@@ -1,0 +1,38 @@
+#!/bin/bash
+TYXYDIR="$(pwd)"
+LIBRARY_PATH="$TYXYDIR/lib"
+mkdir -p /usr/local/ESurfing/lib
+
+declare -a required_libs=(
+"ld-linux-x86-64.so.2"  "libldap-2.4.so.2"
+"libcom_err.so.2"       "libm.so.6"
+"libcrypto.so.10"       "libnspr4.so"
+"libcrypt.so.1"         "libnss3.so"
+"libc.so.6"             "libnssutil3.so"
+"libcurl.so.4"          "libpcre.so.1"
+"libdl.so.2"            "libplc4.so"
+"libfreebl3.so"         "libplds4.so"
+"libgcc_s.so.1"         "libpthread.so.0"
+"libgdk-x11-2.0.so.0"   "libresolv.so.2"
+"libgssapi_krb5.so.2"   "librt.so.1"
+"libgtk-x11-2.0.so.0"   "libsasl2.so.3"
+"libiconv.so.2"         "libselinux.so.1"
+"libidn.so.11"          "libsmime3.so"
+"libk5crypto.so.3"      "libssh2.so.1"
+"libkeyutils.so.1"      "libssl3.so"
+"libkrb5.so.3"          "libssl.so.10"
+"libkrb5support.so.0"   "libstdc++.so.6"
+"liblber-2.4.so.2"      "libz.so.1")  
+for lib in "${required_libs[@]}"; do
+    result=$(find /usr/lib /usr/local/lib /usr/lib64 -name $lib 2>/dev/null)
+
+    if [ -z "$result" ]; then
+        cp "$LIBRARY_PATH/$lib" /usr/local/ESurfing/lib/
+    fi
+done
+
+echo "include /etc/ld.so.conf.d/*.conf" >/etc/ld.so.conf
+touch /etc/ld.so.conf.d/esurfing-lib.conf
+echo "/usr/local/ESurfing/lib" >/etc/ld.so.conf.d/esurfing-lib.conf
+ldconfig
+

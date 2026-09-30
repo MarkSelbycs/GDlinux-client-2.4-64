@@ -1,0 +1,6 @@
+<conf>
+<redirect>http://14.146.227.141:7001/detect.html</redirect>
+<version>1003</version>
+<disasterUrl>http://www.189.cn</disasterUrl>
+</conf>
+
