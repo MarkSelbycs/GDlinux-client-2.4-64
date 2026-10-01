@@ -1,0 +1,172 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+00000000004130d4 <main>:
+  4130d4:	55                   	push   %rbp
+  4130d5:	48 89 e5             	mov    %rsp,%rbp
+  4130d8:	53                   	push   %rbx
+  4130d9:	48 81 ec d8 01 00 00 	sub    $0x1d8,%rsp
+  4130e0:	89 bd 2c fe ff ff    	mov    %edi,-0x1d4(%rbp)
+  4130e6:	48 89 b5 20 fe ff ff 	mov    %rsi,-0x1e0(%rbp)
+  4130ed:	e8 31 fd ff ff       	call   412e23 <StartSingle()>
+  4130f2:	83 f0 01             	xor    $0x1,%eax
+  4130f5:	84 c0                	test   %al,%al
+  4130f7:	74 0a                	je     413103 <main+0x2f>
+  4130f9:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  4130fe:	e9 d3 01 00 00       	jmp    4132d6 <main+0x202>
+  413103:	e8 ce fe ff ff       	call   412fd6 <InitLog()>
+  413108:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  41310f:	48 89 c7             	mov    %rax,%rdi
+  413112:	e8 ef c6 ff ff       	call   40f806 <CServer::CServer()>
+  413117:	e8 0a a5 ff ff       	call   40d626 <CInfoCenter::GetInst()>
+  41311c:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  413120:	e8 77 11 01 00       	call   42429c <CPortalServer::GetInst()>
+  413125:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  413129:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  41312d:	48 8b 00             	mov    (%rax),%rax
+  413130:	48 8b 00             	mov    (%rax),%rax
+  413133:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  41313a:	48 8d 4a 08          	lea    0x8(%rdx),%rcx
+  41313e:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+  413142:	48 89 ce             	mov    %rcx,%rsi
+  413145:	48 89 d7             	mov    %rdx,%rdi
+  413148:	ff d0                	call   *%rax
+  41314a:	e8 4d 11 01 00       	call   42429c <CPortalServer::GetInst()>
+  41314f:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  413153:	48 89 d6             	mov    %rdx,%rsi
+  413156:	48 89 c7             	mov    %rax,%rdi
+  413159:	e8 dc 11 01 00       	call   42433a <CPortalServer::SetInfoCenter(CInfoCenter*)>
+  41315e:	48 8d 85 30 fe ff ff 	lea    -0x1d0(%rbp),%rax
+  413165:	48 89 c7             	mov    %rax,%rdi
+  413168:	e8 37 c3 00 00       	call   41f4a4 <CUserInfo::CUserInfo()>
+  41316d:	48 8d 85 30 fe ff ff 	lea    -0x1d0(%rbp),%rax
+  413174:	48 89 c7             	mov    %rax,%rdi
+  413177:	e8 9c c3 00 00       	call   41f518 <CUserInfo::Init()>
+  41317c:	83 bd 2c fe ff ff 02 	cmpl   $0x2,-0x1d4(%rbp)
+  413183:	0f 8e b5 00 00 00    	jle    41323e <main+0x16a>
+  413189:	48 8b 85 20 fe ff ff 	mov    -0x1e0(%rbp),%rax
+  413190:	48 83 c0 08          	add    $0x8,%rax
+  413194:	48 8b 10             	mov    (%rax),%rdx
+  413197:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  41319b:	48 89 d6             	mov    %rdx,%rsi
+  41319e:	48 89 c7             	mov    %rax,%rdi
+  4131a1:	e8 7e ae ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  4131a6:	48 8b 85 20 fe ff ff 	mov    -0x1e0(%rbp),%rax
+  4131ad:	48 83 c0 10          	add    $0x10,%rax
+  4131b1:	48 8b 10             	mov    (%rax),%rdx
+  4131b4:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  4131b8:	48 89 d6             	mov    %rdx,%rsi
+  4131bb:	48 89 c7             	mov    %rax,%rdi
+  4131be:	e8 61 ae ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  4131c3:	48 8d 55 90          	lea    -0x70(%rbp),%rdx
+  4131c7:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4131cb:	48 89 d6             	mov    %rdx,%rsi
+  4131ce:	48 89 c7             	mov    %rax,%rdi
+  4131d1:	e8 8a ae ff ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  4131d6:	48 8d 55 a0          	lea    -0x60(%rbp),%rdx
+  4131da:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4131de:	48 89 d6             	mov    %rdx,%rsi
+  4131e1:	48 89 c7             	mov    %rax,%rdi
+  4131e4:	e8 77 ae ff ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  4131e9:	e8 74 70 01 00       	call   42a262 <CClientCommand::GetInst()>
+  4131ee:	48 8d 55 b0          	lea    -0x50(%rbp),%rdx
+  4131f2:	48 8d 4d c0          	lea    -0x40(%rbp),%rcx
+  4131f6:	48 89 ce             	mov    %rcx,%rsi
+  4131f9:	48 89 c7             	mov    %rax,%rdi
+  4131fc:	e8 11 72 01 00       	call   42a412 <CClientCommand::SetUserInfo(CAutoString, CAutoString)>
+  413201:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  413205:	48 89 c7             	mov    %rax,%rdi
+  413208:	e8 17 af ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  41320d:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  413211:	48 89 c7             	mov    %rax,%rdi
+  413214:	e8 0b af ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  413219:	e8 44 70 01 00       	call   42a262 <CClientCommand::GetInst()>
+  41321e:	48 89 c7             	mov    %rax,%rdi
+  413221:	e8 7e 71 01 00       	call   42a3a4 <CClientCommand::Start()>
+  413226:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  41322a:	48 89 c7             	mov    %rax,%rdi
+  41322d:	e8 f2 ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  413232:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  413236:	48 89 c7             	mov    %rax,%rdi
+  413239:	e8 e6 ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  41323e:	e8 59 10 01 00       	call   42429c <CPortalServer::GetInst()>
+  413243:	48 89 c2             	mov    %rax,%rdx
+  413246:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  41324d:	be 16 05 45 00       	mov    $0x450516,%esi
+  413252:	48 89 c7             	mov    %rax,%rdi
+  413255:	e8 fc c9 ff ff       	call   40fc56 <CServer::RegisterBusiness(char const*, IBusiness*)>
+  41325a:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  413261:	be 1d 05 45 00       	mov    $0x45051d,%esi
+  413266:	48 89 c7             	mov    %rax,%rdi
+  413269:	e8 6a c6 ff ff       	call   40f8d8 <CServer::CreateServer(char const*)>
+  41326e:	89 45 dc             	mov    %eax,-0x24(%rbp)
+  413271:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  413278:	be 28 05 45 00       	mov    $0x450528,%esi
+  41327d:	48 89 c7             	mov    %rax,%rdi
+  413280:	e8 83 c6 ff ff       	call   40f908 <CServer::ConnectToServer(char const*)>
+  413285:	89 45 dc             	mov    %eax,-0x24(%rbp)
+  413288:	83 7d dc 00          	cmpl   $0x0,-0x24(%rbp)
+  41328c:	75 11                	jne    41329f <main+0x1cb>
+  41328e:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  413295:	48 89 c7             	mov    %rax,%rdi
+  413298:	e8 9b c6 ff ff       	call   40f938 <CServer::DoWork()>
+  41329d:	eb 14                	jmp    4132b3 <main+0x1df>
+  41329f:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4132a2:	89 c6                	mov    %eax,%esi
+  4132a4:	bf 71 05 45 00       	mov    $0x450571,%edi
+  4132a9:	b8 00 00 00 00       	mov    $0x0,%eax
+  4132ae:	e8 9d 0a ff ff       	call   403d50 <printf@plt>
+  4132b3:	bb 00 00 00 00       	mov    $0x0,%ebx
+  4132b8:	48 8d 85 30 fe ff ff 	lea    -0x1d0(%rbp),%rax
+  4132bf:	48 89 c7             	mov    %rax,%rdi
+  4132c2:	e8 17 c2 00 00       	call   41f4de <CUserInfo::~CUserInfo()>
+  4132c7:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  4132ce:	48 89 c7             	mov    %rax,%rdi
+  4132d1:	e8 ba c5 ff ff       	call   40f890 <CServer::~CServer()>
+  4132d6:	89 d8                	mov    %ebx,%eax
+  4132d8:	eb 75                	jmp    41334f <main+0x27b>
+  4132da:	48 89 c3             	mov    %rax,%rbx
+  4132dd:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4132e1:	48 89 c7             	mov    %rax,%rdi
+  4132e4:	e8 3b ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  4132e9:	eb 03                	jmp    4132ee <main+0x21a>
+  4132eb:	48 89 c3             	mov    %rax,%rbx
+  4132ee:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4132f2:	48 89 c7             	mov    %rax,%rdi
+  4132f5:	e8 2a ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  4132fa:	eb 03                	jmp    4132ff <main+0x22b>
+  4132fc:	48 89 c3             	mov    %rax,%rbx
+  4132ff:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  413303:	48 89 c7             	mov    %rax,%rdi
+  413306:	e8 19 ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  41330b:	eb 03                	jmp    413310 <main+0x23c>
+  41330d:	48 89 c3             	mov    %rax,%rbx
+  413310:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  413314:	48 89 c7             	mov    %rax,%rdi
+  413317:	e8 08 ae ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  41331c:	eb 03                	jmp    413321 <main+0x24d>
+  41331e:	48 89 c3             	mov    %rax,%rbx
+  413321:	48 8d 85 30 fe ff ff 	lea    -0x1d0(%rbp),%rax
+  413328:	48 89 c7             	mov    %rax,%rdi
+  41332b:	e8 ae c1 00 00       	call   41f4de <CUserInfo::~CUserInfo()>
+  413330:	eb 03                	jmp    413335 <main+0x261>
+  413332:	48 89 c3             	mov    %rax,%rbx
+  413335:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  41333c:	48 89 c7             	mov    %rax,%rdi
+  41333f:	e8 4c c5 ff ff       	call   40f890 <CServer::~CServer()>
+  413344:	48 89 d8             	mov    %rbx,%rax
+  413347:	48 89 c7             	mov    %rax,%rdi
+  41334a:	e8 d1 14 ff ff       	call   404820 <_Unwind_Resume@plt>
+  41334f:	48 81 c4 d8 01 00 00 	add    $0x1d8,%rsp
+  413356:	5b                   	pop    %rbx
+  413357:	5d                   	pop    %rbp
+  413358:	c3                   	ret
+
+Disassembly of section .fini:

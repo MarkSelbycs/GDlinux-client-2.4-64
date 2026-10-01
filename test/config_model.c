@@ -20,6 +20,11 @@ static const char *child_text(xmlNodePtr root, const char *name)
             return NULL;
         }
 
+        if (content[0] == '\0') {
+            xmlFree(content);
+            return NULL;
+        }
+
         printf("%s=%s\n", name, (const char *)content);
         xmlFree(content);
         return "present";
@@ -28,30 +33,38 @@ static const char *child_text(xmlNodePtr root, const char *name)
     return NULL;
 }
 
+static int child_int(xmlNodePtr root, const char *name)
+{
+    xmlNodePtr node;
+
+    for (node = root->children; node != NULL; node = node->next) {
+        xmlChar *content;
+        int value;
+
+        if (node->type != XML_ELEMENT_NODE ||
+            xmlStrcmp(node->name, (const xmlChar *)name) != 0) {
+            continue;
+        }
+
+        content = xmlNodeGetContent(node);
+        if (content == NULL) {
+            return 0;
+        }
+
+        value = atoi((const char *)content);
+        xmlFree(content);
+        return value;
+    }
+
+    return 0;
+}
+
 int main(int argc, char **argv)
 {
-    static const char *const names[] = {
-        "redirect",
-        "version",
-        "disasterUrl",
-        "hostName",
-        "clientId",
-        "redirectipv6",
-        "termUrl",
-        "keepUrl",
-        "schoolId",
-        "domain",
-        "area",
-        "wlanuserip",
-        "wlanusermac",
-        "wlanacip",
-        "plusInterval",
-        "plusFlag"
-    };
     const char *path;
+    const char *redirectipv6;
     xmlDocPtr document;
     xmlNodePtr root;
-    size_t index;
 
     if (argc != 2) {
         fprintf(stderr, "用法: %s <conf.xml>\n", argv[0]);
@@ -73,9 +86,14 @@ int main(int argc, char **argv)
         return EXIT_FAILURE;
     }
 
-    for (index = 0; index < sizeof(names) / sizeof(names[0]); ++index) {
-        child_text(root, names[index]);
+    redirectipv6 = child_text(root, "redirectipv6");
+    if (redirectipv6 == NULL) {
+        redirectipv6 = "http://www.baidu.com/";
+        printf("redirectipv6=%s\n", redirectipv6);
     }
+
+    printf("plusInterval=%d\n", child_int(root, "plusInterval"));
+    printf("plusFlag=%d\n", child_int(root, "plusFlag"));
 
     xmlFreeDoc(document);
     xmlCleanupParser();
