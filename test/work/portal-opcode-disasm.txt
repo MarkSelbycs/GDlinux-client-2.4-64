@@ -1,0 +1,152 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004246d0 <CPortalServer::~CPortalServer()+0xfa>:
+  4246d0:	c3                   	ret
+
+00000000004246d1 <non-virtual thunk to CPortalServer::~CPortalServer()>:
+  4246d1:	48 83 ef 40          	sub    rdi,0x40
+  4246d5:	e9 fc fe ff ff       	jmp    4245d6 <CPortalServer::~CPortalServer()>
+
+00000000004246da <CPortalServer::~CPortalServer()>:
+  4246da:	55                   	push   rbp
+  4246db:	48 89 e5             	mov    rbp,rsp
+  4246de:	48 83 ec 10          	sub    rsp,0x10
+  4246e2:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4246e6:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4246ea:	48 89 c7             	mov    rdi,rax
+  4246ed:	e8 e4 fe ff ff       	call   4245d6 <CPortalServer::~CPortalServer()>
+  4246f2:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4246f6:	48 89 c7             	mov    rdi,rax
+  4246f9:	e8 e2 f7 fd ff       	call   403ee0 <operator delete(void*)@plt>
+  4246fe:	c9                   	leave
+  4246ff:	c3                   	ret
+
+0000000000424700 <non-virtual thunk to CPortalServer::~CPortalServer()>:
+  424700:	48 83 ef 40          	sub    rdi,0x40
+  424704:	eb d4                	jmp    4246da <CPortalServer::~CPortalServer()>
+
+0000000000424706 <CPortalServer::InitOpcodeFun()>:
+  424706:	55                   	push   rbp
+  424707:	48 89 e5             	mov    rbp,rsp
+  42470a:	53                   	push   rbx
+  42470b:	48 83 ec 78          	sub    rsp,0x78
+  42470f:	48 89 7d 88          	mov    QWORD PTR [rbp-0x78],rdi
+  424713:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  424717:	be c3 27 45 00       	mov    esi,0x4527c3
+  42471c:	48 89 c7             	mov    rdi,rax
+  42471f:	e8 00 99 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  424724:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  424728:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  42472c:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  424730:	48 89 c6             	mov    rsi,rax
+  424733:	48 89 d7             	mov    rdi,rdx
+  424736:	e8 51 48 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  42473b:	48 c7 00 4e 49 42 00 	mov    QWORD PTR [rax],0x42494e
+  424742:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  42474a:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  42474e:	48 89 c7             	mov    rdi,rax
+  424751:	e8 ce 99 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424756:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42475a:	be cf 27 45 00       	mov    esi,0x4527cf
+  42475f:	48 89 c7             	mov    rdi,rax
+  424762:	e8 bd 98 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  424767:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  42476b:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  42476f:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  424773:	48 89 c6             	mov    rsi,rax
+  424776:	48 89 d7             	mov    rdi,rdx
+  424779:	e8 0e 48 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  42477e:	48 c7 00 78 4e 42 00 	mov    QWORD PTR [rax],0x424e78
+  424785:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  42478d:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  424791:	48 89 c7             	mov    rdi,rax
+  424794:	e8 8b 99 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424799:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42479d:	be d8 27 45 00       	mov    esi,0x4527d8
+  4247a2:	48 89 c7             	mov    rdi,rax
+  4247a5:	e8 7a 98 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  4247aa:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  4247ae:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  4247b2:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  4247b6:	48 89 c6             	mov    rsi,rax
+  4247b9:	48 89 d7             	mov    rdi,rdx
+  4247bc:	e8 cb 47 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  4247c1:	48 c7 00 e4 4c 42 00 	mov    QWORD PTR [rax],0x424ce4
+  4247c8:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  4247d0:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  4247d4:	48 89 c7             	mov    rdi,rax
+  4247d7:	e8 48 99 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4247dc:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  4247e0:	be e6 27 45 00       	mov    esi,0x4527e6
+  4247e5:	48 89 c7             	mov    rdi,rax
+  4247e8:	e8 37 98 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  4247ed:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  4247f1:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  4247f5:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  4247f9:	48 89 c6             	mov    rsi,rax
+  4247fc:	48 89 d7             	mov    rdi,rdx
+  4247ff:	e8 88 47 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  424804:	48 c7 00 d8 4d 42 00 	mov    QWORD PTR [rax],0x424dd8
+  42480b:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  424813:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  424817:	48 89 c7             	mov    rdi,rax
+  42481a:	e8 05 99 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42481f:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424823:	be f7 27 45 00       	mov    esi,0x4527f7
+  424828:	48 89 c7             	mov    rdi,rax
+  42482b:	e8 f4 97 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  424830:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  424834:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  424838:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42483c:	48 89 c6             	mov    rsi,rax
+  42483f:	48 89 d7             	mov    rdi,rdx
+  424842:	e8 45 47 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  424847:	48 c7 00 e0 4e 42 00 	mov    QWORD PTR [rax],0x424ee0
+  42484e:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  424856:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42485a:	48 89 c7             	mov    rdi,rax
+  42485d:	e8 c2 98 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424862:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424866:	be 07 28 45 00       	mov    esi,0x452807
+  42486b:	48 89 c7             	mov    rdi,rax
+  42486e:	e8 b1 97 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  424873:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  424877:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  42487b:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42487f:	48 89 c6             	mov    rsi,rax
+  424882:	48 89 d7             	mov    rdi,rdx
+  424885:	e8 02 47 00 00       	call   428f8c <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::operator[](CAutoString&&)>
+  42488a:	48 c7 00 e6 4f 42 00 	mov    QWORD PTR [rax],0x424fe6
+  424891:	48 c7 40 08 00 00 00 00 	mov    QWORD PTR [rax+0x8],0x0
+  424899:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42489d:	48 89 c7             	mov    rdi,rax
+  4248a0:	e8 7f 98 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4248a5:	e9 9c 00 00 00       	jmp    424946 <CPortalServer::InitOpcodeFun()+0x240>
+  4248aa:	48 89 c3             	mov    rbx,rax
+  4248ad:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  4248b1:	48 89 c7             	mov    rdi,rax
+  4248b4:	e8 6b 98 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4248b9:	48 89 d8             	mov    rax,rbx
+  4248bc:	48 89 c7             	mov    rdi,rax
+  4248bf:	e8 5c ff fd ff       	call   404820 <_Unwind_Resume@plt>
+  4248c4:	48 89 c3             	mov    rbx,rax
+  4248c7:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  4248cb:	48 89 c7             	mov    rdi,rax
+  4248ce:	e8 51 98 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4248d3:	48 89 d8             	mov    rax,rbx
+  4248d6:	48 89 c7             	mov    rdi,rax
+  4248d9:	e8 42 ff fd ff       	call   404820 <_Unwind_Resume@plt>
+  4248de:	48 89 c3             	mov    rbx,rax
+  4248e1:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  4248e5:	48 89 c7             	mov    rdi,rax
+  4248e8:	e8 37 98 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4248ed:	48 89 d8             	mov    rax,rbx
+  4248f0:	48 89 c7             	mov    rdi,rax
+  4248f3:	e8 28 ff fd ff       	call   404820 <_Unwind_Resume@plt>
+  4248f8:	48 89 c3             	mov    rbx,rax
+  4248fb:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  4248ff:	48                   	rex.W

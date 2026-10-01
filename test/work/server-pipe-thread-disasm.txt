@@ -1,0 +1,76 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000412f42 <ServerPipe(void*)>:
+  412f42:	55                   	push   rbp
+  412f43:	48 89 e5             	mov    rbp,rsp
+  412f46:	53                   	push   rbx
+  412f47:	48 83 ec 28          	sub    rsp,0x28
+  412f4b:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  412f4f:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  412f53:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  412f57:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  412f5b:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  412f5e:	48 83 c0 08          	add    rax,0x8
+  412f62:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+  412f65:	e8 32 13 01 00       	call   42429c <CPortalServer::GetInst()>
+  412f6a:	48 89 c2             	mov    rdx,rax
+  412f6d:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  412f71:	be 16 05 45 00       	mov    esi,0x450516
+  412f76:	48 89 c7             	mov    rdi,rax
+  412f79:	ff d3                	call   rbx
+  412f7b:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  412f7f:	be 1d 05 45 00       	mov    esi,0x45051d
+  412f84:	48 89 c7             	mov    rdi,rax
+  412f87:	e8 4c c9 ff ff       	call   40f8d8 <CServer::CreateServer(char const*)>
+  412f8c:	89 45 e4             	mov    DWORD PTR [rbp-0x1c],eax
+  412f8f:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  412f93:	be 28 05 45 00       	mov    esi,0x450528
+  412f98:	48 89 c7             	mov    rdi,rax
+  412f9b:	e8 68 c9 ff ff       	call   40f908 <CServer::ConnectToServer(char const*)>
+  412fa0:	89 45 e4             	mov    DWORD PTR [rbp-0x1c],eax
+  412fa3:	83 7d e4 00          	cmp    DWORD PTR [rbp-0x1c],0x0
+  412fa7:	75 0e                	jne    412fb7 <ServerPipe(void*)+0x75>
+  412fa9:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  412fad:	48 89 c7             	mov    rdi,rax
+  412fb0:	e8 83 c9 ff ff       	call   40f938 <CServer::DoWork()>
+  412fb5:	eb 14                	jmp    412fcb <ServerPipe(void*)+0x89>
+  412fb7:	8b 45 e4             	mov    eax,DWORD PTR [rbp-0x1c]
+  412fba:	89 c6                	mov    esi,eax
+  412fbc:	bf 38 05 45 00       	mov    edi,0x450538
+  412fc1:	b8 00 00 00 00       	mov    eax,0x0
+  412fc6:	e8 85 0d ff ff       	call   403d50 <printf@plt>
+  412fcb:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  412fcf:	48 83 c4 28          	add    rsp,0x28
+  412fd3:	5b                   	pop    rbx
+  412fd4:	5d                   	pop    rbp
+  412fd5:	c3                   	ret
+
+0000000000412fd6 <InitLog()>:
+  412fd6:	55                   	push   rbp
+  412fd7:	48 89 e5             	mov    rbp,rsp
+  412fda:	53                   	push   rbx
+  412fdb:	48 81 ec 28 04 00 00 	sub    rsp,0x428
+  412fe2:	48 8d b5 d0 fb ff ff 	lea    rsi,[rbp-0x430]
+  412fe9:	b8 00 00 00 00       	mov    eax,0x0
+  412fee:	ba 80 00 00 00       	mov    edx,0x80
+  412ff3:	48 89 f7             	mov    rdi,rsi
+  412ff6:	48 89 d1             	mov    rcx,rdx
+  412ff9:	f3 48 ab             	rep stos QWORD PTR es:[rdi],rax
+  412ffc:	48 8d 85 d0 fb ff ff 	lea    rax,[rbp-0x430]
+  413003:	be 00 04 00 00       	mov    esi,0x400
+  413008:	48 89 c7             	mov    rdi,rax
+  41300b:	e8 eb b5 ff ff       	call   40e5fb <CSimpleFile::GetModulePath(char*, unsigned long)>
+  413010:	48 8d 95 d0 fb ff ff 	lea    rdx,[rbp-0x430]
+  413017:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  41301b:	48 89 d6             	mov    rsi,rdx
+  41301e:	48 89 c7             	mov    rdi,rax
+  413021:	e8 fe af ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  413026:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  41302a:	be 5b 05 45 00       	mov    esi,0x45055b
+  41302f:	48 89 c7             	mov    rdi,rax
+  413032:	e8 ed af ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  413037:	48                   	rex.W

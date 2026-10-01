@@ -1,0 +1,530 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004288f8 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)>:
+  4288f8:	55                   	push   rbp
+  4288f9:	48 89 e5             	mov    rbp,rsp
+  4288fc:	53                   	push   rbx
+  4288fd:	48 83 ec 48          	sub    rsp,0x48
+  428901:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  428905:	48 89 75 d0          	mov    QWORD PTR [rbp-0x30],rsi
+  428909:	48 89 55 c8          	mov    QWORD PTR [rbp-0x38],rdx
+  42890d:	48 89 4d c0          	mov    QWORD PTR [rbp-0x40],rcx
+  428911:	4c 89 45 b8          	mov    QWORD PTR [rbp-0x48],r8
+  428915:	48 83 7d d0 00       	cmp    QWORD PTR [rbp-0x30],0x0
+  42891a:	74 15                	je     428931 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0x39>
+  42891c:	48 83 7d c8 00       	cmp    QWORD PTR [rbp-0x38],0x0
+  428921:	74 0e                	je     428931 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0x39>
+  428923:	48 83 7d c0 00       	cmp    QWORD PTR [rbp-0x40],0x0
+  428928:	74 07                	je     428931 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0x39>
+  42892a:	48 83 7d b8 00       	cmp    QWORD PTR [rbp-0x48],0x0
+  42892f:	75 05                	jne    428936 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0x3e>
+  428931:	e9 9e 00 00 00       	jmp    4289d4 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0xdc>
+  428936:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42893a:	48 89 c7             	mov    rdi,rax
+  42893d:	e8 c2 56 fe ff       	call   40e004 <CAutoString::CAutoString()>
+  428942:	48 8b 7d b8          	mov    rdi,QWORD PTR [rbp-0x48]
+  428946:	48 8b 75 c0          	mov    rsi,QWORD PTR [rbp-0x40]
+  42894a:	48 8b 4d c8          	mov    rcx,QWORD PTR [rbp-0x38]
+  42894e:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  428952:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  428956:	49 89 f9             	mov    r9,rdi
+  428959:	49 89 f0             	mov    r8,rsi
+  42895c:	be 60 27 45 00       	mov    esi,0x452760
+  428961:	48 89 c7             	mov    rdi,rax
+  428964:	b8 00 00 00 00       	mov    eax,0x0
+  428969:	e8 72 5a fe ff       	call   40e3e0 <CAutoString::Format(char const*, ...)>
+  42896e:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  428972:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+  428976:	48 85 c0             	test   rax,rax
+  428979:	74 31                	je     4289ac <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0xb4>
+  42897b:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  42897f:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+  428983:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428986:	48 83 c0 08          	add    rax,0x8
+  42898a:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+  42898d:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  428991:	48 89 c7             	mov    rdi,rax
+  428994:	e8 6f 59 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  428999:	48 89 c2             	mov    rdx,rax
+  42899c:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  4289a0:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+  4289a4:	48 89 d6             	mov    rsi,rdx
+  4289a7:	48 89 c7             	mov    rdi,rax
+  4289aa:	ff d3                	call   rbx
+  4289ac:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  4289b0:	48 89 c7             	mov    rdi,rax
+  4289b3:	e8 6c 57 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4289b8:	eb 1a                	jmp    4289d4 <CBusiness::PostMsg(char const*, char const*, char const*, char const*)+0xdc>
+  4289ba:	48 89 c3             	mov    rbx,rax
+  4289bd:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  4289c1:	48 89 c7             	mov    rdi,rax
+  4289c4:	e8 5b 57 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  4289c9:	48 89 d8             	mov    rax,rbx
+  4289cc:	48 89 c7             	mov    rdi,rax
+  4289cf:	e8 4c be fd ff       	call   404820 <_Unwind_Resume@plt>
+  4289d4:	48 83 c4 48          	add    rsp,0x48
+  4289d8:	5b                   	pop    rbx
+  4289d9:	5d                   	pop    rbp
+  4289da:	c3                   	ret
+  4289db:	90                   	nop
+
+00000000004289dc <CBusiness::DealMsg(char const*)>:
+  4289dc:	55                   	push   rbp
+  4289dd:	48 89 e5             	mov    rbp,rsp
+  4289e0:	53                   	push   rbx
+  4289e1:	48 81 ec f8 00 00 00 	sub    rsp,0xf8
+  4289e8:	48 89 bd 08 ff ff ff 	mov    QWORD PTR [rbp-0xf8],rdi
+  4289ef:	48 89 b5 00 ff ff ff 	mov    QWORD PTR [rbp-0x100],rsi
+  4289f6:	48 8b 95 00 ff ff ff 	mov    rdx,QWORD PTR [rbp-0x100]
+  4289fd:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  428a04:	48 89 d6             	mov    rsi,rdx
+  428a07:	48 89 c7             	mov    rdi,rax
+  428a0a:	e8 7f 6a 02 00       	call   44f48e <CXMLOpt::CXMLOpt(char const*)>
+  428a0f:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  428a16:	48 89 c7             	mov    rdi,rax
+  428a19:	e8 e4 aa 01 00       	call   443502 <CMarkup::IsWellFormed()>
+  428a1e:	83 f0 01             	xor    eax,0x1
+  428a21:	84 c0                	test   al,al
+  428a23:	74 0a                	je     428a2f <CBusiness::DealMsg(char const*)+0x53>
+  428a25:	bb 00 00 00 00       	mov    ebx,0x0
+  428a2a:	e9 22 02 00 00       	jmp    428c51 <CBusiness::DealMsg(char const*)+0x275>
+  428a2f:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  428a33:	48 8d 8d 10 ff ff ff 	lea    rcx,[rbp-0xf0]
+  428a3a:	ba 98 27 45 00       	mov    edx,0x452798
+  428a3f:	48 89 ce             	mov    rsi,rcx
+  428a42:	48 89 c7             	mov    rdi,rax
+  428a45:	e8 b4 6b 02 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  428a4a:	48 8d 55 c0          	lea    rdx,[rbp-0x40]
+  428a4e:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  428a52:	48 89 d6             	mov    rsi,rdx
+  428a55:	48 89 c7             	mov    rdi,rax
+  428a58:	e8 3f 56 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  428a5d:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  428a61:	48 89 c7             	mov    rdi,rax
+  428a64:	e8 87 b6 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428a69:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  428a6d:	48 8d 8d 10 ff ff ff 	lea    rcx,[rbp-0xf0]
+  428a74:	ba 9c 27 45 00       	mov    edx,0x45279c
+  428a79:	48 89 ce             	mov    rsi,rcx
+  428a7c:	48 89 c7             	mov    rdi,rax
+  428a7f:	e8 7a 6b 02 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  428a84:	48 8d 55 d0          	lea    rdx,[rbp-0x30]
+  428a88:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  428a8c:	48 89 d6             	mov    rsi,rdx
+  428a8f:	48 89 c7             	mov    rdi,rax
+  428a92:	e8 05 56 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  428a97:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  428a9b:	48 89 c7             	mov    rdi,rax
+  428a9e:	e8 4d b6 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428aa3:	c6 45 ef 00          	mov    BYTE PTR [rbp-0x11],0x0
+  428aa7:	48 8b 85 08 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf8]
+  428aae:	48 83 c0 10          	add    rax,0x10
+  428ab2:	48 89 c7             	mov    rdi,rax
+  428ab5:	e8 24 04 00 00       	call   428ede <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::begin()>
+  428aba:	48 89 45 90          	mov    QWORD PTR [rbp-0x70],rax
+  428abe:	e9 09 01 00 00       	jmp    428bcc <CBusiness::DealMsg(char const*)+0x1f0>
+  428ac3:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  428ac7:	48 89 c7             	mov    rdi,rax
+  428aca:	e8 9b 04 00 00       	call   428f6a <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator->() const>
+  428acf:	48 89 c2             	mov    rdx,rax
+  428ad2:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  428ad6:	48 89 d6             	mov    rsi,rdx
+  428ad9:	48 89 c7             	mov    rdi,rax
+  428adc:	e8 7f 55 fe ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  428ae1:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  428ae5:	48 89 c7             	mov    rdi,rax
+  428ae8:	e8 1b 58 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  428aed:	48 89 c2             	mov    rdx,rax
+  428af0:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  428af4:	48 89 d6             	mov    rsi,rdx
+  428af7:	48 89 c7             	mov    rdi,rax
+  428afa:	e8 61 57 fe ff       	call   40e260 <CAutoString::operator==(char const*)>
+  428aff:	84 c0                	test   al,al
+  428b01:	0f 84 9d 00 00 00    	je     428ba4 <CBusiness::DealMsg(char const*)+0x1c8>
+  428b07:	c6 45 ef 01          	mov    BYTE PTR [rbp-0x11],0x1
+  428b0b:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  428b0f:	48 89 c7             	mov    rdi,rax
+  428b12:	e8 53 04 00 00       	call   428f6a <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator->() const>
+  428b17:	48 8b 50 18          	mov    rdx,QWORD PTR [rax+0x18]
+  428b1b:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+  428b1f:	48 89 85 70 ff ff ff 	mov    QWORD PTR [rbp-0x90],rax
+  428b26:	48 89 95 78 ff ff ff 	mov    QWORD PTR [rbp-0x88],rdx
+  428b2d:	48 8b 85 70 ff ff ff 	mov    rax,QWORD PTR [rbp-0x90]
+  428b34:	83 e0 01             	and    eax,0x1
+  428b37:	48 85 c0             	test   rax,rax
+  428b3a:	75 09                	jne    428b45 <CBusiness::DealMsg(char const*)+0x169>
+  428b3c:	48 8b 9d 70 ff ff ff 	mov    rbx,QWORD PTR [rbp-0x90]
+  428b43:	eb 28                	jmp    428b6d <CBusiness::DealMsg(char const*)+0x191>
+  428b45:	48 8b 85 78 ff ff ff 	mov    rax,QWORD PTR [rbp-0x88]
+  428b4c:	48 89 c2             	mov    rdx,rax
+  428b4f:	48 8b 85 08 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf8]
+  428b56:	48 01 d0             	add    rax,rdx
+  428b59:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  428b5c:	48 8b 85 70 ff ff ff 	mov    rax,QWORD PTR [rbp-0x90]
+  428b63:	48 83 e8 01          	sub    rax,0x1
+  428b67:	48 01 d0             	add    rax,rdx
+  428b6a:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+  428b6d:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  428b71:	48 89 c7             	mov    rdi,rax
+  428b74:	e8 8f 57 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  428b79:	48 8b 95 78 ff ff ff 	mov    rdx,QWORD PTR [rbp-0x88]
+  428b80:	48 89 d1             	mov    rcx,rdx
+  428b83:	48 8b 95 08 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xf8]
+  428b8a:	48 01 d1             	add    rcx,rdx
+  428b8d:	48 8d 95 10 ff ff ff 	lea    rdx,[rbp-0xf0]
+  428b94:	48 89 c6             	mov    rsi,rax
+  428b97:	48 89 cf             	mov    rdi,rcx
+  428b9a:	ff d3                	call   rbx
+  428b9c:	90                   	nop
+  428b9d:	bb 00 00 00 00       	mov    ebx,0x0
+  428ba2:	eb 05                	jmp    428ba9 <CBusiness::DealMsg(char const*)+0x1cd>
+  428ba4:	bb 01 00 00 00       	mov    ebx,0x1
+  428ba9:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  428bad:	48 89 c7             	mov    rdi,rax
+  428bb0:	e8 6f 55 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428bb5:	83 fb 01             	cmp    ebx,0x1
+  428bb8:	75 44                	jne    428bfe <CBusiness::DealMsg(char const*)+0x222>
+  428bba:	90                   	nop
+  428bbb:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  428bbf:	be 00 00 00 00       	mov    esi,0x0
+  428bc4:	48 89 c7             	mov    rdi,rax
+  428bc7:	e8 68 03 00 00       	call   428f34 <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator++(int)>
+  428bcc:	48 8b 85 08 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf8]
+  428bd3:	48 83 c0 10          	add    rax,0x10
+  428bd7:	48 89 c7             	mov    rdi,rax
+  428bda:	e8 19 03 00 00       	call   428ef8 <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::end()>
+  428bdf:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  428be3:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  428be7:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  428beb:	48 89 d6             	mov    rsi,rdx
+  428bee:	48 89 c7             	mov    rdi,rax
+  428bf1:	e8 1c 03 00 00       	call   428f12 <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator!=(std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > const&) const>
+  428bf6:	84 c0                	test   al,al
+  428bf8:	0f 85 c5 fe ff ff    	jne    428ac3 <CBusiness::DealMsg(char const*)+0xe7>
+  428bfe:	0f b6 45 ef          	movzx  eax,BYTE PTR [rbp-0x11]
+  428c02:	83 f0 01             	xor    eax,0x1
+  428c05:	84 c0                	test   al,al
+  428c07:	74 2b                	je     428c34 <CBusiness::DealMsg(char const*)+0x258>
+  428c09:	48 8b 85 08 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf8]
+  428c10:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428c13:	48 83 c0 18          	add    rax,0x18
+  428c17:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428c1a:	48 8d 8d 10 ff ff ff 	lea    rcx,[rbp-0xf0]
+  428c21:	48 8b 95 08 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xf8]
+  428c28:	48 89 ce             	mov    rsi,rcx
+  428c2b:	48 89 d7             	mov    rdi,rdx
+  428c2e:	ff d0                	call   rax
+  428c30:	c6 45 ef 00          	mov    BYTE PTR [rbp-0x11],0x0
+  428c34:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  428c38:	48 89 c7             	mov    rdi,rax
+  428c3b:	e8 e4 54 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428c40:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  428c44:	48 89 c7             	mov    rdi,rax
+  428c47:	e8 d8 54 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428c4c:	bb 01 00 00 00       	mov    ebx,0x1
+  428c51:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  428c58:	48 89 c7             	mov    rdi,rax
+  428c5b:	e8 8e 68 02 00       	call   44f4ee <CXMLOpt::~CXMLOpt()>
+  428c60:	83 fb 01             	cmp    ebx,0x1
+  428c63:	74 02                	je     428c67 <CBusiness::DealMsg(char const*)+0x28b>
+  428c65:	eb 75                	jmp    428cdc <CBusiness::DealMsg(char const*)+0x300>
+  428c67:	90                   	nop
+  428c68:	eb 72                	jmp    428cdc <CBusiness::DealMsg(char const*)+0x300>
+  428c6a:	48 89 c3             	mov    rbx,rax
+  428c6d:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  428c71:	48 89 c7             	mov    rdi,rax
+  428c74:	e8 77 b4 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428c79:	eb 47                	jmp    428cc2 <CBusiness::DealMsg(char const*)+0x2e6>
+  428c7b:	48 89 c3             	mov    rbx,rax
+  428c7e:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  428c82:	48 89 c7             	mov    rdi,rax
+  428c85:	e8 66 b4 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428c8a:	eb 25                	jmp    428cb1 <CBusiness::DealMsg(char const*)+0x2d5>
+  428c8c:	48 89 c3             	mov    rbx,rax
+  428c8f:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  428c93:	48 89 c7             	mov    rdi,rax
+  428c96:	e8 89 54 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428c9b:	eb 03                	jmp    428ca0 <CBusiness::DealMsg(char const*)+0x2c4>
+  428c9d:	48 89 c3             	mov    rbx,rax
+  428ca0:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  428ca4:	48 89 c7             	mov    rdi,rax
+  428ca7:	e8 78 54 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428cac:	eb 03                	jmp    428cb1 <CBusiness::DealMsg(char const*)+0x2d5>
+  428cae:	48 89 c3             	mov    rbx,rax
+  428cb1:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  428cb5:	48 89 c7             	mov    rdi,rax
+  428cb8:	e8 67 54 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  428cbd:	eb 03                	jmp    428cc2 <CBusiness::DealMsg(char const*)+0x2e6>
+  428cbf:	48 89 c3             	mov    rbx,rax
+  428cc2:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  428cc9:	48 89 c7             	mov    rdi,rax
+  428ccc:	e8 1d 68 02 00       	call   44f4ee <CXMLOpt::~CXMLOpt()>
+  428cd1:	48 89 d8             	mov    rax,rbx
+  428cd4:	48 89 c7             	mov    rdi,rax
+  428cd7:	e8 44 bb fd ff       	call   404820 <_Unwind_Resume@plt>
+  428cdc:	48 81 c4 f8 00 00 00 	add    rsp,0xf8
+  428ce3:	5b                   	pop    rbx
+  428ce4:	5d                   	pop    rbp
+  428ce5:	c3                   	ret
+
+0000000000428ce6 <CBusiness::DefaultDeal(CXMLOpt&)>:
+  428ce6:	55                   	push   rbp
+  428ce7:	48 89 e5             	mov    rbp,rsp
+  428cea:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428cee:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  428cf2:	5d                   	pop    rbp
+  428cf3:	c3                   	ret
+
+0000000000428cf4 <CBusiness::InitOpcodeFun()>:
+  428cf4:	55                   	push   rbp
+  428cf5:	48 89 e5             	mov    rbp,rsp
+  428cf8:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428cfc:	5d                   	pop    rbp
+  428cfd:	c3                   	ret
+
+0000000000428cfe <CBusiness::ServerStatus(int)>:
+  428cfe:	55                   	push   rbp
+  428cff:	48 89 e5             	mov    rbp,rsp
+  428d02:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d06:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+  428d09:	5d                   	pop    rbp
+  428d0a:	c3                   	ret
+  428d0b:	90                   	nop
+
+0000000000428d0c <ESurfingSvr::Task::Task()>:
+  428d0c:	55                   	push   rbp
+  428d0d:	48 89 e5             	mov    rbp,rsp
+  428d10:	48 83 ec 10          	sub    rsp,0x10
+  428d14:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d18:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d1c:	c7 00 00 00 00 00    	mov    DWORD PTR [rax],0x0
+  428d22:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d26:	c7 40 04 00 00 00 00 	mov    DWORD PTR [rax+0x4],0x0
+  428d2d:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d31:	c7 40 08 01 00 00 00 	mov    DWORD PTR [rax+0x8],0x1
+  428d38:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d3c:	48 83 c0 10          	add    rax,0x10
+  428d40:	48 89 c7             	mov    rdi,rax
+  428d43:	e8 bc 52 fe ff       	call   40e004 <CAutoString::CAutoString()>
+  428d48:	c9                   	leave
+  428d49:	c3                   	ret
+
+0000000000428d4a <CPortalConn::GetNetState()>:
+  428d4a:	55                   	push   rbp
+  428d4b:	48 89 e5             	mov    rbp,rsp
+  428d4e:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d52:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d56:	8b 80 38 01 00 00    	mov    eax,DWORD PTR [rax+0x138]
+  428d5c:	5d                   	pop    rbp
+  428d5d:	c3                   	ret
+
+0000000000428d5e <CNetHelper::CNetHelper()>:
+  428d5e:	55                   	push   rbp
+  428d5f:	48 89 e5             	mov    rbp,rsp
+  428d62:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d66:	5d                   	pop    rbp
+  428d67:	c3                   	ret
+
+0000000000428d68 <CNetHelper::~CNetHelper()>:
+  428d68:	55                   	push   rbp
+  428d69:	48 89 e5             	mov    rbp,rsp
+  428d6c:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d70:	5d                   	pop    rbp
+  428d71:	c3                   	ret
+
+0000000000428d72 <CWiFiSharedValidate::GetDisplayName()>:
+  428d72:	55                   	push   rbp
+  428d73:	48 89 e5             	mov    rbp,rsp
+  428d76:	48 83 ec 10          	sub    rsp,0x10
+  428d7a:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d7e:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428d82:	48 83 c0 10          	add    rax,0x10
+  428d86:	48 89 c7             	mov    rdi,rax
+  428d89:	e8 12 b1 fd ff       	call   403ea0 <std::string::c_str() const@plt>
+  428d8e:	c9                   	leave
+  428d8f:	c3                   	ret
+
+0000000000428d90 <CBusiness::~CBusiness()>:
+  428d90:	55                   	push   rbp
+  428d91:	48 89 e5             	mov    rbp,rsp
+  428d94:	48 83 ec 10          	sub    rsp,0x10
+  428d98:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428d9c:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428da0:	48 c7 00 50 30 45 00 	mov    QWORD PTR [rax],0x453050
+  428da7:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428dab:	48 83 c0 10          	add    rax,0x10
+  428daf:	48 89 c7             	mov    rdi,rax
+  428db2:	e8 af fa ff ff       	call   428866 <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::~map()>
+  428db7:	c9                   	leave
+  428db8:	c3                   	ret
+  428db9:	90                   	nop
+
+0000000000428dba <CTrafficStatistics::CTrafficStatistics()>:
+  428dba:	55                   	push   rbp
+  428dbb:	48 89 e5             	mov    rbp,rsp
+  428dbe:	53                   	push   rbx
+  428dbf:	48 83 ec 18          	sub    rsp,0x18
+  428dc3:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  428dc7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428dcb:	48 83 c0 20          	add    rax,0x20
+  428dcf:	48 89 c7             	mov    rdi,rax
+  428dd2:	e8 69 af fd ff       	call   403d40 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()@plt>
+  428dd7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428ddb:	48 83 c0 28          	add    rax,0x28
+  428ddf:	48 89 c7             	mov    rdi,rax
+  428de2:	e8 59 af fd ff       	call   403d40 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()@plt>
+  428de7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428deb:	48 83 c0 30          	add    rax,0x30
+  428def:	48 89 c7             	mov    rdi,rax
+  428df2:	e8 2d 9c fe ff       	call   412a24 <CSystemControlAdapter::CSystemControlAdapter()>
+  428df7:	eb 33                	jmp    428e2c <CTrafficStatistics::CTrafficStatistics()+0x72>
+  428df9:	48 89 c3             	mov    rbx,rax
+  428dfc:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428e00:	48 83 c0 28          	add    rax,0x28
+  428e04:	48 89 c7             	mov    rdi,rax
+  428e07:	e8 e4 b2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428e0c:	eb 03                	jmp    428e11 <CTrafficStatistics::CTrafficStatistics()+0x57>
+  428e0e:	48 89 c3             	mov    rbx,rax
+  428e11:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428e15:	48 83 c0 20          	add    rax,0x20
+  428e19:	48 89 c7             	mov    rdi,rax
+  428e1c:	e8 cf b2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428e21:	48 89 d8             	mov    rax,rbx
+  428e24:	48 89 c7             	mov    rdi,rax
+  428e27:	e8 f4 b9 fd ff       	call   404820 <_Unwind_Resume@plt>
+  428e2c:	48 83 c4 18          	add    rsp,0x18
+  428e30:	5b                   	pop    rbx
+  428e31:	5d                   	pop    rbp
+  428e32:	c3                   	ret
+  428e33:	90                   	nop
+
+0000000000428e34 <CTrafficStatistics::~CTrafficStatistics()>:
+  428e34:	55                   	push   rbp
+  428e35:	48 89 e5             	mov    rbp,rsp
+  428e38:	48 83 ec 10          	sub    rsp,0x10
+  428e3c:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428e40:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428e44:	48 83 c0 30          	add    rax,0x30
+  428e48:	48 89 c7             	mov    rdi,rax
+  428e4b:	e8 56 9c fe ff       	call   412aa6 <CSystemControlAdapter::~CSystemControlAdapter()>
+  428e50:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428e54:	48 83 c0 28          	add    rax,0x28
+  428e58:	48 89 c7             	mov    rdi,rax
+  428e5b:	e8 90 b2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428e60:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428e64:	48 83 c0 20          	add    rax,0x20
+  428e68:	48 89 c7             	mov    rdi,rax
+  428e6b:	e8 80 b2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  428e70:	c9                   	leave
+  428e71:	c3                   	ret
+
+0000000000428e72 <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::map()>:
+  428e72:	55                   	push   rbp
+  428e73:	48 89 e5             	mov    rbp,rsp
+  428e76:	48 83 ec 10          	sub    rsp,0x10
+  428e7a:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428e7e:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428e82:	48 89 c7             	mov    rdi,rax
+  428e85:	e8 32 02 00 00       	call   4290bc <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::_Rb_tree()>
+  428e8a:	c9                   	leave
+  428e8b:	c3                   	ret
+
+0000000000428e8c <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::_Rb_tree_impl<std::less<CAutoString>, true>::~_Rb_tree_impl()>:
+  428e8c:	55                   	push   rbp
+  428e8d:	48 89 e5             	mov    rbp,rsp
+  428e90:	48 83 ec 10          	sub    rsp,0x10
+  428e94:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428e98:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428e9c:	48 89 c7             	mov    rdi,rax
+  428e9f:	e8 32 02 00 00       	call   4290d6 <std::allocator<std::_Rb_tree_node<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::~allocator()>
+  428ea4:	c9                   	leave
+  428ea5:	c3                   	ret
+
+0000000000428ea6 <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::~_Rb_tree()>:
+  428ea6:	55                   	push   rbp
+  428ea7:	48 89 e5             	mov    rbp,rsp
+  428eaa:	48 83 ec 10          	sub    rsp,0x10
+  428eae:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428eb2:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428eb6:	48 89 c7             	mov    rdi,rax
+  428eb9:	e8 96 02 00 00       	call   429154 <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::_M_begin()>
+  428ebe:	48 89 c2             	mov    rdx,rax
+  428ec1:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428ec5:	48 89 d6             	mov    rsi,rdx
+  428ec8:	48 89 c7             	mov    rdi,rax
+  428ecb:	e8 20 02 00 00       	call   4290f0 <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::_M_erase(std::_Rb_tree_node<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >*)>
+  428ed0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428ed4:	48 89 c7             	mov    rdi,rax
+  428ed7:	e8 b0 ff ff ff       	call   428e8c <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::_Rb_tree_impl<std::less<CAutoString>, true>::~_Rb_tree_impl()>
+  428edc:	c9                   	leave
+  428edd:	c3                   	ret
+
+0000000000428ede <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::begin()>:
+  428ede:	55                   	push   rbp
+  428edf:	48 89 e5             	mov    rbp,rsp
+  428ee2:	48 83 ec 10          	sub    rsp,0x10
+  428ee6:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428eea:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428eee:	48 89 c7             	mov    rdi,rax
+  428ef1:	e8 70 02 00 00       	call   429166 <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::begin()>
+  428ef6:	c9                   	leave
+  428ef7:	c3                   	ret
+
+0000000000428ef8 <std::map<CAutoString, void (CBusiness::*)(char const*, CXMLOpt&), std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::end()>:
+  428ef8:	55                   	push   rbp
+  428ef9:	48 89 e5             	mov    rbp,rsp
+  428efc:	48 83 ec 10          	sub    rsp,0x10
+  428f00:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428f04:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428f08:	48 89 c7             	mov    rdi,rax
+  428f0b:	e8 80 02 00 00       	call   429190 <std::_Rb_tree<CAutoString, std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)>, std::_Select1st<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > >::end()>
+  428f10:	c9                   	leave
+  428f11:	c3                   	ret
+
+0000000000428f12 <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator!=(std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> > const&) const>:
+  428f12:	55                   	push   rbp
+  428f13:	48 89 e5             	mov    rbp,rsp
+  428f16:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428f1a:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  428f1e:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428f22:	48 8b 10             	mov    rdx,QWORD PTR [rax]
+  428f25:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  428f29:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428f2c:	48 39 c2             	cmp    rdx,rax
+  428f2f:	0f 95 c0             	setne  al
+  428f32:	5d                   	pop    rbp
+  428f33:	c3                   	ret
+
+0000000000428f34 <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator++(int)>:
+  428f34:	55                   	push   rbp
+  428f35:	48 89 e5             	mov    rbp,rsp
+  428f38:	48 83 ec 20          	sub    rsp,0x20
+  428f3c:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  428f40:	89 75 e4             	mov    DWORD PTR [rbp-0x1c],esi
+  428f43:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428f47:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428f4a:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+  428f4e:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  428f52:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428f55:	48 89 c7             	mov    rdi,rax
+  428f58:	e8 f3 b6 fd ff       	call   404650 <std::_Rb_tree_increment(std::_Rb_tree_node_base*)@plt>
+  428f5d:	48 8b 55 e8          	mov    rdx,QWORD PTR [rbp-0x18]
+  428f61:	48 89 02             	mov    QWORD PTR [rdx],rax
+  428f64:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  428f68:	c9                   	leave
+  428f69:	c3                   	ret
+
+0000000000428f6a <std::_Rb_tree_iterator<std::pair<CAutoString const, void (CBusiness::*)(char const*, CXMLOpt&)> >::operator->() const>:
+  428f6a:	55                   	push   rbp
+  428f6b:	48 89 e5             	mov    rbp,rsp
+  428f6e:	48 83 ec 10          	sub    rsp,0x10
+  428f72:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  428f76:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  428f7a:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  428f7d:	48                   	rex.W
+  428f7e:	83                   	.byte 0x83
+  428f7f:	c0                   	.byte 0xc0

@@ -1,0 +1,27 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000044eeb4 <CPipeService::CPipeService()>:
+  44eeb4:	55                   	push   rbp
+  44eeb5:	48 89 e5             	mov    rbp,rsp
+  44eeb8:	48 83 ec 10          	sub    rsp,0x10
+  44eebc:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44eec0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44eec4:	48 89 c7             	mov    rdi,rax
+  44eec7:	e8 d2 74 fe ff       	call   43639e <CMsgEngine::CMsgEngine()>
+  44eecc:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44eed0:	48 c7 00 30 77 45 00 	mov    QWORD PTR [rax],0x457730
+  44eed7:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44eedb:	48 05 b8 00 00 00    	add    rax,0xb8
+  44eee1:	48 89 c7             	mov    rdi,rax
+  44eee4:	e8 95 6a fe ff       	call   43597e <MutexLock::MutexLock()>
+  44eee9:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44eeed:	48 c7 80 90 00 00 00 00 00 00 00 	mov    QWORD PTR [rax+0x90],0x0
+  44eef8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44eefc:	c6 80 b0 00 00 00 00 	mov    BYTE PTR [rax+0xb0],0x0
+  44ef03:	c9                   	leave
+  44ef04:	c3                   	ret
+  44ef05:	90                   	nop

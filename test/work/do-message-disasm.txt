@@ -1,0 +1,46 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000044f3d2 <CPipeService::DoMessage(CAutoString)>:
+  44f3d2:	55                   	push   rbp
+  44f3d3:	48 89 e5             	mov    rbp,rsp
+  44f3d6:	53                   	push   rbx
+  44f3d7:	48 83 ec 28          	sub    rsp,0x28
+  44f3db:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  44f3df:	48 89 75 d0          	mov    QWORD PTR [rbp-0x30],rsi
+  44f3e3:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f3e7:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f3ee:	48 85 c0             	test   rax,rax
+  44f3f1:	74 63                	je     44f456 <CPipeService::DoMessage(CAutoString)+0x84>
+  44f3f3:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f3f7:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f3fe:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  44f401:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+  44f404:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  44f408:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f40c:	48 89 d6             	mov    rsi,rdx
+  44f40f:	48 89 c7             	mov    rdi,rax
+  44f412:	e8 49 ec fb ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  44f417:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f41b:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f422:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  44f426:	48 89 d6             	mov    rsi,rdx
+  44f429:	48 89 c7             	mov    rdi,rax
+  44f42c:	ff d3                	call   rbx
+  44f42e:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f432:	48 89 c7             	mov    rdi,rax
+  44f435:	e8 ea ec fb ff       	call   40e124 <CAutoString::~CAutoString()>
+  44f43a:	eb 1a                	jmp    44f456 <CPipeService::DoMessage(CAutoString)+0x84>
+  44f43c:	48 89 c3             	mov    rbx,rax
+  44f43f:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f443:	48 89 c7             	mov    rdi,rax
+  44f446:	e8 d9 ec fb ff       	call   40e124 <CAutoString::~CAutoString()>
+  44f44b:	48 89 d8             	mov    rax,rbx
+  44f44e:	48 89 c7             	mov    rdi,rax
+  44f451:	e8 ca 53 fb ff       	call   404820 <_Unwind_Resume@plt>
+  44f456:	48 83 c4 28          	add    rsp,0x28
+  44f45a:	5b                   	pop    rbx
+  44f45b:	5d                   	pop    rbp

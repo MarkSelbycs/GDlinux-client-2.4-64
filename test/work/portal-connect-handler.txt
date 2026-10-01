@@ -1,0 +1,73 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000424ce4 <CPortalServer::Connect(char const*, CXMLOpt&)>:
+  424ce4:	55                   	push   rbp
+  424ce5:	48 89 e5             	mov    rbp,rsp
+  424ce8:	53                   	push   rbx
+  424ce9:	48 83 ec 68          	sub    rsp,0x68
+  424ced:	48 89 7d a8          	mov    QWORD PTR [rbp-0x58],rdi
+  424cf1:	48 89 75 a0          	mov    QWORD PTR [rbp-0x60],rsi
+  424cf5:	48 89 55 98          	mov    QWORD PTR [rbp-0x68],rdx
+  424cf9:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424cfd:	48 89 c7             	mov    rdi,rax
+  424d00:	e8 07 40 00 00       	call   428d0c <ESurfingSvr::Task::Task()>
+  424d05:	c7 45 b0 06 00 00 00 	mov    DWORD PTR [rbp-0x50],0x6
+  424d0c:	c7 45 b8 02 00 00 00 	mov    DWORD PTR [rbp-0x48],0x2
+  424d13:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424d17:	48 8b 4d 98          	mov    rcx,QWORD PTR [rbp-0x68]
+  424d1b:	ba 00 00 00 00       	mov    edx,0x0
+  424d20:	48 89 ce             	mov    rsi,rcx
+  424d23:	48 89 c7             	mov    rdi,rax
+  424d26:	e8 25 aa 02 00       	call   44f750 <CXMLOpt::GetDoc(char const*)>
+  424d2b:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  424d2f:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d33:	48 89 d6             	mov    rsi,rdx
+  424d36:	48 89 c7             	mov    rdi,rax
+  424d39:	e8 5e 93 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  424d3e:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d42:	48 8d 55 b0          	lea    rdx,[rbp-0x50]
+  424d46:	48 83 c2 10          	add    rdx,0x10
+  424d4a:	48 89 c6             	mov    rsi,rax
+  424d4d:	48 89 d7             	mov    rdi,rdx
+  424d50:	e8 e9 93 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  424d55:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d59:	48 89 c7             	mov    rdi,rax
+  424d5c:	e8 c3 93 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424d61:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424d65:	48 89 c7             	mov    rdi,rax
+  424d68:	e8 83 f3 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424d6d:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424d71:	48 8d 90 d8 01 00 00 	lea    rdx,[rax+0x1d8]
+  424d78:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424d7c:	48 89 c6             	mov    rsi,rax
+  424d7f:	48 89 d7             	mov    rdi,rdx
+  424d82:	e8 8f ca fe ff       	call   411816 <ESurfingSvr::CTaskMgr::AddTask(ESurfingSvr::Task&)>
+  424d87:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424d8b:	48 89 c7             	mov    rdi,rax
+  424d8e:	e8 a9 d9 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424d93:	eb 3c                	jmp    424dd1 <CPortalServer::Connect(char const*, CXMLOpt&)+0xed>
+  424d95:	48 89 c3             	mov    rbx,rax
+  424d98:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d9c:	48 89 c7             	mov    rdi,rax
+  424d9f:	e8 80 93 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424da4:	eb 03                	jmp    424da9 <CPortalServer::Connect(char const*, CXMLOpt&)+0xc5>
+  424da6:	48 89 c3             	mov    rbx,rax
+  424da9:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424dad:	48 89 c7             	mov    rdi,rax
+  424db0:	e8 3b f3 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424db5:	eb 03                	jmp    424dba <CPortalServer::Connect(char const*, CXMLOpt&)+0xd6>
+  424db7:	48 89 c3             	mov    rbx,rax
+  424dba:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424dbe:	48 89 c7             	mov    rdi,rax
+  424dc1:	e8 76 d9 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424dc6:	48 89 d8             	mov    rax,rbx
+  424dc9:	48 89 c7             	mov    rdi,rax
+  424dcc:	e8 4f fa fd ff       	call   404820 <_Unwind_Resume@plt>
+  424dd1:	48 83 c4 68          	add    rsp,0x68
+  424dd5:	5b                   	pop    rbx
+  424dd6:	5d                   	pop    rbp
+  424dd7:	c3                   	ret

@@ -1,0 +1,359 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000040f8d8 <CServer::CreateServer(char const*)>:
+  40f8d8:	55                   	push   rbp
+  40f8d9:	48 89 e5             	mov    rbp,rsp
+  40f8dc:	48 83 ec 10          	sub    rsp,0x10
+  40f8e0:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  40f8e4:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  40f8e8:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  40f8ec:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  40f8f0:	48 8d 48 10          	lea    rcx,[rax+0x10]
+  40f8f4:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  40f8f8:	48 89 c6             	mov    rsi,rax
+  40f8fb:	48 89 cf             	mov    rdi,rcx
+  40f8fe:	e8 6f f6 03 00       	call   44ef72 <CPipeService::CreateNamedPipeInServer(char const*, IPipeCallback*)>
+  40f903:	48 98                	cdqe
+  40f905:	c9                   	leave
+  40f906:	c3                   	ret
+  40f907:	90                   	nop
+
+000000000040f908 <CServer::ConnectToServer(char const*)>:
+  40f908:	55                   	push   rbp
+  40f909:	48 89 e5             	mov    rbp,rsp
+  40f90c:	48 83 ec 20          	sub    rsp,0x20
+  40f910:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  40f914:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+  40f918:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  40f91c:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  40f920:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  40f924:	48 89 c6             	mov    rsi,rax
+  40f927:	48 89 d7             	mov    rdi,rdx
+  40f92a:	e8 d9 f6 03 00       	call   44f008 <CPipeService::OpenNamePipeServer(char const*)>
+  40f92f:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  40f932:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  40f935:	c9                   	leave
+  40f936:	c3                   	ret
+  40f937:	90                   	nop
+
+000000000040f938 <CServer::DoWork()>:
+  40f938:	55                   	push   rbp
+  40f939:	48 89 e5             	mov    rbp,rsp
+  40f93c:	48 83 ec 20          	sub    rsp,0x20
+  40f940:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  40f944:	e8 7b 05 00 00       	call   40fec4 <CLog::GetInst()>
+  40f949:	ba 05 03 45 00       	mov    edx,0x450305
+  40f94e:	be 03 00 00 00       	mov    esi,0x3
+  40f953:	48 89 c7             	mov    rdi,rax
+  40f956:	b8 00 00 00 00       	mov    eax,0x0
+  40f95b:	e8 72 05 00 00       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  40f960:	c7 45 fc 01 00 00 00 	mov    DWORD PTR [rbp-0x4],0x1
+  40f967:	eb 24                	jmp    40f98d <CServer::DoWork()+0x55>
+  40f969:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  40f96d:	48 83 c0 10          	add    rax,0x10
+  40f971:	48 89 c7             	mov    rdi,rax
+  40f974:	e8 ef f7 03 00       	call   44f168 <CPipeService::LoopMsg()>
+  40f979:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  40f97c:	8b 55 fc             	mov    edx,DWORD PTR [rbp-0x4]
+  40f97f:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  40f983:	89 d6                	mov    esi,edx
+  40f985:	48 89 c7             	mov    rdi,rax
+  40f988:	e8 ed 03 00 00       	call   40fd7a <CServer::ServerStatus(int)>
+  40f98d:	83 7d fc 01          	cmp    DWORD PTR [rbp-0x4],0x1
+  40f991:	74 d6                	je     40f969 <CServer::DoWork()+0x31>
+  40f993:	b8 00 00 00 00       	mov    eax,0x0
+  40f998:	c9                   	leave
+  40f999:	c3                   	ret
+
+000000000040f99a <CServer::DoWorkOnPipe(CAutoString)>:
+  40f99a:	55                   	push   rbp
+  40f99b:	48 89 e5             	mov    rbp,rsp
+  40f99e:	41 54                	push   r12
+  40f9a0:	53                   	push   rbx
+  40f9a1:	48 81 ec e0 00 00 00 	sub    rsp,0xe0
+  40f9a8:	48 89 bd 18 ff ff ff 	mov    QWORD PTR [rbp-0xe8],rdi
+  40f9af:	48 89 b5 10 ff ff ff 	mov    QWORD PTR [rbp-0xf0],rsi
+  40f9b6:	48 8b 85 10 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf0]
+  40f9bd:	48 89 c7             	mov    rdi,rax
+  40f9c0:	e8 43 e9 ff ff       	call   40e308 <CAutoString::operator char const*()>
+  40f9c5:	48 89 c2             	mov    rdx,rax
+  40f9c8:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  40f9cf:	48 89 d6             	mov    rsi,rdx
+  40f9d2:	48 89 c7             	mov    rdi,rax
+  40f9d5:	e8 b4 fa 03 00       	call   44f48e <CXMLOpt::CXMLOpt(char const*)>
+  40f9da:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  40f9e1:	48 89 c7             	mov    rdi,rax
+  40f9e4:	e8 19 3b 03 00       	call   443502 <CMarkup::IsWellFormed()>
+  40f9e9:	83 f0 01             	xor    eax,0x1
+  40f9ec:	84 c0                	test   al,al
+  40f9ee:	74 0a                	je     40f9fa <CServer::DoWorkOnPipe(CAutoString)+0x60>
+  40f9f0:	bb 00 00 00 00       	mov    ebx,0x0
+  40f9f5:	e9 c5 01 00 00       	jmp    40fbbf <CServer::DoWorkOnPipe(CAutoString)+0x225>
+  40f9fa:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  40f9fe:	48 8d 8d 20 ff ff ff 	lea    rcx,[rbp-0xe0]
+  40fa05:	ba 0c 03 45 00       	mov    edx,0x45030c
+  40fa0a:	48 89 ce             	mov    rsi,rcx
+  40fa0d:	48 89 c7             	mov    rdi,rax
+  40fa10:	e8 e9 fb 03 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  40fa15:	48 8d 55 c0          	lea    rdx,[rbp-0x40]
+  40fa19:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  40fa1d:	48 89 d6             	mov    rsi,rdx
+  40fa20:	48 89 c7             	mov    rdi,rax
+  40fa23:	e8 74 e6 ff ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  40fa28:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  40fa2c:	48 89 c7             	mov    rdi,rax
+  40fa2f:	e8 bc 46 ff ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  40fa34:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  40fa38:	48 8d 8d 20 ff ff ff 	lea    rcx,[rbp-0xe0]
+  40fa3f:	ba 10 03 45 00       	mov    edx,0x450310
+  40fa44:	48 89 ce             	mov    rsi,rcx
+  40fa47:	48 89 c7             	mov    rdi,rax
+  40fa4a:	e8 af fb 03 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  40fa4f:	48 8d 55 d0          	lea    rdx,[rbp-0x30]
+  40fa53:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  40fa57:	48 89 d6             	mov    rsi,rdx
+  40fa5a:	48 89 c7             	mov    rdi,rax
+  40fa5d:	e8 3a e6 ff ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  40fa62:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  40fa66:	48 89 c7             	mov    rdi,rax
+  40fa69:	e8 82 46 ff ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  40fa6e:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  40fa72:	be 14 03 45 00       	mov    esi,0x450314
+  40fa77:	48 89 c7             	mov    rdi,rax
+  40fa7a:	e8 a7 03 00 00       	call   40fe26 <CAutoString::operator!=(char const*)>
+  40fa7f:	84 c0                	test   al,al
+  40fa81:	74 2c                	je     40faaf <CServer::DoWorkOnPipe(CAutoString)+0x115>
+  40fa83:	48 8b 85 10 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf0]
+  40fa8a:	48 89 c7             	mov    rdi,rax
+  40fa8d:	e8 76 e8 ff ff       	call   40e308 <CAutoString::operator char const*()>
+  40fa92:	48 89 c3             	mov    rbx,rax
+  40fa95:	e8 2a 04 00 00       	call   40fec4 <CLog::GetInst()>
+  40fa9a:	48 89 da             	mov    rdx,rbx
+  40fa9d:	be 03 00 00 00       	mov    esi,0x3
+  40faa2:	48 89 c7             	mov    rdi,rax
+  40faa5:	b8 00 00 00 00       	mov    eax,0x0
+  40faaa:	e8 23 04 00 00       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  40faaf:	48 8b 85 18 ff ff ff 	mov    rax,QWORD PTR [rbp-0xe8]
+  40fab6:	48 05 f8 00 00 00    	add    rax,0xf8
+  40fabc:	48 89 c7             	mov    rdi,rax
+  40fabf:	e8 f4 06 00 00       	call   4101b8 <std::map<CAutoString, IBusiness*, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, IBusiness*> > >::begin()>
+  40fac4:	48 89 45 90          	mov    QWORD PTR [rbp-0x70],rax
+  40fac8:	e9 a1 00 00 00       	jmp    40fb6e <CServer::DoWorkOnPipe(CAutoString)+0x1d4>
+  40facd:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  40fad1:	48 89 c7             	mov    rdi,rax
+  40fad4:	e8 6b 07 00 00       	call   410244 <std::_Rb_tree_iterator<std::pair<CAutoString const, IBusiness*> >::operator->() const>
+  40fad9:	48 89 c2             	mov    rdx,rax
+  40fadc:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  40fae0:	48 89 d6             	mov    rsi,rdx
+  40fae3:	48 89 c7             	mov    rdi,rax
+  40fae6:	e8 75 e5 ff ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  40faeb:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  40faef:	48 89 c7             	mov    rdi,rax
+  40faf2:	e8 11 e8 ff ff       	call   40e308 <CAutoString::operator char const*()>
+  40faf7:	48 89 c2             	mov    rdx,rax
+  40fafa:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  40fafe:	48 89 d6             	mov    rsi,rdx
+  40fb01:	48 89 c7             	mov    rdi,rax
+  40fb04:	e8 57 e7 ff ff       	call   40e260 <CAutoString::operator==(char const*)>
+  40fb09:	84 c0                	test   al,al
+  40fb0b:	74 39                	je     40fb46 <CServer::DoWorkOnPipe(CAutoString)+0x1ac>
+  40fb0d:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  40fb11:	48 89 c7             	mov    rdi,rax
+  40fb14:	e8 2b 07 00 00       	call   410244 <std::_Rb_tree_iterator<std::pair<CAutoString const, IBusiness*> >::operator->() const>
+  40fb19:	48 8b 58 10          	mov    rbx,QWORD PTR [rax+0x10]
+  40fb1d:	48 8b 03             	mov    rax,QWORD PTR [rbx]
+  40fb20:	48 83 c0 08          	add    rax,0x8
+  40fb24:	4c 8b 20             	mov    r12,QWORD PTR [rax]
+  40fb27:	48 8b 85 10 ff ff ff 	mov    rax,QWORD PTR [rbp-0xf0]
+  40fb2e:	48 89 c7             	mov    rdi,rax
+  40fb31:	e8 d2 e7 ff ff       	call   40e308 <CAutoString::operator char const*()>
+  40fb36:	48 89 c6             	mov    rsi,rax
+  40fb39:	48 89 df             	mov    rdi,rbx
+  40fb3c:	41 ff d4             	call   r12
+  40fb3f:	bb 00 00 00 00       	mov    ebx,0x0
+  40fb44:	eb 05                	jmp    40fb4b <CServer::DoWorkOnPipe(CAutoString)+0x1b1>
+  40fb46:	bb 01 00 00 00       	mov    ebx,0x1
+  40fb4b:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  40fb4f:	48 89 c7             	mov    rdi,rax
+  40fb52:	e8 cd e5 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fb57:	83 fb 01             	cmp    ebx,0x1
+  40fb5a:	75 46                	jne    40fba2 <CServer::DoWorkOnPipe(CAutoString)+0x208>
+  40fb5c:	90                   	nop
+  40fb5d:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  40fb61:	be 00 00 00 00       	mov    esi,0x0
+  40fb66:	48 89 c7             	mov    rdi,rax
+  40fb69:	e8 a0 06 00 00       	call   41020e <std::_Rb_tree_iterator<std::pair<CAutoString const, IBusiness*> >::operator++(int)>
+  40fb6e:	48 8b 85 18 ff ff ff 	mov    rax,QWORD PTR [rbp-0xe8]
+  40fb75:	48 05 f8 00 00 00    	add    rax,0xf8
+  40fb7b:	48 89 c7             	mov    rdi,rax
+  40fb7e:	e8 4f 06 00 00       	call   4101d2 <std::map<CAutoString, IBusiness*, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, IBusiness*> > >::end()>
+  40fb83:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  40fb87:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  40fb8b:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  40fb8f:	48 89 d6             	mov    rsi,rdx
+  40fb92:	48 89 c7             	mov    rdi,rax
+  40fb95:	e8 52 06 00 00       	call   4101ec <std::_Rb_tree_iterator<std::pair<CAutoString const, IBusiness*> >::operator!=(std::_Rb_tree_iterator<std::pair<CAutoString const, IBusiness*> > const&) const>
+  40fb9a:	84 c0                	test   al,al
+  40fb9c:	0f 85 2b ff ff ff    	jne    40facd <CServer::DoWorkOnPipe(CAutoString)+0x133>
+  40fba2:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  40fba6:	48 89 c7             	mov    rdi,rax
+  40fba9:	e8 76 e5 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fbae:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  40fbb2:	48 89 c7             	mov    rdi,rax
+  40fbb5:	e8 6a e5 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fbba:	bb 01 00 00 00       	mov    ebx,0x1
+  40fbbf:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  40fbc6:	48 89 c7             	mov    rdi,rax
+  40fbc9:	e8 20 f9 03 00       	call   44f4ee <CXMLOpt::~CXMLOpt()>
+  40fbce:	83 fb 01             	cmp    ebx,0x1
+  40fbd1:	74 02                	je     40fbd5 <CServer::DoWorkOnPipe(CAutoString)+0x23b>
+  40fbd3:	eb 75                	jmp    40fc4a <CServer::DoWorkOnPipe(CAutoString)+0x2b0>
+  40fbd5:	90                   	nop
+  40fbd6:	eb 72                	jmp    40fc4a <CServer::DoWorkOnPipe(CAutoString)+0x2b0>
+  40fbd8:	48 89 c3             	mov    rbx,rax
+  40fbdb:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  40fbdf:	48 89 c7             	mov    rdi,rax
+  40fbe2:	e8 09 45 ff ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  40fbe7:	eb 47                	jmp    40fc30 <CServer::DoWorkOnPipe(CAutoString)+0x296>
+  40fbe9:	48 89 c3             	mov    rbx,rax
+  40fbec:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  40fbf0:	48 89 c7             	mov    rdi,rax
+  40fbf3:	e8 f8 44 ff ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  40fbf8:	eb 25                	jmp    40fc1f <CServer::DoWorkOnPipe(CAutoString)+0x285>
+  40fbfa:	48 89 c3             	mov    rbx,rax
+  40fbfd:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  40fc01:	48 89 c7             	mov    rdi,rax
+  40fc04:	e8 1b e5 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fc09:	eb 03                	jmp    40fc0e <CServer::DoWorkOnPipe(CAutoString)+0x274>
+  40fc0b:	48 89 c3             	mov    rbx,rax
+  40fc0e:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  40fc12:	48 89 c7             	mov    rdi,rax
+  40fc15:	e8 0a e5 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fc1a:	eb 03                	jmp    40fc1f <CServer::DoWorkOnPipe(CAutoString)+0x285>
+  40fc1c:	48 89 c3             	mov    rbx,rax
+  40fc1f:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  40fc23:	48 89 c7             	mov    rdi,rax
+  40fc26:	e8 f9 e4 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fc2b:	eb 03                	jmp    40fc30 <CServer::DoWorkOnPipe(CAutoString)+0x296>
+  40fc2d:	48 89 c3             	mov    rbx,rax
+  40fc30:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  40fc37:	48 89 c7             	mov    rdi,rax
+  40fc3a:	e8 af f8 03 00       	call   44f4ee <CXMLOpt::~CXMLOpt()>
+  40fc3f:	48 89 d8             	mov    rax,rbx
+  40fc42:	48 89 c7             	mov    rdi,rax
+  40fc45:	e8 d6 4b ff ff       	call   404820 <_Unwind_Resume@plt>
+  40fc4a:	48 81 c4 e0 00 00 00 	add    rsp,0xe0
+  40fc51:	5b                   	pop    rbx
+  40fc52:	41 5c                	pop    r12
+  40fc54:	5d                   	pop    rbp
+  40fc55:	c3                   	ret
+
+000000000040fc56 <CServer::RegisterBusiness(char const*, IBusiness*)>:
+  40fc56:	55                   	push   rbp
+  40fc57:	48 89 e5             	mov    rbp,rsp
+  40fc5a:	53                   	push   rbx
+  40fc5b:	48 83 ec 38          	sub    rsp,0x38
+  40fc5f:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  40fc63:	48 89 75 d0          	mov    QWORD PTR [rbp-0x30],rsi
+  40fc67:	48 89 55 c8          	mov    QWORD PTR [rbp-0x38],rdx
+  40fc6b:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  40fc6f:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fc73:	48 89 d6             	mov    rsi,rdx
+  40fc76:	48 89 c7             	mov    rdi,rax
+  40fc79:	e8 a6 e3 ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  40fc7e:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  40fc82:	48 8d 90 f8 00 00 00 	lea    rdx,[rax+0xf8]
+  40fc89:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fc8d:	48 89 c6             	mov    rsi,rax
+  40fc90:	48 89 d7             	mov    rdi,rdx
+  40fc93:	e8 dc 05 00 00       	call   410274 <std::map<CAutoString, IBusiness*, std::less<CAutoString>, std::allocator<std::pair<CAutoString const, IBusiness*> > >::operator[](CAutoString&&)>
+  40fc98:	48 8b 55 c8          	mov    rdx,QWORD PTR [rbp-0x38]
+  40fc9c:	48 89 10             	mov    QWORD PTR [rax],rdx
+  40fc9f:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fca3:	48 89 c7             	mov    rdi,rax
+  40fca6:	e8 79 e4 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fcab:	eb 1a                	jmp    40fcc7 <CServer::RegisterBusiness(char const*, IBusiness*)+0x71>
+  40fcad:	48 89 c3             	mov    rbx,rax
+  40fcb0:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fcb4:	48 89 c7             	mov    rdi,rax
+  40fcb7:	e8 68 e4 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fcbc:	48 89 d8             	mov    rax,rbx
+  40fcbf:	48 89 c7             	mov    rdi,rax
+  40fcc2:	e8 59 4b ff ff       	call   404820 <_Unwind_Resume@plt>
+  40fcc7:	48 83 c4 38          	add    rsp,0x38
+  40fccb:	5b                   	pop    rbx
+  40fccc:	5d                   	pop    rbp
+  40fccd:	c3                   	ret
+
+000000000040fcce <non-virtual thunk to CServer::RegisterBusiness(char const*, IBusiness*)>:
+  40fcce:	48 83 ef 08          	sub    rdi,0x8
+  40fcd2:	eb 82                	jmp    40fc56 <CServer::RegisterBusiness(char const*, IBusiness*)>
+
+000000000040fcd4 <CServer::PostMessage(char const*)>:
+  40fcd4:	55                   	push   rbp
+  40fcd5:	48 89 e5             	mov    rbp,rsp
+  40fcd8:	53                   	push   rbx
+  40fcd9:	48 83 ec 28          	sub    rsp,0x28
+  40fcdd:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  40fce1:	48 89 75 d0          	mov    QWORD PTR [rbp-0x30],rsi
+  40fce5:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  40fce9:	48 8d 50 10          	lea    rdx,[rax+0x10]
+  40fced:	48 8b 45 d0          	mov    rax,QWORD PTR [rbp-0x30]
+  40fcf1:	48 89 c6             	mov    rsi,rax
+  40fcf4:	48 89 d7             	mov    rdi,rdx
+  40fcf7:	e8 f6 f5 03 00       	call   44f2f2 <CPipeService::WritePipe(char const*)>
+  40fcfc:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  40fd00:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fd04:	48 89 d6             	mov    rsi,rdx
+  40fd07:	48 89 c7             	mov    rdi,rax
+  40fd0a:	e8 15 e3 ff ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  40fd0f:	e8 4e a5 01 00       	call   42a262 <CClientCommand::GetInst()>
+  40fd14:	48 8d 50 40          	lea    rdx,[rax+0x40]
+  40fd18:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fd1c:	48 89 c6             	mov    rsi,rax
+  40fd1f:	48 89 d7             	mov    rdi,rdx
+  40fd22:	e8 37 67 02 00       	call   43645e <CMsgEngine::AddMessage(CAutoString)>
+  40fd27:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fd2b:	48 89 c7             	mov    rdi,rax
+  40fd2e:	e8 f1 e3 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fd33:	eb 1a                	jmp    40fd4f <CServer::PostMessage(char const*)+0x7b>
+  40fd35:	48 89 c3             	mov    rbx,rax
+  40fd38:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  40fd3c:	48 89 c7             	mov    rdi,rax
+  40fd3f:	e8 e0 e3 ff ff       	call   40e124 <CAutoString::~CAutoString()>
+  40fd44:	48 89 d8             	mov    rax,rbx
+  40fd47:	48 89 c7             	mov    rdi,rax
+  40fd4a:	e8 d1 4a ff ff       	call   404820 <_Unwind_Resume@plt>
+  40fd4f:	48 83 c4 28          	add    rsp,0x28
+  40fd53:	5b                   	pop    rbx
+  40fd54:	5d                   	pop    rbp
+  40fd55:	c3                   	ret
+
+000000000040fd56 <non-virtual thunk to CServer::PostMessage(char const*)>:
+  40fd56:	48 83 ef 08          	sub    rdi,0x8
+  40fd5a:	e9 75 ff ff ff       	jmp    40fcd4 <CServer::PostMessage(char const*)>
+  40fd5f:	90                   	nop
+
+000000000040fd60 <CServer::GetInfoCenter()>:
+  40fd60:	55                   	push   rbp
+  40fd61:	48 89 e5             	mov    rbp,rsp
+  40fd64:	48 83 ec 10          	sub    rsp,0x10
+  40fd68:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  40fd6c:	e8 b5 d8 ff ff       	call   40d626 <CInfoCenter::GetInst()>
+  40fd71:	c9                   	leave
+  40fd72:	c3                   	ret
+
+000000000040fd73 <non-virtual thunk to CServer::GetInfoCenter()>:
+  40fd73:	48 83 ef 08          	sub    rdi,0x8
+  40fd77:	eb e7                	jmp    40fd60 <CServer::GetInfoCenter()>
+  40fd79:	90                   	nop
+
+000000000040fd7a <CServer::ServerStatus(int)>:
+  40fd7a:	55                   	push   rbp
+  40fd7b:	48 89 e5             	mov    rbp,rsp
+  40fd7e:	48                   	rex.W
+  40fd7f:	83                   	.byte 0x83

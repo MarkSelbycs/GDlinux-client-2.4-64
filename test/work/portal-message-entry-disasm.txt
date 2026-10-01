@@ -1,0 +1,524 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000424940 <CPortalServer::InitOpcodeFun()+0x23a>:
+  424940:	c7                   	(bad)
+  424941:	e8 da fe fd ff       	call   404820 <_Unwind_Resume@plt>
+  424946:	48 83 c4 78          	add    rsp,0x78
+  42494a:	5b                   	pop    rbx
+  42494b:	5d                   	pop    rbp
+  42494c:	c3                   	ret
+  42494d:	90                   	nop
+
+000000000042494e <CPortalServer::Start(char const*, CXMLOpt&)>:
+  42494e:	55                   	push   rbp
+  42494f:	48 89 e5             	mov    rbp,rsp
+  424952:	41 54                	push   r12
+  424954:	53                   	push   rbx
+  424955:	48 83 ec 60          	sub    rsp,0x60
+  424959:	48 89 7d a8          	mov    QWORD PTR [rbp-0x58],rdi
+  42495d:	48 89 75 a0          	mov    QWORD PTR [rbp-0x60],rsi
+  424961:	48 89 55 98          	mov    QWORD PTR [rbp-0x68],rdx
+  424965:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424969:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424970:	48 85 c0             	test   rax,rax
+  424973:	0f 85 81 00 00 00    	jne    4249fa <CPortalServer::Start(char const*, CXMLOpt&)+0xac>
+  424979:	bf c0 01 00 00       	mov    edi,0x1c0
+  42497e:	e8 6d fe fd ff       	call   4047f0 <operator new(unsigned long)@plt>
+  424983:	48 89 c3             	mov    rbx,rax
+  424986:	48 89 df             	mov    rdi,rbx
+  424989:	e8 c8 f1 fe ff       	call   413b56 <CPortalConn::CPortalConn()>
+  42498e:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424992:	48 89 98 b0 00 00 00 	mov    QWORD PTR [rax+0xb0],rbx
+  424999:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  42499d:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  4249a4:	48 89 c7             	mov    rdi,rax
+  4249a7:	e8 0c f7 fe ff       	call   4140b8 <CPortalConn::Init()>
+  4249ac:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4249b0:	48 83 c0 40          	add    rax,0x40
+  4249b4:	be 01 00 00 00       	mov    esi,0x1
+  4249b9:	48 89 c7             	mov    rdi,rax
+  4249bc:	e8 7d 09 01 00       	call   43533e <CTableTimer::DispatchTask(bool)>
+  4249c1:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4249c5:	be 01 00 00 00       	mov    esi,0x1
+  4249ca:	48 89 c7             	mov    rdi,rax
+  4249cd:	e8 c4 0c 00 00       	call   425696 <CPortalServer::Work(int)>
+  4249d2:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4249d6:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  4249d9:	48 83 c0 38          	add    rax,0x38
+  4249dd:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  4249e0:	48 8b 7d a8          	mov    rdi,QWORD PTR [rbp-0x58]
+  4249e4:	b9 18 28 45 00       	mov    ecx,0x452818
+  4249e9:	ba 19 28 45 00       	mov    edx,0x452819
+  4249ee:	be a0 27 45 00       	mov    esi,0x4527a0
+  4249f3:	ff d0                	call   rax
+  4249f5:	e9 e1 02 00 00       	jmp    424cdb <CPortalServer::Start(char const*, CXMLOpt&)+0x38d>
+  4249fa:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4249fe:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424a05:	48 05 90 01 00 00    	add    rax,0x190
+  424a0b:	48 89 c7             	mov    rdi,rax
+  424a0e:	e8 13 93 ff ff       	call   41dd26 <HashBalance::Size()>
+  424a13:	85 c0                	test   eax,eax
+  424a15:	75 2b                	jne    424a42 <CPortalServer::Start(char const*, CXMLOpt&)+0xf4>
+  424a17:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424a1b:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424a22:	48 8b 80 80 01 00 00 	mov    rax,QWORD PTR [rax+0x180]
+  424a29:	48 05 88 02 00 00    	add    rax,0x288
+  424a2f:	48 89 c7             	mov    rdi,rax
+  424a32:	e8 b3 9b fe ff       	call   40e5ea <CAutoString::GetLength() const>
+  424a37:	85 c0                	test   eax,eax
+  424a39:	74 07                	je     424a42 <CPortalServer::Start(char const*, CXMLOpt&)+0xf4>
+  424a3b:	b8 01 00 00 00       	mov    eax,0x1
+  424a40:	eb 05                	jmp    424a47 <CPortalServer::Start(char const*, CXMLOpt&)+0xf9>
+  424a42:	b8 00 00 00 00       	mov    eax,0x0
+  424a47:	84 c0                	test   al,al
+  424a49:	74 7b                	je     424ac6 <CPortalServer::Start(char const*, CXMLOpt&)+0x178>
+  424a4b:	48 8d 45 bf          	lea    rax,[rbp-0x41]
+  424a4f:	48 89 c7             	mov    rdi,rax
+  424a52:	e8 19 fd fd ff       	call   404770 <std::allocator<char>::allocator()@plt>
+  424a57:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424a5b:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424a62:	48 8b 80 80 01 00 00 	mov    rax,QWORD PTR [rax+0x180]
+  424a69:	48 05 88 02 00 00    	add    rax,0x288
+  424a6f:	48 89 c7             	mov    rdi,rax
+  424a72:	e8 91 98 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  424a77:	48 89 c1             	mov    rcx,rax
+  424a7a:	48 8d 55 bf          	lea    rdx,[rbp-0x41]
+  424a7e:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424a82:	48 89 ce             	mov    rsi,rcx
+  424a85:	48 89 c7             	mov    rdi,rax
+  424a88:	e8 33 f8 fd ff       	call   4042c0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+  424a8d:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424a91:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424a98:	48 8d 90 90 01 00 00 	lea    rdx,[rax+0x190]
+  424a9f:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424aa3:	48 89 c6             	mov    rsi,rax
+  424aa6:	48 89 d7             	mov    rdi,rdx
+  424aa9:	e8 92 92 ff ff       	call   41dd40 <HashBalance::SetIpList(std::string const&)>
+  424aae:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424ab2:	48 89 c7             	mov    rdi,rax
+  424ab5:	e8 36 f6 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424aba:	48 8d 45 bf          	lea    rax,[rbp-0x41]
+  424abe:	48 89 c7             	mov    rdi,rax
+  424ac1:	e8 5a fa fd ff       	call   404520 <std::allocator<char>::~allocator()@plt>
+  424ac6:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424aca:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424ad1:	48 05 a8 01 00 00    	add    rax,0x1a8
+  424ad7:	48 89 c7             	mov    rdi,rax
+  424ada:	e8 47 92 ff ff       	call   41dd26 <HashBalance::Size()>
+  424adf:	85 c0                	test   eax,eax
+  424ae1:	75 2b                	jne    424b0e <CPortalServer::Start(char const*, CXMLOpt&)+0x1c0>
+  424ae3:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424ae7:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424aee:	48 8b 80 80 01 00 00 	mov    rax,QWORD PTR [rax+0x180]
+  424af5:	48 05 98 02 00 00    	add    rax,0x298
+  424afb:	48 89 c7             	mov    rdi,rax
+  424afe:	e8 e7 9a fe ff       	call   40e5ea <CAutoString::GetLength() const>
+  424b03:	85 c0                	test   eax,eax
+  424b05:	74 07                	je     424b0e <CPortalServer::Start(char const*, CXMLOpt&)+0x1c0>
+  424b07:	b8 01 00 00 00       	mov    eax,0x1
+  424b0c:	eb 05                	jmp    424b13 <CPortalServer::Start(char const*, CXMLOpt&)+0x1c5>
+  424b0e:	b8 00 00 00 00       	mov    eax,0x0
+  424b13:	84 c0                	test   al,al
+  424b15:	74 7b                	je     424b92 <CPortalServer::Start(char const*, CXMLOpt&)+0x244>
+  424b17:	48 8d 45 cf          	lea    rax,[rbp-0x31]
+  424b1b:	48 89 c7             	mov    rdi,rax
+  424b1e:	e8 4d fc fd ff       	call   404770 <std::allocator<char>::allocator()@plt>
+  424b23:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424b27:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424b2e:	48 8b 80 80 01 00 00 	mov    rax,QWORD PTR [rax+0x180]
+  424b35:	48 05 98 02 00 00    	add    rax,0x298
+  424b3b:	48 89 c7             	mov    rdi,rax
+  424b3e:	e8 c5 97 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  424b43:	48 89 c1             	mov    rcx,rax
+  424b46:	48 8d 55 cf          	lea    rdx,[rbp-0x31]
+  424b4a:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  424b4e:	48 89 ce             	mov    rsi,rcx
+  424b51:	48 89 c7             	mov    rdi,rax
+  424b54:	e8 67 f7 fd ff       	call   4042c0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@plt>
+  424b59:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424b5d:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424b64:	48 8d 90 a8 01 00 00 	lea    rdx,[rax+0x1a8]
+  424b6b:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  424b6f:	48 89 c6             	mov    rsi,rax
+  424b72:	48 89 d7             	mov    rdi,rdx
+  424b75:	e8 c6 91 ff ff       	call   41dd40 <HashBalance::SetIpList(std::string const&)>
+  424b7a:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  424b7e:	48 89 c7             	mov    rdi,rax
+  424b81:	e8 6a f5 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424b86:	48 8d 45 cf          	lea    rax,[rbp-0x31]
+  424b8a:	48 89 c7             	mov    rdi,rax
+  424b8d:	e8 8e f9 fd ff       	call   404520 <std::allocator<char>::~allocator()@plt>
+  424b92:	e8 8f 8a fe ff       	call   40d626 <CInfoCenter::GetInst()>
+  424b97:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  424b9b:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  424b9f:	48 89 c7             	mov    rdi,rax
+  424ba2:	e8 d3 92 fe ff       	call   40de7a <CInfoCenter::SynchroGlobalValue()>
+  424ba7:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424bab:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424bb2:	48 89 c7             	mov    rdi,rax
+  424bb5:	e8 90 41 00 00       	call   428d4a <CPortalConn::GetNetState()>
+  424bba:	89 45 e4             	mov    DWORD PTR [rbp-0x1c],eax
+  424bbd:	83 7d e4 01          	cmp    DWORD PTR [rbp-0x1c],0x1
+  424bc1:	74 1e                	je     424be1 <CPortalServer::Start(char const*, CXMLOpt&)+0x293>
+  424bc3:	83 7d e4 02          	cmp    DWORD PTR [rbp-0x1c],0x2
+  424bc7:	74 18                	je     424be1 <CPortalServer::Start(char const*, CXMLOpt&)+0x293>
+  424bc9:	83 7d e4 03          	cmp    DWORD PTR [rbp-0x1c],0x3
+  424bcd:	74 12                	je     424be1 <CPortalServer::Start(char const*, CXMLOpt&)+0x293>
+  424bcf:	83 7d e4 0b          	cmp    DWORD PTR [rbp-0x1c],0xb
+  424bd3:	74 0c                	je     424be1 <CPortalServer::Start(char const*, CXMLOpt&)+0x293>
+  424bd5:	83 7d e4 0c          	cmp    DWORD PTR [rbp-0x1c],0xc
+  424bd9:	74 06                	je     424be1 <CPortalServer::Start(char const*, CXMLOpt&)+0x293>
+  424bdb:	83 7d e4 0d          	cmp    DWORD PTR [rbp-0x1c],0xd
+  424bdf:	75 5e                	jne    424c3f <CPortalServer::Start(char const*, CXMLOpt&)+0x2f1>
+  424be1:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424be5:	be 18 28 45 00       	mov    esi,0x452818
+  424bea:	48 89 c7             	mov    rdi,rax
+  424bed:	e8 32 94 fe ff       	call   40e024 <CAutoString::CAutoString(char const*)>
+  424bf2:	e8 a5 f6 ff ff       	call   42429c <CPortalServer::GetInst()>
+  424bf7:	48 8d 55 d0          	lea    rdx,[rbp-0x30]
+  424bfb:	49 89 d1             	mov    r9,rdx
+  424bfe:	41 b8 00 00 00 00    	mov    r8d,0x0
+  424c04:	b9 1f 00 00 00       	mov    ecx,0x1f
+  424c09:	ba 00 00 00 00       	mov    edx,0x0
+  424c0e:	be 33 00 00 00       	mov    esi,0x33
+  424c13:	48 89 c7             	mov    rdi,rax
+  424c16:	e8 cd 06 00 00       	call   4252e8 <CPortalServer::PostNetStateMessage(INetConn::ETYPE, INetConn::ESTATE, INetConn::ESTATE, int, CAutoString)>
+  424c1b:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424c1f:	48 89 c7             	mov    rdi,rax
+  424c22:	e8 fd 94 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424c27:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424c2b:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  424c32:	48 89 c7             	mov    rdi,rax
+  424c35:	e8 20 5a ff ff       	call   41a65a <CPortalConn::PostLastNetStateMessage()>
+  424c3a:	e9 9c 00 00 00       	jmp    424cdb <CPortalServer::Start(char const*, CXMLOpt&)+0x38d>
+  424c3f:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424c43:	be 00 00 00 00       	mov    esi,0x0
+  424c48:	48 89 c7             	mov    rdi,rax
+  424c4b:	e8 50 02 00 00       	call   424ea0 <CPortalServer::CheckNetStatus(int)>
+  424c50:	e9 86 00 00 00       	jmp    424cdb <CPortalServer::Start(char const*, CXMLOpt&)+0x38d>
+  424c55:	49 89 c4             	mov    r12,rax
+  424c58:	48 89 df             	mov    rdi,rbx
+  424c5b:	e8 80 f2 fd ff       	call   403ee0 <operator delete(void*)@plt>
+  424c60:	4c 89 e0             	mov    rax,r12
+  424c63:	48 89 c7             	mov    rdi,rax
+  424c66:	e8 b5 fb fd ff       	call   404820 <_Unwind_Resume@plt>
+  424c6b:	48 89 c3             	mov    rbx,rax
+  424c6e:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424c72:	48 89 c7             	mov    rdi,rax
+  424c75:	e8 76 f4 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424c7a:	eb 03                	jmp    424c7f <CPortalServer::Start(char const*, CXMLOpt&)+0x331>
+  424c7c:	48 89 c3             	mov    rbx,rax
+  424c7f:	48 8d 45 bf          	lea    rax,[rbp-0x41]
+  424c83:	48 89 c7             	mov    rdi,rax
+  424c86:	e8 95 f8 fd ff       	call   404520 <std::allocator<char>::~allocator()@plt>
+  424c8b:	48 89 d8             	mov    rax,rbx
+  424c8e:	48 89 c7             	mov    rdi,rax
+  424c91:	e8 8a fb fd ff       	call   404820 <_Unwind_Resume@plt>
+  424c96:	48 89 c3             	mov    rbx,rax
+  424c99:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  424c9d:	48 89 c7             	mov    rdi,rax
+  424ca0:	e8 4b f4 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424ca5:	eb 03                	jmp    424caa <CPortalServer::Start(char const*, CXMLOpt&)+0x35c>
+  424ca7:	48 89 c3             	mov    rbx,rax
+  424caa:	48 8d 45 cf          	lea    rax,[rbp-0x31]
+  424cae:	48 89 c7             	mov    rdi,rax
+  424cb1:	e8 6a f8 fd ff       	call   404520 <std::allocator<char>::~allocator()@plt>
+  424cb6:	48 89 d8             	mov    rax,rbx
+  424cb9:	48 89 c7             	mov    rdi,rax
+  424cbc:	e8 5f fb fd ff       	call   404820 <_Unwind_Resume@plt>
+  424cc1:	48 89 c3             	mov    rbx,rax
+  424cc4:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424cc8:	48 89 c7             	mov    rdi,rax
+  424ccb:	e8 54 94 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424cd0:	48 89 d8             	mov    rax,rbx
+  424cd3:	48 89 c7             	mov    rdi,rax
+  424cd6:	e8 45 fb fd ff       	call   404820 <_Unwind_Resume@plt>
+  424cdb:	48 83 c4 60          	add    rsp,0x60
+  424cdf:	5b                   	pop    rbx
+  424ce0:	41 5c                	pop    r12
+  424ce2:	5d                   	pop    rbp
+  424ce3:	c3                   	ret
+
+0000000000424ce4 <CPortalServer::Connect(char const*, CXMLOpt&)>:
+  424ce4:	55                   	push   rbp
+  424ce5:	48 89 e5             	mov    rbp,rsp
+  424ce8:	53                   	push   rbx
+  424ce9:	48 83 ec 68          	sub    rsp,0x68
+  424ced:	48 89 7d a8          	mov    QWORD PTR [rbp-0x58],rdi
+  424cf1:	48 89 75 a0          	mov    QWORD PTR [rbp-0x60],rsi
+  424cf5:	48 89 55 98          	mov    QWORD PTR [rbp-0x68],rdx
+  424cf9:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424cfd:	48 89 c7             	mov    rdi,rax
+  424d00:	e8 07 40 00 00       	call   428d0c <ESurfingSvr::Task::Task()>
+  424d05:	c7 45 b0 06 00 00 00 	mov    DWORD PTR [rbp-0x50],0x6
+  424d0c:	c7 45 b8 02 00 00 00 	mov    DWORD PTR [rbp-0x48],0x2
+  424d13:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424d17:	48 8b 4d 98          	mov    rcx,QWORD PTR [rbp-0x68]
+  424d1b:	ba 00 00 00 00       	mov    edx,0x0
+  424d20:	48 89 ce             	mov    rsi,rcx
+  424d23:	48 89 c7             	mov    rdi,rax
+  424d26:	e8 25 aa 02 00       	call   44f750 <CXMLOpt::GetDoc(char const*)>
+  424d2b:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  424d2f:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d33:	48 89 d6             	mov    rsi,rdx
+  424d36:	48 89 c7             	mov    rdi,rax
+  424d39:	e8 5e 93 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  424d3e:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d42:	48 8d 55 b0          	lea    rdx,[rbp-0x50]
+  424d46:	48 83 c2 10          	add    rdx,0x10
+  424d4a:	48 89 c6             	mov    rsi,rax
+  424d4d:	48 89 d7             	mov    rdi,rdx
+  424d50:	e8 e9 93 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  424d55:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d59:	48 89 c7             	mov    rdi,rax
+  424d5c:	e8 c3 93 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424d61:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424d65:	48 89 c7             	mov    rdi,rax
+  424d68:	e8 83 f3 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424d6d:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424d71:	48 8d 90 d8 01 00 00 	lea    rdx,[rax+0x1d8]
+  424d78:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424d7c:	48 89 c6             	mov    rsi,rax
+  424d7f:	48 89 d7             	mov    rdi,rdx
+  424d82:	e8 8f ca fe ff       	call   411816 <ESurfingSvr::CTaskMgr::AddTask(ESurfingSvr::Task&)>
+  424d87:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424d8b:	48 89 c7             	mov    rdi,rax
+  424d8e:	e8 a9 d9 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424d93:	eb 3c                	jmp    424dd1 <CPortalServer::Connect(char const*, CXMLOpt&)+0xed>
+  424d95:	48 89 c3             	mov    rbx,rax
+  424d98:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424d9c:	48 89 c7             	mov    rdi,rax
+  424d9f:	e8 80 93 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424da4:	eb 03                	jmp    424da9 <CPortalServer::Connect(char const*, CXMLOpt&)+0xc5>
+  424da6:	48 89 c3             	mov    rbx,rax
+  424da9:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424dad:	48 89 c7             	mov    rdi,rax
+  424db0:	e8 3b f3 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424db5:	eb 03                	jmp    424dba <CPortalServer::Connect(char const*, CXMLOpt&)+0xd6>
+  424db7:	48 89 c3             	mov    rbx,rax
+  424dba:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424dbe:	48 89 c7             	mov    rdi,rax
+  424dc1:	e8 76 d9 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424dc6:	48 89 d8             	mov    rax,rbx
+  424dc9:	48 89 c7             	mov    rdi,rax
+  424dcc:	e8 4f fa fd ff       	call   404820 <_Unwind_Resume@plt>
+  424dd1:	48 83 c4 68          	add    rsp,0x68
+  424dd5:	5b                   	pop    rbx
+  424dd6:	5d                   	pop    rbp
+  424dd7:	c3                   	ret
+
+0000000000424dd8 <CPortalServer::DisConnect(char const*, CXMLOpt&)>:
+  424dd8:	55                   	push   rbp
+  424dd9:	48 89 e5             	mov    rbp,rsp
+  424ddc:	53                   	push   rbx
+  424ddd:	48 83 ec 48          	sub    rsp,0x48
+  424de1:	48 89 7d c8          	mov    QWORD PTR [rbp-0x38],rdi
+  424de5:	48 89 75 c0          	mov    QWORD PTR [rbp-0x40],rsi
+  424de9:	48 89 55 b8          	mov    QWORD PTR [rbp-0x48],rdx
+  424ded:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424df1:	48 8b 4d b8          	mov    rcx,QWORD PTR [rbp-0x48]
+  424df5:	ba 2d 28 45 00       	mov    edx,0x45282d
+  424dfa:	48 89 ce             	mov    rsi,rcx
+  424dfd:	48 89 c7             	mov    rdi,rax
+  424e00:	e8 f9 a7 02 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  424e05:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  424e09:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424e0d:	48 89 d6             	mov    rsi,rdx
+  424e10:	48 89 c7             	mov    rdi,rax
+  424e13:	e8 84 92 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  424e18:	48 8d 55 d0          	lea    rdx,[rbp-0x30]
+  424e1c:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  424e20:	48 89 d6             	mov    rsi,rdx
+  424e23:	48 89 c7             	mov    rdi,rax
+  424e26:	e8 49 06 00 00       	call   425474 <CPortalServer::DisConnect(CAutoString)>
+  424e2b:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424e2f:	48 89 c7             	mov    rdi,rax
+  424e32:	e8 ed 92 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424e37:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424e3b:	48 89 c7             	mov    rdi,rax
+  424e3e:	e8 ad f2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424e43:	eb 2b                	jmp    424e70 <CPortalServer::DisConnect(char const*, CXMLOpt&)+0x98>
+  424e45:	48 89 c3             	mov    rbx,rax
+  424e48:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424e4c:	48 89 c7             	mov    rdi,rax
+  424e4f:	e8 d0 92 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424e54:	eb 03                	jmp    424e59 <CPortalServer::DisConnect(char const*, CXMLOpt&)+0x81>
+  424e56:	48 89 c3             	mov    rbx,rax
+  424e59:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424e5d:	48 89 c7             	mov    rdi,rax
+  424e60:	e8 8b f2 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424e65:	48 89 d8             	mov    rax,rbx
+  424e68:	48 89 c7             	mov    rdi,rax
+  424e6b:	e8 b0 f9 fd ff       	call   404820 <_Unwind_Resume@plt>
+  424e70:	48 83 c4 48          	add    rsp,0x48
+  424e74:	5b                   	pop    rbx
+  424e75:	5d                   	pop    rbp
+  424e76:	c3                   	ret
+  424e77:	90                   	nop
+
+0000000000424e78 <CPortalServer::CheckEnv(char const*, CXMLOpt&)>:
+  424e78:	55                   	push   rbp
+  424e79:	48 89 e5             	mov    rbp,rsp
+  424e7c:	48 83 ec 20          	sub    rsp,0x20
+  424e80:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  424e84:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  424e88:	48 89 55 e8          	mov    QWORD PTR [rbp-0x18],rdx
+  424e8c:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  424e90:	be 00 00 00 00       	mov    esi,0x0
+  424e95:	48 89 c7             	mov    rdi,rax
+  424e98:	e8 03 00 00 00       	call   424ea0 <CPortalServer::CheckNetStatus(int)>
+  424e9d:	c9                   	leave
+  424e9e:	c3                   	ret
+  424e9f:	90                   	nop
+
+0000000000424ea0 <CPortalServer::CheckNetStatus(int)>:
+  424ea0:	55                   	push   rbp
+  424ea1:	48 89 e5             	mov    rbp,rsp
+  424ea4:	48 83 ec 10          	sub    rsp,0x10
+  424ea8:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  424eac:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+  424eaf:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+  424eb2:	48 63 d0             	movsxd rdx,eax
+  424eb5:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  424eb9:	48 83 c0 40          	add    rax,0x40
+  424ebd:	41 b9 01 00 00 00    	mov    r9d,0x1
+  424ec3:	49 89 d0             	mov    r8,rdx
+  424ec6:	b9 00 00 00 00       	mov    ecx,0x0
+  424ecb:	ba 01 00 00 00       	mov    edx,0x1
+  424ed0:	be 01 00 00 00       	mov    esi,0x1
+  424ed5:	48 89 c7             	mov    rdi,rax
+  424ed8:	e8 03 06 01 00       	call   4354e0 <CTableTimer::AddTask(int, int, bool, long, bool)>
+  424edd:	c9                   	leave
+  424ede:	c3                   	ret
+  424edf:	90                   	nop
+
+0000000000424ee0 <CPortalServer::TerminalRequest(char const*, CXMLOpt&)>:
+  424ee0:	55                   	push   rbp
+  424ee1:	48 89 e5             	mov    rbp,rsp
+  424ee4:	53                   	push   rbx
+  424ee5:	48 83 ec 68          	sub    rsp,0x68
+  424ee9:	48 89 7d a8          	mov    QWORD PTR [rbp-0x58],rdi
+  424eed:	48 89 75 a0          	mov    QWORD PTR [rbp-0x60],rsi
+  424ef1:	48 89 55 98          	mov    QWORD PTR [rbp-0x68],rdx
+  424ef5:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424ef9:	be 0b 00 00 00       	mov    esi,0xb
+  424efe:	48 89 c7             	mov    rdi,rax
+  424f01:	e8 90 0a 00 00       	call   425996 <CPortalServer::StopTask(ESurfingSvr::TaskItem)>
+  424f06:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424f0a:	48 89 c7             	mov    rdi,rax
+  424f0d:	e8 fa 3d 00 00       	call   428d0c <ESurfingSvr::Task::Task()>
+  424f12:	c7 45 b0 0b 00 00 00 	mov    DWORD PTR [rbp-0x50],0xb
+  424f19:	c7 45 b8 02 00 00 00 	mov    DWORD PTR [rbp-0x48],0x2
+  424f20:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424f24:	48 8b 4d 98          	mov    rcx,QWORD PTR [rbp-0x68]
+  424f28:	ba 00 00 00 00       	mov    edx,0x0
+  424f2d:	48 89 ce             	mov    rsi,rcx
+  424f30:	48 89 c7             	mov    rdi,rax
+  424f33:	e8 18 a8 02 00       	call   44f750 <CXMLOpt::GetDoc(char const*)>
+  424f38:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  424f3c:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424f40:	48 89 d6             	mov    rsi,rdx
+  424f43:	48 89 c7             	mov    rdi,rax
+  424f46:	e8 51 91 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  424f4b:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424f4f:	48 8d 55 b0          	lea    rdx,[rbp-0x50]
+  424f53:	48 83 c2 10          	add    rdx,0x10
+  424f57:	48 89 c6             	mov    rsi,rax
+  424f5a:	48 89 d7             	mov    rdi,rdx
+  424f5d:	e8 dc 91 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  424f62:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424f66:	48 89 c7             	mov    rdi,rax
+  424f69:	e8 b6 91 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424f6e:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424f72:	48 89 c7             	mov    rdi,rax
+  424f75:	e8 76 f1 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424f7a:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  424f7e:	48 8d 90 d8 01 00 00 	lea    rdx,[rax+0x1d8]
+  424f85:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424f89:	48 89 c6             	mov    rsi,rax
+  424f8c:	48 89 d7             	mov    rdi,rdx
+  424f8f:	e8 82 c8 fe ff       	call   411816 <ESurfingSvr::CTaskMgr::AddTask(ESurfingSvr::Task&)>
+  424f94:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424f98:	48 89 c7             	mov    rdi,rax
+  424f9b:	e8 9c d7 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424fa0:	eb 3c                	jmp    424fde <CPortalServer::TerminalRequest(char const*, CXMLOpt&)+0xfe>
+  424fa2:	48 89 c3             	mov    rbx,rax
+  424fa5:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  424fa9:	48 89 c7             	mov    rdi,rax
+  424fac:	e8 73 91 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  424fb1:	eb 03                	jmp    424fb6 <CPortalServer::TerminalRequest(char const*, CXMLOpt&)+0xd6>
+  424fb3:	48 89 c3             	mov    rbx,rax
+  424fb6:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  424fba:	48 89 c7             	mov    rdi,rax
+  424fbd:	e8 2e f1 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  424fc2:	eb 03                	jmp    424fc7 <CPortalServer::TerminalRequest(char const*, CXMLOpt&)+0xe7>
+  424fc4:	48 89 c3             	mov    rbx,rax
+  424fc7:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  424fcb:	48 89 c7             	mov    rdi,rax
+  424fce:	e8 69 d7 fe ff       	call   41273c <ESurfingSvr::Task::~Task()>
+  424fd3:	48 89 d8             	mov    rax,rbx
+  424fd6:	48 89 c7             	mov    rdi,rax
+  424fd9:	e8 42 f8 fd ff       	call   404820 <_Unwind_Resume@plt>
+  424fde:	48 83 c4 68          	add    rsp,0x68
+  424fe2:	5b                   	pop    rbx
+  424fe3:	5d                   	pop    rbp
+  424fe4:	c3                   	ret
+  424fe5:	90                   	nop
+
+0000000000424fe6 <CPortalServer::TerminalTermRequest(char const*, CXMLOpt&)>:
+  424fe6:	55                   	push   rbp
+  424fe7:	48 89 e5             	mov    rbp,rsp
+  424fea:	53                   	push   rbx
+  424feb:	48 81 ec 88 00 00 00 	sub    rsp,0x88
+  424ff2:	48 89 7d 88          	mov    QWORD PTR [rbp-0x78],rdi
+  424ff6:	48 89 75 80          	mov    QWORD PTR [rbp-0x80],rsi
+  424ffa:	48 89 95 78 ff ff ff 	mov    QWORD PTR [rbp-0x88],rdx
+  425001:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  425005:	48 8b 8d 78 ff ff ff 	mov    rcx,QWORD PTR [rbp-0x88]
+  42500c:	ba 33 28 45 00       	mov    edx,0x452833
+  425011:	48 89 ce             	mov    rsi,rcx
+  425014:	48 89 c7             	mov    rdi,rax
+  425017:	e8 e2 a5 02 00       	call   44f5fe <CXMLOpt::GetValue(char const*)>
+  42501c:	48 8d 55 c0          	lea    rdx,[rbp-0x40]
+  425020:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  425024:	48 89 d6             	mov    rsi,rdx
+  425027:	48 89 c7             	mov    rdi,rax
+  42502a:	e8 6d 90 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42502f:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  425033:	48 8d 90 48 02 00 00 	lea    rdx,[rax+0x248]
+  42503a:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42503e:	48 89 c6             	mov    rsi,rax
+  425041:	48 89 d7             	mov    rdi,rdx
+  425044:	e8 f5 90 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  425049:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42504d:	48 89 c7             	mov    rdi,rax
+  425050:	e8 cf 90 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  425055:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  425059:	48 89 c7             	mov    rdi,rax
+  42505c:	e8 8f f0 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  425061:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  425065:	48 89 c7             	mov    rdi,rax
+  425068:	e8 9f 3c 00 00       	call   428d0c <ESurfingSvr::Task::Task()>
+  42506d:	c7 45 90 0c 00 00 00 	mov    DWORD PTR [rbp-0x70],0xc
+  425074:	c7 45 98 02 00 00 00 	mov    DWORD PTR [rbp-0x68],0x2
+  42507b:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42507f:	48 8b 8d 78 ff ff ff 	mov    rcx,QWORD PTR [rbp-0x88]
+  425086:	ba 00 00 00 00       	mov    edx,0x0
+  42508b:	48 89 ce             	mov    rsi,rcx
+  42508e:	48 89 c7             	mov    rdi,rax
+  425091:	e8 ba a6 02 00       	call   44f750 <CXMLOpt::GetDoc(char const*)>
+  425096:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  42509a:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42509e:	48 89 d6             	mov    rsi,rdx
+  4250a1:	48 89 c7             	mov    rdi,rax
+  4250a4:	e8 f3 8f fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  4250a9:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  4250ad:	48 8d 55 90          	lea    rdx,[rbp-0x70]
+  4250b1:	48 83 c2 10          	add    rdx,0x10
+  4250b5:	48 89 c6             	mov    rsi,rax
+  4250b8:	48 89 d7             	mov    rdi,rdx
+  4250bb:	e8 7e 90 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>

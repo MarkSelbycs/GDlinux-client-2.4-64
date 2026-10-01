@@ -1,0 +1,139 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000044ef72 <CPipeService::CreateNamedPipeInServer(char const*, IPipeCallback*)>:
+  44ef72:	55                   	push   rbp
+  44ef73:	48 89 e5             	mov    rbp,rsp
+  44ef76:	48 83 ec 30          	sub    rsp,0x30
+  44ef7a:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  44ef7e:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+  44ef82:	48 89 55 d8          	mov    QWORD PTR [rbp-0x28],rdx
+  44ef86:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44ef8a:	48 05 b8 00 00 00    	add    rax,0xb8
+  44ef90:	be 80 00 00 00       	mov    esi,0x80
+  44ef95:	48 89 c7             	mov    rdi,rax
+  44ef98:	e8 b7 6a fe ff       	call   435a54 <MutexLock::Lock(int)>
+  44ef9d:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44efa1:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  44efa5:	48 89 90 a8 00 00 00 	mov    QWORD PTR [rax+0xa8],rdx
+  44efac:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44efb0:	48 8b 55 d8          	mov    rdx,QWORD PTR [rbp-0x28]
+  44efb4:	48 89 90 90 00 00 00 	mov    QWORD PTR [rax+0x90],rdx
+  44efbb:	c7 45 fc ff ff ff ff 	mov    DWORD PTR [rbp-0x4],0xffffffff
+  44efc2:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  44efc6:	be 00 00 00 00       	mov    esi,0x0
+  44efcb:	48 89 c7             	mov    rdi,rax
+  44efce:	e8 dd 56 fb ff       	call   4046b0 <access@plt>
+  44efd3:	83 f8 ff             	cmp    eax,0xffffffff
+  44efd6:	0f 94 c0             	sete   al
+  44efd9:	84 c0                	test   al,al
+  44efdb:	74 14                	je     44eff1 <CPipeService::CreateNamedPipeInServer(char const*, IPipeCallback*)+0x7f>
+  44efdd:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  44efe1:	be 80 01 00 00       	mov    esi,0x180
+  44efe6:	48 89 c7             	mov    rdi,rax
+  44efe9:	e8 b2 56 fb ff       	call   4046a0 <mkfifo@plt>
+  44efee:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  44eff1:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44eff5:	48 05 b8 00 00 00    	add    rax,0xb8
+  44effb:	48 89 c7             	mov    rdi,rax
+  44effe:	e8 99 6a fe ff       	call   435a9c <MutexLock::UnLock()>
+  44f003:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  44f006:	c9                   	leave
+  44f007:	c3                   	ret
+
+000000000044f008 <CPipeService::OpenNamePipeServer(char const*)>:
+  44f008:	55                   	push   rbp
+  44f009:	48 89 e5             	mov    rbp,rsp
+  44f00c:	48 83 ec 10          	sub    rsp,0x10
+  44f010:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44f014:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  44f018:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f01c:	48 8b 80 a8 00 00 00 	mov    rax,QWORD PTR [rax+0xa8]
+  44f023:	be 01 00 00 00       	mov    esi,0x1
+  44f028:	48 89 c7             	mov    rdi,rax
+  44f02b:	b8 00 00 00 00       	mov    eax,0x0
+  44f030:	e8 ab 58 fb ff       	call   4048e0 <open@plt>
+  44f035:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  44f039:	89 82 98 00 00 00    	mov    DWORD PTR [rdx+0x98],eax
+  44f03f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f043:	8b 80 98 00 00 00    	mov    eax,DWORD PTR [rax+0x98]
+  44f049:	85 c0                	test   eax,eax
+  44f04b:	79 18                	jns    44f065 <CPipeService::OpenNamePipeServer(char const*)+0x5d>
+  44f04d:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f051:	8b 80 98 00 00 00    	mov    eax,DWORD PTR [rax+0x98]
+  44f057:	89 c7                	mov    edi,eax
+  44f059:	e8 82 4d fb ff       	call   403de0 <close@plt>
+  44f05e:	b8 ff ff ff ff       	mov    eax,0xffffffff
+  44f063:	eb 50                	jmp    44f0b5 <CPipeService::OpenNamePipeServer(char const*)+0xad>
+  44f065:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f069:	c6 80 b0 00 00 00 01 	mov    BYTE PTR [rax+0xb0],0x1
+  44f070:	eb 0a                	jmp    44f07c <CPipeService::OpenNamePipeServer(char const*)+0x74>
+  44f072:	bf 01 00 00 00       	mov    edi,0x1
+  44f077:	e8 c4 51 fb ff       	call   404240 <sleep@plt>
+  44f07c:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  44f080:	be 00 00 00 00       	mov    esi,0x0
+  44f085:	48 89 c7             	mov    rdi,rax
+  44f088:	b8 00 00 00 00       	mov    eax,0x0
+  44f08d:	e8 4e 58 fb ff       	call   4048e0 <open@plt>
+  44f092:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  44f096:	89 82 9c 00 00 00    	mov    DWORD PTR [rdx+0x9c],eax
+  44f09c:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f0a0:	8b 80 9c 00 00 00    	mov    eax,DWORD PTR [rax+0x9c]
+  44f0a6:	83 f8 ff             	cmp    eax,0xffffffff
+  44f0a9:	0f 94 c0             	sete   al
+  44f0ac:	84 c0                	test   al,al
+  44f0ae:	75 c2                	jne    44f072 <CPipeService::OpenNamePipeServer(char const*)+0x6a>
+  44f0b0:	b8 00 00 00 00       	mov    eax,0x0
+  44f0b5:	c9                   	leave
+  44f0b6:	c3                   	ret
+  44f0b7:	90                   	nop
+
+000000000044f0b8 <CPipeService::OpenNamePipeClient(char const*)>:
+  44f0b8:	55                   	push   rbp
+  44f0b9:	48 89 e5             	mov    rbp,rsp
+  44f0bc:	48 83 ec 10          	sub    rsp,0x10
+  44f0c0:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44f0c4:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  44f0c8:	eb 0a                	jmp    44f0d4 <CPipeService::OpenNamePipeClient(char const*)+0x1c>
+  44f0ca:	bf 01 00 00 00       	mov    edi,0x1
+  44f0cf:	e8 6c 51 fb ff       	call   404240 <sleep@plt>
+  44f0d4:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  44f0d8:	be 00 00 00 00       	mov    esi,0x0
+  44f0dd:	48 89 c7             	mov    rdi,rax
+  44f0e0:	b8 00 00 00 00       	mov    eax,0x0
+  44f0e5:	e8 f6 57 fb ff       	call   4048e0 <open@plt>
+  44f0ea:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  44f0ee:	89 82 9c 00 00 00    	mov    DWORD PTR [rdx+0x9c],eax
+  44f0f4:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f0f8:	8b 80 9c 00 00 00    	mov    eax,DWORD PTR [rax+0x9c]
+  44f0fe:	83 f8 ff             	cmp    eax,0xffffffff
+  44f101:	0f 94 c0             	sete   al
+  44f104:	84 c0                	test   al,al
+  44f106:	75 c2                	jne    44f0ca <CPipeService::OpenNamePipeClient(char const*)+0x12>
+  44f108:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f10c:	48 8b 80 a8 00 00 00 	mov    rax,QWORD PTR [rax+0xa8]
+  44f113:	be 01 00 00 00       	mov    esi,0x1
+  44f118:	48 89 c7             	mov    rdi,rax
+  44f11b:	b8 00 00 00 00       	mov    eax,0x0
+  44f120:	e8 bb 57 fb ff       	call   4048e0 <open@plt>
+  44f125:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  44f129:	89 82 98 00 00 00    	mov    DWORD PTR [rdx+0x98],eax
+  44f12f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f133:	8b 80 98 00 00 00    	mov    eax,DWORD PTR [rax+0x98]
+  44f139:	85 c0                	test   eax,eax
+  44f13b:	79 18                	jns    44f155 <CPipeService::OpenNamePipeClient(char const*)+0x9d>
+  44f13d:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f141:	8b 80 98 00 00 00    	mov    eax,DWORD PTR [rax+0x98]
+  44f147:	89 c7                	mov    edi,eax
+  44f149:	e8 92 4c fb ff       	call   403de0 <close@plt>
+  44f14e:	b8 ff ff ff ff       	mov    eax,0xffffffff
+  44f153:	eb 10                	jmp    44f165 <CPipeService::OpenNamePipeClient(char const*)+0xad>
+  44f155:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f159:	c6 80 b0 00 00 00 01 	mov    BYTE PTR [rax+0xb0],0x1
+  44f160:	b8 00 00 00 00       	mov    eax,0x0
+  44f165:	c9                   	leave
+  44f166:	c3                   	ret
+  44f167:	90                   	nop

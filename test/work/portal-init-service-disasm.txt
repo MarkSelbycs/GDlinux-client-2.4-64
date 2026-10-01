@@ -1,0 +1,79 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004242f0 <CPortalServer::InitService(IServer*)>:
+  4242f0:	55                   	push   rbp
+  4242f1:	48 89 e5             	mov    rbp,rsp
+  4242f4:	48 83 ec 10          	sub    rsp,0x10
+  4242f8:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4242fc:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  424300:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  424304:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  424308:	48 89 d6             	mov    rsi,rdx
+  42430b:	48 89 c7             	mov    rdi,rax
+  42430e:	e8 af 45 00 00       	call   4288c2 <CBusiness::InitService(IServer*)>
+  424313:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  424317:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+  42431b:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  42431e:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  424321:	48 8b 55 f8          	mov    rdx,QWORD PTR [rbp-0x8]
+  424325:	48 8b 4d f8          	mov    rcx,QWORD PTR [rbp-0x8]
+  424329:	48 8b 49 08          	mov    rcx,QWORD PTR [rcx+0x8]
+  42432d:	be a0 27 45 00       	mov    esi,0x4527a0
+  424332:	48 89 cf             	mov    rdi,rcx
+  424335:	ff d0                	call   rax
+  424337:	c9                   	leave
+  424338:	c3                   	ret
+  424339:	90                   	nop
+
+000000000042433a <CPortalServer::SetInfoCenter(CInfoCenter*)>:
+  42433a:	55                   	push   rbp
+  42433b:	48 89 e5             	mov    rbp,rsp
+  42433e:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  424342:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  424346:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  42434a:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  42434e:	48 89 90 a8 00 00 00 	mov    QWORD PTR [rax+0xa8],rdx
+  424355:	5d                   	pop    rbp
+  424356:	c3                   	ret
+  424357:	90                   	nop
+
+0000000000424358 <CPortalServer::GetInfoCenter()>:
+  424358:	55                   	push   rbp
+  424359:	48 89 e5             	mov    rbp,rsp
+  42435c:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  424360:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  424364:	48 8b 80 a8 00 00 00 	mov    rax,QWORD PTR [rax+0xa8]
+  42436b:	5d                   	pop    rbp
+  42436c:	c3                   	ret
+  42436d:	90                   	nop
+
+000000000042436e <CPortalServer::ServerStatus(int)>:
+  42436e:	55                   	push   rbp
+  42436f:	48 89 e5             	mov    rbp,rsp
+  424372:	53                   	push   rbx
+  424373:	48 83 ec 18          	sub    rsp,0x18
+  424377:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  42437b:	89 75 e4             	mov    DWORD PTR [rbp-0x1c],esi
+  42437e:	e8 41 bb fe ff       	call   40fec4 <CLog::GetInst()>
+  424383:	ba a7 27 45 00       	mov    edx,0x4527a7
+  424388:	be 03 00 00 00       	mov    esi,0x3
+  42438d:	48 89 c7             	mov    rdi,rax
+  424390:	b8 00 00 00 00       	mov    eax,0x0
+  424395:	e8 38 bb fe ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  42439a:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  42439e:	48 8b 80 b0 00 00 00 	mov    rax,QWORD PTR [rax+0xb0]
+  4243a5:	48 85 c0             	test   rax,rax
+  4243a8:	0f 84 88 00 00 00    	je     424436 <CPortalServer::ServerStatus(int)+0xc8>
+  4243ae:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  4243b2:	48 83 c0 40          	add    rax,0x40
+  4243b6:	48 89 c7             	mov    rdi,rax
+  4243b9:	e8 f2 12 01 00       	call   4356b0 <CTableTimer::ClearTask()>
+  4243be:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  4243c2:	be 00 00 00 00       	mov    esi,0x0
+  4243c7:	48 89 c7             	mov    rdi,rax
+  4243ca:	e8 c7 12 00 00       	call   425696 <CPortalServer::Work(int)>
+  4243cf:	48                   	rex.W

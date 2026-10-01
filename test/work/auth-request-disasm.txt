@@ -1,0 +1,670 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000042c4e8 <CPortalParser::MakeAuthRequestData(char const*, char const*, char const*, char const*, char const*, char const*)>:
+  42c4e8:	55                   	push   rbp
+  42c4e9:	48 89 e5             	mov    rbp,rsp
+  42c4ec:	53                   	push   rbx
+  42c4ed:	48 81 ec 68 01 00 00 	sub    rsp,0x168
+  42c4f4:	48 89 bd b8 fe ff ff 	mov    QWORD PTR [rbp-0x148],rdi
+  42c4fb:	48 89 b5 b0 fe ff ff 	mov    QWORD PTR [rbp-0x150],rsi
+  42c502:	48 89 95 a8 fe ff ff 	mov    QWORD PTR [rbp-0x158],rdx
+  42c509:	48 89 8d a0 fe ff ff 	mov    QWORD PTR [rbp-0x160],rcx
+  42c510:	4c 89 85 98 fe ff ff 	mov    QWORD PTR [rbp-0x168],r8
+  42c517:	4c 89 8d 90 fe ff ff 	mov    QWORD PTR [rbp-0x170],r9
+  42c51e:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c525:	48 89 c7             	mov    rdi,rax
+  42c528:	e8 eb 1b ff ff       	call   41e118 <CMarkup::CMarkup()>
+  42c52d:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c534:	be 40 35 45 00       	mov    esi,0x453540
+  42c539:	48 89 c7             	mov    rdi,rax
+  42c53c:	e8 93 6e 01 00       	call   4433d4 <CMarkup::SetDoc(char const*)>
+  42c541:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c548:	be 7a 35 45 00       	mov    esi,0x45357a
+  42c54d:	48 89 c7             	mov    rdi,rax
+  42c550:	e8 a9 1b ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c555:	48 8b 95 20 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xe0]
+  42c55c:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c563:	48 89 d6             	mov    rsi,rdx
+  42c566:	48 89 c7             	mov    rdi,rax
+  42c569:	e8 74 87 01 00       	call   444ce2 <CMarkup::FindElem(MCD_CSTR)>
+  42c56e:	48 8b 95 a8 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x158]
+  42c575:	48 8d 85 30 ff ff ff 	lea    rax,[rbp-0xd0]
+  42c57c:	48 89 d6             	mov    rsi,rdx
+  42c57f:	48 89 c7             	mov    rdi,rax
+  42c582:	e8 77 1b ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c587:	48 8d 85 40 ff ff ff 	lea    rax,[rbp-0xc0]
+  42c58e:	be 8c 35 45 00       	mov    esi,0x45358c
+  42c593:	48 89 c7             	mov    rdi,rax
+  42c596:	e8 63 1b ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c59b:	48 8b 95 30 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xd0]
+  42c5a2:	48 8b b5 40 ff ff ff 	mov    rsi,QWORD PTR [rbp-0xc0]
+  42c5a9:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c5b0:	b9 00 00 00 00       	mov    ecx,0x0
+  42c5b5:	48 89 c7             	mov    rdi,rax
+  42c5b8:	e8 9b 1f 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c5bd:	48 8b 95 a0 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x160]
+  42c5c4:	48 8d 85 50 ff ff ff 	lea    rax,[rbp-0xb0]
+  42c5cb:	48 89 d6             	mov    rsi,rdx
+  42c5ce:	48 89 c7             	mov    rdi,rax
+  42c5d1:	e8 28 1b ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c5d6:	48 8d 85 60 ff ff ff 	lea    rax,[rbp-0xa0]
+  42c5dd:	be 97 35 45 00       	mov    esi,0x453597
+  42c5e2:	48 89 c7             	mov    rdi,rax
+  42c5e5:	e8 14 1b ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c5ea:	48 8b 95 50 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xb0]
+  42c5f1:	48 8b b5 60 ff ff ff 	mov    rsi,QWORD PTR [rbp-0xa0]
+  42c5f8:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c5ff:	b9 00 00 00 00       	mov    ecx,0x0
+  42c604:	48 89 c7             	mov    rdi,rax
+  42c607:	e8 4c 1f 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c60c:	48 8b 95 98 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x168]
+  42c613:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42c61a:	48 89 d6             	mov    rsi,rdx
+  42c61d:	48 89 c7             	mov    rdi,rax
+  42c620:	e8 d9 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c625:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  42c629:	be d7 35 45 00       	mov    esi,0x4535d7
+  42c62e:	48 89 c7             	mov    rdi,rax
+  42c631:	e8 c8 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c636:	48 8b 95 70 ff ff ff 	mov    rdx,QWORD PTR [rbp-0x90]
+  42c63d:	48 8b 75 80          	mov    rsi,QWORD PTR [rbp-0x80]
+  42c641:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c648:	b9 01 00 00 00       	mov    ecx,0x1
+  42c64d:	48 89 c7             	mov    rdi,rax
+  42c650:	e8 03 1f 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c655:	48 8b 95 90 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x170]
+  42c65c:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  42c660:	48 89 d6             	mov    rsi,rdx
+  42c663:	48 89 c7             	mov    rdi,rax
+  42c666:	e8 93 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c66b:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42c66f:	be de 35 45 00       	mov    esi,0x4535de
+  42c674:	48 89 c7             	mov    rdi,rax
+  42c677:	e8 82 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c67c:	48 8b 55 90          	mov    rdx,QWORD PTR [rbp-0x70]
+  42c680:	48 8b 75 a0          	mov    rsi,QWORD PTR [rbp-0x60]
+  42c684:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c68b:	b9 01 00 00 00       	mov    ecx,0x1
+  42c690:	48 89 c7             	mov    rdi,rax
+  42c693:	e8 c0 1e 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c698:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42c69c:	48 8b 75 10          	mov    rsi,QWORD PTR [rbp+0x10]
+  42c6a0:	48 89 c7             	mov    rdi,rax
+  42c6a3:	e8 56 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c6a8:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  42c6ac:	be c9 35 45 00       	mov    esi,0x4535c9
+  42c6b1:	48 89 c7             	mov    rdi,rax
+  42c6b4:	e8 45 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c6b9:	48 8b 55 b0          	mov    rdx,QWORD PTR [rbp-0x50]
+  42c6bd:	48 8b 75 c0          	mov    rsi,QWORD PTR [rbp-0x40]
+  42c6c1:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c6c8:	b9 00 00 00 00       	mov    ecx,0x0
+  42c6cd:	48 89 c7             	mov    rdi,rax
+  42c6d0:	e8 83 1e 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c6d5:	48 8b 55 18          	mov    rdx,QWORD PTR [rbp+0x18]
+  42c6d9:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42c6dd:	48 89 d6             	mov    rsi,rdx
+  42c6e0:	48 89 c7             	mov    rdi,rax
+  42c6e3:	e8 16 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c6e8:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42c6ec:	be af 35 45 00       	mov    esi,0x4535af
+  42c6f1:	48 89 c7             	mov    rdi,rax
+  42c6f4:	e8 05 1a ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c6f9:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  42c6fd:	48 8b 75 e0          	mov    rsi,QWORD PTR [rbp-0x20]
+  42c701:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c708:	b9 00 00 00 00       	mov    ecx,0x0
+  42c70d:	48 89 c7             	mov    rdi,rax
+  42c710:	e8 43 1e 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c715:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c71c:	48 89 c7             	mov    rdi,rax
+  42c71f:	e8 de be ff ff       	call   428602 <CMarkup::GetDoc() const>
+  42c724:	48 89 c2             	mov    rdx,rax
+  42c727:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  42c72e:	48 89 d6             	mov    rsi,rdx
+  42c731:	48 89 c7             	mov    rdi,rax
+  42c734:	e8 63 19 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42c739:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  42c740:	48 89 c7             	mov    rdi,rax
+  42c743:	e8 c0 1b fe ff       	call   40e308 <CAutoString::operator char const*()>
+  42c748:	48 89 c2             	mov    rdx,rax
+  42c74b:	48 8b 85 b8 fe ff ff 	mov    rax,QWORD PTR [rbp-0x148]
+  42c752:	48 8b 8d b0 fe ff ff 	mov    rcx,QWORD PTR [rbp-0x150]
+  42c759:	48 89 ce             	mov    rsi,rcx
+  42c75c:	48 89 c7             	mov    rdi,rax
+  42c75f:	e8 38 18 00 00       	call   42df9c <CPortalParser::EncodePostRequestData(char const*)>
+  42c764:	90                   	nop
+  42c765:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  42c76c:	48 89 c7             	mov    rdi,rax
+  42c76f:	e8 b0 19 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42c774:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c77b:	48 89 c7             	mov    rdi,rax
+  42c77e:	e8 cb 6a 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42c783:	eb 31                	jmp    42c7b6 <CPortalParser::MakeAuthRequestData(char const*, char const*, char const*, char const*, char const*, char const*)+0x2ce>
+  42c785:	48 89 c3             	mov    rbx,rax
+  42c788:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  42c78f:	48 89 c7             	mov    rdi,rax
+  42c792:	e8 8d 19 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42c797:	eb 03                	jmp    42c79c <CPortalParser::MakeAuthRequestData(char const*, char const*, char const*, char const*, char const*, char const*)+0x2b4>
+  42c799:	48 89 c3             	mov    rbx,rax
+  42c79c:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c7a3:	48 89 c7             	mov    rdi,rax
+  42c7a6:	e8 a3 6a 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42c7ab:	48 89 d8             	mov    rax,rbx
+  42c7ae:	48 89 c7             	mov    rdi,rax
+  42c7b1:	e8 6a 80 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42c7b6:	48 8b 85 b8 fe ff ff 	mov    rax,QWORD PTR [rbp-0x148]
+  42c7bd:	48 81 c4 68 01 00 00 	add    rsp,0x168
+  42c7c4:	5b                   	pop    rbx
+  42c7c5:	5d                   	pop    rbp
+  42c7c6:	c3                   	ret
+  42c7c7:	90                   	nop
+
+000000000042c7c8 <CPortalParser::MakeTerminalRequestData(char const*, char const*, char const*)>:
+  42c7c8:	55                   	push   rbp
+  42c7c9:	48 89 e5             	mov    rbp,rsp
+  42c7cc:	53                   	push   rbx
+  42c7cd:	48 81 ec 08 01 00 00 	sub    rsp,0x108
+  42c7d4:	48 89 bd 18 ff ff ff 	mov    QWORD PTR [rbp-0xe8],rdi
+  42c7db:	48 89 b5 10 ff ff ff 	mov    QWORD PTR [rbp-0xf0],rsi
+  42c7e2:	48 89 95 08 ff ff ff 	mov    QWORD PTR [rbp-0xf8],rdx
+  42c7e9:	48 89 8d 00 ff ff ff 	mov    QWORD PTR [rbp-0x100],rcx
+  42c7f0:	4c 89 85 f8 fe ff ff 	mov    QWORD PTR [rbp-0x108],r8
+  42c7f7:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c7fe:	48 89 c7             	mov    rdi,rax
+  42c801:	e8 12 19 ff ff       	call   41e118 <CMarkup::CMarkup()>
+  42c806:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c80d:	be 40 35 45 00       	mov    esi,0x453540
+  42c812:	48 89 c7             	mov    rdi,rax
+  42c815:	e8 ba 6b 01 00       	call   4433d4 <CMarkup::SetDoc(char const*)>
+  42c81a:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  42c81e:	be 7a 35 45 00       	mov    esi,0x45357a
+  42c823:	48 89 c7             	mov    rdi,rax
+  42c826:	e8 d3 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c82b:	48 8b 55 80          	mov    rdx,QWORD PTR [rbp-0x80]
+  42c82f:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c836:	48 89 d6             	mov    rsi,rdx
+  42c839:	48 89 c7             	mov    rdi,rax
+  42c83c:	e8 a1 84 01 00       	call   444ce2 <CMarkup::FindElem(MCD_CSTR)>
+  42c841:	48 8b 95 08 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xf8]
+  42c848:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  42c84c:	48 89 d6             	mov    rsi,rdx
+  42c84f:	48 89 c7             	mov    rdi,rax
+  42c852:	e8 a7 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c857:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42c85b:	be 8c 35 45 00       	mov    esi,0x45358c
+  42c860:	48 89 c7             	mov    rdi,rax
+  42c863:	e8 96 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c868:	48 8b 55 90          	mov    rdx,QWORD PTR [rbp-0x70]
+  42c86c:	48 8b 75 a0          	mov    rsi,QWORD PTR [rbp-0x60]
+  42c870:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c877:	b9 00 00 00 00       	mov    ecx,0x0
+  42c87c:	48 89 c7             	mov    rdi,rax
+  42c87f:	e8 d4 1c 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c884:	48 8b 95 00 ff ff ff 	mov    rdx,QWORD PTR [rbp-0x100]
+  42c88b:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42c88f:	48 89 d6             	mov    rsi,rdx
+  42c892:	48 89 c7             	mov    rdi,rax
+  42c895:	e8 64 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c89a:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  42c89e:	be 97 35 45 00       	mov    esi,0x453597
+  42c8a3:	48 89 c7             	mov    rdi,rax
+  42c8a6:	e8 53 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c8ab:	48 8b 55 b0          	mov    rdx,QWORD PTR [rbp-0x50]
+  42c8af:	48 8b 75 c0          	mov    rsi,QWORD PTR [rbp-0x40]
+  42c8b3:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c8ba:	b9 00 00 00 00       	mov    ecx,0x0
+  42c8bf:	48 89 c7             	mov    rdi,rax
+  42c8c2:	e8 91 1c 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c8c7:	48 8b 95 f8 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x108]
+  42c8ce:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42c8d2:	48 89 d6             	mov    rsi,rdx
+  42c8d5:	48 89 c7             	mov    rdi,rax
+  42c8d8:	e8 21 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c8dd:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42c8e1:	be af 35 45 00       	mov    esi,0x4535af
+  42c8e6:	48 89 c7             	mov    rdi,rax
+  42c8e9:	e8 10 18 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42c8ee:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  42c8f2:	48 8b 75 e0          	mov    rsi,QWORD PTR [rbp-0x20]
+  42c8f6:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c8fd:	b9 00 00 00 00       	mov    ecx,0x0
+  42c902:	48 89 c7             	mov    rdi,rax
+  42c905:	e8 4e 1c 00 00       	call   42e558 <CMarkup::InsertChildElem(MCD_CSTR, MCD_CSTR, int)>
+  42c90a:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c911:	48 89 c7             	mov    rdi,rax
+  42c914:	e8 e9 bc ff ff       	call   428602 <CMarkup::GetDoc() const>
+  42c919:	48 89 c2             	mov    rdx,rax
+  42c91c:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42c923:	48 89 d6             	mov    rsi,rdx
+  42c926:	48 89 c7             	mov    rdi,rax
+  42c929:	e8 6e 17 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42c92e:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42c935:	48 89 c7             	mov    rdi,rax
+  42c938:	e8 cb 19 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  42c93d:	48 89 c2             	mov    rdx,rax
+  42c940:	48 8b 85 18 ff ff ff 	mov    rax,QWORD PTR [rbp-0xe8]
+  42c947:	48 8b 8d 10 ff ff ff 	mov    rcx,QWORD PTR [rbp-0xf0]
+  42c94e:	48 89 ce             	mov    rsi,rcx
+  42c951:	48 89 c7             	mov    rdi,rax
+  42c954:	e8 43 16 00 00       	call   42df9c <CPortalParser::EncodePostRequestData(char const*)>
+  42c959:	90                   	nop
+  42c95a:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42c961:	48 89 c7             	mov    rdi,rax
+  42c964:	e8 bb 17 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42c969:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c970:	48 89 c7             	mov    rdi,rax
+  42c973:	e8 d6 68 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42c978:	eb 31                	jmp    42c9ab <CPortalParser::MakeTerminalRequestData(char const*, char const*, char const*)+0x1e3>
+  42c97a:	48 89 c3             	mov    rbx,rax
+  42c97d:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42c984:	48 89 c7             	mov    rdi,rax
+  42c987:	e8 98 17 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42c98c:	eb 03                	jmp    42c991 <CPortalParser::MakeTerminalRequestData(char const*, char const*, char const*)+0x1c9>
+  42c98e:	48 89 c3             	mov    rbx,rax
+  42c991:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42c998:	48 89 c7             	mov    rdi,rax
+  42c99b:	e8 ae 68 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42c9a0:	48 89 d8             	mov    rax,rbx
+  42c9a3:	48 89 c7             	mov    rdi,rax
+  42c9a6:	e8 75 7e fd ff       	call   404820 <_Unwind_Resume@plt>
+  42c9ab:	48 8b 85 18 ff ff ff 	mov    rax,QWORD PTR [rbp-0xe8]
+  42c9b2:	48 81 c4 08 01 00 00 	add    rsp,0x108
+  42c9b9:	5b                   	pop    rbx
+  42c9ba:	5d                   	pop    rbp
+  42c9bb:	c3                   	ret
+
+000000000042c9bc <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)>:
+  42c9bc:	55                   	push   rbp
+  42c9bd:	48 89 e5             	mov    rbp,rsp
+  42c9c0:	53                   	push   rbx
+  42c9c1:	48 81 ec c8 01 00 00 	sub    rsp,0x1c8
+  42c9c8:	48 89 bd 58 fe ff ff 	mov    QWORD PTR [rbp-0x1a8],rdi
+  42c9cf:	48 89 b5 50 fe ff ff 	mov    QWORD PTR [rbp-0x1b0],rsi
+  42c9d6:	48 89 95 48 fe ff ff 	mov    QWORD PTR [rbp-0x1b8],rdx
+  42c9dd:	48 89 8d 40 fe ff ff 	mov    QWORD PTR [rbp-0x1c0],rcx
+  42c9e4:	4c 89 85 38 fe ff ff 	mov    QWORD PTR [rbp-0x1c8],r8
+  42c9eb:	4c 89 8d 30 fe ff ff 	mov    QWORD PTR [rbp-0x1d0],r9
+  42c9f2:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42c9f9:	48 8b 95 50 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x1b0]
+  42ca00:	48 8b 8d 58 fe ff ff 	mov    rcx,QWORD PTR [rbp-0x1a8]
+  42ca07:	48 89 ce             	mov    rsi,rcx
+  42ca0a:	48 89 c7             	mov    rdi,rax
+  42ca0d:	e8 48 16 00 00       	call   42e05a <CPortalParser::DecodePostResponseData(char const*)>
+  42ca12:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42ca19:	48 89 c7             	mov    rdi,rax
+  42ca1c:	e8 b7 1b fe ff       	call   40e5d8 <CAutoString::GetBuffer() const>
+  42ca21:	48 89 c3             	mov    rbx,rax
+  42ca24:	e8 9b 34 fe ff       	call   40fec4 <CLog::GetInst()>
+  42ca29:	48 89 d9             	mov    rcx,rbx
+  42ca2c:	ba e5 35 45 00       	mov    edx,0x4535e5
+  42ca31:	be 03 00 00 00       	mov    esi,0x3
+  42ca36:	48 89 c7             	mov    rdi,rax
+  42ca39:	b8 00 00 00 00       	mov    eax,0x0
+  42ca3e:	e8 8f 34 fe ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  42ca43:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ca4a:	48 89 c7             	mov    rdi,rax
+  42ca4d:	e8 c6 16 ff ff       	call   41e118 <CMarkup::CMarkup()>
+  42ca52:	bb 00 00 00 00       	mov    ebx,0x0
+  42ca57:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42ca5e:	48 89 c7             	mov    rdi,rax
+  42ca61:	e8 72 1b fe ff       	call   40e5d8 <CAutoString::GetBuffer() const>
+  42ca66:	48 89 c2             	mov    rdx,rax
+  42ca69:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ca70:	48 89 d6             	mov    rsi,rdx
+  42ca73:	48 89 c7             	mov    rdi,rax
+  42ca76:	e8 59 69 01 00       	call   4433d4 <CMarkup::SetDoc(char const*)>
+  42ca7b:	83 f0 01             	xor    eax,0x1
+  42ca7e:	84 c0                	test   al,al
+  42ca80:	75 39                	jne    42cabb <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0xff>
+  42ca82:	48 8d 85 d0 fe ff ff 	lea    rax,[rbp-0x130]
+  42ca89:	be c0 35 45 00       	mov    esi,0x4535c0
+  42ca8e:	48 89 c7             	mov    rdi,rax
+  42ca91:	e8 68 16 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42ca96:	bb 01 00 00 00       	mov    ebx,0x1
+  42ca9b:	48 8b 95 d0 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x130]
+  42caa2:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42caa9:	48 89 d6             	mov    rsi,rdx
+  42caac:	48 89 c7             	mov    rdi,rax
+  42caaf:	e8 2e 82 01 00       	call   444ce2 <CMarkup::FindElem(MCD_CSTR)>
+  42cab4:	83 f0 01             	xor    eax,0x1
+  42cab7:	84 c0                	test   al,al
+  42cab9:	74 07                	je     42cac2 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x106>
+  42cabb:	b8 01 00 00 00       	mov    eax,0x1
+  42cac0:	eb 05                	jmp    42cac7 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x10b>
+  42cac2:	b8 00 00 00 00       	mov    eax,0x0
+  42cac7:	84 db                	test   bl,bl
+  42cac9:	84 c0                	test   al,al
+  42cacb:	74 0a                	je     42cad7 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x11b>
+  42cacd:	bb ff ff ff ff       	mov    ebx,0xffffffff
+  42cad2:	e9 cf 03 00 00       	jmp    42cea6 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x4ea>
+  42cad7:	48 8d 85 e0 fe ff ff 	lea    rax,[rbp-0x120]
+  42cade:	be d7 35 45 00       	mov    esi,0x4535d7
+  42cae3:	48 89 c7             	mov    rdi,rax
+  42cae6:	e8 13 16 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42caeb:	48 8b 95 e0 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x120]
+  42caf2:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42caf9:	48 89 d6             	mov    rsi,rdx
+  42cafc:	48 89 c7             	mov    rdi,rax
+  42caff:	e8 a4 82 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42cb04:	84 c0                	test   al,al
+  42cb06:	74 69                	je     42cb71 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x1b5>
+  42cb08:	48 8d 85 00 ff ff ff 	lea    rax,[rbp-0x100]
+  42cb0f:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42cb16:	48 89 d6             	mov    rsi,rdx
+  42cb19:	48 89 c7             	mov    rdi,rax
+  42cb1c:	e8 a3 16 ff ff       	call   41e1c4 <CMarkup::GetChildData()>
+  42cb21:	48 8d 95 00 ff ff ff 	lea    rdx,[rbp-0x100]
+  42cb28:	48 8d 85 f0 fe ff ff 	lea    rax,[rbp-0x110]
+  42cb2f:	48 89 d6             	mov    rsi,rdx
+  42cb32:	48 89 c7             	mov    rdi,rax
+  42cb35:	e8 62 15 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42cb3a:	48 8d 95 f0 fe ff ff 	lea    rdx,[rbp-0x110]
+  42cb41:	48 8b 85 48 fe ff ff 	mov    rax,QWORD PTR [rbp-0x1b8]
+  42cb48:	48 89 d6             	mov    rsi,rdx
+  42cb4b:	48 89 c7             	mov    rdi,rax
+  42cb4e:	e8 eb 15 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  42cb53:	48 8d 85 f0 fe ff ff 	lea    rax,[rbp-0x110]
+  42cb5a:	48 89 c7             	mov    rdi,rax
+  42cb5d:	e8 c2 15 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cb62:	48 8d 85 00 ff ff ff 	lea    rax,[rbp-0x100]
+  42cb69:	48 89 c7             	mov    rdi,rax
+  42cb6c:	e8 7f 75 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cb71:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cb78:	48 89 c7             	mov    rdi,rax
+  42cb7b:	e8 16 16 ff ff       	call   41e196 <CMarkup::ResetChildPos()>
+  42cb80:	48 8d 85 10 ff ff ff 	lea    rax,[rbp-0xf0]
+  42cb87:	be f1 35 45 00       	mov    esi,0x4535f1
+  42cb8c:	48 89 c7             	mov    rdi,rax
+  42cb8f:	e8 6a 15 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42cb94:	48 8b 95 10 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xf0]
+  42cb9b:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cba2:	48 89 d6             	mov    rsi,rdx
+  42cba5:	48 89 c7             	mov    rdi,rax
+  42cba8:	e8 fb 81 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42cbad:	84 c0                	test   al,al
+  42cbaf:	74 70                	je     42cc21 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x265>
+  42cbb1:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42cbb8:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42cbbf:	48 89 d6             	mov    rsi,rdx
+  42cbc2:	48 89 c7             	mov    rdi,rax
+  42cbc5:	e8 fa 15 ff ff       	call   41e1c4 <CMarkup::GetChildData()>
+  42cbca:	48 8d 95 20 ff ff ff 	lea    rdx,[rbp-0xe0]
+  42cbd1:	48 8d 85 b0 fe ff ff 	lea    rax,[rbp-0x150]
+  42cbd8:	48 89 d6             	mov    rsi,rdx
+  42cbdb:	48 89 c7             	mov    rdi,rax
+  42cbde:	e8 b9 14 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42cbe3:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42cbea:	48 89 c7             	mov    rdi,rax
+  42cbed:	e8 fe 74 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cbf2:	48 8d 85 b0 fe ff ff 	lea    rax,[rbp-0x150]
+  42cbf9:	48 89 c7             	mov    rdi,rax
+  42cbfc:	e8 07 17 fe ff       	call   40e308 <CAutoString::operator char const*()>
+  42cc01:	48 89 c7             	mov    rdi,rax
+  42cc04:	e8 87 77 fd ff       	call   404390 <atoi@plt>
+  42cc09:	48 8b 95 40 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x1c0]
+  42cc10:	89 02                	mov    DWORD PTR [rdx],eax
+  42cc12:	48 8d 85 b0 fe ff ff 	lea    rax,[rbp-0x150]
+  42cc19:	48 89 c7             	mov    rdi,rax
+  42cc1c:	e8 03 15 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cc21:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cc28:	48 89 c7             	mov    rdi,rax
+  42cc2b:	e8 66 15 ff ff       	call   41e196 <CMarkup::ResetChildPos()>
+  42cc30:	48 8d 85 30 ff ff ff 	lea    rax,[rbp-0xd0]
+  42cc37:	be fc 35 45 00       	mov    esi,0x4535fc
+  42cc3c:	48 89 c7             	mov    rdi,rax
+  42cc3f:	e8 ba 14 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42cc44:	48 8b 95 30 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xd0]
+  42cc4b:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cc52:	48 89 d6             	mov    rsi,rdx
+  42cc55:	48 89 c7             	mov    rdi,rax
+  42cc58:	e8 4b 81 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42cc5d:	84 c0                	test   al,al
+  42cc5f:	74 69                	je     42ccca <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x30e>
+  42cc61:	48 8d 85 50 ff ff ff 	lea    rax,[rbp-0xb0]
+  42cc68:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42cc6f:	48 89 d6             	mov    rsi,rdx
+  42cc72:	48 89 c7             	mov    rdi,rax
+  42cc75:	e8 4a 15 ff ff       	call   41e1c4 <CMarkup::GetChildData()>
+  42cc7a:	48 8d 95 50 ff ff ff 	lea    rdx,[rbp-0xb0]
+  42cc81:	48 8d 85 40 ff ff ff 	lea    rax,[rbp-0xc0]
+  42cc88:	48 89 d6             	mov    rsi,rdx
+  42cc8b:	48 89 c7             	mov    rdi,rax
+  42cc8e:	e8 09 14 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42cc93:	48 8d 95 40 ff ff ff 	lea    rdx,[rbp-0xc0]
+  42cc9a:	48 8b 85 38 fe ff ff 	mov    rax,QWORD PTR [rbp-0x1c8]
+  42cca1:	48 89 d6             	mov    rsi,rdx
+  42cca4:	48 89 c7             	mov    rdi,rax
+  42cca7:	e8 92 14 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  42ccac:	48 8d 85 40 ff ff ff 	lea    rax,[rbp-0xc0]
+  42ccb3:	48 89 c7             	mov    rdi,rax
+  42ccb6:	e8 69 14 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42ccbb:	48 8d 85 50 ff ff ff 	lea    rax,[rbp-0xb0]
+  42ccc2:	48 89 c7             	mov    rdi,rax
+  42ccc5:	e8 26 74 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42ccca:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ccd1:	48 89 c7             	mov    rdi,rax
+  42ccd4:	e8 bd 14 ff ff       	call   41e196 <CMarkup::ResetChildPos()>
+  42ccd9:	48 8d 85 60 ff ff ff 	lea    rax,[rbp-0xa0]
+  42cce0:	be 05 36 45 00       	mov    esi,0x453605
+  42cce5:	48 89 c7             	mov    rdi,rax
+  42cce8:	e8 11 14 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42cced:	48 8b 95 60 ff ff ff 	mov    rdx,QWORD PTR [rbp-0xa0]
+  42ccf4:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ccfb:	48 89 d6             	mov    rsi,rdx
+  42ccfe:	48 89 c7             	mov    rdi,rax
+  42cd01:	e8 a2 80 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42cd06:	84 c0                	test   al,al
+  42cd08:	74 60                	je     42cd6a <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x3ae>
+  42cd0a:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  42cd0e:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42cd15:	48 89 d6             	mov    rsi,rdx
+  42cd18:	48 89 c7             	mov    rdi,rax
+  42cd1b:	e8 a4 14 ff ff       	call   41e1c4 <CMarkup::GetChildData()>
+  42cd20:	48 8d 55 80          	lea    rdx,[rbp-0x80]
+  42cd24:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42cd2b:	48 89 d6             	mov    rsi,rdx
+  42cd2e:	48 89 c7             	mov    rdi,rax
+  42cd31:	e8 66 13 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42cd36:	48 8d 95 70 ff ff ff 	lea    rdx,[rbp-0x90]
+  42cd3d:	48 8b 85 30 fe ff ff 	mov    rax,QWORD PTR [rbp-0x1d0]
+  42cd44:	48 89 d6             	mov    rsi,rdx
+  42cd47:	48 89 c7             	mov    rdi,rax
+  42cd4a:	e8 ef 13 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  42cd4f:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42cd56:	48 89 c7             	mov    rdi,rax
+  42cd59:	e8 c6 13 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cd5e:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  42cd62:	48 89 c7             	mov    rdi,rax
+  42cd65:	e8 86 73 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cd6a:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cd71:	48 89 c7             	mov    rdi,rax
+  42cd74:	e8 1d 14 ff ff       	call   41e196 <CMarkup::ResetChildPos()>
+  42cd79:	48 8d 45 90          	lea    rax,[rbp-0x70]
+  42cd7d:	be 2a 35 45 00       	mov    esi,0x45352a
+  42cd82:	48 89 c7             	mov    rdi,rax
+  42cd85:	e8 74 13 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42cd8a:	48 8b 55 90          	mov    rdx,QWORD PTR [rbp-0x70]
+  42cd8e:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cd95:	48 89 d6             	mov    rsi,rdx
+  42cd98:	48 89 c7             	mov    rdi,rax
+  42cd9b:	e8 08 80 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42cda0:	84 c0                	test   al,al
+  42cda2:	74 6f                	je     42ce13 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x457>
+  42cda4:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cdab:	48 89 c7             	mov    rdi,rax
+  42cdae:	e8 e1 9b 01 00       	call   446994 <CMarkup::IntoElem()>
+  42cdb3:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42cdb7:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42cdbe:	48 89 d6             	mov    rsi,rdx
+  42cdc1:	48 89 c7             	mov    rdi,rax
+  42cdc4:	e8 31 18 00 00       	call   42e5fa <CMarkup::GetSubDoc()>
+  42cdc9:	48 8d 55 b0          	lea    rdx,[rbp-0x50]
+  42cdcd:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42cdd1:	48 89 d6             	mov    rsi,rdx
+  42cdd4:	48 89 c7             	mov    rdi,rax
+  42cdd7:	e8 c0 12 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42cddc:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42cde0:	48 89 c6             	mov    rsi,rax
+  42cde3:	48 8b 7d 10          	mov    rdi,QWORD PTR [rbp+0x10]
+  42cde7:	e8 52 13 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  42cdec:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42cdf0:	48 89 c7             	mov    rdi,rax
+  42cdf3:	e8 2c 13 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cdf8:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42cdfc:	48 89 c7             	mov    rdi,rax
+  42cdff:	e8 ec 72 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42ce04:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ce0b:	48 89 c7             	mov    rdi,rax
+  42ce0e:	e8 d1 9b 01 00       	call   4469e4 <CMarkup::OutOfElem()>
+  42ce13:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ce1a:	48 89 c7             	mov    rdi,rax
+  42ce1d:	e8 74 13 ff ff       	call   41e196 <CMarkup::ResetChildPos()>
+  42ce22:	48 8d 45 c0          	lea    rax,[rbp-0x40]
+  42ce26:	be 0e 36 45 00       	mov    esi,0x45360e
+  42ce2b:	48 89 c7             	mov    rdi,rax
+  42ce2e:	e8 cb 12 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42ce33:	48 8b 55 c0          	mov    rdx,QWORD PTR [rbp-0x40]
+  42ce37:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42ce3e:	48 89 d6             	mov    rsi,rdx
+  42ce41:	48 89 c7             	mov    rdi,rax
+  42ce44:	e8 5f 7f 01 00       	call   444da8 <CMarkup::FindChildElem(MCD_CSTR)>
+  42ce49:	84 c0                	test   al,al
+  42ce4b:	74 54                	je     42cea1 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x4e5>
+  42ce4d:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42ce51:	48 8d 95 60 fe ff ff 	lea    rdx,[rbp-0x1a0]
+  42ce58:	48 89 d6             	mov    rsi,rdx
+  42ce5b:	48 89 c7             	mov    rdi,rax
+  42ce5e:	e8 fd 17 00 00       	call   42e660 <CMarkup::GetChildSubDoc()>
+  42ce63:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  42ce67:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42ce6b:	48 89 d6             	mov    rsi,rdx
+  42ce6e:	48 89 c7             	mov    rdi,rax
+  42ce71:	e8 26 12 fe ff       	call   40e09c <CAutoString::CAutoString(std::string const&)>
+  42ce76:	48 8d 55 d0          	lea    rdx,[rbp-0x30]
+  42ce7a:	48 8b 45 18          	mov    rax,QWORD PTR [rbp+0x18]
+  42ce7e:	48 89 d6             	mov    rsi,rdx
+  42ce81:	48 89 c7             	mov    rdi,rax
+  42ce84:	e8 b5 12 fe ff       	call   40e13e <CAutoString::operator=(CAutoString const&)>
+  42ce89:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42ce8d:	48 89 c7             	mov    rdi,rax
+  42ce90:	e8 8f 12 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42ce95:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42ce99:	48 89 c7             	mov    rdi,rax
+  42ce9c:	e8 4f 72 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cea1:	bb 00 00 00 00       	mov    ebx,0x0
+  42cea6:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cead:	48 89 c7             	mov    rdi,rax
+  42ceb0:	e8 99 63 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42ceb5:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42cebc:	48 89 c7             	mov    rdi,rax
+  42cebf:	e8 60 12 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cec4:	89 d8                	mov    eax,ebx
+  42cec6:	e9 0f 01 00 00       	jmp    42cfda <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x61e>
+  42cecb:	84 db                	test   bl,bl
+  42cecd:	90                   	nop
+  42cece:	48 89 c3             	mov    rbx,rax
+  42ced1:	e9 d6 00 00 00       	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42ced6:	48 89 c3             	mov    rbx,rax
+  42ced9:	48 8d 85 f0 fe ff ff 	lea    rax,[rbp-0x110]
+  42cee0:	48 89 c7             	mov    rdi,rax
+  42cee3:	e8 3c 12 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cee8:	eb 03                	jmp    42ceed <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x531>
+  42ceea:	48 89 c3             	mov    rbx,rax
+  42ceed:	48 8d 85 00 ff ff ff 	lea    rax,[rbp-0x100]
+  42cef4:	48 89 c7             	mov    rdi,rax
+  42cef7:	e8 f4 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cefc:	e9 ab 00 00 00       	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cf01:	48 89 c3             	mov    rbx,rax
+  42cf04:	48 8d 85 20 ff ff ff 	lea    rax,[rbp-0xe0]
+  42cf0b:	48 89 c7             	mov    rdi,rax
+  42cf0e:	e8 dd 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cf13:	e9 94 00 00 00       	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cf18:	48 89 c3             	mov    rbx,rax
+  42cf1b:	48 8d 85 40 ff ff ff 	lea    rax,[rbp-0xc0]
+  42cf22:	48 89 c7             	mov    rdi,rax
+  42cf25:	e8 fa 11 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cf2a:	eb 03                	jmp    42cf2f <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x573>
+  42cf2c:	48 89 c3             	mov    rbx,rax
+  42cf2f:	48 8d 85 50 ff ff ff 	lea    rax,[rbp-0xb0]
+  42cf36:	48 89 c7             	mov    rdi,rax
+  42cf39:	e8 b2 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cf3e:	eb 6c                	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cf40:	48 89 c3             	mov    rbx,rax
+  42cf43:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+  42cf4a:	48 89 c7             	mov    rdi,rax
+  42cf4d:	e8 d2 11 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cf52:	eb 03                	jmp    42cf57 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x59b>
+  42cf54:	48 89 c3             	mov    rbx,rax
+  42cf57:	48 8d 45 80          	lea    rax,[rbp-0x80]
+  42cf5b:	48 89 c7             	mov    rdi,rax
+  42cf5e:	e8 8d 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cf63:	eb 47                	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cf65:	48 89 c3             	mov    rbx,rax
+  42cf68:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  42cf6c:	48 89 c7             	mov    rdi,rax
+  42cf6f:	e8 b0 11 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cf74:	eb 03                	jmp    42cf79 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5bd>
+  42cf76:	48 89 c3             	mov    rbx,rax
+  42cf79:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  42cf7d:	48 89 c7             	mov    rdi,rax
+  42cf80:	e8 6b 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cf85:	eb 25                	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cf87:	48 89 c3             	mov    rbx,rax
+  42cf8a:	48 8d 45 d0          	lea    rax,[rbp-0x30]
+  42cf8e:	48 89 c7             	mov    rdi,rax
+  42cf91:	e8 8e 11 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cf96:	eb 03                	jmp    42cf9b <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5df>
+  42cf98:	48 89 c3             	mov    rbx,rax
+  42cf9b:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  42cf9f:	48 89 c7             	mov    rdi,rax
+  42cfa2:	e8 49 71 fd ff       	call   4040f0 <std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@plt>
+  42cfa7:	eb 03                	jmp    42cfac <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x5f0>
+  42cfa9:	48 89 c3             	mov    rbx,rax
+  42cfac:	48 8d 85 60 fe ff ff 	lea    rax,[rbp-0x1a0]
+  42cfb3:	48 89 c7             	mov    rdi,rax
+  42cfb6:	e8 93 62 01 00       	call   44324e <CMarkup::~CMarkup()>
+  42cfbb:	eb 03                	jmp    42cfc0 <CPortalParser::ParserAuthResponse(char const*, CAutoString&, int&, CAutoString&, CAutoString&, CAutoString&, CAutoString&)+0x604>
+  42cfbd:	48 89 c3             	mov    rbx,rax
+  42cfc0:	48 8d 85 c0 fe ff ff 	lea    rax,[rbp-0x140]
+  42cfc7:	48 89 c7             	mov    rdi,rax
+  42cfca:	e8 55 11 fe ff       	call   40e124 <CAutoString::~CAutoString()>
+  42cfcf:	48 89 d8             	mov    rax,rbx
+  42cfd2:	48 89 c7             	mov    rdi,rax
+  42cfd5:	e8 46 78 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42cfda:	48 81 c4 c8 01 00 00 	add    rsp,0x1c8
+  42cfe1:	5b                   	pop    rbx
+  42cfe2:	5d                   	pop    rbp
+  42cfe3:	c3                   	ret
+
+000000000042cfe4 <CPortalParser::MakeKeepRequestData(char const*, char const*, char const*, char const*, char const*, char const*, char const*, char const*, int)>:
+  42cfe4:	55                   	push   rbp
+  42cfe5:	48 89 e5             	mov    rbp,rsp
+  42cfe8:	53                   	push   rbx
+  42cfe9:	48 81 ec a8 01 00 00 	sub    rsp,0x1a8
+  42cff0:	48 89 bd 78 fe ff ff 	mov    QWORD PTR [rbp-0x188],rdi
+  42cff7:	48 89 b5 70 fe ff ff 	mov    QWORD PTR [rbp-0x190],rsi
+  42cffe:	48 89 95 68 fe ff ff 	mov    QWORD PTR [rbp-0x198],rdx
+  42d005:	48 89 8d 60 fe ff ff 	mov    QWORD PTR [rbp-0x1a0],rcx
+  42d00c:	4c 89 85 58 fe ff ff 	mov    QWORD PTR [rbp-0x1a8],r8
+  42d013:	4c 89 8d 50 fe ff ff 	mov    QWORD PTR [rbp-0x1b0],r9
+  42d01a:	48 8d 85 80 fe ff ff 	lea    rax,[rbp-0x180]
+  42d021:	48 89 c7             	mov    rdi,rax
+  42d024:	e8 ef 10 ff ff       	call   41e118 <CMarkup::CMarkup()>
+  42d029:	48 8d 85 80 fe ff ff 	lea    rax,[rbp-0x180]
+  42d030:	be 40 35 45 00       	mov    esi,0x453540
+  42d035:	48 89 c7             	mov    rdi,rax
+  42d038:	e8 97 63 01 00       	call   4433d4 <CMarkup::SetDoc(char const*)>
+  42d03d:	48 8d 85 e0 fe ff ff 	lea    rax,[rbp-0x120]
+  42d044:	be 7a 35 45 00       	mov    esi,0x45357a
+  42d049:	48 89 c7             	mov    rdi,rax
+  42d04c:	e8 ad 10 ff ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  42d051:	48 8b 95 e0 fe ff ff 	mov    rdx,QWORD PTR [rbp-0x120]
+  42d058:	48                   	rex.W
+  42d059:	8d                   	.byte 0x8d
+  42d05a:	85                   	.byte 0x85
+  42d05b:	80                   	.byte 0x80

@@ -1,0 +1,190 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000044f3d2 <CPipeService::DoMessage(CAutoString)>:
+  44f3d2:	55                   	push   rbp
+  44f3d3:	48 89 e5             	mov    rbp,rsp
+  44f3d6:	53                   	push   rbx
+  44f3d7:	48 83 ec 28          	sub    rsp,0x28
+  44f3db:	48 89 7d d8          	mov    QWORD PTR [rbp-0x28],rdi
+  44f3df:	48 89 75 d0          	mov    QWORD PTR [rbp-0x30],rsi
+  44f3e3:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f3e7:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f3ee:	48 85 c0             	test   rax,rax
+  44f3f1:	74 63                	je     44f456 <CPipeService::DoMessage(CAutoString)+0x84>
+  44f3f3:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f3f7:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f3fe:	48 8b 00             	mov    rax,QWORD PTR [rax]
+  44f401:	48 8b 18             	mov    rbx,QWORD PTR [rax]
+  44f404:	48 8b 55 d0          	mov    rdx,QWORD PTR [rbp-0x30]
+  44f408:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f40c:	48 89 d6             	mov    rsi,rdx
+  44f40f:	48 89 c7             	mov    rdi,rax
+  44f412:	e8 49 ec fb ff       	call   40e060 <CAutoString::CAutoString(CAutoString const&)>
+  44f417:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  44f41b:	48 8b 80 90 00 00 00 	mov    rax,QWORD PTR [rax+0x90]
+  44f422:	48 8d 55 e0          	lea    rdx,[rbp-0x20]
+  44f426:	48 89 d6             	mov    rsi,rdx
+  44f429:	48 89 c7             	mov    rdi,rax
+  44f42c:	ff d3                	call   rbx
+  44f42e:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f432:	48 89 c7             	mov    rdi,rax
+  44f435:	e8 ea ec fb ff       	call   40e124 <CAutoString::~CAutoString()>
+  44f43a:	eb 1a                	jmp    44f456 <CPipeService::DoMessage(CAutoString)+0x84>
+  44f43c:	48 89 c3             	mov    rbx,rax
+  44f43f:	48 8d 45 e0          	lea    rax,[rbp-0x20]
+  44f443:	48 89 c7             	mov    rdi,rax
+  44f446:	e8 d9 ec fb ff       	call   40e124 <CAutoString::~CAutoString()>
+  44f44b:	48 89 d8             	mov    rax,rbx
+  44f44e:	48 89 c7             	mov    rdi,rax
+  44f451:	e8 ca 53 fb ff       	call   404820 <_Unwind_Resume@plt>
+  44f456:	48 83 c4 28          	add    rsp,0x28
+  44f45a:	5b                   	pop    rbx
+  44f45b:	5d                   	pop    rbp
+  44f45c:	c3                   	ret
+  44f45d:	90                   	nop
+
+000000000044f45e <CPipeService::Disconnect()>:
+  44f45e:	55                   	push   rbp
+  44f45f:	48 89 e5             	mov    rbp,rsp
+  44f462:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44f466:	5d                   	pop    rbp
+  44f467:	c3                   	ret
+
+000000000044f468 <CXMLOpt::CXMLOpt()>:
+  44f468:	55                   	push   rbp
+  44f469:	48 89 e5             	mov    rbp,rsp
+  44f46c:	48 83 ec 10          	sub    rsp,0x10
+  44f470:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44f474:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f478:	48 89 c7             	mov    rdi,rax
+  44f47b:	e8 98 ec fc ff       	call   41e118 <CMarkup::CMarkup()>
+  44f480:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f484:	48 c7 40 50 00 00 00 00 	mov    QWORD PTR [rax+0x50],0x0
+  44f48c:	c9                   	leave
+  44f48d:	c3                   	ret
+
+000000000044f48e <CXMLOpt::CXMLOpt(char const*)>:
+  44f48e:	55                   	push   rbp
+  44f48f:	48 89 e5             	mov    rbp,rsp
+  44f492:	53                   	push   rbx
+  44f493:	48 83 ec 18          	sub    rsp,0x18
+  44f497:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  44f49b:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+  44f49f:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f4a3:	48 89 c7             	mov    rdi,rax
+  44f4a6:	e8 6d ec fc ff       	call   41e118 <CMarkup::CMarkup()>
+  44f4ab:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f4af:	48 c7 40 50 00 00 00 00 	mov    QWORD PTR [rax+0x50],0x0
+  44f4b7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f4bb:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  44f4bf:	48 89 d6             	mov    rsi,rdx
+  44f4c2:	48 89 c7             	mov    rdi,rax
+  44f4c5:	e8 0a 3f ff ff       	call   4433d4 <CMarkup::SetDoc(char const*)>
+  44f4ca:	eb 1a                	jmp    44f4e6 <CXMLOpt::CXMLOpt(char const*)+0x58>
+  44f4cc:	48 89 c3             	mov    rbx,rax
+  44f4cf:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f4d3:	48 89 c7             	mov    rdi,rax
+  44f4d6:	e8 73 3d ff ff       	call   44324e <CMarkup::~CMarkup()>
+  44f4db:	48 89 d8             	mov    rax,rbx
+  44f4de:	48 89 c7             	mov    rdi,rax
+  44f4e1:	e8 3a 53 fb ff       	call   404820 <_Unwind_Resume@plt>
+  44f4e6:	48 83 c4 18          	add    rsp,0x18
+  44f4ea:	5b                   	pop    rbx
+  44f4eb:	5d                   	pop    rbp
+  44f4ec:	c3                   	ret
+  44f4ed:	90                   	nop
+
+000000000044f4ee <CXMLOpt::~CXMLOpt()>:
+  44f4ee:	55                   	push   rbp
+  44f4ef:	48 89 e5             	mov    rbp,rsp
+  44f4f2:	48 83 ec 10          	sub    rsp,0x10
+  44f4f6:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  44f4fa:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f4fe:	48 8b 40 50          	mov    rax,QWORD PTR [rax+0x50]
+  44f502:	48 85 c0             	test   rax,rax
+  44f505:	74 1d                	je     44f524 <CXMLOpt::~CXMLOpt()+0x36>
+  44f507:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f50b:	48 8b 40 50          	mov    rax,QWORD PTR [rax+0x50]
+  44f50f:	48 85 c0             	test   rax,rax
+  44f512:	74 10                	je     44f524 <CXMLOpt::~CXMLOpt()+0x36>
+  44f514:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f518:	48 8b 40 50          	mov    rax,QWORD PTR [rax+0x50]
+  44f51c:	48 89 c7             	mov    rdi,rax
+  44f51f:	e8 8c 50 fb ff       	call   4045b0 <operator delete[](void*)@plt>
+  44f524:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  44f528:	48 89 c7             	mov    rdi,rax
+  44f52b:	e8 1e 3d ff ff       	call   44324e <CMarkup::~CMarkup()>
+  44f530:	c9                   	leave
+  44f531:	c3                   	ret
+
+000000000044f532 <CXMLOpt::LoadFile(char const*)>:
+  44f532:	55                   	push   rbp
+  44f533:	48 89 e5             	mov    rbp,rsp
+  44f536:	48 83 ec 20          	sub    rsp,0x20
+  44f53a:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  44f53e:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+  44f542:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  44f546:	48 8d 45 f0          	lea    rax,[rbp-0x10]
+  44f54a:	48 89 d6             	mov    rsi,rdx
+  44f54d:	48 89 c7             	mov    rdi,rax
+  44f550:	e8 a9 eb fc ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  44f555:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f559:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  44f55d:	48 89 d6             	mov    rsi,rdx
+  44f560:	48 89 c7             	mov    rdi,rax
+  44f563:	e8 dc 52 ff ff       	call   444844 <CMarkup::Load(MCD_CSTR)>
+  44f568:	84 c0                	test   al,al
+  44f56a:	74 3e                	je     44f5aa <CXMLOpt::LoadFile(char const*)+0x78>
+  44f56c:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  44f570:	48 89 c7             	mov    rdi,rax
+  44f573:	e8 a8 4b fb ff       	call   404120 <strlen@plt>
+  44f578:	48 83 c0 01          	add    rax,0x1
+  44f57c:	48 89 c7             	mov    rdi,rax
+  44f57f:	e8 2c 49 fb ff       	call   403eb0 <operator new[](unsigned long)@plt>
+  44f584:	48 8b 55 e8          	mov    rdx,QWORD PTR [rbp-0x18]
+  44f588:	48 89 42 50          	mov    QWORD PTR [rdx+0x50],rax
+  44f58c:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f590:	48 8b 40 50          	mov    rax,QWORD PTR [rax+0x50]
+  44f594:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  44f598:	48 89 d6             	mov    rsi,rdx
+  44f59b:	48 89 c7             	mov    rdi,rax
+  44f59e:	e8 ad 4f fb ff       	call   404550 <strcpy@plt>
+  44f5a3:	b8 01 00 00 00       	mov    eax,0x1
+  44f5a8:	eb 05                	jmp    44f5af <CXMLOpt::LoadFile(char const*)+0x7d>
+  44f5aa:	b8 00 00 00 00       	mov    eax,0x0
+  44f5af:	c9                   	leave
+  44f5b0:	c3                   	ret
+  44f5b1:	90                   	nop
+
+000000000044f5b2 <CXMLOpt::SaveFile()>:
+  44f5b2:	55                   	push   rbp
+  44f5b3:	48 89 e5             	mov    rbp,rsp
+  44f5b6:	48 83 ec 20          	sub    rsp,0x20
+  44f5ba:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  44f5be:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f5c2:	48 8b 40 50          	mov    rax,QWORD PTR [rax+0x50]
+  44f5c6:	48 85 c0             	test   rax,rax
+  44f5c9:	74 2c                	je     44f5f7 <CXMLOpt::SaveFile()+0x45>
+  44f5cb:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f5cf:	48 8b 50 50          	mov    rdx,QWORD PTR [rax+0x50]
+  44f5d3:	48 8d 45 f0          	lea    rax,[rbp-0x10]
+  44f5d7:	48 89 d6             	mov    rsi,rdx
+  44f5da:	48 89 c7             	mov    rdi,rax
+  44f5dd:	e8 1c eb fc ff       	call   41e0fe <MCD_CSTR::MCD_CSTR(char const*)>
+  44f5e2:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f5e6:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  44f5ea:	48 89 d6             	mov    rsi,rdx
+  44f5ed:	48 89 c7             	mov    rdi,rax
+  44f5f0:	e8 5d 54 ff ff       	call   444a52 <CMarkup::Save(MCD_CSTR)>
+  44f5f5:	eb 05                	jmp    44f5fc <CXMLOpt::SaveFile()+0x4a>
+  44f5f7:	b8 00 00 00 00       	mov    eax,0x0
+  44f5fc:	c9                   	leave
+  44f5fd:	c3                   	ret
+
+000000000044f5fe <CXMLOpt::GetValue(char const*)>:
+  44f5fe:	55                   	push   rbp
+  44f5ff:	48                   	rex.W

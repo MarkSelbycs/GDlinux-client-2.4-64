@@ -1,0 +1,303 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000043002e <CZsmHelper::Code(char const*)>:
+  43002e:	55                   	push   rbp
+  43002f:	48 89 e5             	mov    rbp,rsp
+  430032:	53                   	push   rbx
+  430033:	48 83 ec 78          	sub    rsp,0x78
+  430037:	48 89 7d 88          	mov    QWORD PTR [rbp-0x78],rdi
+  43003b:	48 89 75 80          	mov    QWORD PTR [rbp-0x80],rsi
+  43003f:	bf 32 00 00 00       	mov    edi,0x32
+  430044:	e8 67 3e fd ff       	call   403eb0 <operator new[](unsigned long)@plt>
+  430049:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  43004d:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  430051:	48 b9 74 61 72 63 65 20 6c 6f 	movabs rcx,0x6f6c206563726174
+  43005b:	48 89 08             	mov    QWORD PTR [rax],rcx
+  43005e:	48 b9 67 20 61 6c 67 6f 20 61 	movabs rcx,0x61206f676c612067
+  430068:	48 89 48 08          	mov    QWORD PTR [rax+0x8],rcx
+  43006c:	48 b9 75 74 6f 20 63 6f 6d 70 	movabs rcx,0x706d6f63206f7475
+  430076:	48 89 48 10          	mov    QWORD PTR [rax+0x10],rcx
+  43007a:	48 bb 73 74 72 20 6e 75 6c 6c 	movabs rbx,0x6c6c756e20727473
+  430084:	48 89 58 18          	mov    QWORD PTR [rax+0x18],rbx
+  430088:	c7 40 20 20 76 61 6c 	mov    DWORD PTR [rax+0x20],0x6c617620
+  43008f:	66 c7 40 24 75 65    	mov    WORD PTR [rax+0x24],0x6575
+  430095:	c6 40 26 00          	mov    BYTE PTR [rax+0x26],0x0
+  430099:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  43009d:	48 8d 88 68 08 00 00 	lea    rcx,[rax+0x868]
+  4300a4:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  4300a8:	ba 00 00 00 00       	mov    edx,0x0
+  4300ad:	48 89 ce             	mov    rsi,rcx
+  4300b0:	48 89 c7             	mov    rdi,rax
+  4300b3:	e8 42 e9 fd ff       	call   40e9fa <CLockGuard<RWLock*, GNothing<RWLock*> >::CLockGuard(RWLock*, bool)>
+  4300b8:	48 c7 45 e0 00 00 00 00 	mov    QWORD PTR [rbp-0x20],0x0
+  4300c0:	48 c7 45 d8 00 00 00 00 	mov    QWORD PTR [rbp-0x28],0x0
+  4300c8:	48 c7 45 d0 00 00 00 00 	mov    QWORD PTR [rbp-0x30],0x0
+  4300d0:	48 c7 45 c8 00 00 00 00 	mov    QWORD PTR [rbp-0x38],0x0
+  4300d8:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  4300dc:	48 89 c7             	mov    rdi,rax
+  4300df:	e8 3e 09 00 00       	call   430a22 <CZsmHelper::openZsmModule()>
+  4300e4:	48 89 45 98          	mov    QWORD PTR [rbp-0x68],rax
+  4300e8:	48 8b 45 98          	mov    rax,QWORD PTR [rbp-0x68]
+  4300ec:	48 85 c0             	test   rax,rax
+  4300ef:	75 09                	jne    4300fa <CZsmHelper::Code(char const*)+0xcc>
+  4300f1:	48 8b 5d e8          	mov    rbx,QWORD PTR [rbp-0x18]
+  4300f5:	e9 43 01 00 00       	jmp    43023d <CZsmHelper::Code(char const*)+0x20f>
+  4300fa:	48 8b 45 98          	mov    rax,QWORD PTR [rbp-0x68]
+  4300fe:	48 8b 40 28          	mov    rax,QWORD PTR [rax+0x28]
+  430102:	be c1 37 45 00       	mov    esi,0x4537c1
+  430107:	48 89 c7             	mov    rdi,rax
+  43010a:	e8 31 45 fd ff       	call   404640 <dlsym@plt>
+  43010f:	48 89 45 d0          	mov    QWORD PTR [rbp-0x30],rax
+  430113:	48 83 7d d0 00       	cmp    QWORD PTR [rbp-0x30],0x0
+  430118:	75 4d                	jne    430167 <CZsmHelper::Code(char const*)+0x139>
+  43011a:	e8 81 40 fd ff       	call   4041a0 <dlerror@plt>
+  43011f:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  430123:	48 83 7d e0 00       	cmp    QWORD PTR [rbp-0x20],0x0
+  430128:	0f 95 c0             	setne  al
+  43012b:	84 c0                	test   al,al
+  43012d:	74 38                	je     430167 <CZsmHelper::Code(char const*)+0x139>
+  43012f:	48 8d 55 98          	lea    rdx,[rbp-0x68]
+  430133:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  430137:	48 89 d6             	mov    rsi,rdx
+  43013a:	48 89 c7             	mov    rdi,rax
+  43013d:	e8 98 06 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  430142:	e8 7d fd fd ff       	call   40fec4 <CLog::GetInst()>
+  430147:	ba c6 37 45 00       	mov    edx,0x4537c6
+  43014c:	be 00 00 00 00       	mov    esi,0x0
+  430151:	48 89 c7             	mov    rdi,rax
+  430154:	b8 00 00 00 00       	mov    eax,0x0
+  430159:	e8 74 fd fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  43015e:	48 8b 5d e8          	mov    rbx,QWORD PTR [rbp-0x18]
+  430162:	e9 d6 00 00 00       	jmp    43023d <CZsmHelper::Code(char const*)+0x20f>
+  430167:	48 8b 55 80          	mov    rdx,QWORD PTR [rbp-0x80]
+  43016b:	48 8b 45 d0          	mov    rax,QWORD PTR [rbp-0x30]
+  43016f:	48 89 d7             	mov    rdi,rdx
+  430172:	ff d0                	call   rax
+  430174:	48 89 45 d8          	mov    QWORD PTR [rbp-0x28],rax
+  430178:	48 83 7d d8 00       	cmp    QWORD PTR [rbp-0x28],0x0
+  43017d:	0f 94 c0             	sete   al
+  430180:	84 c0                	test   al,al
+  430182:	74 38                	je     4301bc <CZsmHelper::Code(char const*)+0x18e>
+  430184:	48 8d 55 98          	lea    rdx,[rbp-0x68]
+  430188:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  43018c:	48 89 d6             	mov    rsi,rdx
+  43018f:	48 89 c7             	mov    rdi,rax
+  430192:	e8 43 06 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  430197:	e8 28 fd fd ff       	call   40fec4 <CLog::GetInst()>
+  43019c:	ba d8 37 45 00       	mov    edx,0x4537d8
+  4301a1:	be 00 00 00 00       	mov    esi,0x0
+  4301a6:	48 89 c7             	mov    rdi,rax
+  4301a9:	b8 00 00 00 00       	mov    eax,0x0
+  4301ae:	e8 1f fd fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  4301b3:	48 8b 5d e8          	mov    rbx,QWORD PTR [rbp-0x18]
+  4301b7:	e9 81 00 00 00       	jmp    43023d <CZsmHelper::Code(char const*)+0x20f>
+  4301bc:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  4301c0:	48 89 c7             	mov    rdi,rax
+  4301c3:	e8 58 3f fd ff       	call   404120 <strlen@plt>
+  4301c8:	48 83 c0 01          	add    rax,0x1
+  4301cc:	48 89 c7             	mov    rdi,rax
+  4301cf:	e8 dc 3c fd ff       	call   403eb0 <operator new[](unsigned long)@plt>
+  4301d4:	48 89 45 c0          	mov    QWORD PTR [rbp-0x40],rax
+  4301d8:	48 8b 55 d8          	mov    rdx,QWORD PTR [rbp-0x28]
+  4301dc:	48 8b 45 c0          	mov    rax,QWORD PTR [rbp-0x40]
+  4301e0:	48 89 d6             	mov    rsi,rdx
+  4301e3:	48 89 c7             	mov    rdi,rax
+  4301e6:	e8 65 43 fd ff       	call   404550 <strcpy@plt>
+  4301eb:	48 8b 45 98          	mov    rax,QWORD PTR [rbp-0x68]
+  4301ef:	48 8b 40 28          	mov    rax,QWORD PTR [rax+0x28]
+  4301f3:	be e5 37 45 00       	mov    esi,0x4537e5
+  4301f8:	48 89 c7             	mov    rdi,rax
+  4301fb:	e8 40 44 fd ff       	call   404640 <dlsym@plt>
+  430200:	48 89 45 c8          	mov    QWORD PTR [rbp-0x38],rax
+  430204:	e8 97 3f fd ff       	call   4041a0 <dlerror@plt>
+  430209:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  43020d:	48 83 7d e0 00       	cmp    QWORD PTR [rbp-0x20],0x0
+  430212:	0f 95 c0             	setne  al
+  430215:	84 c0                	test   al,al
+  430217:	75 0d                	jne    430226 <CZsmHelper::Code(char const*)+0x1f8>
+  430219:	48 8b 55 d8          	mov    rdx,QWORD PTR [rbp-0x28]
+  43021d:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  430221:	48 89 d7             	mov    rdi,rdx
+  430224:	ff d0                	call   rax
+  430226:	48 8d 55 98          	lea    rdx,[rbp-0x68]
+  43022a:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  43022e:	48 89 d6             	mov    rsi,rdx
+  430231:	48 89 c7             	mov    rdi,rax
+  430234:	e8 a1 05 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  430239:	48 8b 5d c0          	mov    rbx,QWORD PTR [rbp-0x40]
+  43023d:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  430241:	48 89 c7             	mov    rdi,rax
+  430244:	e8 f7 e7 fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  430249:	48 89 d8             	mov    rax,rbx
+  43024c:	eb 1a                	jmp    430268 <CZsmHelper::Code(char const*)+0x23a>
+  43024e:	48 89 c3             	mov    rbx,rax
+  430251:	48 8d 45 a0          	lea    rax,[rbp-0x60]
+  430255:	48 89 c7             	mov    rdi,rax
+  430258:	e8 e3 e7 fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  43025d:	48 89 d8             	mov    rax,rbx
+  430260:	48 89 c7             	mov    rdi,rax
+  430263:	e8 b8 45 fd ff       	call   404820 <_Unwind_Resume@plt>
+  430268:	48 83 c4 78          	add    rsp,0x78
+  43026c:	5b                   	pop    rbx
+  43026d:	5d                   	pop    rbp
+  43026e:	c3                   	ret
+  43026f:	90                   	nop
+
+0000000000430270 <CZsmHelper::DeCode(char const*)>:
+  430270:	55                   	push   rbp
+  430271:	48 89 e5             	mov    rbp,rsp
+  430274:	53                   	push   rbx
+  430275:	48 83 ec 78          	sub    rsp,0x78
+  430279:	48 89 7d 88          	mov    QWORD PTR [rbp-0x78],rdi
+  43027d:	48 89 75 80          	mov    QWORD PTR [rbp-0x80],rsi
+  430281:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  430285:	48 8d 88 68 08 00 00 	lea    rcx,[rax+0x868]
+  43028c:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  430290:	ba 00 00 00 00       	mov    edx,0x0
+  430295:	48 89 ce             	mov    rsi,rcx
+  430298:	48 89 c7             	mov    rdi,rax
+  43029b:	e8 5a e7 fd ff       	call   40e9fa <CLockGuard<RWLock*, GNothing<RWLock*> >::CLockGuard(RWLock*, bool)>
+  4302a0:	48 c7 45 e8 00 00 00 00 	mov    QWORD PTR [rbp-0x18],0x0
+  4302a8:	c7 45 e4 00 00 00 00 	mov    DWORD PTR [rbp-0x1c],0x0
+  4302af:	48 c7 45 d8 00 00 00 00 	mov    QWORD PTR [rbp-0x28],0x0
+  4302b7:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  4302bb:	48 89 c7             	mov    rdi,rax
+  4302be:	e8 5f 07 00 00       	call   430a22 <CZsmHelper::openZsmModule()>
+  4302c3:	48 89 45 a8          	mov    QWORD PTR [rbp-0x58],rax
+  4302c7:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4302cb:	48 85 c0             	test   rax,rax
+  4302ce:	75 0a                	jne    4302da <CZsmHelper::DeCode(char const*)+0x6a>
+  4302d0:	bb 00 00 00 00       	mov    ebx,0x0
+  4302d5:	e9 93 01 00 00       	jmp    43046d <CZsmHelper::DeCode(char const*)+0x1fd>
+  4302da:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4302de:	48 8b 40 28          	mov    rax,QWORD PTR [rax+0x28]
+  4302e2:	be f0 37 45 00       	mov    esi,0x4537f0
+  4302e7:	48 89 c7             	mov    rdi,rax
+  4302ea:	e8 51 43 fd ff       	call   404640 <dlsym@plt>
+  4302ef:	48 89 45 d8          	mov    QWORD PTR [rbp-0x28],rax
+  4302f3:	48 83 7d d8 00       	cmp    QWORD PTR [rbp-0x28],0x0
+  4302f8:	75 4e                	jne    430348 <CZsmHelper::DeCode(char const*)+0xd8>
+  4302fa:	e8 a1 3e fd ff       	call   4041a0 <dlerror@plt>
+  4302ff:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  430303:	48 83 7d e8 00       	cmp    QWORD PTR [rbp-0x18],0x0
+  430308:	0f 95 c0             	setne  al
+  43030b:	84 c0                	test   al,al
+  43030d:	74 39                	je     430348 <CZsmHelper::DeCode(char const*)+0xd8>
+  43030f:	48 8d 55 a8          	lea    rdx,[rbp-0x58]
+  430313:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  430317:	48 89 d6             	mov    rsi,rdx
+  43031a:	48 89 c7             	mov    rdi,rax
+  43031d:	e8 b8 04 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  430322:	e8 9d fb fd ff       	call   40fec4 <CLog::GetInst()>
+  430327:	ba f8 37 45 00       	mov    edx,0x4537f8
+  43032c:	be 00 00 00 00       	mov    esi,0x0
+  430331:	48 89 c7             	mov    rdi,rax
+  430334:	b8 00 00 00 00       	mov    eax,0x0
+  430339:	e8 94 fb fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  43033e:	bb 00 00 00 00       	mov    ebx,0x0
+  430343:	e9 25 01 00 00       	jmp    43046d <CZsmHelper::DeCode(char const*)+0x1fd>
+  430348:	c7 45 90 00 00 00 00 	mov    DWORD PTR [rbp-0x70],0x0
+  43034f:	c7 45 94 00 00 00 00 	mov    DWORD PTR [rbp-0x6c],0x0
+  430356:	48 c7 45 98 00 00 00 00 	mov    QWORD PTR [rbp-0x68],0x0
+  43035e:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  430362:	48 8b 38             	mov    rdi,QWORD PTR [rax]
+  430365:	48 8d 55 90          	lea    rdx,[rbp-0x70]
+  430369:	48 8b 75 80          	mov    rsi,QWORD PTR [rbp-0x80]
+  43036d:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  430371:	48 89 d1             	mov    rcx,rdx
+  430374:	ba ba 0b 43 00       	mov    edx,0x430bba
+  430379:	ff d0                	call   rax
+  43037b:	89 45 e4             	mov    DWORD PTR [rbp-0x1c],eax
+  43037e:	83 7d e4 01          	cmp    DWORD PTR [rbp-0x1c],0x1
+  430382:	74 3e                	je     4303c2 <CZsmHelper::DeCode(char const*)+0x152>
+  430384:	e8 3b fb fd ff       	call   40fec4 <CLog::GetInst()>
+  430389:	8b 55 e4             	mov    edx,DWORD PTR [rbp-0x1c]
+  43038c:	89 d1                	mov    ecx,edx
+  43038e:	ba 0d 38 45 00       	mov    edx,0x45380d
+  430393:	be 00 00 00 00       	mov    esi,0x0
+  430398:	48 89 c7             	mov    rdi,rax
+  43039b:	b8 00 00 00 00       	mov    eax,0x0
+  4303a0:	e8 2d fb fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  4303a5:	48 8d 55 a8          	lea    rdx,[rbp-0x58]
+  4303a9:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  4303ad:	48 89 d6             	mov    rsi,rdx
+  4303b0:	48 89 c7             	mov    rdi,rax
+  4303b3:	e8 22 04 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  4303b8:	bb 00 00 00 00       	mov    ebx,0x0
+  4303bd:	e9 ab 00 00 00       	jmp    43046d <CZsmHelper::DeCode(char const*)+0x1fd>
+  4303c2:	8b 45 94             	mov    eax,DWORD PTR [rbp-0x6c]
+  4303c5:	89 c0                	mov    eax,eax
+  4303c7:	48 89 c7             	mov    rdi,rax
+  4303ca:	e8 e1 3a fd ff       	call   403eb0 <operator new[](unsigned long)@plt>
+  4303cf:	48 89 45 d0          	mov    QWORD PTR [rbp-0x30],rax
+  4303d3:	c7 45 90 00 00 00 00 	mov    DWORD PTR [rbp-0x70],0x0
+  4303da:	48 8b 45 d0          	mov    rax,QWORD PTR [rbp-0x30]
+  4303de:	48 89 45 98          	mov    QWORD PTR [rbp-0x68],rax
+  4303e2:	48 8b 45 a8          	mov    rax,QWORD PTR [rbp-0x58]
+  4303e6:	48 8b 38             	mov    rdi,QWORD PTR [rax]
+  4303e9:	48 8d 55 90          	lea    rdx,[rbp-0x70]
+  4303ed:	48 8b 75 80          	mov    rsi,QWORD PTR [rbp-0x80]
+  4303f1:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  4303f5:	48 89 d1             	mov    rcx,rdx
+  4303f8:	ba ba 0b 43 00       	mov    edx,0x430bba
+  4303fd:	ff d0                	call   rax
+  4303ff:	89 45 e4             	mov    DWORD PTR [rbp-0x1c],eax
+  430402:	83 7d e4 01          	cmp    DWORD PTR [rbp-0x1c],0x1
+  430406:	74 4e                	je     430456 <CZsmHelper::DeCode(char const*)+0x1e6>
+  430408:	e8 b7 fa fd ff       	call   40fec4 <CLog::GetInst()>
+  43040d:	8b 55 e4             	mov    edx,DWORD PTR [rbp-0x1c]
+  430410:	89 d1                	mov    ecx,edx
+  430412:	ba 0d 38 45 00       	mov    edx,0x45380d
+  430417:	be 00 00 00 00       	mov    esi,0x0
+  43041c:	48 89 c7             	mov    rdi,rax
+  43041f:	b8 00 00 00 00       	mov    eax,0x0
+  430424:	e8 a9 fa fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  430429:	48 83 7d d0 00       	cmp    QWORD PTR [rbp-0x30],0x0
+  43042e:	74 0c                	je     43043c <CZsmHelper::DeCode(char const*)+0x1cc>
+  430430:	48 8b 45 d0          	mov    rax,QWORD PTR [rbp-0x30]
+  430434:	48 89 c7             	mov    rdi,rax
+  430437:	e8 74 41 fd ff       	call   4045b0 <operator delete[](void*)@plt>
+  43043c:	48 8d 55 a8          	lea    rdx,[rbp-0x58]
+  430440:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  430444:	48 89 d6             	mov    rsi,rdx
+  430447:	48 89 c7             	mov    rdi,rax
+  43044a:	e8 8b 03 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  43044f:	bb 00 00 00 00       	mov    ebx,0x0
+  430454:	eb 17                	jmp    43046d <CZsmHelper::DeCode(char const*)+0x1fd>
+  430456:	48 8d 55 a8          	lea    rdx,[rbp-0x58]
+  43045a:	48 8b 45 88          	mov    rax,QWORD PTR [rbp-0x78]
+  43045e:	48 89 d6             	mov    rsi,rdx
+  430461:	48 89 c7             	mov    rdi,rax
+  430464:	e8 71 03 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  430469:	48 8b 5d d0          	mov    rbx,QWORD PTR [rbp-0x30]
+  43046d:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  430471:	48 89 c7             	mov    rdi,rax
+  430474:	e8 c7 e5 fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  430479:	48 89 d8             	mov    rax,rbx
+  43047c:	eb 1a                	jmp    430498 <CZsmHelper::DeCode(char const*)+0x228>
+  43047e:	48 89 c3             	mov    rbx,rax
+  430481:	48 8d 45 b0          	lea    rax,[rbp-0x50]
+  430485:	48 89 c7             	mov    rdi,rax
+  430488:	e8 b3 e5 fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  43048d:	48 89 d8             	mov    rax,rbx
+  430490:	48 89 c7             	mov    rdi,rax
+  430493:	e8 88 43 fd ff       	call   404820 <_Unwind_Resume@plt>
+  430498:	48 83 c4 78          	add    rsp,0x78
+  43049c:	5b                   	pop    rbx
+  43049d:	5d                   	pop    rbp
+  43049e:	c3                   	ret
+  43049f:	90                   	nop
+
+00000000004304a0 <CZsmHelper::FreeResult(char const*)>:
+  4304a0:	55                   	push   rbp
+  4304a1:	48 89 e5             	mov    rbp,rsp
+  4304a4:	48 83 ec 10          	sub    rsp,0x10
+  4304a8:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4304ac:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  4304b0:	48 83 7d f0 00       	cmp    QWORD PTR [rbp-0x10],0x0
+  4304b5:	74 0c                	je     4304c3 <CZsmHelper::FreeResult(char const*)+0x23>
+  4304b7:	48                   	rex.W

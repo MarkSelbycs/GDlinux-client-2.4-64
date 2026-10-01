@@ -1,0 +1,63 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000044f2f2 <CPipeService::WritePipe(char const*)>:
+  44f2f2:	55                   	push   rbp
+  44f2f3:	48 89 e5             	mov    rbp,rsp
+  44f2f6:	48 83 ec 20          	sub    rsp,0x20
+  44f2fa:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  44f2fe:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+  44f302:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f306:	0f b6 80 b0 00 00 00 	movzx  eax,BYTE PTR [rax+0xb0]
+  44f30d:	83 f0 01             	xor    eax,0x1
+  44f310:	84 c0                	test   al,al
+  44f312:	74 0a                	je     44f31e <CPipeService::WritePipe(char const*)+0x2c>
+  44f314:	b8 00 00 00 00       	mov    eax,0x0
+  44f319:	e9 b2 00 00 00       	jmp    44f3d0 <CPipeService::WritePipe(char const*)+0xde>
+  44f31e:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f322:	48 05 b8 00 00 00    	add    rax,0xb8
+  44f328:	be 80 00 00 00       	mov    esi,0x80
+  44f32d:	48 89 c7             	mov    rdi,rax
+  44f330:	e8 1f 67 fe ff       	call   435a54 <MutexLock::Lock(int)>
+  44f335:	c7 45 fc ff ff ff ff 	mov    DWORD PTR [rbp-0x4],0xffffffff
+  44f33c:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  44f340:	48 89 c7             	mov    rdi,rax
+  44f343:	e8 d8 4d fb ff       	call   404120 <strlen@plt>
+  44f348:	48 8d 50 01          	lea    rdx,[rax+0x1]
+  44f34c:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f350:	8b 80 98 00 00 00    	mov    eax,DWORD PTR [rax+0x98]
+  44f356:	48 8b 4d e0          	mov    rcx,QWORD PTR [rbp-0x20]
+  44f35a:	48 89 ce             	mov    rsi,rcx
+  44f35d:	89 c7                	mov    edi,eax
+  44f35f:	e8 7c 54 fb ff       	call   4047e0 <write@plt>
+  44f364:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  44f367:	83 7d fc 00          	cmp    DWORD PTR [rbp-0x4],0x0
+  44f36b:	79 3d                	jns    44f3aa <CPipeService::WritePipe(char const*)+0xb8>
+  44f36d:	e8 1e 51 fb ff       	call   404490 <__errno_location@plt>
+  44f372:	8b 00                	mov    eax,DWORD PTR [rax]
+  44f374:	89 c7                	mov    edi,eax
+  44f376:	e8 75 4f fb ff       	call   4042f0 <strerror@plt>
+  44f37b:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  44f37f:	48 89 c6             	mov    rsi,rax
+  44f382:	bf fb 76 45 00       	mov    edi,0x4576fb
+  44f387:	b8 00 00 00 00       	mov    eax,0x0
+  44f38c:	e8 bf 49 fb ff       	call   403d50 <printf@plt>
+  44f391:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f395:	48 05 b8 00 00 00    	add    rax,0xb8
+  44f39b:	48 89 c7             	mov    rdi,rax
+  44f39e:	e8 f9 66 fe ff       	call   435a9c <MutexLock::UnLock()>
+  44f3a3:	b8 00 00 00 00       	mov    eax,0x0
+  44f3a8:	eb 26                	jmp    44f3d0 <CPipeService::WritePipe(char const*)+0xde>
+  44f3aa:	48 8b 05 27 dd 21 00 	mov    rax,QWORD PTR [rip+0x21dd27]        # 66d0d8 <stdin@GLIBC_2.2.5>
+  44f3b1:	48 89 c7             	mov    rdi,rax
+  44f3b4:	e8 67 55 fb ff       	call   404920 <fflush@plt>
+  44f3b9:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  44f3bd:	48 05 b8 00 00 00    	add    rax,0xb8
+  44f3c3:	48 89 c7             	mov    rdi,rax
+  44f3c6:	e8 d1 66 fe ff       	call   435a9c <MutexLock::UnLock()>
+  44f3cb:	b8 01 00 00 00       	mov    eax,0x1
+  44f3d0:	c9                   	leave
+  44f3d1:	c3                   	ret
