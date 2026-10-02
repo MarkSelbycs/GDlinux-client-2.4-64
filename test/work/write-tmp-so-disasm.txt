@@ -1,0 +1,61 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000430958 <CZsmHelper::writeTmpSo(char const*, __ZsoFile*)>:
+  430958:	55                   	push   %rbp
+  430959:	48 89 e5             	mov    %rsp,%rbp
+  43095c:	48 83 ec 30          	sub    $0x30,%rsp
+  430960:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+  430964:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+  430968:	48 89 55 d8          	mov    %rdx,-0x28(%rbp)
+  43096c:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  430970:	be 23 38 45 00       	mov    $0x453823,%esi
+  430975:	48 89 c7             	mov    %rax,%rdi
+  430978:	e8 43 36 fd ff       	call   403fc0 <fopen@plt>
+  43097d:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  430981:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
+  430986:	75 0a                	jne    430992 <CZsmHelper::writeTmpSo(char const*, __ZsoFile*)+0x3a>
+  430988:	b8 00 00 00 00       	mov    $0x0,%eax
+  43098d:	e9 8d 00 00 00       	jmp    430a1f <CZsmHelper::writeTmpSo(char const*, __ZsoFile*)+0xc7>
+  430992:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  430996:	8b 40 18             	mov    0x18(%rax),%eax
+  430999:	89 c6                	mov    %eax,%esi
+  43099b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  43099f:	48 8b 40 20          	mov    0x20(%rax),%rax
+  4309a3:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+  4309a7:	48 89 d1             	mov    %rdx,%rcx
+  4309aa:	ba 01 00 00 00       	mov    $0x1,%edx
+  4309af:	48 89 c7             	mov    %rax,%rdi
+  4309b2:	e8 39 3d fd ff       	call   4046f0 <fwrite@plt>
+  4309b7:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4309bb:	48 89 c7             	mov    %rax,%rdi
+  4309be:	e8 5d 3f fd ff       	call   404920 <fflush@plt>
+  4309c3:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4309c7:	48 89 c7             	mov    %rax,%rdi
+  4309ca:	e8 11 3c fd ff       	call   4045e0 <fclose@plt>
+  4309cf:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4309d3:	be c0 01 00 00       	mov    $0x1c0,%esi
+  4309d8:	48 89 c7             	mov    %rax,%rdi
+  4309db:	e8 10 33 fd ff       	call   403cf0 <chmod@plt>
+  4309e0:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4309e4:	48 89 c7             	mov    %rax,%rdi
+  4309e7:	e8 34 37 fd ff       	call   404120 <strlen@plt>
+  4309ec:	48 83 c0 01          	add    $0x1,%rax
+  4309f0:	48 89 c7             	mov    %rax,%rdi
+  4309f3:	e8 b8 35 fd ff       	call   403fb0 <malloc@plt>
+  4309f8:	48 89 c2             	mov    %rax,%rdx
+  4309fb:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  4309ff:	48 89 50 30          	mov    %rdx,0x30(%rax)
+  430a03:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  430a07:	48 8b 40 30          	mov    0x30(%rax),%rax
+  430a0b:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+  430a0f:	48 89 d6             	mov    %rdx,%rsi
+  430a12:	48 89 c7             	mov    %rax,%rdi
+  430a15:	e8 36 3b fd ff       	call   404550 <strcpy@plt>
+  430a1a:	b8 01 00 00 00       	mov    $0x1,%eax
+  430a1f:	c9                   	leave
+  430a20:	c3                   	ret
+  430a21:	90                   	nop

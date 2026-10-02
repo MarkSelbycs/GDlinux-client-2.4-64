@@ -1,0 +1,1389 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004140ee <_ZN11CPortalConn13RequestConfigEi>:
+  4140ee:	55                   	push   %rbp
+  4140ef:	48 89 e5             	mov    %rsp,%rbp
+  4140f2:	41 54                	push   %r12
+  4140f4:	53                   	push   %rbx
+  4140f5:	48 81 ec 10 01 00 00 	sub    $0x110,%rsp
+  4140fc:	48 89 bd e8 fe ff ff 	mov    %rdi,-0x118(%rbp)
+  414103:	89 b5 e4 fe ff ff    	mov    %esi,-0x11c(%rbp)
+  414109:	e8 b6 bd ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  41410e:	ba 0f 07 45 00       	mov    $0x45070f,%edx
+  414113:	be 03 00 00 00       	mov    $0x3,%esi
+  414118:	48 89 c7             	mov    %rax,%rdi
+  41411b:	b8 00 00 00 00       	mov    $0x0,%eax
+  414120:	e8 ad bd ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414125:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41412c:	48 89 c7             	mov    %rax,%rdi
+  41412f:	e8 00 0b 00 00       	call   414c34 <_ZN11CPortalConn11CheckNetEnvEv>
+  414134:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  414137:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  41413b:	75 0a                	jne    414147 <_ZN11CPortalConn13RequestConfigEi+0x59>
+  41413d:	b8 00 00 00 00       	mov    $0x0,%eax
+  414142:	e9 e0 0a 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  414147:	83 7d ec ff          	cmpl   $0xffffffff,-0x14(%rbp)
+  41414b:	75 55                	jne    4141a2 <_ZN11CPortalConn13RequestConfigEi+0xb4>
+  41414d:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  414154:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  414159:	48 89 c7             	mov    %rax,%rdi
+  41415c:	e8 c3 9e ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414161:	48 8d 95 40 ff ff ff 	lea    -0xc0(%rbp),%rdx
+  414168:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41416f:	49 89 d0             	mov    %rdx,%r8
+  414172:	b9 dd 54 31 01       	mov    $0x13154dd,%ecx
+  414177:	ba 20 00 00 00       	mov    $0x20,%edx
+  41417c:	be 21 00 00 00       	mov    $0x21,%esi
+  414181:	48 89 c7             	mov    %rax,%rdi
+  414184:	e8 7b 5b 00 00       	call   419d04 <_ZN11CPortalConn14NetStateChangeEN8INetConn6ESTATEES1_i11CAutoString>
+  414189:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  414190:	48 89 c7             	mov    %rax,%rdi
+  414193:	e8 8c 9f ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414198:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  41419d:	e9 85 0a 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  4141a2:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+  4141a6:	74 60                	je     414208 <_ZN11CPortalConn13RequestConfigEi+0x11a>
+  4141a8:	83 bd e4 fe ff ff 00 	cmpl   $0x0,-0x11c(%rbp)
+  4141af:	74 28                	je     4141d9 <_ZN11CPortalConn13RequestConfigEi+0xeb>
+  4141b1:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  4141b4:	48 63 d0             	movslq %eax,%rdx
+  4141b7:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4141be:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+  4141c4:	48 89 d1             	mov    %rdx,%rcx
+  4141c7:	ba 55 4a 02 00       	mov    $0x24a55,%edx
+  4141cc:	be 20 00 00 00       	mov    $0x20,%esi
+  4141d1:	48 89 c7             	mov    %rax,%rdi
+  4141d4:	e8 71 5a 00 00       	call   419c4a <_ZN11CPortalConn9PostErrorEN8INetConn6ESTATEEmmi>
+  4141d9:	81 7d ec f3 01 00 00 	cmpl   $0x1f3,-0x14(%rbp)
+  4141e0:	7e 1c                	jle    4141fe <_ZN11CPortalConn13RequestConfigEi+0x110>
+  4141e2:	81 7d ec 57 02 00 00 	cmpl   $0x257,-0x14(%rbp)
+  4141e9:	7f 13                	jg     4141fe <_ZN11CPortalConn13RequestConfigEi+0x110>
+  4141eb:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4141f2:	c7 80 30 01 00 00 00 	movl   $0x0,0x130(%rax)
+  4141f9:	00 00 00 
+  4141fc:	eb 0a                	jmp    414208 <_ZN11CPortalConn13RequestConfigEi+0x11a>
+  4141fe:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  414203:	e9 1f 0a 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  414208:	bb 00 00 00 00       	mov    $0x0,%ebx
+  41420d:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414214:	8b 80 30 01 00 00    	mov    0x130(%rax),%eax
+  41421a:	85 c0                	test   %eax,%eax
+  41421c:	75 49                	jne    414267 <_ZN11CPortalConn13RequestConfigEi+0x179>
+  41421e:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414225:	48 8d 90 20 01 00 00 	lea    0x120(%rax),%rdx
+  41422c:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  414233:	48 89 d6             	mov    %rdx,%rsi
+  414236:	48 89 c7             	mov    %rax,%rdi
+  414239:	e8 22 9e ff ff       	call   40e060 <_ZN11CAutoStringC1ERKS_>
+  41423e:	bb 01 00 00 00       	mov    $0x1,%ebx
+  414243:	48 8d 95 50 ff ff ff 	lea    -0xb0(%rbp),%rdx
+  41424a:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414251:	48 89 d6             	mov    %rdx,%rsi
+  414254:	48 89 c7             	mov    %rax,%rdi
+  414257:	e8 3e 61 00 00       	call   41a39a <_ZN11CPortalConn16DisasterRecoveryE11CAutoString>
+  41425c:	85 c0                	test   %eax,%eax
+  41425e:	75 07                	jne    414267 <_ZN11CPortalConn13RequestConfigEi+0x179>
+  414260:	b8 01 00 00 00       	mov    $0x1,%eax
+  414265:	eb 05                	jmp    41426c <_ZN11CPortalConn13RequestConfigEi+0x17e>
+  414267:	b8 00 00 00 00       	mov    $0x0,%eax
+  41426c:	41 89 c4             	mov    %eax,%r12d
+  41426f:	84 db                	test   %bl,%bl
+  414271:	74 10                	je     414283 <_ZN11CPortalConn13RequestConfigEi+0x195>
+  414273:	90                   	nop
+  414274:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  41427b:	48 89 c7             	mov    %rax,%rdi
+  41427e:	e8 a1 9e ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414283:	45 84 e4             	test   %r12b,%r12b
+  414286:	74 55                	je     4142dd <_ZN11CPortalConn13RequestConfigEi+0x1ef>
+  414288:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  41428f:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  414294:	48 89 c7             	mov    %rax,%rdi
+  414297:	e8 88 9d ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  41429c:	48 8d 95 60 ff ff ff 	lea    -0xa0(%rbp),%rdx
+  4142a3:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4142aa:	49 89 d0             	mov    %rdx,%r8
+  4142ad:	b9 de 54 31 01       	mov    $0x13154de,%ecx
+  4142b2:	ba 20 00 00 00       	mov    $0x20,%edx
+  4142b7:	be 21 00 00 00       	mov    $0x21,%esi
+  4142bc:	48 89 c7             	mov    %rax,%rdi
+  4142bf:	e8 40 5a 00 00       	call   419d04 <_ZN11CPortalConn14NetStateChangeEN8INetConn6ESTATEES1_i11CAutoString>
+  4142c4:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  4142cb:	48 89 c7             	mov    %rax,%rdi
+  4142ce:	e8 51 9e ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4142d3:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  4142d8:	e9 4a 09 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  4142dd:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4142e4:	8b 80 30 01 00 00    	mov    0x130(%rax),%eax
+  4142ea:	85 c0                	test   %eax,%eax
+  4142ec:	75 55                	jne    414343 <_ZN11CPortalConn13RequestConfigEi+0x255>
+  4142ee:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  4142f5:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  4142fa:	48 89 c7             	mov    %rax,%rdi
+  4142fd:	e8 22 9d ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414302:	48 8d 95 70 ff ff ff 	lea    -0x90(%rbp),%rdx
+  414309:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414310:	49 89 d0             	mov    %rdx,%r8
+  414313:	b9 f9 49 02 00       	mov    $0x249f9,%ecx
+  414318:	ba 20 00 00 00       	mov    $0x20,%edx
+  41431d:	be 21 00 00 00       	mov    $0x21,%esi
+  414322:	48 89 c7             	mov    %rax,%rdi
+  414325:	e8 da 59 00 00       	call   419d04 <_ZN11CPortalConn14NetStateChangeEN8INetConn6ESTATEES1_i11CAutoString>
+  41432a:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  414331:	48 89 c7             	mov    %rax,%rdi
+  414334:	e8 eb 9d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414339:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  41433e:	e9 e4 08 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  414343:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41434a:	48 8d 98 80 01 00 00 	lea    0x180(%rax),%rbx
+  414351:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414358:	48 05 c8 00 00 00    	add    $0xc8,%rax
+  41435e:	48 89 c7             	mov    %rax,%rdi
+  414361:	e8 a2 9f ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414366:	48 8b 95 e8 fe ff ff 	mov    -0x118(%rbp),%rdx
+  41436d:	48 8d 4a 08          	lea    0x8(%rdx),%rcx
+  414371:	48 89 da             	mov    %rbx,%rdx
+  414374:	48 89 c6             	mov    %rax,%rsi
+  414377:	48 89 cf             	mov    %rcx,%rdi
+  41437a:	e8 93 69 01 00       	call   42ad12 <_ZN13CPortalParser12ParserConfigEPKcRP11CAuthConfig>
+  41437f:	83 f8 ff             	cmp    $0xffffffff,%eax
+  414382:	0f 94 c0             	sete   %al
+  414385:	84 c0                	test   %al,%al
+  414387:	74 55                	je     4143de <_ZN11CPortalConn13RequestConfigEi+0x2f0>
+  414389:	83 bd e4 fe ff ff 00 	cmpl   $0x0,-0x11c(%rbp)
+  414390:	74 42                	je     4143d4 <_ZN11CPortalConn13RequestConfigEi+0x2e6>
+  414392:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  414396:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  41439b:	48 89 c7             	mov    %rax,%rdi
+  41439e:	e8 81 9c ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  4143a3:	48 8d 55 80          	lea    -0x80(%rbp),%rdx
+  4143a7:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4143ae:	49 89 d0             	mov    %rdx,%r8
+  4143b1:	b9 f2 49 02 00       	mov    $0x249f2,%ecx
+  4143b6:	ba 20 00 00 00       	mov    $0x20,%edx
+  4143bb:	be 21 00 00 00       	mov    $0x21,%esi
+  4143c0:	48 89 c7             	mov    %rax,%rdi
+  4143c3:	e8 3c 59 00 00       	call   419d04 <_ZN11CPortalConn14NetStateChangeEN8INetConn6ESTATEES1_i11CAutoString>
+  4143c8:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  4143cc:	48 89 c7             	mov    %rax,%rdi
+  4143cf:	e8 50 9d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4143d4:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  4143d9:	e9 49 08 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  4143de:	e8 b9 fe 00 00       	call   42429c <_ZN13CPortalServer7GetInstEv>
+  4143e3:	48 89 c7             	mov    %rax,%rdi
+  4143e6:	e8 6d ff 00 00       	call   424358 <_ZN13CPortalServer13GetInfoCenterEv>
+  4143eb:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  4143ef:	48 c7 85 30 ff ff ff 	movq   $0x0,-0xd0(%rbp)
+  4143f6:	00 00 00 00 
+  4143fa:	c7 85 38 ff ff ff 00 	movl   $0x0,-0xc8(%rbp)
+  414401:	00 00 00 
+  414404:	66 c7 85 3c ff ff ff 	movw   $0x0,-0xc4(%rbp)
+  41440b:	00 00 
+  41440d:	c6 85 3e ff ff ff 00 	movb   $0x0,-0xc2(%rbp)
+  414414:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41441b:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414422:	8b 40 78             	mov    0x78(%rax),%eax
+  414425:	48 8d 8d 30 ff ff ff 	lea    -0xd0(%rbp),%rcx
+  41442c:	ba 0a 00 00 00       	mov    $0xa,%edx
+  414431:	48 89 ce             	mov    %rcx,%rsi
+  414434:	89 c7                	mov    %eax,%edi
+  414436:	e8 b3 51 02 00       	call   4395ee <_Z4itoaiPci>
+  41443b:	48 89 c2             	mov    %rax,%rdx
+  41443e:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414445:	be 2a 07 45 00       	mov    $0x45072a,%esi
+  41444a:	48 89 c7             	mov    %rax,%rdi
+  41444d:	e8 c6 7a 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  414452:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414459:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414460:	48 05 30 02 00 00    	add    $0x230,%rax
+  414466:	48 89 c7             	mov    %rax,%rdi
+  414469:	e8 9a 9e ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41446e:	48 89 c2             	mov    %rax,%rdx
+  414471:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  414475:	be 33 07 45 00       	mov    $0x450733,%esi
+  41447a:	48 89 c7             	mov    %rax,%rdi
+  41447d:	e8 12 97 ff ff       	call   40db94 <_ZN11CInfoCenter14SetGlobalValueEPKcS1_>
+  414482:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414489:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414490:	48 05 40 02 00 00    	add    $0x240,%rax
+  414496:	48 89 c7             	mov    %rax,%rdi
+  414499:	e8 6a 9e ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41449e:	48 89 c2             	mov    %rax,%rdx
+  4144a1:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4144a5:	be 3e 07 45 00       	mov    $0x45073e,%esi
+  4144aa:	48 89 c7             	mov    %rax,%rdi
+  4144ad:	e8 e2 96 ff ff       	call   40db94 <_ZN11CInfoCenter14SetGlobalValueEPKcS1_>
+  4144b2:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4144b9:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4144c0:	8b 40 40             	mov    0x40(%rax),%eax
+  4144c3:	48 8d 8d 30 ff ff ff 	lea    -0xd0(%rbp),%rcx
+  4144ca:	ba 0a 00 00 00       	mov    $0xa,%edx
+  4144cf:	48 89 ce             	mov    %rcx,%rsi
+  4144d2:	89 c7                	mov    %eax,%edi
+  4144d4:	e8 15 51 02 00       	call   4395ee <_Z4itoaiPci>
+  4144d9:	48 89 c2             	mov    %rax,%rdx
+  4144dc:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4144e3:	be 4a 07 45 00       	mov    $0x45074a,%esi
+  4144e8:	48 89 c7             	mov    %rax,%rdi
+  4144eb:	e8 28 7a 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  4144f0:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4144f7:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4144fe:	48 05 50 02 00 00    	add    $0x250,%rax
+  414504:	48 89 c7             	mov    %rax,%rdi
+  414507:	e8 fc 9d ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41450c:	48 89 c2             	mov    %rax,%rdx
+  41450f:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  414513:	be 59 07 45 00       	mov    $0x450759,%esi
+  414518:	48 89 c7             	mov    %rax,%rdi
+  41451b:	e8 74 96 ff ff       	call   40db94 <_ZN11CInfoCenter14SetGlobalValueEPKcS1_>
+  414520:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414527:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41452e:	48 05 00 02 00 00    	add    $0x200,%rax
+  414534:	48 89 c7             	mov    %rax,%rdi
+  414537:	e8 cc 9d ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41453c:	48 89 c2             	mov    %rax,%rdx
+  41453f:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414546:	be 62 07 45 00       	mov    $0x450762,%esi
+  41454b:	48 89 c7             	mov    %rax,%rdi
+  41454e:	e8 c5 79 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  414553:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41455a:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414561:	48 05 10 02 00 00    	add    $0x210,%rax
+  414567:	48 89 c7             	mov    %rax,%rdi
+  41456a:	e8 99 9d ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41456f:	48 89 c2             	mov    %rax,%rdx
+  414572:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414579:	be 6b 07 45 00       	mov    $0x45076b,%esi
+  41457e:	48 89 c7             	mov    %rax,%rdi
+  414581:	e8 92 79 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  414586:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41458d:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414594:	48 05 20 02 00 00    	add    $0x220,%rax
+  41459a:	48 89 c7             	mov    %rax,%rdi
+  41459d:	e8 66 9d ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4145a2:	48 89 c2             	mov    %rax,%rdx
+  4145a5:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4145ac:	be 72 07 45 00       	mov    $0x450772,%esi
+  4145b1:	48 89 c7             	mov    %rax,%rdi
+  4145b4:	e8 5f 79 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  4145b9:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4145c0:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4145c7:	48 05 b8 02 00 00    	add    $0x2b8,%rax
+  4145cd:	48 89 c7             	mov    %rax,%rdi
+  4145d0:	e8 09 a5 ff ff       	call   40eade <_ZNSt3mapI11CAutoStringS0_St4lessIS0_ESaISt4pairIKS0_S0_EEE5beginEv>
+  4145d5:	48 89 85 00 ff ff ff 	mov    %rax,-0x100(%rbp)
+  4145dc:	e9 df 00 00 00       	jmp    4146c0 <_ZN11CPortalConn13RequestConfigEi+0x5d2>
+  4145e1:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  4145e8:	48 89 c7             	mov    %rax,%rdi
+  4145eb:	e8 7a a5 ff ff       	call   40eb6a <_ZNKSt17_Rb_tree_iteratorISt4pairIK11CAutoStringS1_EEptEv>
+  4145f0:	48 8d 50 10          	lea    0x10(%rax),%rdx
+  4145f4:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4145fb:	48 89 d6             	mov    %rdx,%rsi
+  4145fe:	48 89 c7             	mov    %rax,%rdi
+  414601:	e8 5a 9a ff ff       	call   40e060 <_ZN11CAutoStringC1ERKS_>
+  414606:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  41460d:	ba 77 07 45 00       	mov    $0x450777,%edx
+  414612:	be 7c 07 45 00       	mov    $0x45077c,%esi
+  414617:	48 89 c7             	mov    %rax,%rdi
+  41461a:	e8 6b 83 00 00       	call   41c98a <_ZN11CAutoString7ReplaceEPKcS1_>
+  41461f:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414626:	ba 7e 07 45 00       	mov    $0x45077e,%edx
+  41462b:	be 83 07 45 00       	mov    $0x450783,%esi
+  414630:	48 89 c7             	mov    %rax,%rdi
+  414633:	e8 52 83 00 00       	call   41c98a <_ZN11CAutoString7ReplaceEPKcS1_>
+  414638:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  41463f:	48 89 c7             	mov    %rax,%rdi
+  414642:	e8 c1 9c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414647:	48 89 c3             	mov    %rax,%rbx
+  41464a:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  414651:	48 89 c7             	mov    %rax,%rdi
+  414654:	e8 11 a5 ff ff       	call   40eb6a <_ZNKSt17_Rb_tree_iteratorISt4pairIK11CAutoStringS1_EEptEv>
+  414659:	48 89 c2             	mov    %rax,%rdx
+  41465c:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  414660:	be 85 07 45 00       	mov    $0x450785,%esi
+  414665:	48 89 c7             	mov    %rax,%rdi
+  414668:	e8 2e 85 00 00       	call   41cb9b <_ZplPKcRK11CAutoString>
+  41466d:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  414671:	48 89 c7             	mov    %rax,%rdi
+  414674:	e8 8f 9c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414679:	48 89 c1             	mov    %rax,%rcx
+  41467c:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414683:	48 89 da             	mov    %rbx,%rdx
+  414686:	48 89 ce             	mov    %rcx,%rsi
+  414689:	48 89 c7             	mov    %rax,%rdi
+  41468c:	e8 87 78 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  414691:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  414695:	48 89 c7             	mov    %rax,%rdi
+  414698:	e8 87 9a ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41469d:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4146a4:	48 89 c7             	mov    %rax,%rdi
+  4146a7:	e8 78 9a ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4146ac:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  4146b3:	be 00 00 00 00       	mov    $0x0,%esi
+  4146b8:	48 89 c7             	mov    %rax,%rdi
+  4146bb:	e8 74 a4 ff ff       	call   40eb34 <_ZNSt17_Rb_tree_iteratorISt4pairIK11CAutoStringS1_EEppEi>
+  4146c0:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4146c7:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4146ce:	48 05 b8 02 00 00    	add    $0x2b8,%rax
+  4146d4:	48 89 c7             	mov    %rax,%rdi
+  4146d7:	e8 1c a4 ff ff       	call   40eaf8 <_ZNSt3mapI11CAutoStringS0_St4lessIS0_ESaISt4pairIKS0_S0_EEE3endEv>
+  4146dc:	48 89 45 a0          	mov    %rax,-0x60(%rbp)
+  4146e0:	48 8d 55 a0          	lea    -0x60(%rbp),%rdx
+  4146e4:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  4146eb:	48 89 d6             	mov    %rdx,%rsi
+  4146ee:	48 89 c7             	mov    %rax,%rdi
+  4146f1:	e8 1c a4 ff ff       	call   40eb12 <_ZNKSt17_Rb_tree_iteratorISt4pairIK11CAutoStringS1_EEneERKS4_>
+  4146f6:	84 c0                	test   %al,%al
+  4146f8:	0f 85 e3 fe ff ff    	jne    4145e1 <_ZN11CPortalConn13RequestConfigEi+0x4f3>
+  4146fe:	48 c7 85 10 ff ff ff 	movq   $0x0,-0xf0(%rbp)
+  414705:	00 00 00 00 
+  414709:	48 c7 85 18 ff ff ff 	movq   $0x0,-0xe8(%rbp)
+  414710:	00 00 00 00 
+  414714:	c7 85 20 ff ff ff 00 	movl   $0x0,-0xe0(%rbp)
+  41471b:	00 00 00 
+  41471e:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414725:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41472c:	48 89 c7             	mov    %rax,%rdi
+  41472f:	e8 d4 9b ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414734:	48 89 c2             	mov    %rax,%rdx
+  414737:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  41473b:	be 8a 07 45 00       	mov    $0x45078a,%esi
+  414740:	48 89 c7             	mov    %rax,%rdi
+  414743:	e8 8c 96 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  414748:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41474f:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414756:	48 83 c0 30          	add    $0x30,%rax
+  41475a:	48 89 c7             	mov    %rax,%rdi
+  41475d:	e8 a6 9b ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414762:	48 89 c2             	mov    %rax,%rdx
+  414765:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  414769:	be 92 07 45 00       	mov    $0x450792,%esi
+  41476e:	48 89 c7             	mov    %rax,%rdi
+  414771:	e8 5e 96 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  414776:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41477d:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414784:	8b 40 40             	mov    0x40(%rax),%eax
+  414787:	48 8d 8d 10 ff ff ff 	lea    -0xf0(%rbp),%rcx
+  41478e:	ba 0a 00 00 00       	mov    $0xa,%edx
+  414793:	48 89 ce             	mov    %rcx,%rsi
+  414796:	89 c7                	mov    %eax,%edi
+  414798:	e8 51 4e 02 00       	call   4395ee <_Z4itoaiPci>
+  41479d:	48 89 c2             	mov    %rax,%rdx
+  4147a0:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4147a4:	be 9b 07 45 00       	mov    $0x45079b,%esi
+  4147a9:	48 89 c7             	mov    %rax,%rdi
+  4147ac:	e8 23 96 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  4147b1:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4147b8:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4147bf:	48 05 40 01 00 00    	add    $0x140,%rax
+  4147c5:	48 89 c7             	mov    %rax,%rdi
+  4147c8:	e8 3b 9b ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4147cd:	48 89 c2             	mov    %rax,%rdx
+  4147d0:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4147d7:	be a7 07 45 00       	mov    $0x4507a7,%esi
+  4147dc:	48 89 c7             	mov    %rax,%rdi
+  4147df:	e8 34 77 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  4147e4:	e8 3d 8e ff ff       	call   40d626 <_ZN11CInfoCenter7GetInstEv>
+  4147e9:	48 89 c1             	mov    %rax,%rcx
+  4147ec:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4147f0:	ba af 07 45 00       	mov    $0x4507af,%edx
+  4147f5:	48 89 ce             	mov    %rcx,%rsi
+  4147f8:	48 89 c7             	mov    %rax,%rdi
+  4147fb:	e8 5a 95 ff ff       	call   40dd5a <_ZN11CInfoCenter13GetLocalValueEPKc>
+  414800:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  414804:	48 89 c7             	mov    %rax,%rdi
+  414807:	e8 fc 9a ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41480c:	48 89 c2             	mov    %rax,%rdx
+  41480f:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414816:	be af 07 45 00       	mov    $0x4507af,%esi
+  41481b:	48 89 c7             	mov    %rax,%rdi
+  41481e:	e8 f5 76 00 00       	call   41bf18 <_ZN11CPortalConn8SendDataEPKcS1_>
+  414823:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  414827:	48 89 c7             	mov    %rax,%rdi
+  41482a:	e8 f5 98 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41482f:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414836:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41483d:	8b 80 80 02 00 00    	mov    0x280(%rax),%eax
+  414843:	83 f8 0a             	cmp    $0xa,%eax
+  414846:	0f 85 42 01 00 00    	jne    41498e <_ZN11CPortalConn13RequestConfigEi+0x8a0>
+  41484c:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414853:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41485a:	48 05 98 02 00 00    	add    $0x298,%rax
+  414860:	48 89 c7             	mov    %rax,%rdi
+  414863:	e8 a0 9a ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414868:	48 89 c2             	mov    %rax,%rdx
+  41486b:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  41486f:	be b8 07 45 00       	mov    $0x4507b8,%esi
+  414874:	48 89 c7             	mov    %rax,%rdi
+  414877:	e8 58 95 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  41487c:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414883:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41488a:	48 05 98 02 00 00    	add    $0x298,%rax
+  414890:	48 89 c7             	mov    %rax,%rdi
+  414893:	e8 70 9a ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414898:	48 8b 95 e8 fe ff ff 	mov    -0x118(%rbp),%rdx
+  41489f:	48 8b 92 80 01 00 00 	mov    0x180(%rdx),%rdx
+  4148a6:	48 81 c2 a8 02 00 00 	add    $0x2a8,%rdx
+  4148ad:	48 89 c6             	mov    %rax,%rsi
+  4148b0:	48 89 d7             	mov    %rdx,%rdi
+  4148b3:	e8 6e b5 ff ff       	call   40fe26 <_ZN11CAutoStringneEPKc>
+  4148b8:	84 c0                	test   %al,%al
+  4148ba:	0f 84 07 02 00 00    	je     414ac7 <_ZN11CPortalConn13RequestConfigEi+0x9d9>
+  4148c0:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4148c7:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4148ce:	48 8d 90 a8 02 00 00 	lea    0x2a8(%rax),%rdx
+  4148d5:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4148dc:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4148e3:	48 05 98 02 00 00    	add    $0x298,%rax
+  4148e9:	48 89 d6             	mov    %rdx,%rsi
+  4148ec:	48 89 c7             	mov    %rax,%rdi
+  4148ef:	e8 4a 98 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4148f4:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4148fb:	48 05 a8 01 00 00    	add    $0x1a8,%rax
+  414901:	48 89 c7             	mov    %rax,%rdi
+  414904:	e8 1d 94 00 00       	call   41dd26 <_ZN11HashBalance4SizeEv>
+  414909:	85 c0                	test   %eax,%eax
+  41490b:	0f 94 c0             	sete   %al
+  41490e:	84 c0                	test   %al,%al
+  414910:	0f 84 b1 01 00 00    	je     414ac7 <_ZN11CPortalConn13RequestConfigEi+0x9d9>
+  414916:	48 8d 45 cf          	lea    -0x31(%rbp),%rax
+  41491a:	48 89 c7             	mov    %rax,%rdi
+  41491d:	e8 4e fe fe ff       	call   404770 <_ZNSaIcEC1Ev@plt>
+  414922:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414929:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414930:	48 05 98 02 00 00    	add    $0x298,%rax
+  414936:	48 89 c7             	mov    %rax,%rdi
+  414939:	e8 ca 99 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41493e:	48 89 c1             	mov    %rax,%rcx
+  414941:	48 8d 55 cf          	lea    -0x31(%rbp),%rdx
+  414945:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  414949:	48 89 ce             	mov    %rcx,%rsi
+  41494c:	48 89 c7             	mov    %rax,%rdi
+  41494f:	e8 6c f9 fe ff       	call   4042c0 <_ZNSsC1EPKcRKSaIcE@plt>
+  414954:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  41495b:	48 8d 90 a8 01 00 00 	lea    0x1a8(%rax),%rdx
+  414962:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  414966:	48 89 c6             	mov    %rax,%rsi
+  414969:	48 89 d7             	mov    %rdx,%rdi
+  41496c:	e8 cf 93 00 00       	call   41dd40 <_ZN11HashBalance9SetIpListERKSs>
+  414971:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  414975:	48 89 c7             	mov    %rax,%rdi
+  414978:	e8 73 f7 fe ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  41497d:	48 8d 45 cf          	lea    -0x31(%rbp),%rax
+  414981:	48 89 c7             	mov    %rax,%rdi
+  414984:	e8 97 fb fe ff       	call   404520 <_ZNSaIcED1Ev@plt>
+  414989:	e9 39 01 00 00       	jmp    414ac7 <_ZN11CPortalConn13RequestConfigEi+0x9d9>
+  41498e:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414995:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41499c:	48 05 88 02 00 00    	add    $0x288,%rax
+  4149a2:	48 89 c7             	mov    %rax,%rdi
+  4149a5:	e8 5e 99 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4149aa:	48 89 c2             	mov    %rax,%rdx
+  4149ad:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4149b1:	be c7 07 45 00       	mov    $0x4507c7,%esi
+  4149b6:	48 89 c7             	mov    %rax,%rdi
+  4149b9:	e8 16 94 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  4149be:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  4149c5:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4149cc:	48 05 88 02 00 00    	add    $0x288,%rax
+  4149d2:	48 89 c7             	mov    %rax,%rdi
+  4149d5:	e8 2e 99 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4149da:	48 8b 95 e8 fe ff ff 	mov    -0x118(%rbp),%rdx
+  4149e1:	48 8b 92 80 01 00 00 	mov    0x180(%rdx),%rdx
+  4149e8:	48 81 c2 a8 02 00 00 	add    $0x2a8,%rdx
+  4149ef:	48 89 c6             	mov    %rax,%rsi
+  4149f2:	48 89 d7             	mov    %rdx,%rdi
+  4149f5:	e8 2c b4 ff ff       	call   40fe26 <_ZN11CAutoStringneEPKc>
+  4149fa:	84 c0                	test   %al,%al
+  4149fc:	0f 84 c5 00 00 00    	je     414ac7 <_ZN11CPortalConn13RequestConfigEi+0x9d9>
+  414a02:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414a09:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414a10:	48 8d 90 a8 02 00 00 	lea    0x2a8(%rax),%rdx
+  414a17:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414a1e:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414a25:	48 05 88 02 00 00    	add    $0x288,%rax
+  414a2b:	48 89 d6             	mov    %rdx,%rsi
+  414a2e:	48 89 c7             	mov    %rax,%rdi
+  414a31:	e8 08 97 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  414a36:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414a3d:	48 05 90 01 00 00    	add    $0x190,%rax
+  414a43:	48 89 c7             	mov    %rax,%rdi
+  414a46:	e8 db 92 00 00       	call   41dd26 <_ZN11HashBalance4SizeEv>
+  414a4b:	85 c0                	test   %eax,%eax
+  414a4d:	0f 94 c0             	sete   %al
+  414a50:	84 c0                	test   %al,%al
+  414a52:	74 73                	je     414ac7 <_ZN11CPortalConn13RequestConfigEi+0x9d9>
+  414a54:	48 8d 45 df          	lea    -0x21(%rbp),%rax
+  414a58:	48 89 c7             	mov    %rax,%rdi
+  414a5b:	e8 10 fd fe ff       	call   404770 <_ZNSaIcEC1Ev@plt>
+  414a60:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414a67:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414a6e:	48 05 88 02 00 00    	add    $0x288,%rax
+  414a74:	48 89 c7             	mov    %rax,%rdi
+  414a77:	e8 8c 98 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414a7c:	48 89 c1             	mov    %rax,%rcx
+  414a7f:	48 8d 55 df          	lea    -0x21(%rbp),%rdx
+  414a83:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  414a87:	48 89 ce             	mov    %rcx,%rsi
+  414a8a:	48 89 c7             	mov    %rax,%rdi
+  414a8d:	e8 2e f8 fe ff       	call   4042c0 <_ZNSsC1EPKcRKSaIcE@plt>
+  414a92:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414a99:	48 8d 90 90 01 00 00 	lea    0x190(%rax),%rdx
+  414aa0:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  414aa4:	48 89 c6             	mov    %rax,%rsi
+  414aa7:	48 89 d7             	mov    %rdx,%rdi
+  414aaa:	e8 91 92 00 00       	call   41dd40 <_ZN11HashBalance9SetIpListERKSs>
+  414aaf:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  414ab3:	48 89 c7             	mov    %rax,%rdi
+  414ab6:	e8 35 f6 fe ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  414abb:	48 8d 45 df          	lea    -0x21(%rbp),%rax
+  414abf:	48 89 c7             	mov    %rax,%rdi
+  414ac2:	e8 59 fa fe ff       	call   404520 <_ZNSaIcED1Ev@plt>
+  414ac7:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414ace:	c7 40 10 01 00 00 00 	movl   $0x1,0x10(%rax)
+  414ad5:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+  414adc:	be 00 00 00 00       	mov    $0x0,%esi
+  414ae1:	48 89 c7             	mov    %rax,%rdi
+  414ae4:	e8 a9 56 00 00       	call   41a192 <_ZN11CPortalConn10SetConnCfgEi>
+  414ae9:	b8 01 00 00 00       	mov    $0x1,%eax
+  414aee:	e9 34 01 00 00       	jmp    414c27 <_ZN11CPortalConn13RequestConfigEi+0xb39>
+  414af3:	48 89 c3             	mov    %rax,%rbx
+  414af6:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  414afd:	48 89 c7             	mov    %rax,%rdi
+  414b00:	e8 1f 96 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b05:	48 89 d8             	mov    %rbx,%rax
+  414b08:	48 89 c7             	mov    %rax,%rdi
+  414b0b:	e8 10 fd fe ff       	call   404820 <_Unwind_Resume@plt>
+  414b10:	49 89 c4             	mov    %rax,%r12
+  414b13:	84 db                	test   %bl,%bl
+  414b15:	74 12                	je     414b29 <_ZN11CPortalConn13RequestConfigEi+0xa3b>
+  414b17:	90                   	nop
+  414b18:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  414b1f:	48 89 c7             	mov    %rax,%rdi
+  414b22:	e8 fd 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b27:	eb 01                	jmp    414b2a <_ZN11CPortalConn13RequestConfigEi+0xa3c>
+  414b29:	90                   	nop
+  414b2a:	4c 89 e0             	mov    %r12,%rax
+  414b2d:	48 89 c7             	mov    %rax,%rdi
+  414b30:	e8 eb fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414b35:	48 89 c3             	mov    %rax,%rbx
+  414b38:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  414b3f:	48 89 c7             	mov    %rax,%rdi
+  414b42:	e8 dd 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b47:	48 89 d8             	mov    %rbx,%rax
+  414b4a:	48 89 c7             	mov    %rax,%rdi
+  414b4d:	e8 ce fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414b52:	48 89 c3             	mov    %rax,%rbx
+  414b55:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  414b5c:	48 89 c7             	mov    %rax,%rdi
+  414b5f:	e8 c0 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b64:	48 89 d8             	mov    %rbx,%rax
+  414b67:	48 89 c7             	mov    %rax,%rdi
+  414b6a:	e8 b1 fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414b6f:	48 89 c3             	mov    %rax,%rbx
+  414b72:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  414b76:	48 89 c7             	mov    %rax,%rdi
+  414b79:	e8 a6 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b7e:	48 89 d8             	mov    %rbx,%rax
+  414b81:	48 89 c7             	mov    %rax,%rdi
+  414b84:	e8 97 fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414b89:	48 89 c3             	mov    %rax,%rbx
+  414b8c:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  414b90:	48 89 c7             	mov    %rax,%rdi
+  414b93:	e8 8c 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414b98:	eb 03                	jmp    414b9d <_ZN11CPortalConn13RequestConfigEi+0xaaf>
+  414b9a:	48 89 c3             	mov    %rax,%rbx
+  414b9d:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414ba4:	48 89 c7             	mov    %rax,%rdi
+  414ba7:	e8 78 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414bac:	48 89 d8             	mov    %rbx,%rax
+  414baf:	48 89 c7             	mov    %rax,%rdi
+  414bb2:	e8 69 fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414bb7:	48 89 c3             	mov    %rax,%rbx
+  414bba:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  414bbe:	48 89 c7             	mov    %rax,%rdi
+  414bc1:	e8 5e 95 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414bc6:	48 89 d8             	mov    %rbx,%rax
+  414bc9:	48 89 c7             	mov    %rax,%rdi
+  414bcc:	e8 4f fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414bd1:	48 89 c3             	mov    %rax,%rbx
+  414bd4:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  414bd8:	48 89 c7             	mov    %rax,%rdi
+  414bdb:	e8 10 f5 fe ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  414be0:	eb 03                	jmp    414be5 <_ZN11CPortalConn13RequestConfigEi+0xaf7>
+  414be2:	48 89 c3             	mov    %rax,%rbx
+  414be5:	48 8d 45 cf          	lea    -0x31(%rbp),%rax
+  414be9:	48 89 c7             	mov    %rax,%rdi
+  414bec:	e8 2f f9 fe ff       	call   404520 <_ZNSaIcED1Ev@plt>
+  414bf1:	48 89 d8             	mov    %rbx,%rax
+  414bf4:	48 89 c7             	mov    %rax,%rdi
+  414bf7:	e8 24 fc fe ff       	call   404820 <_Unwind_Resume@plt>
+  414bfc:	48 89 c3             	mov    %rax,%rbx
+  414bff:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  414c03:	48 89 c7             	mov    %rax,%rdi
+  414c06:	e8 e5 f4 fe ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  414c0b:	eb 03                	jmp    414c10 <_ZN11CPortalConn13RequestConfigEi+0xb22>
+  414c0d:	48 89 c3             	mov    %rax,%rbx
+  414c10:	48 8d 45 df          	lea    -0x21(%rbp),%rax
+  414c14:	48 89 c7             	mov    %rax,%rdi
+  414c17:	e8 04 f9 fe ff       	call   404520 <_ZNSaIcED1Ev@plt>
+  414c1c:	48 89 d8             	mov    %rbx,%rax
+  414c1f:	48 89 c7             	mov    %rax,%rdi
+  414c22:	e8 f9 fb fe ff       	call   404820 <_Unwind_Resume@plt>
+  414c27:	48 81 c4 10 01 00 00 	add    $0x110,%rsp
+  414c2e:	5b                   	pop    %rbx
+  414c2f:	41 5c                	pop    %r12
+  414c31:	5d                   	pop    %rbp
+  414c32:	c3                   	ret
+  414c33:	90                   	nop
+
+0000000000414c34 <_ZN11CPortalConn11CheckNetEnvEv>:
+  414c34:	55                   	push   %rbp
+  414c35:	48 89 e5             	mov    %rsp,%rbp
+  414c38:	41 56                	push   %r14
+  414c3a:	41 55                	push   %r13
+  414c3c:	41 54                	push   %r12
+  414c3e:	53                   	push   %rbx
+  414c3f:	48 81 ec 90 02 00 00 	sub    $0x290,%rsp
+  414c46:	48 89 bd 58 fd ff ff 	mov    %rdi,-0x2a8(%rbp)
+  414c4d:	e8 72 b2 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414c52:	ba d5 07 45 00       	mov    $0x4507d5,%edx
+  414c57:	be 03 00 00 00       	mov    $0x3,%esi
+  414c5c:	48 89 c7             	mov    %rax,%rdi
+  414c5f:	b8 00 00 00 00       	mov    $0x0,%eax
+  414c64:	e8 69 b2 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414c69:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  414c70:	48 8d 90 98 00 00 00 	lea    0x98(%rax),%rdx
+  414c77:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414c7e:	48 89 d6             	mov    %rdx,%rsi
+  414c81:	48 89 c7             	mov    %rax,%rdi
+  414c84:	e8 d7 93 ff ff       	call   40e060 <_ZN11CAutoStringC1ERKS_>
+  414c89:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  414c90:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414c97:	8b 80 80 02 00 00    	mov    0x280(%rax),%eax
+  414c9d:	83 f8 0a             	cmp    $0xa,%eax
+  414ca0:	75 20                	jne    414cc2 <_ZN11CPortalConn11CheckNetEnvEv+0x8e>
+  414ca2:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  414ca9:	48 8d 90 a8 00 00 00 	lea    0xa8(%rax),%rdx
+  414cb0:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414cb7:	48 89 d6             	mov    %rdx,%rsi
+  414cba:	48 89 c7             	mov    %rax,%rdi
+  414cbd:	e8 7c 94 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  414cc2:	48 8d 85 b0 fd ff ff 	lea    -0x250(%rbp),%rax
+  414cc9:	be 01 00 00 00       	mov    $0x1,%esi
+  414cce:	48 89 c7             	mov    %rax,%rdi
+  414cd1:	e8 38 7f 00 00       	call   41cc0e <_ZN9CHttpDataC1Eb>
+  414cd6:	41 89 dc             	mov    %ebx,%r12d
+  414cd9:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  414ce0:	48 89 c7             	mov    %rax,%rdi
+  414ce3:	e8 1c 93 ff ff       	call   40e004 <_ZN11CAutoStringC1Ev>
+  414ce8:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  414cef:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  414cf6:	48 05 d0 00 00 00    	add    $0xd0,%rax
+  414cfc:	48 89 c7             	mov    %rax,%rdi
+  414cff:	e8 d4 98 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414d04:	48 89 c2             	mov    %rax,%rdx
+  414d07:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  414d0e:	be f8 07 45 00       	mov    $0x4507f8,%esi
+  414d13:	48 89 c7             	mov    %rax,%rdi
+  414d16:	b8 00 00 00 00       	mov    $0x0,%eax
+  414d1b:	e8 c0 96 ff ff       	call   40e3e0 <_ZN11CAutoString6FormatEPKcz>
+  414d20:	48 8d 85 20 fe ff ff 	lea    -0x1e0(%rbp),%rax
+  414d27:	be 00 00 00 00       	mov    $0x0,%esi
+  414d2c:	48 89 c7             	mov    %rax,%rdi
+  414d2f:	e8 da 7e 00 00       	call   41cc0e <_ZN9CHttpDataC1Eb>
+  414d34:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414d3b:	48 89 c7             	mov    %rax,%rdi
+  414d3e:	e8 95 98 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414d43:	48 89 c2             	mov    %rax,%rdx
+  414d46:	48 8d 85 d0 fe ff ff 	lea    -0x130(%rbp),%rax
+  414d4d:	48 89 d6             	mov    %rdx,%rsi
+  414d50:	48 89 c7             	mov    %rax,%rdi
+  414d53:	e8 cc 92 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414d58:	48 8d 85 d0 fe ff ff 	lea    -0x130(%rbp),%rax
+  414d5f:	48 89 c7             	mov    %rax,%rdi
+  414d62:	e8 a1 95 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414d67:	48 89 85 20 fe ff ff 	mov    %rax,-0x1e0(%rbp)
+  414d6e:	48 c7 85 28 fe ff ff 	movq   $0x45069d,-0x1d8(%rbp)
+  414d75:	9d 06 45 00 
+  414d79:	48 c7 85 48 fe ff ff 	movq   $0x2710,-0x1b8(%rbp)
+  414d80:	10 27 00 00 
+  414d84:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  414d8b:	48 89 c7             	mov    %rax,%rdi
+  414d8e:	e8 75 95 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  414d93:	48 89 85 30 fe ff ff 	mov    %rax,-0x1d0(%rbp)
+  414d9a:	c6 85 68 fe ff ff 00 	movb   $0x0,-0x198(%rbp)
+  414da1:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414da8:	48 89 c7             	mov    %rax,%rdi
+  414dab:	e8 28 98 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414db0:	48 89 c3             	mov    %rax,%rbx
+  414db3:	e8 0c b1 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414db8:	48 89 d9             	mov    %rbx,%rcx
+  414dbb:	ba 66 08 45 00       	mov    $0x450866,%edx
+  414dc0:	be 03 00 00 00       	mov    $0x3,%esi
+  414dc5:	48 89 c7             	mov    %rax,%rdi
+  414dc8:	b8 00 00 00 00       	mov    $0x0,%eax
+  414dcd:	e8 00 b1 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414dd2:	48 8d 85 cf fe ff ff 	lea    -0x131(%rbp),%rax
+  414dd9:	48 89 c7             	mov    %rax,%rdi
+  414ddc:	e8 2f 5a 02 00       	call   43a810 <_ZN9CCurlHttpC1Ev>
+  414de1:	48 8d 95 20 fe ff ff 	lea    -0x1e0(%rbp),%rdx
+  414de8:	48 8d 85 cf fe ff ff 	lea    -0x131(%rbp),%rax
+  414def:	48 89 d6             	mov    %rdx,%rsi
+  414df2:	48 89 c7             	mov    %rax,%rdi
+  414df5:	e8 2a 5a 02 00       	call   43a824 <_ZN9CCurlHttp7PerformEP9CHttpData>
+  414dfa:	89 45 dc             	mov    %eax,-0x24(%rbp)
+  414dfd:	83 7d dc 00          	cmpl   $0x0,-0x24(%rbp)
+  414e01:	74 7d                	je     414e80 <_ZN11CPortalConn11CheckNetEnvEv+0x24c>
+  414e03:	e8 bc b0 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414e08:	8b 55 dc             	mov    -0x24(%rbp),%edx
+  414e0b:	89 d1                	mov    %edx,%ecx
+  414e0d:	ba 7b 08 45 00       	mov    $0x45087b,%edx
+  414e12:	be 03 00 00 00       	mov    $0x3,%esi
+  414e17:	48 89 c7             	mov    %rax,%rdi
+  414e1a:	b8 00 00 00 00       	mov    $0x0,%eax
+  414e1f:	e8 ae b0 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414e24:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  414e2b:	ba 00 00 00 00       	mov    $0x0,%edx
+  414e30:	be 99 08 45 00       	mov    $0x450899,%esi
+  414e35:	48 89 c7             	mov    %rax,%rdi
+  414e38:	e8 73 79 00 00       	call   41c7b0 <_ZN11CAutoString4FindEPKci>
+  414e3d:	f7 d0                	not    %eax
+  414e3f:	c1 e8 1f             	shr    $0x1f,%eax
+  414e42:	84 c0                	test   %al,%al
+  414e44:	74 2c                	je     414e72 <_ZN11CPortalConn11CheckNetEnvEv+0x23e>
+  414e46:	48 8d 95 f0 fe ff ff 	lea    -0x110(%rbp),%rdx
+  414e4d:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  414e54:	48 89 d6             	mov    %rdx,%rsi
+  414e57:	48 89 c7             	mov    %rax,%rdi
+  414e5a:	e8 bb 72 00 00       	call   41c11a <_ZN11CPortalConn14GetNewServerIPER11CAutoString>
+  414e5f:	85 c0                	test   %eax,%eax
+  414e61:	0f 95 c0             	setne  %al
+  414e64:	84 c0                	test   %al,%al
+  414e66:	74 0a                	je     414e72 <_ZN11CPortalConn11CheckNetEnvEv+0x23e>
+  414e68:	bb 00 00 00 00       	mov    $0x0,%ebx
+  414e6d:	e9 55 07 00 00       	jmp    4155c7 <_ZN11CPortalConn11CheckNetEnvEv+0x993>
+  414e72:	44 8b 65 dc          	mov    -0x24(%rbp),%r12d
+  414e76:	bb 01 00 00 00       	mov    $0x1,%ebx
+  414e7b:	e9 47 07 00 00       	jmp    4155c7 <_ZN11CPortalConn11CheckNetEnvEv+0x993>
+  414e80:	8b 9d 50 fe ff ff    	mov    -0x1b0(%rbp),%ebx
+  414e86:	e8 39 b0 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414e8b:	89 d9                	mov    %ebx,%ecx
+  414e8d:	ba a8 08 45 00       	mov    $0x4508a8,%edx
+  414e92:	be 03 00 00 00       	mov    $0x3,%esi
+  414e97:	48 89 c7             	mov    %rax,%rdi
+  414e9a:	b8 00 00 00 00       	mov    $0x0,%eax
+  414e9f:	e8 2e b0 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414ea4:	48 8d 85 20 fe ff ff 	lea    -0x1e0(%rbp),%rax
+  414eab:	48 89 c7             	mov    %rax,%rdi
+  414eae:	e8 9b 7e 00 00       	call   41cd4e <_ZN9CHttpData8RespHeadEv>
+  414eb3:	48 89 c3             	mov    %rax,%rbx
+  414eb6:	e8 09 b0 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414ebb:	48 89 da             	mov    %rbx,%rdx
+  414ebe:	be 03 00 00 00       	mov    $0x3,%esi
+  414ec3:	48 89 c7             	mov    %rax,%rdi
+  414ec6:	b8 00 00 00 00       	mov    $0x0,%eax
+  414ecb:	e8 02 b0 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414ed0:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  414ed7:	be ce 08 45 00       	mov    $0x4508ce,%esi
+  414edc:	48 89 c7             	mov    %rax,%rdi
+  414edf:	e8 40 91 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414ee4:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  414eeb:	48 8d 95 00 ff ff ff 	lea    -0x100(%rbp),%rdx
+  414ef2:	48 8d 8d 20 fe ff ff 	lea    -0x1e0(%rbp),%rcx
+  414ef9:	48 89 ce             	mov    %rcx,%rsi
+  414efc:	48 89 c7             	mov    %rax,%rdi
+  414eff:	e8 96 7e 00 00       	call   41cd9a <_ZN9CHttpData12GetHeadAttriE11CAutoString>
+  414f04:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  414f0b:	48 89 c7             	mov    %rax,%rdi
+  414f0e:	e8 11 92 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414f13:	48 8d 85 10 ff ff ff 	lea    -0xf0(%rbp),%rax
+  414f1a:	be d8 08 45 00       	mov    $0x4508d8,%esi
+  414f1f:	48 89 c7             	mov    %rax,%rdi
+  414f22:	e8 fd 90 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414f27:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  414f2e:	48 8d 95 10 ff ff ff 	lea    -0xf0(%rbp),%rdx
+  414f35:	48 8d 8d 20 fe ff ff 	lea    -0x1e0(%rbp),%rcx
+  414f3c:	48 89 ce             	mov    %rcx,%rsi
+  414f3f:	48 89 c7             	mov    %rax,%rdi
+  414f42:	e8 53 7e 00 00       	call   41cd9a <_ZN9CHttpData12GetHeadAttriE11CAutoString>
+  414f47:	48 8d 85 10 ff ff ff 	lea    -0xf0(%rbp),%rax
+  414f4e:	48 89 c7             	mov    %rax,%rdi
+  414f51:	e8 ce 91 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414f56:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  414f5d:	be e0 08 45 00       	mov    $0x4508e0,%esi
+  414f62:	48 89 c7             	mov    %rax,%rdi
+  414f65:	e8 ba 90 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  414f6a:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  414f71:	48 8d 95 20 ff ff ff 	lea    -0xe0(%rbp),%rdx
+  414f78:	48 8d 8d 20 fe ff ff 	lea    -0x1e0(%rbp),%rcx
+  414f7f:	48 89 ce             	mov    %rcx,%rsi
+  414f82:	48 89 c7             	mov    %rax,%rdi
+  414f85:	e8 10 7e 00 00       	call   41cd9a <_ZN9CHttpData12GetHeadAttriE11CAutoString>
+  414f8a:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  414f91:	48 89 c7             	mov    %rax,%rdi
+  414f94:	e8 8b 91 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  414f99:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  414fa0:	48 89 c7             	mov    %rax,%rdi
+  414fa3:	e8 42 96 ff ff       	call   40e5ea <_ZNK11CAutoString9GetLengthEv>
+  414fa8:	89 c3                	mov    %eax,%ebx
+  414faa:	e8 15 af ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  414faf:	89 d9                	mov    %ebx,%ecx
+  414fb1:	ba e6 08 45 00       	mov    $0x4508e6,%edx
+  414fb6:	be 03 00 00 00       	mov    $0x3,%esi
+  414fbb:	48 89 c7             	mov    %rax,%rdi
+  414fbe:	b8 00 00 00 00       	mov    $0x0,%eax
+  414fc3:	e8 0a af ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  414fc8:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  414fcf:	48 89 c7             	mov    %rax,%rdi
+  414fd2:	e8 01 96 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414fd7:	49 89 c6             	mov    %rax,%r14
+  414fda:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  414fe1:	48 89 c7             	mov    %rax,%rdi
+  414fe4:	e8 ef 95 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414fe9:	49 89 c5             	mov    %rax,%r13
+  414fec:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  414ff3:	48 89 c7             	mov    %rax,%rdi
+  414ff6:	e8 dd 95 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  414ffb:	48 89 c3             	mov    %rax,%rbx
+  414ffe:	e8 c1 ae ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  415003:	4d 89 f1             	mov    %r14,%r9
+  415006:	4d 89 e8             	mov    %r13,%r8
+  415009:	48 89 d9             	mov    %rbx,%rcx
+  41500c:	ba 00 09 45 00       	mov    $0x450900,%edx
+  415011:	be 03 00 00 00       	mov    $0x3,%esi
+  415016:	48 89 c7             	mov    %rax,%rdi
+  415019:	b8 00 00 00 00       	mov    $0x0,%eax
+  41501e:	e8 af ae ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  415023:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  41502a:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  41502f:	48 89 c7             	mov    %rax,%rdi
+  415032:	e8 ef ad ff ff       	call   40fe26 <_ZN11CAutoStringneEPKc>
+  415037:	84 c0                	test   %al,%al
+  415039:	74 37                	je     415072 <_ZN11CPortalConn11CheckNetEnvEv+0x43e>
+  41503b:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  415042:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  415047:	48 89 c7             	mov    %rax,%rdi
+  41504a:	e8 d7 ad ff ff       	call   40fe26 <_ZN11CAutoStringneEPKc>
+  41504f:	84 c0                	test   %al,%al
+  415051:	74 1f                	je     415072 <_ZN11CPortalConn11CheckNetEnvEv+0x43e>
+  415053:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  41505a:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  41505f:	48 89 c7             	mov    %rax,%rdi
+  415062:	e8 bf ad ff ff       	call   40fe26 <_ZN11CAutoStringneEPKc>
+  415067:	84 c0                	test   %al,%al
+  415069:	74 07                	je     415072 <_ZN11CPortalConn11CheckNetEnvEv+0x43e>
+  41506b:	b8 01 00 00 00       	mov    $0x1,%eax
+  415070:	eb 05                	jmp    415077 <_ZN11CPortalConn11CheckNetEnvEv+0x443>
+  415072:	b8 00 00 00 00       	mov    $0x0,%eax
+  415077:	84 c0                	test   %al,%al
+  415079:	0f 84 16 01 00 00    	je     415195 <_ZN11CPortalConn11CheckNetEnvEv+0x561>
+  41507f:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415086:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41508d:	48 8d 90 00 02 00 00 	lea    0x200(%rax),%rdx
+  415094:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  41509b:	48 89 c6             	mov    %rax,%rsi
+  41509e:	48 89 d7             	mov    %rdx,%rdi
+  4150a1:	e8 98 90 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4150a6:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4150ad:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4150b4:	48 8d 90 10 02 00 00 	lea    0x210(%rax),%rdx
+  4150bb:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  4150c2:	48 89 c6             	mov    %rax,%rsi
+  4150c5:	48 89 d7             	mov    %rdx,%rdi
+  4150c8:	e8 71 90 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4150cd:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4150d4:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4150db:	48 8d 90 20 02 00 00 	lea    0x220(%rax),%rdx
+  4150e2:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  4150e9:	48 89 c6             	mov    %rax,%rsi
+  4150ec:	48 89 d7             	mov    %rdx,%rdi
+  4150ef:	e8 4a 90 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4150f4:	e8 a3 f1 00 00       	call   42429c <_ZN13CPortalServer7GetInstEv>
+  4150f9:	48 89 c7             	mov    %rax,%rdi
+  4150fc:	e8 57 f2 00 00       	call   424358 <_ZN13CPortalServer13GetInfoCenterEv>
+  415101:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  415105:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41510c:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  415113:	48 05 00 02 00 00    	add    $0x200,%rax
+  415119:	48 89 c7             	mov    %rax,%rdi
+  41511c:	e8 e7 91 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  415121:	48 89 c2             	mov    %rax,%rdx
+  415124:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  415128:	be 62 07 45 00       	mov    $0x450762,%esi
+  41512d:	48 89 c7             	mov    %rax,%rdi
+  415130:	e8 9f 8c ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  415135:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41513c:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  415143:	48 05 10 02 00 00    	add    $0x210,%rax
+  415149:	48 89 c7             	mov    %rax,%rdi
+  41514c:	e8 b7 91 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  415151:	48 89 c2             	mov    %rax,%rdx
+  415154:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  415158:	be 6b 07 45 00       	mov    $0x45076b,%esi
+  41515d:	48 89 c7             	mov    %rax,%rdi
+  415160:	e8 6f 8c ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  415165:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41516c:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  415173:	48 05 20 02 00 00    	add    $0x220,%rax
+  415179:	48 89 c7             	mov    %rax,%rdi
+  41517c:	e8 87 91 ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  415181:	48 89 c2             	mov    %rax,%rdx
+  415184:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  415188:	be 72 07 45 00       	mov    $0x450772,%esi
+  41518d:	48 89 c7             	mov    %rax,%rdi
+  415190:	e8 3f 8c ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  415195:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41519c:	48 8d 90 b8 00 00 00 	lea    0xb8(%rax),%rdx
+  4151a3:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4151aa:	48 89 c6             	mov    %rax,%rsi
+  4151ad:	48 89 d7             	mov    %rdx,%rdi
+  4151b0:	e8 89 8f ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4151b5:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  4151bc:	48 8d 95 20 fe ff ff 	lea    -0x1e0(%rbp),%rdx
+  4151c3:	48 89 d6             	mov    %rdx,%rsi
+  4151c6:	48 89 c7             	mov    %rax,%rdi
+  4151c9:	e8 78 7d 00 00       	call   41cf46 <_ZN9CHttpData18GetRedirectAddressEv>
+  4151ce:	48 8d 95 30 ff ff ff 	lea    -0xd0(%rbp),%rdx
+  4151d5:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4151dc:	48 89 d6             	mov    %rdx,%rsi
+  4151df:	48 89 c7             	mov    %rax,%rdi
+  4151e2:	e8 57 8f ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4151e7:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  4151ee:	48 89 c7             	mov    %rax,%rdi
+  4151f1:	e8 2e 8f ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4151f6:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4151fd:	ba 00 00 00 00       	mov    $0x0,%edx
+  415202:	be 99 08 45 00       	mov    $0x450899,%esi
+  415207:	48 89 c7             	mov    %rax,%rdi
+  41520a:	e8 a1 75 00 00       	call   41c7b0 <_ZN11CAutoString4FindEPKci>
+  41520f:	f7 d0                	not    %eax
+  415211:	c1 e8 1f             	shr    $0x1f,%eax
+  415214:	84 c0                	test   %al,%al
+  415216:	74 19                	je     415231 <_ZN11CPortalConn11CheckNetEnvEv+0x5fd>
+  415218:	48 8d 95 f0 fe ff ff 	lea    -0x110(%rbp),%rdx
+  41521f:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415226:	48 89 d6             	mov    %rdx,%rsi
+  415229:	48 89 c7             	mov    %rax,%rdi
+  41522c:	e8 e9 6e 00 00       	call   41c11a <_ZN11CPortalConn14GetNewServerIPER11CAutoString>
+  415231:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  415238:	48 89 c7             	mov    %rax,%rdi
+  41523b:	e8 aa 93 ff ff       	call   40e5ea <_ZNK11CAutoString9GetLengthEv>
+  415240:	85 c0                	test   %eax,%eax
+  415242:	0f 94 c0             	sete   %al
+  415245:	84 c0                	test   %al,%al
+  415247:	74 28                	je     415271 <_ZN11CPortalConn11CheckNetEnvEv+0x63d>
+  415249:	48 8d 8d 20 fe ff ff 	lea    -0x1e0(%rbp),%rcx
+  415250:	48 8d 85 b0 fd ff ff 	lea    -0x250(%rbp),%rax
+  415257:	ba 68 00 00 00       	mov    $0x68,%edx
+  41525c:	48 89 ce             	mov    %rcx,%rsi
+  41525f:	48 89 c7             	mov    %rax,%rdi
+  415262:	e8 39 f6 fe ff       	call   4048a0 <memcpy@plt>
+  415267:	bb 00 00 00 00       	mov    $0x0,%ebx
+  41526c:	e9 f3 02 00 00       	jmp    415564 <_ZN11CPortalConn11CheckNetEnvEv+0x930>
+  415271:	48 8d 85 60 fd ff ff 	lea    -0x2a0(%rbp),%rax
+  415278:	48 89 c7             	mov    %rax,%rdi
+  41527b:	e8 7e 8f 00 00       	call   41e1fe <_ZN11CHttpHelperC1Ev>
+  415280:	48 8d 95 f0 fe ff ff 	lea    -0x110(%rbp),%rdx
+  415287:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  41528e:	48 89 d6             	mov    %rdx,%rsi
+  415291:	48 89 c7             	mov    %rax,%rdi
+  415294:	e8 c7 8d ff ff       	call   40e060 <_ZN11CAutoStringC1ERKS_>
+  415299:	48 8d 95 40 ff ff ff 	lea    -0xc0(%rbp),%rdx
+  4152a0:	48 8d 85 60 fd ff ff 	lea    -0x2a0(%rbp),%rax
+  4152a7:	48 89 d6             	mov    %rdx,%rsi
+  4152aa:	48 89 c7             	mov    %rax,%rdi
+  4152ad:	e8 a4 ec 01 00       	call   433f56 <_ZN11CHttpHelper10SetAddressE11CAutoString>
+  4152b2:	88 45 cf             	mov    %al,-0x31(%rbp)
+  4152b5:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  4152bc:	48 89 c7             	mov    %rax,%rdi
+  4152bf:	e8 60 8e ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4152c4:	80 7d cf 00          	cmpb   $0x0,-0x31(%rbp)
+  4152c8:	0f 84 73 02 00 00    	je     415541 <_ZN11CPortalConn11CheckNetEnvEv+0x90d>
+  4152ce:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  4152d5:	be 33 07 45 00       	mov    $0x450733,%esi
+  4152da:	48 89 c7             	mov    %rax,%rdi
+  4152dd:	e8 42 8d ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  4152e2:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  4152e9:	48 8d 95 60 ff ff ff 	lea    -0xa0(%rbp),%rdx
+  4152f0:	48 8d 8d 60 fd ff ff 	lea    -0x2a0(%rbp),%rcx
+  4152f7:	48 89 ce             	mov    %rcx,%rsi
+  4152fa:	48 89 c7             	mov    %rax,%rdi
+  4152fd:	e8 20 f8 01 00       	call   434b22 <_ZN11CHttpHelper8GetParamE11CAutoString>
+  415302:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415309:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  415310:	48 8d 90 30 02 00 00 	lea    0x230(%rax),%rdx
+  415317:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  41531e:	48 89 c6             	mov    %rax,%rsi
+  415321:	48 89 d7             	mov    %rdx,%rdi
+  415324:	e8 15 8e ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  415329:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  415330:	48 89 c7             	mov    %rax,%rdi
+  415333:	e8 ec 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415338:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  41533f:	48 89 c7             	mov    %rax,%rdi
+  415342:	e8 dd 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415347:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  41534b:	be 3e 07 45 00       	mov    $0x45073e,%esi
+  415350:	48 89 c7             	mov    %rax,%rdi
+  415353:	e8 cc 8c ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  415358:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  41535f:	48 8d 55 80          	lea    -0x80(%rbp),%rdx
+  415363:	48 8d 8d 60 fd ff ff 	lea    -0x2a0(%rbp),%rcx
+  41536a:	48 89 ce             	mov    %rcx,%rsi
+  41536d:	48 89 c7             	mov    %rax,%rdi
+  415370:	e8 ad f7 01 00       	call   434b22 <_ZN11CHttpHelper8GetParamE11CAutoString>
+  415375:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41537c:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  415383:	48 8d 90 40 02 00 00 	lea    0x240(%rax),%rdx
+  41538a:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  415391:	48 89 c6             	mov    %rax,%rsi
+  415394:	48 89 d7             	mov    %rdx,%rdi
+  415397:	e8 a2 8d ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  41539c:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  4153a3:	48 89 c7             	mov    %rax,%rdi
+  4153a6:	e8 79 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4153ab:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  4153af:	48 89 c7             	mov    %rax,%rdi
+  4153b2:	e8 6d 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4153b7:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  4153bb:	be 59 07 45 00       	mov    $0x450759,%esi
+  4153c0:	48 89 c7             	mov    %rax,%rdi
+  4153c3:	e8 5c 8c ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  4153c8:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  4153cc:	48 8d 55 a0          	lea    -0x60(%rbp),%rdx
+  4153d0:	48 8d 8d 60 fd ff ff 	lea    -0x2a0(%rbp),%rcx
+  4153d7:	48 89 ce             	mov    %rcx,%rsi
+  4153da:	48 89 c7             	mov    %rax,%rdi
+  4153dd:	e8 40 f7 01 00       	call   434b22 <_ZN11CHttpHelper8GetParamE11CAutoString>
+  4153e2:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4153e9:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4153f0:	48 8d 90 50 02 00 00 	lea    0x250(%rax),%rdx
+  4153f7:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  4153fb:	48 89 c6             	mov    %rax,%rsi
+  4153fe:	48 89 d7             	mov    %rdx,%rdi
+  415401:	e8 38 8d ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  415406:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  41540a:	48 89 c7             	mov    %rax,%rdi
+  41540d:	e8 12 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415412:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  415416:	48 89 c7             	mov    %rax,%rdi
+  415419:	e8 06 8d ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41541e:	e8 79 ee 00 00       	call   42429c <_ZN13CPortalServer7GetInstEv>
+  415423:	48 89 c7             	mov    %rax,%rdi
+  415426:	e8 2d ef 00 00       	call   424358 <_ZN13CPortalServer13GetInfoCenterEv>
+  41542b:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+  41542f:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415436:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41543d:	48 05 30 02 00 00    	add    $0x230,%rax
+  415443:	48 89 c7             	mov    %rax,%rdi
+  415446:	e8 bd 8e ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41544b:	48 89 c2             	mov    %rax,%rdx
+  41544e:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  415452:	be 33 07 45 00       	mov    $0x450733,%esi
+  415457:	48 89 c7             	mov    %rax,%rdi
+  41545a:	e8 75 89 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  41545f:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415466:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41546d:	48 05 40 02 00 00    	add    $0x240,%rax
+  415473:	48 89 c7             	mov    %rax,%rdi
+  415476:	e8 8d 8e ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41547b:	48 89 c2             	mov    %rax,%rdx
+  41547e:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  415482:	be 3e 07 45 00       	mov    $0x45073e,%esi
+  415487:	48 89 c7             	mov    %rax,%rdi
+  41548a:	e8 45 89 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  41548f:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415496:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41549d:	48 05 50 02 00 00    	add    $0x250,%rax
+  4154a3:	48 89 c7             	mov    %rax,%rdi
+  4154a6:	e8 5d 8e ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4154ab:	48 89 c2             	mov    %rax,%rdx
+  4154ae:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  4154b2:	be 59 07 45 00       	mov    $0x450759,%esi
+  4154b7:	48 89 c7             	mov    %rax,%rdi
+  4154ba:	e8 15 89 ff ff       	call   40ddd4 <_ZN11CInfoCenter13SetLocalValueEPKcS1_>
+  4154bf:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4154c6:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4154cd:	48 05 50 02 00 00    	add    $0x250,%rax
+  4154d3:	48 89 c7             	mov    %rax,%rdi
+  4154d6:	e8 fd 90 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  4154db:	49 89 c6             	mov    %rax,%r14
+  4154de:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4154e5:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4154ec:	48 05 40 02 00 00    	add    $0x240,%rax
+  4154f2:	48 89 c7             	mov    %rax,%rdi
+  4154f5:	e8 de 90 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  4154fa:	49 89 c5             	mov    %rax,%r13
+  4154fd:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  415504:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41550b:	48 05 30 02 00 00    	add    $0x230,%rax
+  415511:	48 89 c7             	mov    %rax,%rdi
+  415514:	e8 bf 90 ff ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  415519:	48 89 c3             	mov    %rax,%rbx
+  41551c:	e8 a3 a9 ff ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  415521:	4d 89 f1             	mov    %r14,%r9
+  415524:	4d 89 e8             	mov    %r13,%r8
+  415527:	48 89 d9             	mov    %rbx,%rcx
+  41552a:	ba 28 09 45 00       	mov    $0x450928,%edx
+  41552f:	be 03 00 00 00       	mov    $0x3,%esi
+  415534:	48 89 c7             	mov    %rax,%rdi
+  415537:	b8 00 00 00 00       	mov    $0x0,%eax
+  41553c:	e8 91 a9 ff ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  415541:	48 8d 85 20 fe ff ff 	lea    -0x1e0(%rbp),%rax
+  415548:	48 89 c7             	mov    %rax,%rdi
+  41554b:	e8 84 77 00 00       	call   41ccd4 <_ZN9CHttpData7ReleaseEv>
+  415550:	48 8d 85 60 fd ff ff 	lea    -0x2a0(%rbp),%rax
+  415557:	48 89 c7             	mov    %rax,%rdi
+  41555a:	e8 0b 8d 00 00       	call   41e26a <_ZN11CHttpHelperD1Ev>
+  41555f:	bb 01 00 00 00       	mov    $0x1,%ebx
+  415564:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  41556b:	48 89 c7             	mov    %rax,%rdi
+  41556e:	e8 b1 8b ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415573:	83 fb 01             	cmp    $0x1,%ebx
+  415576:	74 07                	je     41557f <_ZN11CPortalConn11CheckNetEnvEv+0x94b>
+  415578:	bb 00 00 00 00       	mov    $0x0,%ebx
+  41557d:	eb 06                	jmp    415585 <_ZN11CPortalConn11CheckNetEnvEv+0x951>
+  41557f:	90                   	nop
+  415580:	bb 01 00 00 00       	mov    $0x1,%ebx
+  415585:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  41558c:	48 89 c7             	mov    %rax,%rdi
+  41558f:	e8 90 8b ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415594:	83 fb 01             	cmp    $0x1,%ebx
+  415597:	74 07                	je     4155a0 <_ZN11CPortalConn11CheckNetEnvEv+0x96c>
+  415599:	bb 00 00 00 00       	mov    $0x0,%ebx
+  41559e:	eb 06                	jmp    4155a6 <_ZN11CPortalConn11CheckNetEnvEv+0x972>
+  4155a0:	90                   	nop
+  4155a1:	bb 01 00 00 00       	mov    $0x1,%ebx
+  4155a6:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  4155ad:	48 89 c7             	mov    %rax,%rdi
+  4155b0:	e8 6f 8b ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4155b5:	83 fb 01             	cmp    $0x1,%ebx
+  4155b8:	74 07                	je     4155c1 <_ZN11CPortalConn11CheckNetEnvEv+0x98d>
+  4155ba:	bb 02 00 00 00       	mov    $0x2,%ebx
+  4155bf:	eb 06                	jmp    4155c7 <_ZN11CPortalConn11CheckNetEnvEv+0x993>
+  4155c1:	90                   	nop
+  4155c2:	bb 03 00 00 00       	mov    $0x3,%ebx
+  4155c7:	48 8d 85 cf fe ff ff 	lea    -0x131(%rbp),%rax
+  4155ce:	48 89 c7             	mov    %rax,%rdi
+  4155d1:	e8 44 52 02 00       	call   43a81a <_ZN9CCurlHttpD1Ev>
+  4155d6:	83 fb 01             	cmp    $0x1,%ebx
+  4155d9:	74 10                	je     4155eb <_ZN11CPortalConn11CheckNetEnvEv+0x9b7>
+  4155db:	83 fb 03             	cmp    $0x3,%ebx
+  4155de:	74 19                	je     4155f9 <_ZN11CPortalConn11CheckNetEnvEv+0x9c5>
+  4155e0:	85 db                	test   %ebx,%ebx
+  4155e2:	75 0e                	jne    4155f2 <_ZN11CPortalConn11CheckNetEnvEv+0x9be>
+  4155e4:	bb 00 00 00 00       	mov    $0x0,%ebx
+  4155e9:	eb 14                	jmp    4155ff <_ZN11CPortalConn11CheckNetEnvEv+0x9cb>
+  4155eb:	bb 01 00 00 00       	mov    $0x1,%ebx
+  4155f0:	eb 0d                	jmp    4155ff <_ZN11CPortalConn11CheckNetEnvEv+0x9cb>
+  4155f2:	bb 02 00 00 00       	mov    $0x2,%ebx
+  4155f7:	eb 06                	jmp    4155ff <_ZN11CPortalConn11CheckNetEnvEv+0x9cb>
+  4155f9:	90                   	nop
+  4155fa:	bb 03 00 00 00       	mov    $0x3,%ebx
+  4155ff:	48 8d 85 d0 fe ff ff 	lea    -0x130(%rbp),%rax
+  415606:	48 89 c7             	mov    %rax,%rdi
+  415609:	e8 16 8b ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41560e:	83 fb 01             	cmp    $0x1,%ebx
+  415611:	74 10                	je     415623 <_ZN11CPortalConn11CheckNetEnvEv+0x9ef>
+  415613:	83 fb 03             	cmp    $0x3,%ebx
+  415616:	74 19                	je     415631 <_ZN11CPortalConn11CheckNetEnvEv+0x9fd>
+  415618:	85 db                	test   %ebx,%ebx
+  41561a:	75 0e                	jne    41562a <_ZN11CPortalConn11CheckNetEnvEv+0x9f6>
+  41561c:	bb 00 00 00 00       	mov    $0x0,%ebx
+  415621:	eb 14                	jmp    415637 <_ZN11CPortalConn11CheckNetEnvEv+0xa03>
+  415623:	bb 01 00 00 00       	mov    $0x1,%ebx
+  415628:	eb 0d                	jmp    415637 <_ZN11CPortalConn11CheckNetEnvEv+0xa03>
+  41562a:	bb 02 00 00 00       	mov    $0x2,%ebx
+  41562f:	eb 06                	jmp    415637 <_ZN11CPortalConn11CheckNetEnvEv+0xa03>
+  415631:	90                   	nop
+  415632:	bb 03 00 00 00       	mov    $0x3,%ebx
+  415637:	48 8d 85 20 fe ff ff 	lea    -0x1e0(%rbp),%rax
+  41563e:	48 89 c7             	mov    %rax,%rdi
+  415641:	e8 68 76 00 00       	call   41ccae <_ZN9CHttpDataD1Ev>
+  415646:	83 fb 01             	cmp    $0x1,%ebx
+  415649:	74 10                	je     41565b <_ZN11CPortalConn11CheckNetEnvEv+0xa27>
+  41564b:	83 fb 03             	cmp    $0x3,%ebx
+  41564e:	74 19                	je     415669 <_ZN11CPortalConn11CheckNetEnvEv+0xa35>
+  415650:	85 db                	test   %ebx,%ebx
+  415652:	75 0e                	jne    415662 <_ZN11CPortalConn11CheckNetEnvEv+0xa2e>
+  415654:	bb 00 00 00 00       	mov    $0x0,%ebx
+  415659:	eb 14                	jmp    41566f <_ZN11CPortalConn11CheckNetEnvEv+0xa3b>
+  41565b:	bb 01 00 00 00       	mov    $0x1,%ebx
+  415660:	eb 0d                	jmp    41566f <_ZN11CPortalConn11CheckNetEnvEv+0xa3b>
+  415662:	bb 02 00 00 00       	mov    $0x2,%ebx
+  415667:	eb 06                	jmp    41566f <_ZN11CPortalConn11CheckNetEnvEv+0xa3b>
+  415669:	90                   	nop
+  41566a:	bb 03 00 00 00       	mov    $0x3,%ebx
+  41566f:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  415676:	48 89 c7             	mov    %rax,%rdi
+  415679:	e8 a6 8a ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41567e:	83 fb 01             	cmp    $0x1,%ebx
+  415681:	0f 84 87 00 00 00    	je     41570e <_ZN11CPortalConn11CheckNetEnvEv+0xada>
+  415687:	83 fb 03             	cmp    $0x3,%ebx
+  41568a:	74 06                	je     415692 <_ZN11CPortalConn11CheckNetEnvEv+0xa5e>
+  41568c:	85 db                	test   %ebx,%ebx
+  41568e:	74 39                	je     4156c9 <_ZN11CPortalConn11CheckNetEnvEv+0xa95>
+  415690:	eb 06                	jmp    415698 <_ZN11CPortalConn11CheckNetEnvEv+0xa64>
+  415692:	90                   	nop
+  415693:	e9 41 f6 ff ff       	jmp    414cd9 <_ZN11CPortalConn11CheckNetEnvEv+0xa5>
+  415698:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  41569f:	48 8d 98 c8 00 00 00 	lea    0xc8(%rax),%rbx
+  4156a6:	48 8d 85 b0 fd ff ff 	lea    -0x250(%rbp),%rax
+  4156ad:	48 89 c7             	mov    %rax,%rdi
+  4156b0:	e8 bf 76 00 00       	call   41cd74 <_ZN9CHttpData8RespDataEv>
+  4156b5:	48 89 c2             	mov    %rax,%rdx
+  4156b8:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4156bc:	48 89 d6             	mov    %rdx,%rsi
+  4156bf:	48 89 c7             	mov    %rax,%rdi
+  4156c2:	e8 5d 89 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  4156c7:	eb 05                	jmp    4156ce <_ZN11CPortalConn11CheckNetEnvEv+0xa9a>
+  4156c9:	e9 0b f6 ff ff       	jmp    414cd9 <_ZN11CPortalConn11CheckNetEnvEv+0xa5>
+  4156ce:	48 8b 85 58 fd ff ff 	mov    -0x2a8(%rbp),%rax
+  4156d5:	48 8d 48 08          	lea    0x8(%rax),%rcx
+  4156d9:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4156dd:	48 89 da             	mov    %rbx,%rdx
+  4156e0:	48 89 c6             	mov    %rax,%rsi
+  4156e3:	48 89 cf             	mov    %rcx,%rdi
+  4156e6:	e8 2f 55 01 00       	call   42ac1a <_ZN13CPortalParser19GetConfigWithStringE11CAutoStringRS0_>
+  4156eb:	85 c0                	test   %eax,%eax
+  4156ed:	0f 94 c3             	sete   %bl
+  4156f0:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4156f4:	48 89 c7             	mov    %rax,%rdi
+  4156f7:	e8 28 8a ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4156fc:	84 db                	test   %bl,%bl
+  4156fe:	74 08                	je     415708 <_ZN11CPortalConn11CheckNetEnvEv+0xad4>
+  415700:	41 bc 00 00 00 00    	mov    $0x0,%r12d
+  415706:	eb 06                	jmp    41570e <_ZN11CPortalConn11CheckNetEnvEv+0xada>
+  415708:	41 bc 01 00 00 00    	mov    $0x1,%r12d
+  41570e:	48 8d 85 b0 fd ff ff 	lea    -0x250(%rbp),%rax
+  415715:	48 89 c7             	mov    %rax,%rdi
+  415718:	e8 91 75 00 00       	call   41ccae <_ZN9CHttpDataD1Ev>
+  41571d:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  415724:	48 89 c7             	mov    %rax,%rdi
+  415727:	e8 f8 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41572c:	44 89 e0             	mov    %r12d,%eax
+  41572f:	e9 c1 01 00 00       	jmp    4158f5 <_ZN11CPortalConn11CheckNetEnvEv+0xcc1>
+  415734:	48 89 c3             	mov    %rax,%rbx
+  415737:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  41573e:	48 89 c7             	mov    %rax,%rdi
+  415741:	e8 de 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415746:	e9 1b 01 00 00       	jmp    415866 <_ZN11CPortalConn11CheckNetEnvEv+0xc32>
+  41574b:	48 89 c3             	mov    %rax,%rbx
+  41574e:	48 8d 85 10 ff ff ff 	lea    -0xf0(%rbp),%rax
+  415755:	48 89 c7             	mov    %rax,%rdi
+  415758:	e8 c7 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41575d:	e9 f0 00 00 00       	jmp    415852 <_ZN11CPortalConn11CheckNetEnvEv+0xc1e>
+  415762:	48 89 c3             	mov    %rax,%rbx
+  415765:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  41576c:	48 89 c7             	mov    %rax,%rdi
+  41576f:	e8 b0 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415774:	e9 c5 00 00 00       	jmp    41583e <_ZN11CPortalConn11CheckNetEnvEv+0xc0a>
+  415779:	48 89 c3             	mov    %rax,%rbx
+  41577c:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  415783:	48 89 c7             	mov    %rax,%rdi
+  415786:	e8 99 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41578b:	e9 9a 00 00 00       	jmp    41582a <_ZN11CPortalConn11CheckNetEnvEv+0xbf6>
+  415790:	48 89 c3             	mov    %rax,%rbx
+  415793:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  41579a:	48 89 c7             	mov    %rax,%rdi
+  41579d:	e8 82 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4157a2:	eb 72                	jmp    415816 <_ZN11CPortalConn11CheckNetEnvEv+0xbe2>
+  4157a4:	48 89 c3             	mov    %rax,%rbx
+  4157a7:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  4157ae:	48 89 c7             	mov    %rax,%rdi
+  4157b1:	e8 6e 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4157b6:	eb 03                	jmp    4157bb <_ZN11CPortalConn11CheckNetEnvEv+0xb87>
+  4157b8:	48 89 c3             	mov    %rax,%rbx
+  4157bb:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  4157c2:	48 89 c7             	mov    %rax,%rdi
+  4157c5:	e8 5a 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4157ca:	eb 4a                	jmp    415816 <_ZN11CPortalConn11CheckNetEnvEv+0xbe2>
+  4157cc:	48 89 c3             	mov    %rax,%rbx
+  4157cf:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  4157d6:	48 89 c7             	mov    %rax,%rdi
+  4157d9:	e8 46 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4157de:	eb 03                	jmp    4157e3 <_ZN11CPortalConn11CheckNetEnvEv+0xbaf>
+  4157e0:	48 89 c3             	mov    %rax,%rbx
+  4157e3:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  4157e7:	48 89 c7             	mov    %rax,%rdi
+  4157ea:	e8 35 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4157ef:	eb 25                	jmp    415816 <_ZN11CPortalConn11CheckNetEnvEv+0xbe2>
+  4157f1:	48 89 c3             	mov    %rax,%rbx
+  4157f4:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  4157f8:	48 89 c7             	mov    %rax,%rdi
+  4157fb:	e8 24 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415800:	eb 03                	jmp    415805 <_ZN11CPortalConn11CheckNetEnvEv+0xbd1>
+  415802:	48 89 c3             	mov    %rax,%rbx
+  415805:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  415809:	48 89 c7             	mov    %rax,%rdi
+  41580c:	e8 13 89 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415811:	eb 03                	jmp    415816 <_ZN11CPortalConn11CheckNetEnvEv+0xbe2>
+  415813:	48 89 c3             	mov    %rax,%rbx
+  415816:	48 8d 85 60 fd ff ff 	lea    -0x2a0(%rbp),%rax
+  41581d:	48 89 c7             	mov    %rax,%rdi
+  415820:	e8 45 8a 00 00       	call   41e26a <_ZN11CHttpHelperD1Ev>
+  415825:	eb 03                	jmp    41582a <_ZN11CPortalConn11CheckNetEnvEv+0xbf6>
+  415827:	48 89 c3             	mov    %rax,%rbx
+  41582a:	48 8d 85 90 fe ff ff 	lea    -0x170(%rbp),%rax
+  415831:	48 89 c7             	mov    %rax,%rdi
+  415834:	e8 eb 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415839:	eb 03                	jmp    41583e <_ZN11CPortalConn11CheckNetEnvEv+0xc0a>
+  41583b:	48 89 c3             	mov    %rax,%rbx
+  41583e:	48 8d 85 a0 fe ff ff 	lea    -0x160(%rbp),%rax
+  415845:	48 89 c7             	mov    %rax,%rdi
+  415848:	e8 d7 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  41584d:	eb 03                	jmp    415852 <_ZN11CPortalConn11CheckNetEnvEv+0xc1e>
+  41584f:	48 89 c3             	mov    %rax,%rbx
+  415852:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  415859:	48 89 c7             	mov    %rax,%rdi
+  41585c:	e8 c3 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415861:	eb 03                	jmp    415866 <_ZN11CPortalConn11CheckNetEnvEv+0xc32>
+  415863:	48 89 c3             	mov    %rax,%rbx
+  415866:	48 8d 85 cf fe ff ff 	lea    -0x131(%rbp),%rax
+  41586d:	48 89 c7             	mov    %rax,%rdi
+  415870:	e8 a5 4f 02 00       	call   43a81a <_ZN9CCurlHttpD1Ev>
+  415875:	eb 03                	jmp    41587a <_ZN11CPortalConn11CheckNetEnvEv+0xc46>
+  415877:	48 89 c3             	mov    %rax,%rbx
+  41587a:	48 8d 85 d0 fe ff ff 	lea    -0x130(%rbp),%rax
+  415881:	48 89 c7             	mov    %rax,%rdi
+  415884:	e8 9b 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  415889:	eb 03                	jmp    41588e <_ZN11CPortalConn11CheckNetEnvEv+0xc5a>
+  41588b:	48 89 c3             	mov    %rax,%rbx
+  41588e:	48 8d 85 20 fe ff ff 	lea    -0x1e0(%rbp),%rax
+  415895:	48 89 c7             	mov    %rax,%rdi
+  415898:	e8 11 74 00 00       	call   41ccae <_ZN9CHttpDataD1Ev>
+  41589d:	eb 03                	jmp    4158a2 <_ZN11CPortalConn11CheckNetEnvEv+0xc6e>
+  41589f:	48 89 c3             	mov    %rax,%rbx
+  4158a2:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  4158a9:	48 89 c7             	mov    %rax,%rdi
+  4158ac:	e8 73 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4158b1:	eb 14                	jmp    4158c7 <_ZN11CPortalConn11CheckNetEnvEv+0xc93>
+  4158b3:	48 89 c3             	mov    %rax,%rbx
+  4158b6:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4158ba:	48 89 c7             	mov    %rax,%rdi
+  4158bd:	e8 62 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4158c2:	eb 03                	jmp    4158c7 <_ZN11CPortalConn11CheckNetEnvEv+0xc93>
+  4158c4:	48 89 c3             	mov    %rax,%rbx
+  4158c7:	48 8d 85 b0 fd ff ff 	lea    -0x250(%rbp),%rax
+  4158ce:	48 89 c7             	mov    %rax,%rdi
+  4158d1:	e8 d8 73 00 00       	call   41ccae <_ZN9CHttpDataD1Ev>
+  4158d6:	eb 03                	jmp    4158db <_ZN11CPortalConn11CheckNetEnvEv+0xca7>
+  4158d8:	48 89 c3             	mov    %rax,%rbx
+  4158db:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  4158e2:	48 89 c7             	mov    %rax,%rdi
+  4158e5:	e8 3a 88 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4158ea:	48 89 d8             	mov    %rbx,%rax
+  4158ed:	48 89 c7             	mov    %rax,%rdi
+  4158f0:	e8 2b ef fe ff       	call   404820 <_Unwind_Resume@plt>
+  4158f5:	48 81 c4 90 02 00 00 	add    $0x290,%rsp
+  4158fc:	5b                   	pop    %rbx
+  4158fd:	41 5c                	pop    %r12
+  4158ff:	41 5d                	pop    %r13
+  415901:	41 5e                	pop    %r14
+  415903:	5d                   	pop    %rbp
+  415904:	c3                   	ret
+  415905:	90                   	nop

@@ -1,0 +1,58 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000425682 <_ZN13CPortalServer11IsPortalEnvEv>:
+  425682:	55                   	push   %rbp
+  425683:	48 89 e5             	mov    %rsp,%rbp
+  425686:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  42568a:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  42568e:	8b 80 d0 00 00 00    	mov    0xd0(%rax),%eax
+  425694:	5d                   	pop    %rbp
+  425695:	c3                   	ret
+
+0000000000425696 <_ZN13CPortalServer4WorkEi>:
+  425696:	55                   	push   %rbp
+  425697:	48 89 e5             	mov    %rsp,%rbp
+  42569a:	48 83 ec 10          	sub    $0x10,%rsp
+  42569e:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  4256a2:	89 75 f4             	mov    %esi,-0xc(%rbp)
+  4256a5:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  4256a9:	74 67                	je     425712 <_ZN13CPortalServer4WorkEi+0x7c>
+  4256ab:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4256af:	48 8d 90 30 02 00 00 	lea    0x230(%rax),%rdx
+  4256b6:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4256ba:	48 8d b8 38 02 00 00 	lea    0x238(%rax),%rdi
+  4256c1:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4256c5:	48 89 d1             	mov    %rdx,%rcx
+  4256c8:	48 89 c2             	mov    %rax,%rdx
+  4256cb:	be 3c 57 42 00       	mov    $0x42573c,%esi
+  4256d0:	e8 15 30 00 00       	call   4286ea <_ZN13CSimpleThread3RunEPFPvS0_ES0_Pb>
+  4256d5:	83 f0 01             	xor    $0x1,%eax
+  4256d8:	84 c0                	test   %al,%al
+  4256da:	74 5e                	je     42573a <_ZN13CPortalServer4WorkEi+0xa4>
+  4256dc:	bf c0 29 45 00       	mov    $0x4529c0,%edi
+  4256e1:	e8 aa e7 fd ff       	call   403e90 <puts@plt>
+  4256e6:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4256ea:	48 8d 90 30 02 00 00 	lea    0x230(%rax),%rdx
+  4256f1:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  4256f5:	48 8d b8 38 02 00 00 	lea    0x238(%rax),%rdi
+  4256fc:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  425700:	48 89 d1             	mov    %rdx,%rcx
+  425703:	48 89 c2             	mov    %rax,%rdx
+  425706:	be 3c 57 42 00       	mov    $0x42573c,%esi
+  42570b:	e8 da 2f 00 00       	call   4286ea <_ZN13CSimpleThread3RunEPFPvS0_ES0_Pb>
+  425710:	eb 28                	jmp    42573a <_ZN13CPortalServer4WorkEi+0xa4>
+  425712:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  425716:	48 89 c7             	mov    %rax,%rdi
+  425719:	e8 b6 02 00 00       	call   4259d4 <_ZN13CPortalServer11StopAllTaskEv>
+  42571e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  425722:	48 05 38 02 00 00    	add    $0x238,%rax
+  425728:	ba 01 00 00 00       	mov    $0x1,%edx
+  42572d:	be e8 03 00 00       	mov    $0x3e8,%esi
+  425732:	48 89 c7             	mov    %rax,%rdi
+  425735:	e8 6c 30 00 00       	call   4287a6 <_ZN13CSimpleThread4StopElb>
+  42573a:	c9                   	leave
+  42573b:	c3                   	ret

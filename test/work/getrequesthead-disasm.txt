@@ -1,0 +1,254 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000419664 <_ZN11CPortalConn14GetRequestHeadEPKc>:
+  419664:	55                   	push   %rbp
+  419665:	48 89 e5             	mov    %rsp,%rbp
+  419668:	41 57                	push   %r15
+  41966a:	41 56                	push   %r14
+  41966c:	41 55                	push   %r13
+  41966e:	41 54                	push   %r12
+  419670:	53                   	push   %rbx
+  419671:	48 83 ec 48          	sub    $0x48,%rsp
+  419675:	48 89 7d b8          	mov    %rdi,-0x48(%rbp)
+  419679:	48 89 75 b0          	mov    %rsi,-0x50(%rbp)
+  41967d:	48 89 55 a8          	mov    %rdx,-0x58(%rbp)
+  419681:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  419685:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41968c:	48 05 20 02 00 00    	add    $0x220,%rax
+  419692:	48 89 c7             	mov    %rax,%rdi
+  419695:	e8 6e 4c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  41969a:	49 89 c4             	mov    %rax,%r12
+  41969d:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  4196a1:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4196a8:	48 05 10 02 00 00    	add    $0x210,%rax
+  4196ae:	48 89 c7             	mov    %rax,%rdi
+  4196b1:	e8 52 4c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4196b6:	48 89 c3             	mov    %rax,%rbx
+  4196b9:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  4196bd:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4196c4:	48 05 00 02 00 00    	add    $0x200,%rax
+  4196ca:	48 89 c7             	mov    %rax,%rdi
+  4196cd:	e8 36 4c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4196d2:	49 89 c7             	mov    %rax,%r15
+  4196d5:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4196d9:	48 8b 55 a8          	mov    -0x58(%rbp),%rdx
+  4196dd:	48 8b 4d b0          	mov    -0x50(%rbp),%rcx
+  4196e1:	48 89 ce             	mov    %rcx,%rsi
+  4196e4:	48 89 c7             	mov    %rax,%rdi
+  4196e7:	e8 a8 00 00 00       	call   419794 <_ZN11CPortalConn18GetMD5FromPostDataEPKc>
+  4196ec:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4196f0:	48 89 c7             	mov    %rax,%rdi
+  4196f3:	e8 10 4c ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  4196f8:	49 89 c6             	mov    %rax,%r14
+  4196fb:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  4196ff:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  419706:	48 05 c0 00 00 00    	add    $0xc0,%rax
+  41970c:	48 89 c7             	mov    %rax,%rdi
+  41970f:	e8 f4 4b ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  419714:	49 89 c5             	mov    %rax,%r13
+  419717:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  41971b:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  419722:	48 05 d0 00 00 00    	add    $0xd0,%rax
+  419728:	48 89 c7             	mov    %rax,%rdi
+  41972b:	e8 d8 4b ff ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  419730:	48 89 c2             	mov    %rax,%rdx
+  419733:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+  419737:	48 8d 70 08          	lea    0x8(%rax),%rsi
+  41973b:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  41973f:	4c 89 64 24 08       	mov    %r12,0x8(%rsp)
+  419744:	48 89 1c 24          	mov    %rbx,(%rsp)
+  419748:	4d 89 f9             	mov    %r15,%r9
+  41974b:	4d 89 f0             	mov    %r14,%r8
+  41974e:	4c 89 e9             	mov    %r13,%rcx
+  419751:	48 89 c7             	mov    %rax,%rdi
+  419754:	e8 17 46 01 00       	call   42dd70 <_ZN13CPortalParser15MakeRequestHeadEPKcS1_S1_S1_S1_S1_>
+  419759:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  41975d:	48 89 c7             	mov    %rax,%rdi
+  419760:	e8 bf 49 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  419765:	eb 1a                	jmp    419781 <_ZN11CPortalConn14GetRequestHeadEPKc+0x11d>
+  419767:	48 89 c3             	mov    %rax,%rbx
+  41976a:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  41976e:	48 89 c7             	mov    %rax,%rdi
+  419771:	e8 ae 49 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  419776:	48 89 d8             	mov    %rbx,%rax
+  419779:	48 89 c7             	mov    %rax,%rdi
+  41977c:	e8 9f b0 fe ff       	call   404820 <_Unwind_Resume@plt>
+  419781:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  419785:	48 83 c4 48          	add    $0x48,%rsp
+  419789:	5b                   	pop    %rbx
+  41978a:	41 5c                	pop    %r12
+  41978c:	41 5d                	pop    %r13
+  41978e:	41 5e                	pop    %r14
+  419790:	41 5f                	pop    %r15
+  419792:	5d                   	pop    %rbp
+  419793:	c3                   	ret
+
+0000000000419794 <_ZN11CPortalConn18GetMD5FromPostDataEPKc>:
+  419794:	55                   	push   %rbp
+  419795:	48 89 e5             	mov    %rsp,%rbp
+  419798:	53                   	push   %rbx
+  419799:	48 81 ec 88 00 00 00 	sub    $0x88,%rsp
+  4197a0:	48 89 7d 88          	mov    %rdi,-0x78(%rbp)
+  4197a4:	48 89 75 80          	mov    %rsi,-0x80(%rbp)
+  4197a8:	48 89 95 78 ff ff ff 	mov    %rdx,-0x88(%rbp)
+  4197af:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  4197b3:	48 89 c7             	mov    %rax,%rdi
+  4197b6:	e8 49 48 ff ff       	call   40e004 <_ZN11CAutoStringC1Ev>
+  4197bb:	48 8d 55 90          	lea    -0x70(%rbp),%rdx
+  4197bf:	b8 00 00 00 00       	mov    $0x0,%eax
+  4197c4:	b9 08 00 00 00       	mov    $0x8,%ecx
+  4197c9:	48 89 d7             	mov    %rdx,%rdi
+  4197cc:	f3 48 ab             	rep stos %rax,%es:(%rdi)
+  4197cf:	48 89 fa             	mov    %rdi,%rdx
+  4197d2:	88 02                	mov    %al,(%rdx)
+  4197d4:	48 83 c2 01          	add    $0x1,%rdx
+  4197d8:	48 8d 55 90          	lea    -0x70(%rbp),%rdx
+  4197dc:	48 8b 8d 78 ff ff ff 	mov    -0x88(%rbp),%rcx
+  4197e3:	48 8d 45 df          	lea    -0x21(%rbp),%rax
+  4197e7:	48 89 ce             	mov    %rcx,%rsi
+  4197ea:	48 89 c7             	mov    %rax,%rdi
+  4197ed:	e8 ae 3c ff ff       	call   40d4a0 <_ZN4CMD58MDStringEPKcPc>
+  4197f2:	48 8d 55 90          	lea    -0x70(%rbp),%rdx
+  4197f6:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  4197fa:	48 89 d6             	mov    %rdx,%rsi
+  4197fd:	48 89 c7             	mov    %rax,%rdi
+  419800:	e8 1f 48 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  419805:	48 8d 55 e0          	lea    -0x20(%rbp),%rdx
+  419809:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  41980d:	48 89 d6             	mov    %rdx,%rsi
+  419810:	48 89 c7             	mov    %rax,%rdi
+  419813:	e8 26 49 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  419818:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  41981c:	48 89 c7             	mov    %rax,%rdi
+  41981f:	e8 00 49 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  419824:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  419828:	48 89 c7             	mov    %rax,%rdi
+  41982b:	e8 c8 32 00 00       	call   41caf8 <_ZN11CAutoString9MakeLowerEv>
+  419830:	90                   	nop
+  419831:	eb 2b                	jmp    41985e <_ZN11CPortalConn18GetMD5FromPostDataEPKc+0xca>
+  419833:	48 89 c3             	mov    %rax,%rbx
+  419836:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  41983a:	48 89 c7             	mov    %rax,%rdi
+  41983d:	e8 e2 48 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  419842:	eb 03                	jmp    419847 <_ZN11CPortalConn18GetMD5FromPostDataEPKc+0xb3>
+  419844:	48 89 c3             	mov    %rax,%rbx
+  419847:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  41984b:	48 89 c7             	mov    %rax,%rdi
+  41984e:	e8 d1 48 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  419853:	48 89 d8             	mov    %rbx,%rax
+  419856:	48 89 c7             	mov    %rax,%rdi
+  419859:	e8 c2 af fe ff       	call   404820 <_Unwind_Resume@plt>
+  41985e:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  419862:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+  419869:	5b                   	pop    %rbx
+  41986a:	5d                   	pop    %rbp
+  41986b:	c3                   	ret
+
+000000000041986c <_ZN11CPortalConn12UpdateAlgoidEP9CHttpData>:
+  41986c:	55                   	push   %rbp
+  41986d:	48 89 e5             	mov    %rsp,%rbp
+  419870:	53                   	push   %rbx
+  419871:	48 83 ec 28          	sub    $0x28,%rsp
+  419875:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  419879:	48 89 75 d0          	mov    %rsi,-0x30(%rbp)
+  41987d:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  419881:	be a1 06 45 00       	mov    $0x4506a1,%esi
+  419886:	48 89 c7             	mov    %rax,%rdi
+  419889:	e8 96 47 ff ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  41988e:	48 8d 55 e0          	lea    -0x20(%rbp),%rdx
+  419892:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  419896:	49 89 d0             	mov    %rdx,%r8
+  419899:	b9 e8 c3 c9 01       	mov    $0x1c9c3e8,%ecx
+  41989e:	ba 21 00 00 00       	mov    $0x21,%edx
+  4198a3:	be 21 00 00 00       	mov    $0x21,%esi
+  4198a8:	48 89 c7             	mov    %rax,%rdi
+  4198ab:	e8 54 04 00 00       	call   419d04 <_ZN11CPortalConn14NetStateChangeEN8INetConn6ESTATEES1_i11CAutoString>
+  4198b0:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  4198b4:	48 89 c7             	mov    %rax,%rdi
+  4198b7:	e8 68 48 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4198bc:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  4198c0:	48 8d 50 08          	lea    0x8(%rax),%rdx
+  4198c4:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  4198c8:	48 89 c6             	mov    %rax,%rsi
+  4198cb:	48 89 d7             	mov    %rdx,%rdi
+  4198ce:	e8 67 49 01 00       	call   42e23a <_ZN13CPortalParser12UpdateAlgoidEP9CHttpData>
+  4198d3:	eb 1a                	jmp    4198ef <_ZN11CPortalConn12UpdateAlgoidEP9CHttpData+0x83>
+  4198d5:	48 89 c3             	mov    %rax,%rbx
+  4198d8:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  4198dc:	48 89 c7             	mov    %rax,%rdi
+  4198df:	e8 40 48 ff ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4198e4:	48 89 d8             	mov    %rbx,%rax
+  4198e7:	48 89 c7             	mov    %rax,%rdi
+  4198ea:	e8 31 af fe ff       	call   404820 <_Unwind_Resume@plt>
+  4198ef:	48 83 c4 28          	add    $0x28,%rsp
+  4198f3:	5b                   	pop    %rbx
+  4198f4:	5d                   	pop    %rbp
+  4198f5:	c3                   	ret
+
+00000000004198f6 <_ZN11CPortalConn16SaveAuthResponseER11CAutoStringRiS1_S1_S1_RKS0_>:
+  4198f6:	55                   	push   %rbp
+  4198f7:	48 89 e5             	mov    %rsp,%rbp
+  4198fa:	41 54                	push   %r12
+  4198fc:	53                   	push   %rbx
+  4198fd:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+  419901:	48 89 7d 98          	mov    %rdi,-0x68(%rbp)
+  419905:	48 89 75 90          	mov    %rsi,-0x70(%rbp)
+  419909:	48 89 55 88          	mov    %rdx,-0x78(%rbp)
+  41990d:	48 89 4d 80          	mov    %rcx,-0x80(%rbp)
+  419911:	4c 89 85 78 ff ff ff 	mov    %r8,-0x88(%rbp)
+  419918:	4c 89 8d 70 ff ff ff 	mov    %r9,-0x90(%rbp)
+  41991f:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  419923:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41992a:	48 8d 90 50 01 00 00 	lea    0x150(%rax),%rdx
+  419931:	48 8b 45 90          	mov    -0x70(%rbp),%rax
+  419935:	48 89 c6             	mov    %rax,%rsi
+  419938:	48 89 d7             	mov    %rdx,%rdi
+  41993b:	e8 fe 47 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  419940:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  419944:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41994b:	48 8d 90 98 00 00 00 	lea    0x98(%rax),%rdx
+  419952:	48 8b 45 80          	mov    -0x80(%rbp),%rax
+  419956:	48 89 c6             	mov    %rax,%rsi
+  419959:	48 89 d7             	mov    %rdx,%rdi
+  41995c:	e8 dd 47 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  419961:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  419965:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  41996c:	48 8d 90 88 00 00 00 	lea    0x88(%rax),%rdx
+  419973:	48 8b 85 78 ff ff ff 	mov    -0x88(%rbp),%rax
+  41997a:	48 89 c6             	mov    %rax,%rsi
+  41997d:	48 89 d7             	mov    %rdx,%rdi
+  419980:	e8 b9 47 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  419985:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  419989:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  419990:	48 8b 55 88          	mov    -0x78(%rbp),%rdx
+  419994:	8b 12                	mov    (%rdx),%edx
+  419996:	89 90 e0 00 00 00    	mov    %edx,0xe0(%rax)
+  41999c:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  4199a0:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4199a7:	48 8d 90 70 01 00 00 	lea    0x170(%rax),%rdx
+  4199ae:	48 8b 85 70 ff ff ff 	mov    -0x90(%rbp),%rax
+  4199b5:	48 89 c6             	mov    %rax,%rsi
+  4199b8:	48 89 d7             	mov    %rdx,%rdi
+  4199bb:	e8 7e 47 ff ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  4199c0:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  4199c4:	48 8b 98 80 01 00 00 	mov    0x180(%rax),%rbx
+  4199cb:	48 8b 95 70 ff ff ff 	mov    -0x90(%rbp),%rdx
+  4199d2:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4199d6:	48 89 d6             	mov    %rdx,%rsi
+  4199d9:	48 89 c7             	mov    %rax,%rdi
+  4199dc:	e8 7f 46 ff ff       	call   40e060 <_ZN11CAutoStringC1ERKS_>
+  4199e1:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  4199e5:	48 8d 50 08          	lea    0x8(%rax),%rdx
+  4199e9:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  4199ed:	48 89 c6             	mov    %rax,%rsi
+  4199f0:	48 89 d7             	mov    %rdx,%rdi
+  4199f3:	e8 e4 40 01 00       	call   42dadc <_ZN13CPortalParser21GetCheckWifiShareTimeE11CAutoString>
+  4199f8:	48 98                	cltq
+  4199fa:	48                   	rex.W
+  4199fb:	89                   	.byte 0x89
+  4199fc:	83                   	.byte 0x83
+  4199fd:	80 01 00             	addb   $0x0,(%rcx)

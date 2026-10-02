@@ -1,0 +1,368 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000042c9bc <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_>:
+  42c9bc:	55                   	push   %rbp
+  42c9bd:	48 89 e5             	mov    %rsp,%rbp
+  42c9c0:	53                   	push   %rbx
+  42c9c1:	48 81 ec c8 01 00 00 	sub    $0x1c8,%rsp
+  42c9c8:	48 89 bd 58 fe ff ff 	mov    %rdi,-0x1a8(%rbp)
+  42c9cf:	48 89 b5 50 fe ff ff 	mov    %rsi,-0x1b0(%rbp)
+  42c9d6:	48 89 95 48 fe ff ff 	mov    %rdx,-0x1b8(%rbp)
+  42c9dd:	48 89 8d 40 fe ff ff 	mov    %rcx,-0x1c0(%rbp)
+  42c9e4:	4c 89 85 38 fe ff ff 	mov    %r8,-0x1c8(%rbp)
+  42c9eb:	4c 89 8d 30 fe ff ff 	mov    %r9,-0x1d0(%rbp)
+  42c9f2:	48 8d 85 c0 fe ff ff 	lea    -0x140(%rbp),%rax
+  42c9f9:	48 8b 95 50 fe ff ff 	mov    -0x1b0(%rbp),%rdx
+  42ca00:	48 8b 8d 58 fe ff ff 	mov    -0x1a8(%rbp),%rcx
+  42ca07:	48 89 ce             	mov    %rcx,%rsi
+  42ca0a:	48 89 c7             	mov    %rax,%rdi
+  42ca0d:	e8 48 16 00 00       	call   42e05a <_ZN13CPortalParser22DecodePostResponseDataEPKc>
+  42ca12:	48 8d 85 c0 fe ff ff 	lea    -0x140(%rbp),%rax
+  42ca19:	48 89 c7             	mov    %rax,%rdi
+  42ca1c:	e8 b7 1b fe ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  42ca21:	48 89 c3             	mov    %rax,%rbx
+  42ca24:	e8 9b 34 fe ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  42ca29:	48 89 d9             	mov    %rbx,%rcx
+  42ca2c:	ba e5 35 45 00       	mov    $0x4535e5,%edx
+  42ca31:	be 03 00 00 00       	mov    $0x3,%esi
+  42ca36:	48 89 c7             	mov    %rax,%rdi
+  42ca39:	b8 00 00 00 00       	mov    $0x0,%eax
+  42ca3e:	e8 8f 34 fe ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  42ca43:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ca4a:	48 89 c7             	mov    %rax,%rdi
+  42ca4d:	e8 c6 16 ff ff       	call   41e118 <_ZN7CMarkupC1Ev>
+  42ca52:	bb 00 00 00 00       	mov    $0x0,%ebx
+  42ca57:	48 8d 85 c0 fe ff ff 	lea    -0x140(%rbp),%rax
+  42ca5e:	48 89 c7             	mov    %rax,%rdi
+  42ca61:	e8 72 1b fe ff       	call   40e5d8 <_ZNK11CAutoString9GetBufferEv>
+  42ca66:	48 89 c2             	mov    %rax,%rdx
+  42ca69:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ca70:	48 89 d6             	mov    %rdx,%rsi
+  42ca73:	48 89 c7             	mov    %rax,%rdi
+  42ca76:	e8 59 69 01 00       	call   4433d4 <_ZN7CMarkup6SetDocEPKc>
+  42ca7b:	83 f0 01             	xor    $0x1,%eax
+  42ca7e:	84 c0                	test   %al,%al
+  42ca80:	75 39                	jne    42cabb <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0xff>
+  42ca82:	48 8d 85 d0 fe ff ff 	lea    -0x130(%rbp),%rax
+  42ca89:	be c0 35 45 00       	mov    $0x4535c0,%esi
+  42ca8e:	48 89 c7             	mov    %rax,%rdi
+  42ca91:	e8 68 16 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42ca96:	bb 01 00 00 00       	mov    $0x1,%ebx
+  42ca9b:	48 8b 95 d0 fe ff ff 	mov    -0x130(%rbp),%rdx
+  42caa2:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42caa9:	48 89 d6             	mov    %rdx,%rsi
+  42caac:	48 89 c7             	mov    %rax,%rdi
+  42caaf:	e8 2e 82 01 00       	call   444ce2 <_ZN7CMarkup8FindElemE8MCD_CSTR>
+  42cab4:	83 f0 01             	xor    $0x1,%eax
+  42cab7:	84 c0                	test   %al,%al
+  42cab9:	74 07                	je     42cac2 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x106>
+  42cabb:	b8 01 00 00 00       	mov    $0x1,%eax
+  42cac0:	eb 05                	jmp    42cac7 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x10b>
+  42cac2:	b8 00 00 00 00       	mov    $0x0,%eax
+  42cac7:	84 db                	test   %bl,%bl
+  42cac9:	84 c0                	test   %al,%al
+  42cacb:	74 0a                	je     42cad7 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x11b>
+  42cacd:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42cad2:	e9 cf 03 00 00       	jmp    42cea6 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x4ea>
+  42cad7:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42cade:	be d7 35 45 00       	mov    $0x4535d7,%esi
+  42cae3:	48 89 c7             	mov    %rax,%rdi
+  42cae6:	e8 13 16 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42caeb:	48 8b 95 e0 fe ff ff 	mov    -0x120(%rbp),%rdx
+  42caf2:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42caf9:	48 89 d6             	mov    %rdx,%rsi
+  42cafc:	48 89 c7             	mov    %rax,%rdi
+  42caff:	e8 a4 82 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42cb04:	84 c0                	test   %al,%al
+  42cb06:	74 69                	je     42cb71 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x1b5>
+  42cb08:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  42cb0f:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42cb16:	48 89 d6             	mov    %rdx,%rsi
+  42cb19:	48 89 c7             	mov    %rax,%rdi
+  42cb1c:	e8 a3 16 ff ff       	call   41e1c4 <_ZN7CMarkup12GetChildDataEv>
+  42cb21:	48 8d 95 00 ff ff ff 	lea    -0x100(%rbp),%rdx
+  42cb28:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  42cb2f:	48 89 d6             	mov    %rdx,%rsi
+  42cb32:	48 89 c7             	mov    %rax,%rdi
+  42cb35:	e8 62 15 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42cb3a:	48 8d 95 f0 fe ff ff 	lea    -0x110(%rbp),%rdx
+  42cb41:	48 8b 85 48 fe ff ff 	mov    -0x1b8(%rbp),%rax
+  42cb48:	48 89 d6             	mov    %rdx,%rsi
+  42cb4b:	48 89 c7             	mov    %rax,%rdi
+  42cb4e:	e8 eb 15 fe ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  42cb53:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  42cb5a:	48 89 c7             	mov    %rax,%rdi
+  42cb5d:	e8 c2 15 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cb62:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  42cb69:	48 89 c7             	mov    %rax,%rdi
+  42cb6c:	e8 7f 75 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cb71:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cb78:	48 89 c7             	mov    %rax,%rdi
+  42cb7b:	e8 16 16 ff ff       	call   41e196 <_ZN7CMarkup13ResetChildPosEv>
+  42cb80:	48 8d 85 10 ff ff ff 	lea    -0xf0(%rbp),%rax
+  42cb87:	be f1 35 45 00       	mov    $0x4535f1,%esi
+  42cb8c:	48 89 c7             	mov    %rax,%rdi
+  42cb8f:	e8 6a 15 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42cb94:	48 8b 95 10 ff ff ff 	mov    -0xf0(%rbp),%rdx
+  42cb9b:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cba2:	48 89 d6             	mov    %rdx,%rsi
+  42cba5:	48 89 c7             	mov    %rax,%rdi
+  42cba8:	e8 fb 81 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42cbad:	84 c0                	test   %al,%al
+  42cbaf:	74 70                	je     42cc21 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x265>
+  42cbb1:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  42cbb8:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42cbbf:	48 89 d6             	mov    %rdx,%rsi
+  42cbc2:	48 89 c7             	mov    %rax,%rdi
+  42cbc5:	e8 fa 15 ff ff       	call   41e1c4 <_ZN7CMarkup12GetChildDataEv>
+  42cbca:	48 8d 95 20 ff ff ff 	lea    -0xe0(%rbp),%rdx
+  42cbd1:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  42cbd8:	48 89 d6             	mov    %rdx,%rsi
+  42cbdb:	48 89 c7             	mov    %rax,%rdi
+  42cbde:	e8 b9 14 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42cbe3:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  42cbea:	48 89 c7             	mov    %rax,%rdi
+  42cbed:	e8 fe 74 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cbf2:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  42cbf9:	48 89 c7             	mov    %rax,%rdi
+  42cbfc:	e8 07 17 fe ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  42cc01:	48 89 c7             	mov    %rax,%rdi
+  42cc04:	e8 87 77 fd ff       	call   404390 <atoi@plt>
+  42cc09:	48 8b 95 40 fe ff ff 	mov    -0x1c0(%rbp),%rdx
+  42cc10:	89 02                	mov    %eax,(%rdx)
+  42cc12:	48 8d 85 b0 fe ff ff 	lea    -0x150(%rbp),%rax
+  42cc19:	48 89 c7             	mov    %rax,%rdi
+  42cc1c:	e8 03 15 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cc21:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cc28:	48 89 c7             	mov    %rax,%rdi
+  42cc2b:	e8 66 15 ff ff       	call   41e196 <_ZN7CMarkup13ResetChildPosEv>
+  42cc30:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  42cc37:	be fc 35 45 00       	mov    $0x4535fc,%esi
+  42cc3c:	48 89 c7             	mov    %rax,%rdi
+  42cc3f:	e8 ba 14 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42cc44:	48 8b 95 30 ff ff ff 	mov    -0xd0(%rbp),%rdx
+  42cc4b:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cc52:	48 89 d6             	mov    %rdx,%rsi
+  42cc55:	48 89 c7             	mov    %rax,%rdi
+  42cc58:	e8 4b 81 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42cc5d:	84 c0                	test   %al,%al
+  42cc5f:	74 69                	je     42ccca <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x30e>
+  42cc61:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  42cc68:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42cc6f:	48 89 d6             	mov    %rdx,%rsi
+  42cc72:	48 89 c7             	mov    %rax,%rdi
+  42cc75:	e8 4a 15 ff ff       	call   41e1c4 <_ZN7CMarkup12GetChildDataEv>
+  42cc7a:	48 8d 95 50 ff ff ff 	lea    -0xb0(%rbp),%rdx
+  42cc81:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  42cc88:	48 89 d6             	mov    %rdx,%rsi
+  42cc8b:	48 89 c7             	mov    %rax,%rdi
+  42cc8e:	e8 09 14 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42cc93:	48 8d 95 40 ff ff ff 	lea    -0xc0(%rbp),%rdx
+  42cc9a:	48 8b 85 38 fe ff ff 	mov    -0x1c8(%rbp),%rax
+  42cca1:	48 89 d6             	mov    %rdx,%rsi
+  42cca4:	48 89 c7             	mov    %rax,%rdi
+  42cca7:	e8 92 14 fe ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  42ccac:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  42ccb3:	48 89 c7             	mov    %rax,%rdi
+  42ccb6:	e8 69 14 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42ccbb:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  42ccc2:	48 89 c7             	mov    %rax,%rdi
+  42ccc5:	e8 26 74 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42ccca:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ccd1:	48 89 c7             	mov    %rax,%rdi
+  42ccd4:	e8 bd 14 ff ff       	call   41e196 <_ZN7CMarkup13ResetChildPosEv>
+  42ccd9:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  42cce0:	be 05 36 45 00       	mov    $0x453605,%esi
+  42cce5:	48 89 c7             	mov    %rax,%rdi
+  42cce8:	e8 11 14 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42cced:	48 8b 95 60 ff ff ff 	mov    -0xa0(%rbp),%rdx
+  42ccf4:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ccfb:	48 89 d6             	mov    %rdx,%rsi
+  42ccfe:	48 89 c7             	mov    %rax,%rdi
+  42cd01:	e8 a2 80 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42cd06:	84 c0                	test   %al,%al
+  42cd08:	74 60                	je     42cd6a <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x3ae>
+  42cd0a:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  42cd0e:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42cd15:	48 89 d6             	mov    %rdx,%rsi
+  42cd18:	48 89 c7             	mov    %rax,%rdi
+  42cd1b:	e8 a4 14 ff ff       	call   41e1c4 <_ZN7CMarkup12GetChildDataEv>
+  42cd20:	48 8d 55 80          	lea    -0x80(%rbp),%rdx
+  42cd24:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  42cd2b:	48 89 d6             	mov    %rdx,%rsi
+  42cd2e:	48 89 c7             	mov    %rax,%rdi
+  42cd31:	e8 66 13 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42cd36:	48 8d 95 70 ff ff ff 	lea    -0x90(%rbp),%rdx
+  42cd3d:	48 8b 85 30 fe ff ff 	mov    -0x1d0(%rbp),%rax
+  42cd44:	48 89 d6             	mov    %rdx,%rsi
+  42cd47:	48 89 c7             	mov    %rax,%rdi
+  42cd4a:	e8 ef 13 fe ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  42cd4f:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  42cd56:	48 89 c7             	mov    %rax,%rdi
+  42cd59:	e8 c6 13 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cd5e:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  42cd62:	48 89 c7             	mov    %rax,%rdi
+  42cd65:	e8 86 73 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cd6a:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cd71:	48 89 c7             	mov    %rax,%rdi
+  42cd74:	e8 1d 14 ff ff       	call   41e196 <_ZN7CMarkup13ResetChildPosEv>
+  42cd79:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  42cd7d:	be 2a 35 45 00       	mov    $0x45352a,%esi
+  42cd82:	48 89 c7             	mov    %rax,%rdi
+  42cd85:	e8 74 13 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42cd8a:	48 8b 55 90          	mov    -0x70(%rbp),%rdx
+  42cd8e:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cd95:	48 89 d6             	mov    %rdx,%rsi
+  42cd98:	48 89 c7             	mov    %rax,%rdi
+  42cd9b:	e8 08 80 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42cda0:	84 c0                	test   %al,%al
+  42cda2:	74 6f                	je     42ce13 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x457>
+  42cda4:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cdab:	48 89 c7             	mov    %rax,%rdi
+  42cdae:	e8 e1 9b 01 00       	call   446994 <_ZN7CMarkup8IntoElemEv>
+  42cdb3:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  42cdb7:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42cdbe:	48 89 d6             	mov    %rdx,%rsi
+  42cdc1:	48 89 c7             	mov    %rax,%rdi
+  42cdc4:	e8 31 18 00 00       	call   42e5fa <_ZN7CMarkup9GetSubDocEv>
+  42cdc9:	48 8d 55 b0          	lea    -0x50(%rbp),%rdx
+  42cdcd:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  42cdd1:	48 89 d6             	mov    %rdx,%rsi
+  42cdd4:	48 89 c7             	mov    %rax,%rdi
+  42cdd7:	e8 c0 12 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42cddc:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  42cde0:	48 89 c6             	mov    %rax,%rsi
+  42cde3:	48 8b 7d 10          	mov    0x10(%rbp),%rdi
+  42cde7:	e8 52 13 fe ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  42cdec:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  42cdf0:	48 89 c7             	mov    %rax,%rdi
+  42cdf3:	e8 2c 13 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cdf8:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  42cdfc:	48 89 c7             	mov    %rax,%rdi
+  42cdff:	e8 ec 72 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42ce04:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ce0b:	48 89 c7             	mov    %rax,%rdi
+  42ce0e:	e8 d1 9b 01 00       	call   4469e4 <_ZN7CMarkup9OutOfElemEv>
+  42ce13:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ce1a:	48 89 c7             	mov    %rax,%rdi
+  42ce1d:	e8 74 13 ff ff       	call   41e196 <_ZN7CMarkup13ResetChildPosEv>
+  42ce22:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  42ce26:	be 0e 36 45 00       	mov    $0x45360e,%esi
+  42ce2b:	48 89 c7             	mov    %rax,%rdi
+  42ce2e:	e8 cb 12 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42ce33:	48 8b 55 c0          	mov    -0x40(%rbp),%rdx
+  42ce37:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42ce3e:	48 89 d6             	mov    %rdx,%rsi
+  42ce41:	48 89 c7             	mov    %rax,%rdi
+  42ce44:	e8 5f 7f 01 00       	call   444da8 <_ZN7CMarkup13FindChildElemE8MCD_CSTR>
+  42ce49:	84 c0                	test   %al,%al
+  42ce4b:	74 54                	je     42cea1 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x4e5>
+  42ce4d:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ce51:	48 8d 95 60 fe ff ff 	lea    -0x1a0(%rbp),%rdx
+  42ce58:	48 89 d6             	mov    %rdx,%rsi
+  42ce5b:	48 89 c7             	mov    %rax,%rdi
+  42ce5e:	e8 fd 17 00 00       	call   42e660 <_ZN7CMarkup14GetChildSubDocEv>
+  42ce63:	48 8d 55 e0          	lea    -0x20(%rbp),%rdx
+  42ce67:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42ce6b:	48 89 d6             	mov    %rdx,%rsi
+  42ce6e:	48 89 c7             	mov    %rax,%rdi
+  42ce71:	e8 26 12 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42ce76:	48 8d 55 d0          	lea    -0x30(%rbp),%rdx
+  42ce7a:	48 8b 45 18          	mov    0x18(%rbp),%rax
+  42ce7e:	48 89 d6             	mov    %rdx,%rsi
+  42ce81:	48 89 c7             	mov    %rax,%rdi
+  42ce84:	e8 b5 12 fe ff       	call   40e13e <_ZN11CAutoStringaSERKS_>
+  42ce89:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42ce8d:	48 89 c7             	mov    %rax,%rdi
+  42ce90:	e8 8f 12 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42ce95:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ce99:	48 89 c7             	mov    %rax,%rdi
+  42ce9c:	e8 4f 72 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cea1:	bb 00 00 00 00       	mov    $0x0,%ebx
+  42cea6:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cead:	48 89 c7             	mov    %rax,%rdi
+  42ceb0:	e8 99 63 01 00       	call   44324e <_ZN7CMarkupD1Ev>
+  42ceb5:	48 8d 85 c0 fe ff ff 	lea    -0x140(%rbp),%rax
+  42cebc:	48 89 c7             	mov    %rax,%rdi
+  42cebf:	e8 60 12 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cec4:	89 d8                	mov    %ebx,%eax
+  42cec6:	e9 0f 01 00 00       	jmp    42cfda <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x61e>
+  42cecb:	84 db                	test   %bl,%bl
+  42cecd:	90                   	nop
+  42cece:	48 89 c3             	mov    %rax,%rbx
+  42ced1:	e9 d6 00 00 00       	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42ced6:	48 89 c3             	mov    %rax,%rbx
+  42ced9:	48 8d 85 f0 fe ff ff 	lea    -0x110(%rbp),%rax
+  42cee0:	48 89 c7             	mov    %rax,%rdi
+  42cee3:	e8 3c 12 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cee8:	eb 03                	jmp    42ceed <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x531>
+  42ceea:	48 89 c3             	mov    %rax,%rbx
+  42ceed:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  42cef4:	48 89 c7             	mov    %rax,%rdi
+  42cef7:	e8 f4 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cefc:	e9 ab 00 00 00       	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cf01:	48 89 c3             	mov    %rax,%rbx
+  42cf04:	48 8d 85 20 ff ff ff 	lea    -0xe0(%rbp),%rax
+  42cf0b:	48 89 c7             	mov    %rax,%rdi
+  42cf0e:	e8 dd 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cf13:	e9 94 00 00 00       	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cf18:	48 89 c3             	mov    %rax,%rbx
+  42cf1b:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  42cf22:	48 89 c7             	mov    %rax,%rdi
+  42cf25:	e8 fa 11 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cf2a:	eb 03                	jmp    42cf2f <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x573>
+  42cf2c:	48 89 c3             	mov    %rax,%rbx
+  42cf2f:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  42cf36:	48 89 c7             	mov    %rax,%rdi
+  42cf39:	e8 b2 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cf3e:	eb 6c                	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cf40:	48 89 c3             	mov    %rax,%rbx
+  42cf43:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  42cf4a:	48 89 c7             	mov    %rax,%rdi
+  42cf4d:	e8 d2 11 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cf52:	eb 03                	jmp    42cf57 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x59b>
+  42cf54:	48 89 c3             	mov    %rax,%rbx
+  42cf57:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  42cf5b:	48 89 c7             	mov    %rax,%rdi
+  42cf5e:	e8 8d 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cf63:	eb 47                	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cf65:	48 89 c3             	mov    %rax,%rbx
+  42cf68:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  42cf6c:	48 89 c7             	mov    %rax,%rdi
+  42cf6f:	e8 b0 11 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cf74:	eb 03                	jmp    42cf79 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5bd>
+  42cf76:	48 89 c3             	mov    %rax,%rbx
+  42cf79:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  42cf7d:	48 89 c7             	mov    %rax,%rdi
+  42cf80:	e8 6b 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cf85:	eb 25                	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cf87:	48 89 c3             	mov    %rax,%rbx
+  42cf8a:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42cf8e:	48 89 c7             	mov    %rax,%rdi
+  42cf91:	e8 8e 11 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cf96:	eb 03                	jmp    42cf9b <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5df>
+  42cf98:	48 89 c3             	mov    %rax,%rbx
+  42cf9b:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42cf9f:	48 89 c7             	mov    %rax,%rdi
+  42cfa2:	e8 49 71 fd ff       	call   4040f0 <_ZNSsD1Ev@plt>
+  42cfa7:	eb 03                	jmp    42cfac <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x5f0>
+  42cfa9:	48 89 c3             	mov    %rax,%rbx
+  42cfac:	48 8d 85 60 fe ff ff 	lea    -0x1a0(%rbp),%rax
+  42cfb3:	48 89 c7             	mov    %rax,%rdi
+  42cfb6:	e8 93 62 01 00       	call   44324e <_ZN7CMarkupD1Ev>
+  42cfbb:	eb 03                	jmp    42cfc0 <_ZN13CPortalParser18ParserAuthResponseEPKcR11CAutoStringRiS3_S3_S3_S3_+0x604>
+  42cfbd:	48 89 c3             	mov    %rax,%rbx
+  42cfc0:	48 8d 85 c0 fe ff ff 	lea    -0x140(%rbp),%rax
+  42cfc7:	48 89 c7             	mov    %rax,%rdi
+  42cfca:	e8 55 11 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42cfcf:	48 89 d8             	mov    %rbx,%rax
+  42cfd2:	48 89 c7             	mov    %rax,%rdi
+  42cfd5:	e8 46 78 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42cfda:	48 81 c4 c8 01 00 00 	add    $0x1c8,%rsp
+  42cfe1:	5b                   	pop    %rbx
+  42cfe2:	5d                   	pop    %rbp
+  42cfe3:	c3                   	ret

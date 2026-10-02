@@ -1,0 +1,216 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000042fcbc <CZsmHelper::Init(char const*, char*, unsigned long)>:
+  42fcbc:	55                   	push   %rbp
+  42fcbd:	48 89 e5             	mov    %rsp,%rbp
+  42fcc0:	53                   	push   %rbx
+  42fcc1:	48 83 ec 48          	sub    $0x48,%rsp
+  42fcc5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+  42fcc9:	48 89 75 c0          	mov    %rsi,-0x40(%rbp)
+  42fccd:	48 89 55 b8          	mov    %rdx,-0x48(%rbp)
+  42fcd1:	48 89 4d b0          	mov    %rcx,-0x50(%rbp)
+  42fcd5:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fcd9:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fce0:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fce4:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fce9:	48 89 ce             	mov    %rcx,%rsi
+  42fcec:	48 89 c7             	mov    %rax,%rdi
+  42fcef:	e8 06 ed fd ff       	call   40e9fa <CLockGuard<RWLock*, GNothing<RWLock*> >::CLockGuard(RWLock*, bool)>
+  42fcf4:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fcf8:	48 8d 90 00 04 00 00 	lea    0x400(%rax),%rdx
+  42fcff:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  42fd03:	48 89 c6             	mov    %rax,%rsi
+  42fd06:	48 89 d7             	mov    %rdx,%rdi
+  42fd09:	e8 42 48 fd ff       	call   404550 <strcpy@plt>
+  42fd0e:	bb 01 00 00 00       	mov    $0x1,%ebx
+  42fd13:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fd17:	48 89 c7             	mov    %rax,%rdi
+  42fd1a:	e8 21 ed fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  42fd1f:	89 d8                	mov    %ebx,%eax
+  42fd21:	48 83 c4 48          	add    $0x48,%rsp
+  42fd25:	5b                   	pop    %rbx
+  42fd26:	5d                   	pop    %rbp
+  42fd27:	c3                   	ret
+
+000000000042fd28 <CZsmHelper::Release()>:
+  42fd28:	55                   	push   %rbp
+  42fd29:	48 89 e5             	mov    %rsp,%rbp
+  42fd2c:	48 83 ec 30          	sub    $0x30,%rsp
+  42fd30:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  42fd34:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fd38:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fd3f:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fd43:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fd48:	48 89 ce             	mov    %rcx,%rsi
+  42fd4b:	48 89 c7             	mov    %rax,%rdi
+  42fd4e:	e8 a7 ec fd ff       	call   40e9fa <CLockGuard<RWLock*, GNothing<RWLock*> >::CLockGuard(RWLock*, bool)>
+  42fd53:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fd57:	48 89 c7             	mov    %rax,%rdi
+  42fd5a:	e8 e1 ec fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  42fd5f:	c9                   	leave
+  42fd60:	c3                   	ret
+  42fd61:	90                   	nop
+
+000000000042fd62 <CZsmHelper::IsUpdated()>:
+  42fd62:	55                   	push   %rbp
+  42fd63:	48 89 e5             	mov    %rsp,%rbp
+  42fd66:	48 83 ec 10          	sub    $0x10,%rsp
+  42fd6a:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  42fd6e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  42fd72:	48 05 00 04 00 00    	add    $0x400,%rax
+  42fd78:	48 89 c7             	mov    %rax,%rdi
+  42fd7b:	e8 8e 36 fe ff       	call   41340e <CSimpleFile::IsFileExist(char const*)>
+  42fd80:	0f b6 c0             	movzbl %al,%eax
+  42fd83:	83 f8 ff             	cmp    $0xffffffff,%eax
+  42fd86:	74 07                	je     42fd8f <CZsmHelper::IsUpdated()+0x2d>
+  42fd88:	b8 01 00 00 00       	mov    $0x1,%eax
+  42fd8d:	eb 05                	jmp    42fd94 <CZsmHelper::IsUpdated()+0x32>
+  42fd8f:	b8 00 00 00 00       	mov    $0x0,%eax
+  42fd94:	c9                   	leave
+  42fd95:	c3                   	ret
+
+000000000042fd96 <CZsmHelper::GetAlgoId()>:
+  42fd96:	55                   	push   %rbp
+  42fd97:	48 89 e5             	mov    %rsp,%rbp
+  42fd9a:	53                   	push   %rbx
+  42fd9b:	48 83 ec 48          	sub    $0x48,%rsp
+  42fd9f:	48 89 7d b8          	mov    %rdi,-0x48(%rbp)
+  42fda3:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fda7:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fdae:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fdb2:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fdb7:	48 89 ce             	mov    %rcx,%rsi
+  42fdba:	48 89 c7             	mov    %rax,%rdi
+  42fdbd:	e8 38 ec fd ff       	call   40e9fa <CLockGuard<RWLock*, GNothing<RWLock*> >::CLockGuard(RWLock*, bool)>
+  42fdc2:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fdc6:	48 89 c7             	mov    %rax,%rdi
+  42fdc9:	e8 54 0c 00 00       	call   430a22 <CZsmHelper::openZsmModule()>
+  42fdce:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  42fdd2:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fdd6:	48 85 c0             	test   %rax,%rax
+  42fdd9:	75 07                	jne    42fde2 <CZsmHelper::GetAlgoId()+0x4c>
+  42fddb:	bb 60 37 45 00       	mov    $0x453760,%ebx
+  42fde0:	eb 3c                	jmp    42fe1e <CZsmHelper::GetAlgoId()+0x88>
+  42fde2:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fde6:	48 8b 40 10          	mov    0x10(%rax),%rax
+  42fdea:	48 8b 55 b8          	mov    -0x48(%rbp),%rdx
+  42fdee:	48 81 c2 00 08 00 00 	add    $0x800,%rdx
+  42fdf5:	48 89 c6             	mov    %rax,%rsi
+  42fdf8:	48 89 d7             	mov    %rdx,%rdi
+  42fdfb:	e8 50 47 fd ff       	call   404550 <strcpy@plt>
+  42fe00:	48 8d 55 c8          	lea    -0x38(%rbp),%rdx
+  42fe04:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fe08:	48 89 d6             	mov    %rdx,%rsi
+  42fe0b:	48 89 c7             	mov    %rax,%rdi
+  42fe0e:	e8 c7 09 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  42fe13:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fe17:	48 8d 98 00 08 00 00 	lea    0x800(%rax),%rbx
+  42fe1e:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fe22:	48 89 c7             	mov    %rax,%rdi
+  42fe25:	e8 16 ec fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  42fe2a:	48 89 d8             	mov    %rbx,%rax
+  42fe2d:	eb 1a                	jmp    42fe49 <CZsmHelper::GetAlgoId()+0xb3>
+  42fe2f:	48 89 c3             	mov    %rax,%rbx
+  42fe32:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fe36:	48 89 c7             	mov    %rax,%rdi
+  42fe39:	e8 02 ec fd ff       	call   40ea40 <CLockGuard<RWLock*, GNothing<RWLock*> >::~CLockGuard()>
+  42fe3e:	48 89 d8             	mov    %rbx,%rax
+  42fe41:	48 89 c7             	mov    %rax,%rdi
+  42fe44:	e8 d7 49 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42fe49:	48 83 c4 48          	add    $0x48,%rsp
+  42fe4d:	5b                   	pop    %rbx
+  42fe4e:	5d                   	pop    %rbp
+  42fe4f:	c3                   	ret
+
+000000000042fe50 <CZsmHelper::UpdateZsm(char*, unsigned long)>:
+  42fe50:	55                   	push   %rbp
+  42fe51:	48 89 e5             	mov    %rsp,%rbp
+  42fe54:	53                   	push   %rbx
+  42fe55:	48 83 ec 38          	sub    $0x38,%rsp
+  42fe59:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  42fe5d:	48 89 75 d0          	mov    %rsi,-0x30(%rbp)
+  42fe61:	48 89 55 c8          	mov    %rdx,-0x38(%rbp)
+  42fe65:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%rbp)
+  42fe6c:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fe70:	48 89 c7             	mov    %rax,%rdi
+  42fe73:	e8 18 0f 00 00       	call   430d90 <CSimpleFile::CSimpleFile()>
+  42fe78:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fe7c:	48 8d 88 00 04 00 00 	lea    0x400(%rax),%rcx
+  42fe83:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fe87:	ba 85 37 45 00       	mov    $0x453785,%edx
+  42fe8c:	48 89 ce             	mov    %rcx,%rsi
+  42fe8f:	48 89 c7             	mov    %rax,%rdi
+  42fe92:	e8 c3 34 fe ff       	call   41335a <CSimpleFile::CreateFile(char const*, char const*)>
+  42fe97:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42fe9a:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42fe9e:	74 34                	je     42fed4 <CZsmHelper::UpdateZsm(char*, unsigned long)+0x84>
+  42fea0:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fea4:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42feab:	e8 14 00 fe ff       	call   40fec4 <CLog::GetInst()>
+  42feb0:	48 89 d9             	mov    %rbx,%rcx
+  42feb3:	ba 87 37 45 00       	mov    $0x453787,%edx
+  42feb8:	be 00 00 00 00       	mov    $0x0,%esi
+  42febd:	48 89 c7             	mov    %rax,%rdi
+  42fec0:	b8 00 00 00 00       	mov    $0x0,%eax
+  42fec5:	e8 08 00 fe ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  42feca:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42fecf:	e9 9c 00 00 00       	jmp    42ff70 <CZsmHelper::UpdateZsm(char*, unsigned long)+0x120>
+  42fed4:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  42fed8:	48 8b 4d d0          	mov    -0x30(%rbp),%rcx
+  42fedc:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fee0:	48 89 ce             	mov    %rcx,%rsi
+  42fee3:	48 89 c7             	mov    %rax,%rdi
+  42fee6:	e8 63 ff fd ff       	call   40fe4e <CSimpleFile::WriteFile(void const*, unsigned long)>
+  42feeb:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42feee:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42fef2:	74 31                	je     42ff25 <CZsmHelper::UpdateZsm(char*, unsigned long)+0xd5>
+  42fef4:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fef8:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42feff:	e8 c0 ff fd ff       	call   40fec4 <CLog::GetInst()>
+  42ff04:	48 89 d9             	mov    %rbx,%rcx
+  42ff07:	ba 9b 37 45 00       	mov    $0x45379b,%edx
+  42ff0c:	be 00 00 00 00       	mov    $0x0,%esi
+  42ff11:	48 89 c7             	mov    %rax,%rdi
+  42ff14:	b8 00 00 00 00       	mov    $0x0,%eax
+  42ff19:	e8 b4 ff fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  42ff1e:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42ff23:	eb 4b                	jmp    42ff70 <CZsmHelper::UpdateZsm(char*, unsigned long)+0x120>
+  42ff25:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff29:	48 89 c7             	mov    %rax,%rdi
+  42ff2c:	e8 8d 34 fe ff       	call   4133be <CSimpleFile::CloseFile()>
+  42ff31:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42ff34:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42ff38:	74 31                	je     42ff6b <CZsmHelper::UpdateZsm(char*, unsigned long)+0x11b>
+  42ff3a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42ff3e:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42ff45:	e8 7a ff fd ff       	call   40fec4 <CLog::GetInst()>
+  42ff4a:	48 89 d9             	mov    %rbx,%rcx
+  42ff4d:	ba ae 37 45 00       	mov    $0x4537ae,%edx
+  42ff52:	be 00 00 00 00       	mov    $0x0,%esi
+  42ff57:	48 89 c7             	mov    %rax,%rdi
+  42ff5a:	b8 00 00 00 00       	mov    $0x0,%eax
+  42ff5f:	e8 6e ff fd ff       	call   40fed2 <CLog::WriteLog(int, char const*, ...)>
+  42ff64:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42ff69:	eb 05                	jmp    42ff70 <CZsmHelper::UpdateZsm(char*, unsigned long)+0x120>
+  42ff6b:	bb 01 00 00 00       	mov    $0x1,%ebx
+  42ff70:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff74:	48 89 c7             	mov    %rax,%rdi
+  42ff77:	e8 2a 0e 00 00       	call   430da6 <CSimpleFile::~CSimpleFile()>
+  42ff7c:	89 d8                	mov    %ebx,%eax
+  42ff7e:	eb 1a                	jmp    42ff9a <CZsmHelper::UpdateZsm(char*, unsigned long)+0x14a>
+  42ff80:	48 89 c3             	mov    %rax,%rbx
+  42ff83:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff87:	48 89 c7             	mov    %rax,%rdi
+  42ff8a:	e8 17 0e 00 00       	call   430da6 <CSimpleFile::~CSimpleFile()>
+  42ff8f:	48 89 d8             	mov    %rbx,%rax
+  42ff92:	48 89 c7             	mov    %rax,%rdi
+  42ff95:	e8 86 48 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42ff9a:	48 83 c4 38          	add    $0x38,%rsp
+  42ff9e:	5b                   	pop    %rbx
+  42ff9f:	5d                   	pop    %rbp
+  42ffa0:	c3                   	ret
+  42ffa1:	90                   	nop

@@ -1,0 +1,12 @@
+redirect=http://14.146.227.141:7001/detect.html
+version=1003
+disasterUrl=http://www.189.cn
+clientId=91aa3b40-3b40-91aa-b5f9-2d8c7fff75f92d8c
+termUrl=http://14.146.227.141:7001/term.cgi
+keepUrl=http://14.146.227.142:7001/keep.cgi
+schoolId=1099
+domain=sise.cn
+area=020
+wlanuserip=
+wlanusermac=
+wlanacip=

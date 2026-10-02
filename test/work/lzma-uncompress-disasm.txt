@@ -1,0 +1,32 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000430c54 <CZsmHelper::LzmaUncompress(unsigned char*, unsigned long*, unsigned char const*, unsigned long*, unsigned char const*, unsigned long)>:
+  430c54:	55                   	push   %rbp
+  430c55:	48 89 e5             	mov    %rsp,%rbp
+  430c58:	48 83 ec 60          	sub    $0x60,%rsp
+  430c5c:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+  430c60:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+  430c64:	48 89 55 d8          	mov    %rdx,-0x28(%rbp)
+  430c68:	48 89 4d d0          	mov    %rcx,-0x30(%rbp)
+  430c6c:	4c 89 45 c8          	mov    %r8,-0x38(%rbp)
+  430c70:	4c 89 4d c0          	mov    %r9,-0x40(%rbp)
+  430c74:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  430c78:	41 89 c1             	mov    %eax,%r9d
+  430c7b:	4c 8b 45 c0          	mov    -0x40(%rbp),%r8
+  430c7f:	48 8b 4d c8          	mov    -0x38(%rbp),%rcx
+  430c83:	48 8b 55 d0          	mov    -0x30(%rbp),%rdx
+  430c87:	48 8b 75 d8          	mov    -0x28(%rbp),%rsi
+  430c8b:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  430c8f:	48 c7 44 24 10 a0 c6 	movq   $0x66c6a0,0x10(%rsp)
+  430c96:	66 00 
+  430c98:	48 8d 7d fc          	lea    -0x4(%rbp),%rdi
+  430c9c:	48 89 7c 24 08       	mov    %rdi,0x8(%rsp)
+  430ca1:	c7 04 24 00 00 00 00 	movl   $0x0,(%rsp)
+  430ca8:	48 89 c7             	mov    %rax,%rdi
+  430cab:	e8 b4 73 fd ff       	call   408064 <LzmaDecode>
+  430cb0:	c9                   	leave
+  430cb1:	c3                   	ret

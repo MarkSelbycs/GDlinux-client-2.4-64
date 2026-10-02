@@ -1,0 +1,1 @@
+samples/ESurfingSvr: symbol lookup error: /home/gcc/GDlinux-client-2.4-64/lib/libpthread.so.0: undefined symbol: _dl_make_stack_executable, version GLIBC_PRIVATE

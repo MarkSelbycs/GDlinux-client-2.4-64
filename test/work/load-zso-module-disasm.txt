@@ -1,0 +1,222 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004304c6 <CZsmHelper::loadZsoModule(char const*)>:
+  4304c6:	55                   	push   %rbp
+  4304c7:	48 89 e5             	mov    %rsp,%rbp
+  4304ca:	53                   	push   %rbx
+  4304cb:	48 83 ec 68          	sub    $0x68,%rsp
+  4304cf:	48 89 7d a8          	mov    %rdi,-0x58(%rbp)
+  4304d3:	48 89 75 a0          	mov    %rsi,-0x60(%rbp)
+  4304d7:	48 c7 45 d8 00 00 00 	movq   $0x0,-0x28(%rbp)
+  4304de:	00 
+  4304df:	48 c7 45 c8 00 00 00 	movq   $0x0,-0x38(%rbp)
+  4304e6:	00 
+  4304e7:	48 c7 45 c0 00 00 00 	movq   $0x0,-0x40(%rbp)
+  4304ee:	00 
+  4304ef:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  4304f6:	00 
+  4304f7:	48 c7 45 d0 00 00 00 	movq   $0x0,-0x30(%rbp)
+  4304fe:	00 
+  4304ff:	48 c7 45 e0 00 00 00 	movq   $0x0,-0x20(%rbp)
+  430506:	00 
+  430507:	48 c7 45 b8 00 00 00 	movq   $0x0,-0x48(%rbp)
+  43050e:	00 
+  43050f:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+  430513:	be 20 38 45 00       	mov    $0x453820,%esi
+  430518:	48 89 c7             	mov    %rax,%rdi
+  43051b:	e8 a0 3a fd ff       	call   403fc0 <fopen@plt>
+  430520:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  430524:	48 83 7d d8 00       	cmpq   $0x0,-0x28(%rbp)
+  430529:	0f 94 c0             	sete   %al
+  43052c:	84 c0                	test   %al,%al
+  43052e:	74 0a                	je     43053a <CZsmHelper::loadZsoModule(char const*)+0x74>
+  430530:	b8 00 00 00 00       	mov    $0x0,%eax
+  430535:	e9 98 02 00 00       	jmp    4307d2 <CZsmHelper::loadZsoModule(char const*)+0x30c>
+  43053a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  43053e:	ba 02 00 00 00       	mov    $0x2,%edx
+  430543:	be 00 00 00 00       	mov    $0x0,%esi
+  430548:	48 89 c7             	mov    %rax,%rdi
+  43054b:	e8 80 39 fd ff       	call   403ed0 <fseek@plt>
+  430550:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  430554:	48 89 c7             	mov    %rax,%rdi
+  430557:	e8 44 38 fd ff       	call   403da0 <ftell@plt>
+  43055c:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+  430560:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  430564:	ba 00 00 00 00       	mov    $0x0,%edx
+  430569:	be 00 00 00 00       	mov    $0x0,%esi
+  43056e:	48 89 c7             	mov    %rax,%rdi
+  430571:	e8 5a 39 fd ff       	call   403ed0 <fseek@plt>
+  430576:	bf 38 00 00 00       	mov    $0x38,%edi
+  43057b:	e8 30 3a fd ff       	call   403fb0 <malloc@plt>
+  430580:	48 89 45 b8          	mov    %rax,-0x48(%rbp)
+  430584:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  430588:	ba 38 00 00 00       	mov    $0x38,%edx
+  43058d:	be 00 00 00 00       	mov    $0x0,%esi
+  430592:	48 89 c7             	mov    %rax,%rdi
+  430595:	e8 f6 37 fd ff       	call   403d90 <memset@plt>
+  43059a:	e9 dd 00 00 00       	jmp    43067c <CZsmHelper::loadZsoModule(char const*)+0x1b6>
+  43059f:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  4305a3:	48 89 c6             	mov    %rax,%rsi
+  4305a6:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  4305aa:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4305ae:	b9 03 00 00 00       	mov    $0x3,%ecx
+  4305b3:	48 89 c7             	mov    %rax,%rdi
+  4305b6:	e8 f7 06 00 00       	call   430cb2 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)>
+  4305bb:	85 c0                	test   %eax,%eax
+  4305bd:	0f 94 c0             	sete   %al
+  4305c0:	84 c0                	test   %al,%al
+  4305c2:	74 05                	je     4305c9 <CZsmHelper::loadZsoModule(char const*)+0x103>
+  4305c4:	e9 c0 00 00 00       	jmp    430689 <CZsmHelper::loadZsoModule(char const*)+0x1c3>
+  4305c9:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  4305cd:	48 8d 70 08          	lea    0x8(%rax),%rsi
+  4305d1:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  4305d5:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4305d9:	b9 00 00 00 00       	mov    $0x0,%ecx
+  4305de:	48 89 c7             	mov    %rax,%rdi
+  4305e1:	e8 cc 06 00 00       	call   430cb2 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)>
+  4305e6:	85 c0                	test   %eax,%eax
+  4305e8:	0f 94 c0             	sete   %al
+  4305eb:	84 c0                	test   %al,%al
+  4305ed:	74 05                	je     4305f4 <CZsmHelper::loadZsoModule(char const*)+0x12e>
+  4305ef:	e9 95 00 00 00       	jmp    430689 <CZsmHelper::loadZsoModule(char const*)+0x1c3>
+  4305f4:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  4305f8:	48 8d 70 10          	lea    0x10(%rax),%rsi
+  4305fc:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  430600:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  430604:	b9 00 00 00 00       	mov    $0x0,%ecx
+  430609:	48 89 c7             	mov    %rax,%rdi
+  43060c:	e8 a1 06 00 00       	call   430cb2 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)>
+  430611:	85 c0                	test   %eax,%eax
+  430613:	0f 94 c0             	sete   %al
+  430616:	84 c0                	test   %al,%al
+  430618:	74 02                	je     43061c <CZsmHelper::loadZsoModule(char const*)+0x156>
+  43061a:	eb 6d                	jmp    430689 <CZsmHelper::loadZsoModule(char const*)+0x1c3>
+  43061c:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  430620:	48 89 c7             	mov    %rax,%rdi
+  430623:	e8 78 37 fd ff       	call   403da0 <ftell@plt>
+  430628:	48 8b 55 c0          	mov    -0x40(%rbp),%rdx
+  43062c:	48 29 c2             	sub    %rax,%rdx
+  43062f:	48 89 d0             	mov    %rdx,%rax
+  430632:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+  430636:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  43063a:	48 89 c7             	mov    %rax,%rdi
+  43063d:	e8 6e 39 fd ff       	call   403fb0 <malloc@plt>
+  430642:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  430646:	48 83 7d e0 00       	cmpq   $0x0,-0x20(%rbp)
+  43064b:	0f 94 c0             	sete   %al
+  43064e:	84 c0                	test   %al,%al
+  430650:	74 02                	je     430654 <CZsmHelper::loadZsoModule(char const*)+0x18e>
+  430652:	eb 35                	jmp    430689 <CZsmHelper::loadZsoModule(char const*)+0x1c3>
+  430654:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
+  430658:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  43065c:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  430660:	48 89 d1             	mov    %rdx,%rcx
+  430663:	ba 01 00 00 00       	mov    $0x1,%edx
+  430668:	48 89 c7             	mov    %rax,%rdi
+  43066b:	e8 00 3e fd ff       	call   404470 <fread@plt>
+  430670:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  430674:	48 83 c0 01          	add    $0x1,%rax
+  430678:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  43067c:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  430680:	48 85 c0             	test   %rax,%rax
+  430683:	0f 84 16 ff ff ff    	je     43059f <CZsmHelper::loadZsoModule(char const*)+0xd9>
+  430689:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  43068d:	48 89 c7             	mov    %rax,%rdi
+  430690:	e8 4b 3f fd ff       	call   4045e0 <fclose@plt>
+  430695:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  430699:	48 85 c0             	test   %rax,%rax
+  43069c:	75 1d                	jne    4306bb <CZsmHelper::loadZsoModule(char const*)+0x1f5>
+  43069e:	48 8d 55 b8          	lea    -0x48(%rbp),%rdx
+  4306a2:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4306a6:	48 89 d6             	mov    %rdx,%rsi
+  4306a9:	48 89 c7             	mov    %rax,%rdi
+  4306ac:	e8 29 01 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  4306b1:	b8 00 00 00 00       	mov    $0x0,%eax
+  4306b6:	e9 17 01 00 00       	jmp    4307d2 <CZsmHelper::loadZsoModule(char const*)+0x30c>
+  4306bb:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4306bf:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  4306c3:	48 83 45 e0 05       	addq   $0x5,-0x20(%rbp)
+  4306c8:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  4306cc:	48 83 e8 05          	sub    $0x5,%rax
+  4306d0:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+  4306d4:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4306d8:	8b 00                	mov    (%rax),%eax
+  4306da:	89 c0                	mov    %eax,%eax
+  4306dc:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  4306e0:	48 83 45 e0 04       	addq   $0x4,-0x20(%rbp)
+  4306e5:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  4306e9:	48 83 e8 04          	sub    $0x4,%rax
+  4306ed:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+  4306f1:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  4306f5:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
+  4306f9:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  4306fd:	48 01 d0             	add    %rdx,%rax
+  430700:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  430704:	eb 23                	jmp    430729 <CZsmHelper::loadZsoModule(char const*)+0x263>
+  430706:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  43070a:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
+  43070e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  430712:	48 83 e8 01          	sub    $0x1,%rax
+  430716:	0f b6 08             	movzbl (%rax),%ecx
+  430719:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  43071d:	0f b6 00             	movzbl (%rax),%eax
+  430720:	31 c8                	xor    %ecx,%eax
+  430722:	88 02                	mov    %al,(%rdx)
+  430724:	48 83 6d e8 01       	subq   $0x1,-0x18(%rbp)
+  430729:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  43072d:	48 3b 45 e0          	cmp    -0x20(%rbp),%rax
+  430731:	77 d3                	ja     430706 <CZsmHelper::loadZsoModule(char const*)+0x240>
+  430733:	48 8b 5d b8          	mov    -0x48(%rbp),%rbx
+  430737:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  43073b:	48 89 c7             	mov    %rax,%rdi
+  43073e:	e8 6d 38 fd ff       	call   403fb0 <malloc@plt>
+  430743:	48 89 43 20          	mov    %rax,0x20(%rbx)
+  430747:	48 8b 43 20          	mov    0x20(%rbx),%rax
+  43074b:	48 85 c0             	test   %rax,%rax
+  43074e:	0f 95 c0             	setne  %al
+  430751:	84 c0                	test   %al,%al
+  430753:	74 48                	je     43079d <CZsmHelper::loadZsoModule(char const*)+0x2d7>
+  430755:	48 8b 5d b8          	mov    -0x48(%rbp),%rbx
+  430759:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  43075d:	48 8b 70 20          	mov    0x20(%rax),%rsi
+  430761:	4c 8b 45 d0          	mov    -0x30(%rbp),%r8
+  430765:	48 8d 7d c0          	lea    -0x40(%rbp),%rdi
+  430769:	48 8b 4d e8          	mov    -0x18(%rbp),%rcx
+  43076d:	48 8d 55 c8          	lea    -0x38(%rbp),%rdx
+  430771:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  430775:	48 c7 04 24 05 00 00 	movq   $0x5,(%rsp)
+  43077c:	00 
+  43077d:	4d 89 c1             	mov    %r8,%r9
+  430780:	49 89 f8             	mov    %rdi,%r8
+  430783:	48 89 c7             	mov    %rax,%rdi
+  430786:	e8 c9 04 00 00       	call   430c54 <CZsmHelper::LzmaUncompress(unsigned char*, unsigned long*, unsigned char const*, unsigned long*, unsigned char const*, unsigned long)>
+  43078b:	85 c0                	test   %eax,%eax
+  43078d:	75 06                	jne    430795 <CZsmHelper::loadZsoModule(char const*)+0x2cf>
+  43078f:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  430793:	eb 05                	jmp    43079a <CZsmHelper::loadZsoModule(char const*)+0x2d4>
+  430795:	b8 00 00 00 00       	mov    $0x0,%eax
+  43079a:	89 43 18             	mov    %eax,0x18(%rbx)
+  43079d:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  4307a1:	48 89 c7             	mov    %rax,%rdi
+  4307a4:	e8 67 39 fd ff       	call   404110 <free@plt>
+  4307a9:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  4307ad:	8b 40 18             	mov    0x18(%rax),%eax
+  4307b0:	85 c0                	test   %eax,%eax
+  4307b2:	75 1a                	jne    4307ce <CZsmHelper::loadZsoModule(char const*)+0x308>
+  4307b4:	48 8d 55 b8          	lea    -0x48(%rbp),%rdx
+  4307b8:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4307bc:	48 89 d6             	mov    %rdx,%rsi
+  4307bf:	48 89 c7             	mov    %rax,%rdi
+  4307c2:	e8 13 00 00 00       	call   4307da <CZsmHelper::FreeZsoFile(__ZsoFile*&)>
+  4307c7:	b8 00 00 00 00       	mov    $0x0,%eax
+  4307cc:	eb 04                	jmp    4307d2 <CZsmHelper::loadZsoModule(char const*)+0x30c>
+  4307ce:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  4307d2:	48 83 c4 68          	add    $0x68,%rsp
+  4307d6:	5b                   	pop    %rbx
+  4307d7:	5d                   	pop    %rbp
+  4307d8:	c3                   	ret
+  4307d9:	90                   	nop

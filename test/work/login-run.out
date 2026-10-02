@@ -1,0 +1,7 @@
+fixturepass
+Password: debug=config ticket-url=http://14.146.227.141:7001/ticket.cgi?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=sise&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/&portal_node=http://125.88.59.131:10002
+debug=ticket-http status=200 error=0 bytes=352
+debug=ticket-ok length=32
+debug=auth-http status=200 error=0 bytes=768
+debug=finish failure=auth-response local-ip=172.17.104.130
+state=online

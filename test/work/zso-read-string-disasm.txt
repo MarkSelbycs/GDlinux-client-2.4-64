@@ -1,0 +1,75 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000430cb2 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)>:
+  430cb2:	55                   	push   %rbp
+  430cb3:	48 89 e5             	mov    %rsp,%rbp
+  430cb6:	48 83 ec 20          	sub    $0x20,%rsp
+  430cba:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  430cbe:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+  430cc2:	48 89 55 e8          	mov    %rdx,-0x18(%rbp)
+  430cc6:	89 c8                	mov    %ecx,%eax
+  430cc8:	88 45 e4             	mov    %al,-0x1c(%rbp)
+  430ccb:	0f b6 45 e4          	movzbl -0x1c(%rbp),%eax
+  430ccf:	84 c0                	test   %al,%al
+  430cd1:	75 31                	jne    430d04 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0x52>
+  430cd3:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  430cd7:	48 8d 45 e4          	lea    -0x1c(%rbp),%rax
+  430cdb:	48 89 d1             	mov    %rdx,%rcx
+  430cde:	ba 01 00 00 00       	mov    $0x1,%edx
+  430ce3:	be 01 00 00 00       	mov    $0x1,%esi
+  430ce8:	48 89 c7             	mov    %rax,%rdi
+  430ceb:	e8 80 37 fd ff       	call   404470 <fread@plt>
+  430cf0:	48 85 c0             	test   %rax,%rax
+  430cf3:	0f 94 c0             	sete   %al
+  430cf6:	84 c0                	test   %al,%al
+  430cf8:	74 0a                	je     430d04 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0x52>
+  430cfa:	b8 00 00 00 00       	mov    $0x0,%eax
+  430cff:	e9 8a 00 00 00       	jmp    430d8e <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0xdc>
+  430d04:	0f b6 45 e4          	movzbl -0x1c(%rbp),%eax
+  430d08:	84 c0                	test   %al,%al
+  430d0a:	74 7d                	je     430d89 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0xd7>
+  430d0c:	0f b6 45 e4          	movzbl -0x1c(%rbp),%eax
+  430d10:	0f b6 c0             	movzbl %al,%eax
+  430d13:	83 c0 01             	add    $0x1,%eax
+  430d16:	48 98                	cltq
+  430d18:	48 89 c7             	mov    %rax,%rdi
+  430d1b:	e8 90 32 fd ff       	call   403fb0 <malloc@plt>
+  430d20:	48 89 c2             	mov    %rax,%rdx
+  430d23:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  430d27:	48 89 10             	mov    %rdx,(%rax)
+  430d2a:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  430d2e:	48 8b 00             	mov    (%rax),%rax
+  430d31:	48 85 c0             	test   %rax,%rax
+  430d34:	0f 94 c0             	sete   %al
+  430d37:	84 c0                	test   %al,%al
+  430d39:	74 07                	je     430d42 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0x90>
+  430d3b:	b8 00 00 00 00       	mov    $0x0,%eax
+  430d40:	eb 4c                	jmp    430d8e <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0xdc>
+  430d42:	0f b6 45 e4          	movzbl -0x1c(%rbp),%eax
+  430d46:	0f b6 f0             	movzbl %al,%esi
+  430d49:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  430d4d:	48 8b 00             	mov    (%rax),%rax
+  430d50:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  430d54:	48 89 d1             	mov    %rdx,%rcx
+  430d57:	ba 01 00 00 00       	mov    $0x1,%edx
+  430d5c:	48 89 c7             	mov    %rax,%rdi
+  430d5f:	e8 0c 37 fd ff       	call   404470 <fread@plt>
+  430d64:	48 85 c0             	test   %rax,%rax
+  430d67:	0f 94 c0             	sete   %al
+  430d6a:	84 c0                	test   %al,%al
+  430d6c:	74 07                	je     430d75 <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0xc3>
+  430d6e:	b8 00 00 00 00       	mov    $0x0,%eax
+  430d73:	eb 19                	jmp    430d8e <CZsmHelper::zsoReadString(char**, _IO_FILE*, unsigned char)+0xdc>
+  430d75:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  430d79:	48 8b 10             	mov    (%rax),%rdx
+  430d7c:	0f b6 45 e4          	movzbl -0x1c(%rbp),%eax
+  430d80:	0f b6 c0             	movzbl %al,%eax
+  430d83:	48 01 d0             	add    %rdx,%rax
+  430d86:	c6 00 00             	movb   $0x0,(%rax)
+  430d89:	b8 01 00 00 00       	mov    $0x1,%eax
+  430d8e:	c9                   	leave
+  430d8f:	c3                   	ret

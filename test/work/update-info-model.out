@@ -1,0 +1,12 @@
+version=2.4.64
+updateInstId=test-installer
+decompressDir=/tmp/gd-decompress
+updateDir=/tmp/gd-update
+mainProgram=client
+mainProgramWnd=GDClient
+mainProgramId=gdlinux-client
+backupPath=/tmp/gd-backup
+recordFile=/tmp/gd-record.xml
+downloadDir=/tmp/gd-download
+imgDir=/tmp/gd-images
+updateType=3

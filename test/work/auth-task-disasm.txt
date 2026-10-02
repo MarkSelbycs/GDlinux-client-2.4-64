@@ -1,0 +1,130 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000004265f0 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE>:
+  4265f0:	55                   	push   %rbp
+  4265f1:	48 89 e5             	mov    %rsp,%rbp
+  4265f4:	53                   	push   %rbx
+  4265f5:	48 83 ec 58          	sub    $0x58,%rsp
+  4265f9:	48 89 7d a8          	mov    %rdi,-0x58(%rbp)
+  4265fd:	48 89 75 a0          	mov    %rsi,-0x60(%rbp)
+  426601:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  426605:	48 8b 80 b0 00 00 00 	mov    0xb0(%rax),%rax
+  42660c:	48 85 c0             	test   %rax,%rax
+  42660f:	75 05                	jne    426616 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x26>
+  426611:	e9 cf 01 00 00       	jmp    4267e5 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x1f5>
+  426616:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  42661a:	48 8b 80 b0 00 00 00 	mov    0xb0(%rax),%rax
+  426621:	48 8b 00             	mov    (%rax),%rax
+  426624:	48 8b 18             	mov    (%rax),%rbx
+  426627:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+  42662b:	48 83 c0 10          	add    $0x10,%rax
+  42662f:	48 89 c7             	mov    %rax,%rdi
+  426632:	e8 d1 7c fe ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  426637:	48 89 c2             	mov    %rax,%rdx
+  42663a:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  42663e:	48 8b 80 b0 00 00 00 	mov    0xb0(%rax),%rax
+  426645:	48 89 d6             	mov    %rdx,%rsi
+  426648:	48 89 c7             	mov    %rax,%rdi
+  42664b:	ff d3                	call   *%rbx
+  42664d:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  426650:	83 7d ec 02          	cmpl   $0x2,-0x14(%rbp)
+  426654:	75 1f                	jne    426675 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x85>
+  426656:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  42665a:	48 8d 90 d8 01 00 00 	lea    0x1d8(%rax),%rdx
+  426661:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+  426665:	48 89 c6             	mov    %rax,%rsi
+  426668:	48 89 d7             	mov    %rdx,%rdi
+  42666b:	e8 a6 b1 fe ff       	call   411816 <_ZN11ESurfingSvr8CTaskMgr7AddTaskERNS_4TaskE>
+  426670:	e9 70 01 00 00       	jmp    4267e5 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x1f5>
+  426675:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+  426679:	0f 85 f0 00 00 00    	jne    42676f <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x17f>
+  42667f:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  426683:	c7 80 d0 00 00 00 01 	movl   $0x1,0xd0(%rax)
+  42668a:	00 00 00 
+  42668d:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  426691:	be 04 00 00 00       	mov    $0x4,%esi
+  426696:	48 89 c7             	mov    %rax,%rdi
+  426699:	e8 f8 f2 ff ff       	call   425996 <_ZN13CPortalServer8StopTaskEN11ESurfingSvr8TaskItemE>
+  42669e:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4266a2:	be 05 00 00 00       	mov    $0x5,%esi
+  4266a7:	48 89 c7             	mov    %rax,%rdi
+  4266aa:	e8 e7 f2 ff ff       	call   425996 <_ZN13CPortalServer8StopTaskEN11ESurfingSvr8TaskItemE>
+  4266af:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4266b3:	48 8b 80 b0 00 00 00 	mov    0xb0(%rax),%rax
+  4266ba:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  4266c1:	8b 80 e4 00 00 00    	mov    0xe4(%rax),%eax
+  4266c7:	48 63 d0             	movslq %eax,%rdx
+  4266ca:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4266ce:	48 83 c0 40          	add    $0x40,%rax
+  4266d2:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+  4266d8:	49 89 d0             	mov    %rdx,%r8
+  4266db:	b9 01 00 00 00       	mov    $0x1,%ecx
+  4266e0:	ba 01 00 00 00       	mov    $0x1,%edx
+  4266e5:	be 08 00 00 00       	mov    $0x8,%esi
+  4266ea:	48 89 c7             	mov    %rax,%rdi
+  4266ed:	e8 ee ed 00 00       	call   4354e0 <_ZN11CTableTimer7AddTaskEiiblb>
+  4266f2:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  4266f6:	48 8b 80 b0 00 00 00 	mov    0xb0(%rax),%rax
+  4266fd:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  426704:	48 8b 80 80 01 00 00 	mov    0x180(%rax),%rax
+  42670b:	48 85 c0             	test   %rax,%rax
+  42670e:	74 2b                	je     42673b <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x14b>
+  426710:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  426714:	48 83 c0 40          	add    $0x40,%rax
+  426718:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+  42671e:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+  426724:	b9 00 00 00 00       	mov    $0x0,%ecx
+  426729:	ba 01 00 00 00       	mov    $0x1,%edx
+  42672e:	be 09 00 00 00       	mov    $0x9,%esi
+  426733:	48 89 c7             	mov    %rax,%rdi
+  426736:	e8 a5 ed 00 00       	call   4354e0 <_ZN11CTableTimer7AddTaskEiiblb>
+  42673b:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42673f:	be 18 28 45 00       	mov    $0x452818,%esi
+  426744:	48 89 c7             	mov    %rax,%rdi
+  426747:	e8 d8 78 fe ff       	call   40e024 <_ZN11CAutoStringC1EPKc>
+  42674c:	48 8d 55 d0          	lea    -0x30(%rbp),%rdx
+  426750:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  426754:	be 01 00 00 00       	mov    $0x1,%esi
+  426759:	48 89 c7             	mov    %rax,%rdi
+  42675c:	e8 23 09 00 00       	call   427084 <_ZN13CPortalServer14NetworkTrafficEN18CTrafficStatistics19tag_STATISTICS_TYPEERK11CAutoString>
+  426761:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  426765:	48 89 c7             	mov    %rax,%rdi
+  426768:	e8 b7 79 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42676d:	eb 76                	jmp    4267e5 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x1f5>
+  42676f:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  426773:	48 89 c7             	mov    %rax,%rdi
+  426776:	e8 91 25 00 00       	call   428d0c <_ZN11ESurfingSvr4TaskC1Ev>
+  42677b:	c7 45 b0 04 00 00 00 	movl   $0x4,-0x50(%rbp)
+  426782:	c7 45 b8 02 00 00 00 	movl   $0x2,-0x48(%rbp)
+  426789:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  42678d:	48 8d 90 d8 01 00 00 	lea    0x1d8(%rax),%rdx
+  426794:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  426798:	48 89 c6             	mov    %rax,%rsi
+  42679b:	48 89 d7             	mov    %rdx,%rdi
+  42679e:	e8 73 b0 fe ff       	call   411816 <_ZN11ESurfingSvr8CTaskMgr7AddTaskERNS_4TaskE>
+  4267a3:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4267a7:	48 89 c7             	mov    %rax,%rdi
+  4267aa:	e8 8d bf fe ff       	call   41273c <_ZN11ESurfingSvr4TaskD1Ev>
+  4267af:	eb 34                	jmp    4267e5 <_ZN13CPortalServer4authERN11ESurfingSvr4TaskE+0x1f5>
+  4267b1:	48 89 c3             	mov    %rax,%rbx
+  4267b4:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  4267b8:	48 89 c7             	mov    %rax,%rdi
+  4267bb:	e8 64 79 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  4267c0:	48 89 d8             	mov    %rbx,%rax
+  4267c3:	48 89 c7             	mov    %rax,%rdi
+  4267c6:	e8 55 e0 fd ff       	call   404820 <_Unwind_Resume@plt>
+  4267cb:	48 89 c3             	mov    %rax,%rbx
+  4267ce:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  4267d2:	48 89 c7             	mov    %rax,%rdi
+  4267d5:	e8 62 bf fe ff       	call   41273c <_ZN11ESurfingSvr4TaskD1Ev>
+  4267da:	48 89 d8             	mov    %rbx,%rax
+  4267dd:	48 89 c7             	mov    %rax,%rdi
+  4267e0:	e8 3b e0 fd ff       	call   404820 <_Unwind_Resume@plt>
+  4267e5:	48 83 c4 58          	add    $0x58,%rsp
+  4267e9:	5b                   	pop    %rbx
+  4267ea:	5d                   	pop    %rbp
+  4267eb:	c3                   	ret

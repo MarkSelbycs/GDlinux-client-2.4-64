@@ -1,0 +1,6 @@
+<conf>
+<redirectipv6>http://example.invalid/</redirectipv6>
+<plusInterval>30</plusInterval>
+<plusFlag>1</plusFlag>
+<domain>example.invalid</domain>
+</conf>

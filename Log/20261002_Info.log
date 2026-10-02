@@ -1,0 +1,839 @@
+10-02 01:27:09 DoWork
+10-02 01:27:09 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:27:09 version is 1003
+10-02 01:27:09 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 01:27:09 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 01:27:09 check net status start
+10-02 01:27:09 NetStateChange curState 0, oldState 33,newState 33,code 30000101,subCode 
+10-02 01:27:10 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 01:27:10 CPortalConn::RequestConfig
+10-02 01:27:10 CPortalConn::CheckConnState
+10-02 01:27:10 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 01:27:10 portal test  request state code is 200
+10-02 01:27:10 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:25:43 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:07:55 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaWvvJsIKa8LZSugYUuFWx0_7s78hTvbvc6vvkqyG3ahhnoQiMvSo10VF_N46yhWcYy67VDJcfTxvozYelb3MHK3zGXxnwRfwh2wyE16ge5dQ; Path=/; expires=Mon, 29 Sep 2036 08:07:55 GMT; HttpOnly
+
+
+10-02 01:27:10 schoolid length is 0
+10-02 01:27:10 schoolid is ,domain is ,area is 
+10-02 01:27:10 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:27:10 requestConfig is :http://www.189.cn/
+10-02 01:27:10 portal test  request state code is 301
+10-02 01:27:10 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 08:27:10 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b046abf6ade1b9f2ade4ea6e0f7e083
+
+
+10-02 01:27:10 schoolid length is 0
+10-02 01:27:10 schoolid is ,domain is ,area is 
+10-02 01:27:10 net is connected and not connected by myself, is unknow type
+10-02 01:27:10 stop all task
+10-02 01:27:15 checkUnknowNet
+10-02 01:27:15 CPortalConn::RequestConfig
+10-02 01:27:15 CPortalConn::CheckConnState
+10-02 01:27:15 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 01:27:15 portal test  request state code is 200
+10-02 01:27:15 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:25:48 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:08:00 GMT
+Set-Cookie: U9QcDIaFZqBHS=qa9cTsrIdPiLBgZC2KMU5_6z4JUsJAw-CnPVzlEcRLPodDDst5vK8x9dzo3cocO3OJs8iUXLgYfUF-KQqCtS3PPzitE3xZuHcxyaEta9gFska; Path=/; expires=Mon, 29 Sep 2036 08:08:00 GMT; HttpOnly
+
+
+10-02 01:27:15 schoolid length is 0
+10-02 01:27:15 schoolid is ,domain is ,area is 
+10-02 01:27:15 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:27:15 requestConfig is :http://www.189.cn/
+10-02 01:27:15 portal test  request state code is 301
+10-02 01:27:15 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 08:27:15 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b046abf6ae31b9fa8e84b81a6b0f07c
+
+
+10-02 01:27:15 schoolid length is 0
+10-02 01:27:15 schoolid is ,domain is ,area is 
+10-02 01:27:15 env still unknow env
+10-02 01:27:15 Portal check state
+10-02 01:27:15 Portal state url is 
+10-02 01:30:19 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:30:20 check net status start
+10-02 01:30:20 NetStateChange curState 33, oldState 33,newState 33,code 30000101,subCode 
+10-02 01:30:21 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 01:30:21 CPortalConn::RequestConfig
+10-02 01:30:21 CPortalConn::CheckConnState
+10-02 01:30:21 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 01:30:21 portal test  request state code is 200
+10-02 01:30:21 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:28:54 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:11:06 GMT
+Set-Cookie: U9QcDIaFZqBHS=qa3NioqGJIEFmzarbQTuGZD3XTdSU3gcmreopGmQ4S2-Pf2kSLgWg2833hAbKQqtABNfUjZ_jP3qKPz350sMBuxWp6X8LpgaKm4EGFjIP1s9V; Path=/; expires=Mon, 29 Sep 2036 08:11:06 GMT; HttpOnly
+
+
+10-02 01:30:21 schoolid length is 0
+10-02 01:30:21 schoolid is ,domain is ,area is 
+10-02 01:30:21 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:30:21 requestConfig is :http://www.189.cn/
+10-02 01:30:21 portal test  request state code is 301
+10-02 01:30:21 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 08:30:21 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b046abf6b9d1b9f1865a909fc075473
+
+
+10-02 01:30:21 schoolid length is 0
+10-02 01:30:21 schoolid is ,domain is ,area is 
+10-02 01:30:21 net is connected and not connected by myself, is unknow type
+10-02 01:30:21 stop all task
+10-02 01:30:26 checkUnknowNet
+10-02 01:30:26 CPortalConn::RequestConfig
+10-02 01:30:26 CPortalConn::CheckConnState
+10-02 01:30:26 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 01:30:26 portal test  request state code is 200
+10-02 01:30:26 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:28:59 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:11:11 GMT
+Set-Cookie: U9QcDIaFZqBHS=qacrO9PpXcpVunwW69nbuzOqs9SMn1ZpB9T86DFzp3_s9asyFEg0J70qMipRu0iRsCCdhXt4gpDm8yylhJ69JaMXzoYmQO7YEOE5Ib5Z9iP-W; Path=/; expires=Mon, 29 Sep 2036 08:11:11 GMT; HttpOnly
+
+
+10-02 01:30:26 schoolid length is 0
+10-02 01:30:26 schoolid is ,domain is ,area is 
+10-02 01:30:26 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:30:26 requestConfig is :http://www.189.cn/
+10-02 01:30:26 portal test  request state code is 301
+10-02 01:30:26 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 08:30:26 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b046abf6ba21b9f6b177ea474eab3ca
+
+
+10-02 01:30:26 schoolid length is 0
+10-02 01:30:26 schoolid is ,domain is ,area is 
+10-02 01:30:26 env still unknow env
+10-02 01:30:26 Portal check state
+10-02 01:30:26 Portal state url is 
+10-02 01:39:45 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:39:45 check net status start
+10-02 01:39:45 NetStateChange curState 33, oldState 33,newState 33,code 30000101,subCode 
+10-02 01:39:46 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 01:39:46 CPortalConn::RequestConfig
+10-02 01:39:46 CPortalConn::CheckConnState
+10-02 01:39:46 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 01:39:46 portal test  request state code is 200
+10-02 01:39:46 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:38:19 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:20:31 GMT
+Set-Cookie: U9QcDIaFZqBHS=qa-awI_ddE_aHMlCKZha4I9IL9oyNETvuKKSUy6v9gnXnztuPJy79gkYogLGXeG1f4IjDXhLjLkyYqYC2VNQ7obRk2m7T_iDcKnjKT9qQm8_7; Path=/; expires=Mon, 29 Sep 2036 08:20:31 GMT; HttpOnly
+
+
+10-02 01:39:46 schoolid length is 0
+10-02 01:39:46 schoolid is ,domain is ,area is 
+10-02 01:39:46 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:39:46 requestConfig is :http://www.189.cn/
+10-02 01:39:46 portal test  request state code is 302
+10-02 01:39:46 HTTP/1.1 302 Found
+Content-Type: text/html
+Location: http://125.88.59.131:10001/?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=SISE&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/
+Connection: close
+Content-Length: 0
+
+
+10-02 01:39:46 schoolid length is 0
+10-02 01:39:46 schoolid is ,domain is ,area is 
+10-02 01:39:46 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:39:46 requestConfig is :http://125.88.59.131:10001/?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=sise&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/
+10-02 01:39:46 portal test  request state code is 302
+10-02 01:39:46 HTTP/1.1 302 
+Set-Cookie: JSESSIONID=71D651975473BF7B22C167730E488688; Path=/; HttpOnly
+schoolid: 1099
+domain: sise.cn
+area: 020
+Location: http://14.146.227.141:7001/index.cgi?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=sise&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/&portal_node=http://125.88.59.131:10002
+Content-Length: 0
+Date: Fri, 02 Oct 2026 08:39:46 GMT
+Connection: close
+
+
+10-02 01:39:46 schoolid length is 4
+10-02 01:39:46 schoolid is 1099,domain is sise.cn,area is 020
+10-02 01:39:46 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 01:39:46 requestConfig is :http://14.146.227.141:7001/index.cgi?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=sise&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/&portal_node=http://125.88.59.131:10002
+10-02 01:39:46 portal test  request state code is 200
+10-02 01:39:46 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 08:38:20 GMT
+Pragma: no-cache
+Expires: Fri, 02 Oct 2026 08:20:32 GMT
+Cache-Control: no-store
+Server-Tag: cdcportal/1.4.2/gd-portal-40
+Error-Code: 0
+Set-Cookie: U9QcDIaFZqBHS=qaCcq-YNYKSXEPNqrW-myGiiKOVKGPWKZ1CPq9bZgpNh26XmMWnM4O3DbuTJ0nx0Kjh-XnKuVkbVd2Nzs2CRnZOJLaRBQgxLU83yt_LP6JZWQ; Path=/; expires=Mon, 29 Sep 2036 08:20:32 GMT; HttpOnly
+
+
+10-02 01:39:46 schoolid length is 0
+10-02 01:39:46 schoolid is ,domain is ,area is 
+10-02 01:39:46 config is  <config><ticket-url><![CDATA[http://14.146.227.141:7001/ticket.cgi?wlanacip=183.3.151.148&wlanuserip=172.17.104.130&clientip=172.17.104.130&wlanacname=sise&clientmac=a4:fa:76:44:ba:e8&paip=10.88.88.88&vlan=100.0&iarmdst=www.189.cn/&portal_node=http://125.88.59.131:10002]]></ticket-url><query-url><![CDATA[http://14.146.227.141:7001/query.cgi]]></query-url><auth-url><![CDATA[http://14.146.227.141:7001/auth.cgi]]></auth-url><state-url><![CDATA[http://14.146.227.141:7001/state.cgi]]></state-url><auth><type>cdc-http-pap</type><default>yes</default></auth><ServerIPs>121.8.177.212:7001,14.146.227.141:7001</ServerIPs></config> 
+10-02 01:39:46 record not connect
+10-02 01:39:46 [CPortalServer::checkNet]reqTicket...
+10-02 01:39:46 CPortalConn::_RequestTicket
+10-02 01:39:46 NetStateChange curState 33, oldState 33,newState 33,code 30000103,subCode 
+10-02 01:39:47 ip4 is 172.17.104.130
+10-02 01:39:47 NetStateChange curState 33, oldState 33,newState 33,code 30000102,subCode 
+10-02 01:39:47 NetStateChange curState 33, oldState 33,newState 33,code 30000104,subCode 
+10-02 01:39:48 update algoid success
+10-02 01:39:48 NetStateChange curState 33, oldState 33,newState 33,code 30000105,subCode 
+10-02 01:39:48 CPortalConn::_RequestTicket
+10-02 01:39:48 NetStateChange curState 33, oldState 33,newState 33,code 30000103,subCode 
+10-02 01:39:49 ip4 is 172.17.104.130
+10-02 01:39:49 NetStateChange curState 33, oldState 33,newState 33,code 30000102,subCode 
+10-02 01:39:50 ticket is 60a4c018079aa79a7696f6bf1d36eb54
+10-02 01:39:50 NetStateChange curState 33, oldState 33,newState 31,code 0,subCode 
+10-02 01:39:50 Portal check state
+10-02 01:39:55 Portal check state
+10-02 01:40:00 Portal check state
+10-02 01:40:05 Portal check state
+10-02 01:40:10 Portal check state
+10-02 01:40:15 Portal check state
+10-02 01:40:20 Portal check state
+10-02 01:40:25 Portal check state
+10-02 01:40:30 Portal check state
+10-02 01:40:35 Portal check state
+10-02 01:40:40 Portal check state
+10-02 01:40:45 Portal check state
+10-02 01:40:50 Portal check state
+10-02 01:40:55 Portal check state
+10-02 01:41:00 Portal check state
+10-02 01:41:05 Portal check state
+10-02 01:41:10 Portal check state
+10-02 01:41:15 Portal check state
+10-02 01:41:20 Portal check state
+10-02 01:41:25 Portal check state
+10-02 01:41:30 Portal check state
+10-02 01:41:35 Portal check state
+10-02 01:41:40 Portal check state
+10-02 01:41:45 Portal check state
+10-02 01:41:50 Portal check state
+10-02 01:41:55 Portal check state
+10-02 01:41:56 portal connect start
+10-02 01:41:56 CPortalConn::ConnectThread
+10-02 01:41:56 NetStateChange curState 31, oldState 0,newState 1,code 0,subCode 
+10-02 01:41:56 account is 19002036256
+10-02 01:41:56 authUrl is :http://14.146.227.141:7001/auth.cgi
+10-02 01:41:56 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 01:41:56 NetStateChange curState 1, oldState 1,newState 2,code 1,subCode 
+10-02 01:41:56 record connected
+10-02 01:41:56 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:41:57 pulse
+10-02 01:44:37 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:46:00 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:46:00 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:46:03 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:46:03 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:46:08 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:46:08 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:46:08 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:46:08 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:46:12 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:46:12 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:46:57 pulse
+10-02 01:47:43 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:51:12 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:51:37 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:51:37 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:51:57 pulse
+10-02 01:52:21 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:55:18 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:55:21 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:21 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:21 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:21 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:22 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:22 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:24 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:24 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:24 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:24 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:24 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:24 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:24 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:24 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:55:24 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:55:24 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:23 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:23 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:25 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:56:26 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:26 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:28 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:56:29 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:29 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:29 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:29 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:29 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:29 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 01:56:31 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 01:56:32 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 01:56:32 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :
+10-02 02:14:49 DoWork
+10-02 02:14:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:14:49 version is 1003
+10-02 02:14:49 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:14:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 02:14:50 check net status start
+10-02 02:14:50 NetStateChange curState 0, oldState 33,newState 33,code 30000101,subCode 
+10-02 02:14:51 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:14:51 CPortalConn::RequestConfig
+10-02 02:14:51 CPortalConn::CheckConnState
+10-02 02:14:51 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:14:51 portal test  request state code is 200
+10-02 02:14:51 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:13:24 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:55:36 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaJ7UdaVnK4SSCYuYq_N6Mkd92bs3scy3ZHT2_jXOStYZ76Ikh0Pg8Ib5iH-EljIFkiDacyMPdBVQv9vkkcM3GwjRXIFzl6fo3dBRHGc3erZl; Path=/; expires=Mon, 29 Sep 2036 08:55:36 GMT; HttpOnly
+
+
+10-02 02:14:51 schoolid length is 0
+10-02 02:14:51 schoolid is ,domain is ,area is 
+10-02 02:14:51 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:14:51 requestConfig is :http://www.189.cn/
+10-02 02:14:51 portal test  request state code is 301
+10-02 02:14:51 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:14:51 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220d6abf760b9dfff818a349067b8dcf
+
+
+10-02 02:14:51 schoolid length is 0
+10-02 02:14:51 schoolid is ,domain is ,area is 
+10-02 02:14:51 net is connected and not connected by myself, is unknow type
+10-02 02:14:51 stop all task
+10-02 02:14:56 checkUnknowNet
+10-02 02:14:56 CPortalConn::RequestConfig
+10-02 02:14:56 CPortalConn::CheckConnState
+10-02 02:14:56 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:14:56 portal test  request state code is 200
+10-02 02:14:56 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:13:29 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 08:55:41 GMT
+Set-Cookie: U9QcDIaFZqBHS=qa1lA2cmYhG5FwvBipxr546Idwl4L88tImL32FNzO7iosauSJFA0q-2hqHvNaKlAsw0Of2TFvQnCZY9o85w7FxZrgluZTUPNUDnUl3YsGbf0A; Path=/; expires=Mon, 29 Sep 2036 08:55:41 GMT; HttpOnly
+
+
+10-02 02:14:56 schoolid length is 0
+10-02 02:14:56 schoolid is ,domain is ,area is 
+10-02 02:14:56 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:14:56 requestConfig is :http://www.189.cn/
+10-02 02:14:56 portal test  request state code is 301
+10-02 02:14:56 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:14:56 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220d6abf76109dfff28cc85d61a19b85
+
+
+10-02 02:14:56 schoolid length is 0
+10-02 02:14:56 schoolid is ,domain is ,area is 
+10-02 02:14:56 env still unknow env
+10-02 02:14:56 Portal check state
+10-02 02:14:56 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 02:14:56 NetStateChange curState 33, oldState 1,newState 2,code 1,subCode 
+10-02 02:14:56 record connected
+10-02 02:14:57 pulse
+10-02 02:16:39 DoWork
+10-02 02:16:39 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:16:40 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:46 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:16:48 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:48 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:48 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:49 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:50 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:50 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:50 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:50 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:50 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:50 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:51 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:51 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:51 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:51 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:52 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:52 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:52 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:52 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:52 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:52 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:53 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:53 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:53 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:53 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:16:53 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:16:54 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:17:29 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:19:14 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:19:14 version is 1003
+10-02 02:19:14 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:19:14 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 02:19:15 check net status start
+10-02 02:19:15 NetStateChange curState 2, oldState 33,newState 33,code 30000101,subCode 
+10-02 02:19:15 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:19:15 CPortalConn::RequestConfig
+10-02 02:19:15 CPortalConn::CheckConnState
+10-02 02:19:15 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:19:15 portal test  request state code is 200
+10-02 02:19:15 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:17:48 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:00:00 GMT
+Set-Cookie: U9QcDIaFZqBHS=qayyb5P8iEqu8wHSyI1qQ6-k-No7tBHsfsENzy5UQroWGy4WnOgSkgnbZpFrC1PS5NsCRaptZaeZeREq6ay-plrnqhIR2fzYk3Lv7sG35WzeG; Path=/; expires=Mon, 29 Sep 2036 09:00:00 GMT; HttpOnly
+
+
+10-02 02:19:15 schoolid length is 0
+10-02 02:19:15 schoolid is ,domain is ,area is 
+10-02 02:19:15 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:19:15 requestConfig is :http://www.189.cn/
+10-02 02:19:15 portal test  request state code is 301
+10-02 02:19:15 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:19:15 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220d6abf77139dffe8c83d40b15106a9
+
+
+10-02 02:19:15 schoolid length is 0
+10-02 02:19:15 schoolid is ,domain is ,area is 
+10-02 02:19:15 net is connected and not connected by myself, is unknow type
+10-02 02:19:15 stop all task
+10-02 02:19:20 checkUnknowNet
+10-02 02:19:20 CPortalConn::RequestConfig
+10-02 02:19:20 CPortalConn::CheckConnState
+10-02 02:19:20 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:19:20 portal test  request state code is 200
+10-02 02:19:20 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:17:54 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:00:06 GMT
+Set-Cookie: U9QcDIaFZqBHS=qa91RpOD4CrmrZyzZ24hEE9u07tiCQFCx8OklTe21jxag-ZM2OBaH8y4aSFYI6rU9MhOcnbnfysYcBLjUbuCoCfRWpyM0vOdXVevvRnkvse2A; Path=/; expires=Mon, 29 Sep 2036 09:00:06 GMT; HttpOnly
+
+
+10-02 02:19:20 schoolid length is 0
+10-02 02:19:20 schoolid is ,domain is ,area is 
+10-02 02:19:20 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:19:20 requestConfig is :http://www.189.cn/
+10-02 02:19:21 portal test  request state code is 301
+10-02 02:19:21 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:19:21 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220d6abf77199dfff87568f361ca5555
+
+
+10-02 02:19:21 schoolid length is 0
+10-02 02:19:21 schoolid is ,domain is ,area is 
+10-02 02:19:21 env still unknow env
+10-02 02:19:21 Portal check state
+10-02 02:19:21 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 02:19:21 NetStateChange curState 2, oldState 1,newState 2,code 1,subCode 
+10-02 02:19:21 record connected
+10-02 02:19:21 pulse
+10-02 02:21:26 DoWork
+10-02 02:21:26 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:21:26 version is 1003
+10-02 02:21:26 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:21:26 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 02:21:27 check net status start
+10-02 02:21:27 NetStateChange curState 0, oldState 33,newState 33,code 30000101,subCode 
+10-02 02:21:27 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:21:27 CPortalConn::RequestConfig
+10-02 02:21:27 CPortalConn::CheckConnState
+10-02 02:21:27 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:21:27 portal test  request state code is 200
+10-02 02:21:27 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:20:00 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:02:12 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaPFG247wVpqB73NxKD0JOMDHIS8JsRI_mvxris1MmkHJs7W1jrzqtblNAgGhTDWN8VIe0D1R1wTUFjScZutGopjQwzaVXqe9HW11KLjUTq2E; Path=/; expires=Mon, 29 Sep 2036 09:02:12 GMT; HttpOnly
+
+
+10-02 02:21:27 schoolid length is 0
+10-02 02:21:27 schoolid is ,domain is ,area is 
+10-02 02:21:27 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:21:27 requestConfig is :http://www.189.cn/
+10-02 02:21:27 portal test  request state code is 301
+10-02 02:21:27 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:21:28 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220c6abf77989dffc1e14bcae79e0d1e
+
+
+10-02 02:21:27 schoolid length is 0
+10-02 02:21:27 schoolid is ,domain is ,area is 
+10-02 02:21:27 net is connected and not connected by myself, is unknow type
+10-02 02:21:27 stop all task
+10-02 02:21:32 checkUnknowNet
+10-02 02:21:32 CPortalConn::RequestConfig
+10-02 02:21:32 CPortalConn::CheckConnState
+10-02 02:21:32 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:21:32 portal test  request state code is 200
+10-02 02:21:32 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:20:05 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:02:17 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaHL4WOUV4UT7MYjOO0fMSwX63peQF8ovBzM0FeIlfJQdP6u5S2wRMARpCEMczK2P4qnNGhU_rd8a-Yz8G_11Ld4IEzZMu98Wo08ECgAocwHV; Path=/; expires=Mon, 29 Sep 2036 09:02:17 GMT; HttpOnly
+
+
+10-02 02:21:32 schoolid length is 0
+10-02 02:21:32 schoolid is ,domain is ,area is 
+10-02 02:21:32 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:21:32 requestConfig is :http://www.189.cn/
+10-02 02:21:32 portal test  request state code is 301
+10-02 02:21:32 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:21:32 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220c6abf779c9dff6c1938ac65c8a45e
+
+
+10-02 02:21:32 schoolid length is 0
+10-02 02:21:32 schoolid is ,domain is ,area is 
+10-02 02:21:32 env still unknow env
+10-02 02:21:32 Portal check state
+10-02 02:21:32 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 02:21:32 NetStateChange curState 33, oldState 1,newState 2,code 1,subCode 
+10-02 02:21:32 record connected
+10-02 02:21:33 pulse
+10-02 02:26:33 pulse
+10-02 02:31:33 pulse
+10-02 02:33:12 DoWork
+10-02 02:33:12 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:33:12 version is 1003
+10-02 02:33:12 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:33:12 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 02:33:13 check net status start
+10-02 02:33:13 NetStateChange curState 0, oldState 33,newState 33,code 30000101,subCode 
+10-02 02:33:14 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:33:14 CPortalConn::RequestConfig
+10-02 02:33:14 CPortalConn::CheckConnState
+10-02 02:33:14 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:33:14 portal test  request state code is 200
+10-02 02:33:14 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:31:47 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:13:59 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaLrM09xfXi-xivoT09C1m1wYrV0TjarPpliNEtVWPZrrtrsO3-z7Pv5GLqY-Y3dsj-qW7Wmf0vh2JWv9FJMzqt9qoMh5xA_irLt-jlS9ToEA; Path=/; expires=Mon, 29 Sep 2036 09:13:59 GMT; HttpOnly
+
+
+10-02 02:33:14 schoolid length is 0
+10-02 02:33:14 schoolid is ,domain is ,area is 
+10-02 02:33:14 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:33:14 requestConfig is :http://www.189.cn/
+10-02 02:33:14 portal test  request state code is 301
+10-02 02:33:14 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:33:14 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220d6abf7a5a9dffd931a1696aacb7b1
+
+
+10-02 02:33:14 schoolid length is 0
+10-02 02:33:14 schoolid is ,domain is ,area is 
+10-02 02:33:14 net is connected and not connected by myself, is unknow type
+10-02 02:33:14 stop all task
+10-02 02:33:19 checkUnknowNet
+10-02 02:33:19 CPortalConn::RequestConfig
+10-02 02:33:19 CPortalConn::CheckConnState
+10-02 02:33:19 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:33:19 portal test  request state code is 200
+10-02 02:33:19 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:31:52 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:14:04 GMT
+Set-Cookie: U9QcDIaFZqBHS=qayl4Kqq3hQvst7JxDiqqwMWC4HKeG_3Fd9xUhcGCgnoM_LTXljJIQqZu2p0N55aKVEOOQ61M8DAHICo1miUS1Z15oJHUfiDEe4BFn6kWHy0L; Path=/; expires=Mon, 29 Sep 2036 09:14:04 GMT; HttpOnly
+
+
+10-02 02:33:19 schoolid length is 0
+10-02 02:33:19 schoolid is ,domain is ,area is 
+10-02 02:33:19 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:33:19 requestConfig is :http://www.189.cn/
+10-02 02:33:19 portal test  request state code is 301
+10-02 02:33:19 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:33:19 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 220c6abf7a5f9dffede0cf99f8773739
+
+
+10-02 02:33:19 schoolid length is 0
+10-02 02:33:19 schoolid is ,domain is ,area is 
+10-02 02:33:19 env still unknow env
+10-02 02:33:19 Portal check state
+10-02 02:33:19 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 02:33:19 NetStateChange curState 33, oldState 1,newState 2,code 1,subCode 
+10-02 02:33:19 record connected
+10-02 02:33:20 pulse
+10-02 02:37:42 DoWork
+10-02 02:37:42 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:37:42 version is 1003
+10-02 02:37:42 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:37:42 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>CheckEnv</OpC><P>CheckEnv</P></M>
+10-02 02:37:43 check net status start
+10-02 02:37:43 NetStateChange curState 0, oldState 33,newState 33,code 30000101,subCode 
+10-02 02:37:43 sysVer is linux64,agent is CCTP/Linux64/1003
+10-02 02:37:43 CPortalConn::RequestConfig
+10-02 02:37:43 CPortalConn::CheckConnState
+10-02 02:37:43 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:37:43 portal test  request state code is 200
+10-02 02:37:43 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:36:16 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:18:28 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaVZRbLGSQL9hoOpxZaZACV-9-r1LPwDUYFZ8B-e3bB-k3UpT4299Er6y7X_jf8bHdTn577vRzPqSny5y__0_CzdxSyDuPcfxVb9fCc6bY3F9; Path=/; expires=Mon, 29 Sep 2036 09:18:28 GMT; HttpOnly
+
+
+10-02 02:37:43 schoolid length is 0
+10-02 02:37:43 schoolid is ,domain is ,area is 
+10-02 02:37:43 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:37:43 requestConfig is :http://www.189.cn/
+10-02 02:37:43 portal test  request state code is 301
+10-02 02:37:43 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:37:43 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b056abf7b671b9f43b0ab468be0da66
+
+
+10-02 02:37:43 schoolid length is 0
+10-02 02:37:43 schoolid is ,domain is ,area is 
+10-02 02:37:43 net is connected and not connected by myself, is unknow type
+10-02 02:37:43 stop all task
+10-02 02:37:48 checkUnknowNet
+10-02 02:37:48 CPortalConn::RequestConfig
+10-02 02:37:48 CPortalConn::CheckConnState
+10-02 02:37:48 requestConfig is :http://14.146.227.141:7001/detect.html
+10-02 02:37:48 portal test  request state code is 200
+10-02 02:37:48 HTTP/1.1 200 OK
+Server: ******
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: close
+Date: Fri, 02 Oct 2026 09:36:21 GMT
+Pragma: no-cache
+Cache-Control: no-store
+Expires: Fri, 02 Oct 2026 09:18:33 GMT
+Set-Cookie: U9QcDIaFZqBHS=qaeQO8ndOKmoI2s1NasXSkmj_OhUtJAVcNYKOJHVhMXKUFUqAW14Mv0UOGrEL9Krh6YVAhjCZj2ZM3E4dexgWpblY-qCM5enLqH96ahz159oG; Path=/; expires=Mon, 29 Sep 2036 09:18:33 GMT; HttpOnly
+
+
+10-02 02:37:48 schoolid length is 0
+10-02 02:37:48 schoolid is ,domain is ,area is 
+10-02 02:37:48 wlanuserip is , wlanusermac is , wlanacip is 
+10-02 02:37:48 requestConfig is :http://www.189.cn/
+10-02 02:37:48 portal test  request state code is 301
+10-02 02:37:48 HTTP/1.1 301 Moved Permanently
+Server: openresty
+Date: Fri, 02 Oct 2026 09:37:48 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+Location: https://www.189.cn/
+Request-Id: 4b046abf7b6c1b9f9a3ce97ad3f5dd18
+
+
+10-02 02:37:48 schoolid length is 0
+10-02 02:37:48 schoolid is ,domain is ,area is 
+10-02 02:37:48 env still unknow env
+10-02 02:37:48 Portal check state
+10-02 02:37:49 auth is <?xml version="1.0" encoding="UTF-8"?><response><userid><![CDATA[19002036256]]></userid><keep-retry>6</keep-retry><keep-url><![CDATA[http://14.146.227.142:7001/keep.cgi]]></keep-url><term-url><![CDATA[http://14.146.227.141:7001/term.cgi]]></term-url><user-config><against-interval>0</against-interval></user-config><domain-config></domain-config></response> 
+10-02 02:37:49 NetStateChange curState 33, oldState 1,newState 2,code 1,subCode 
+10-02 02:37:49 record connected
+10-02 02:37:50 pulse
+10-02 02:39:26 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:39:27 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>PortalDisConnect</OpC><P><src>2</src></P></M>
+10-02 02:39:27 [CPortalServer::NetworkTraffic] trafficStatisticsURL is :(null)
+10-02 02:39:33 <M><OpS>client</OpS><OpT>Portal</OpT><OpC>ClientStart</OpC><P>ClientStart</P></M>
+10-02 02:42:50 pulse
+10-02 02:47:50 pulse
+10-02 02:52:50 pulse
+10-02 02:57:50 pulse
+10-02 03:02:50 pulse
+10-02 03:07:50 pulse
+10-02 03:12:50 pulse
+10-02 03:17:50 pulse
+10-02 03:22:50 pulse
+10-02 03:27:50 pulse
+10-02 03:32:50 pulse
+10-02 03:37:50 pulse
+10-02 03:42:50 pulse
+10-02 03:47:50 pulse
+10-02 03:52:50 pulse
+10-02 03:57:50 pulse
+10-02 04:02:50 pulse
+10-02 04:07:50 pulse
+10-02 04:12:50 pulse
+10-02 04:17:50 pulse
+10-02 04:22:50 pulse
+10-02 04:27:50 pulse
+10-02 04:32:50 pulse
+10-02 04:37:50 pulse
+10-02 04:42:50 pulse
+10-02 04:47:50 pulse
+10-02 04:52:50 pulse
+10-02 04:57:50 pulse
+10-02 05:02:51 pulse
+10-02 05:07:51 pulse
+10-02 05:12:51 pulse
+10-02 05:17:51 pulse
+10-02 05:22:51 pulse
+10-02 05:27:51 pulse
+10-02 05:32:51 pulse
+10-02 05:37:51 pulse
+10-02 05:42:51 pulse
+10-02 05:42:51 KeepPluseThread err ret is -3, code is 14
+10-02 05:42:51 NetStateChange curState 2, oldState 2,newState 12,code 14,subCode 

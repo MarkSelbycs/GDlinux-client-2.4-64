@@ -1,0 +1,150 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000042d5fe <_ZN13CPortalParser19MakeTermRequestDataEPKcS1_S1_S1_S1_>:
+  42d5fe:	55                   	push   %rbp
+  42d5ff:	48 89 e5             	mov    %rsp,%rbp
+  42d602:	53                   	push   %rbx
+  42d603:	48 81 ec 48 01 00 00 	sub    $0x148,%rsp
+  42d60a:	48 89 bd d8 fe ff ff 	mov    %rdi,-0x128(%rbp)
+  42d611:	48 89 b5 d0 fe ff ff 	mov    %rsi,-0x130(%rbp)
+  42d618:	48 89 95 c8 fe ff ff 	mov    %rdx,-0x138(%rbp)
+  42d61f:	48 89 8d c0 fe ff ff 	mov    %rcx,-0x140(%rbp)
+  42d626:	4c 89 85 b8 fe ff ff 	mov    %r8,-0x148(%rbp)
+  42d62d:	4c 89 8d b0 fe ff ff 	mov    %r9,-0x150(%rbp)
+  42d634:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d63b:	48 89 c7             	mov    %rax,%rdi
+  42d63e:	e8 d5 0a ff ff       	call   41e118 <_ZN7CMarkupC1Ev>
+  42d643:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d64a:	be 40 35 45 00       	mov    $0x453540,%esi
+  42d64f:	48 89 c7             	mov    %rax,%rdi
+  42d652:	e8 7d 5d 01 00       	call   4433d4 <_ZN7CMarkup6SetDocEPKc>
+  42d657:	48 8d 85 40 ff ff ff 	lea    -0xc0(%rbp),%rax
+  42d65e:	be 7a 35 45 00       	mov    $0x45357a,%esi
+  42d663:	48 89 c7             	mov    %rax,%rdi
+  42d666:	e8 93 0a ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d66b:	48 8b 95 40 ff ff ff 	mov    -0xc0(%rbp),%rdx
+  42d672:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d679:	48 89 d6             	mov    %rdx,%rsi
+  42d67c:	48 89 c7             	mov    %rax,%rdi
+  42d67f:	e8 5e 76 01 00       	call   444ce2 <_ZN7CMarkup8FindElemE8MCD_CSTR>
+  42d684:	48 8b 95 c8 fe ff ff 	mov    -0x138(%rbp),%rdx
+  42d68b:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+  42d692:	48 89 d6             	mov    %rdx,%rsi
+  42d695:	48 89 c7             	mov    %rax,%rdi
+  42d698:	e8 61 0a ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d69d:	48 8d 85 60 ff ff ff 	lea    -0xa0(%rbp),%rax
+  42d6a4:	be 8c 35 45 00       	mov    $0x45358c,%esi
+  42d6a9:	48 89 c7             	mov    %rax,%rdi
+  42d6ac:	e8 4d 0a ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d6b1:	48 8b 95 50 ff ff ff 	mov    -0xb0(%rbp),%rdx
+  42d6b8:	48 8b b5 60 ff ff ff 	mov    -0xa0(%rbp),%rsi
+  42d6bf:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d6c6:	b9 00 00 00 00       	mov    $0x0,%ecx
+  42d6cb:	48 89 c7             	mov    %rax,%rdi
+  42d6ce:	e8 85 0e 00 00       	call   42e558 <_ZN7CMarkup15InsertChildElemE8MCD_CSTRS0_i>
+  42d6d3:	48 8b 95 c0 fe ff ff 	mov    -0x140(%rbp),%rdx
+  42d6da:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+  42d6e1:	48 89 d6             	mov    %rdx,%rsi
+  42d6e4:	48 89 c7             	mov    %rax,%rdi
+  42d6e7:	e8 12 0a ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d6ec:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+  42d6f0:	be 97 35 45 00       	mov    $0x453597,%esi
+  42d6f5:	48 89 c7             	mov    %rax,%rdi
+  42d6f8:	e8 01 0a ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d6fd:	48 8b 95 70 ff ff ff 	mov    -0x90(%rbp),%rdx
+  42d704:	48 8b 75 80          	mov    -0x80(%rbp),%rsi
+  42d708:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d70f:	b9 00 00 00 00       	mov    $0x0,%ecx
+  42d714:	48 89 c7             	mov    %rax,%rdi
+  42d717:	e8 3c 0e 00 00       	call   42e558 <_ZN7CMarkup15InsertChildElemE8MCD_CSTRS0_i>
+  42d71c:	48 8b 95 b8 fe ff ff 	mov    -0x148(%rbp),%rdx
+  42d723:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+  42d727:	48 89 d6             	mov    %rdx,%rsi
+  42d72a:	48 89 c7             	mov    %rax,%rdi
+  42d72d:	e8 cc 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d732:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  42d736:	be c9 35 45 00       	mov    $0x4535c9,%esi
+  42d73b:	48 89 c7             	mov    %rax,%rdi
+  42d73e:	e8 bb 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d743:	48 8b 55 90          	mov    -0x70(%rbp),%rdx
+  42d747:	48 8b 75 a0          	mov    -0x60(%rbp),%rsi
+  42d74b:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d752:	b9 00 00 00 00       	mov    $0x0,%ecx
+  42d757:	48 89 c7             	mov    %rax,%rdi
+  42d75a:	e8 f9 0d 00 00       	call   42e558 <_ZN7CMarkup15InsertChildElemE8MCD_CSTRS0_i>
+  42d75f:	48 8b 95 b0 fe ff ff 	mov    -0x150(%rbp),%rdx
+  42d766:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
+  42d76a:	48 89 d6             	mov    %rdx,%rsi
+  42d76d:	48 89 c7             	mov    %rax,%rdi
+  42d770:	e8 89 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d775:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  42d779:	be af 35 45 00       	mov    $0x4535af,%esi
+  42d77e:	48 89 c7             	mov    %rax,%rdi
+  42d781:	e8 78 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d786:	48 8b 55 b0          	mov    -0x50(%rbp),%rdx
+  42d78a:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
+  42d78e:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d795:	b9 00 00 00 00       	mov    $0x0,%ecx
+  42d79a:	48 89 c7             	mov    %rax,%rdi
+  42d79d:	e8 b6 0d 00 00       	call   42e558 <_ZN7CMarkup15InsertChildElemE8MCD_CSTRS0_i>
+  42d7a2:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42d7a6:	48 8b 75 10          	mov    0x10(%rbp),%rsi
+  42d7aa:	48 89 c7             	mov    %rax,%rdi
+  42d7ad:	e8 4c 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d7b2:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42d7b6:	be 32 36 45 00       	mov    $0x453632,%esi
+  42d7bb:	48 89 c7             	mov    %rax,%rdi
+  42d7be:	e8 3b 09 ff ff       	call   41e0fe <_ZN8MCD_CSTRC1EPKc>
+  42d7c3:	48 8b 55 d0          	mov    -0x30(%rbp),%rdx
+  42d7c7:	48 8b 75 e0          	mov    -0x20(%rbp),%rsi
+  42d7cb:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d7d2:	b9 00 00 00 00       	mov    $0x0,%ecx
+  42d7d7:	48 89 c7             	mov    %rax,%rdi
+  42d7da:	e8 79 0d 00 00       	call   42e558 <_ZN7CMarkup15InsertChildElemE8MCD_CSTRS0_i>
+  42d7df:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d7e6:	48 89 c7             	mov    %rax,%rdi
+  42d7e9:	e8 14 ae ff ff       	call   428602 <_ZNK7CMarkup6GetDocEv>
+  42d7ee:	48 89 c2             	mov    %rax,%rdx
+  42d7f1:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  42d7f8:	48 89 d6             	mov    %rdx,%rsi
+  42d7fb:	48 89 c7             	mov    %rax,%rdi
+  42d7fe:	e8 99 08 fe ff       	call   40e09c <_ZN11CAutoStringC1ERKSs>
+  42d803:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  42d80a:	48 89 c7             	mov    %rax,%rdi
+  42d80d:	e8 f6 0a fe ff       	call   40e308 <_ZN11CAutoStringcvPKcEv>
+  42d812:	48 89 c2             	mov    %rax,%rdx
+  42d815:	48 8b 85 d8 fe ff ff 	mov    -0x128(%rbp),%rax
+  42d81c:	48 8b 8d d0 fe ff ff 	mov    -0x130(%rbp),%rcx
+  42d823:	48 89 ce             	mov    %rcx,%rsi
+  42d826:	48 89 c7             	mov    %rax,%rdi
+  42d829:	e8 6e 07 00 00       	call   42df9c <_ZN13CPortalParser21EncodePostRequestDataEPKc>
+  42d82e:	90                   	nop
+  42d82f:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  42d836:	48 89 c7             	mov    %rax,%rdi
+  42d839:	e8 e6 08 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42d83e:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d845:	48 89 c7             	mov    %rax,%rdi
+  42d848:	e8 01 5a 01 00       	call   44324e <_ZN7CMarkupD1Ev>
+  42d84d:	eb 31                	jmp    42d880 <_ZN13CPortalParser19MakeTermRequestDataEPKcS1_S1_S1_S1_+0x282>
+  42d84f:	48 89 c3             	mov    %rax,%rbx
+  42d852:	48 8d 85 30 ff ff ff 	lea    -0xd0(%rbp),%rax
+  42d859:	48 89 c7             	mov    %rax,%rdi
+  42d85c:	e8 c3 08 fe ff       	call   40e124 <_ZN11CAutoStringD1Ev>
+  42d861:	eb 03                	jmp    42d866 <_ZN13CPortalParser19MakeTermRequestDataEPKcS1_S1_S1_S1_+0x268>
+  42d863:	48 89 c3             	mov    %rax,%rbx
+  42d866:	48 8d 85 e0 fe ff ff 	lea    -0x120(%rbp),%rax
+  42d86d:	48 89 c7             	mov    %rax,%rdi
+  42d870:	e8 d9 59 01 00       	call   44324e <_ZN7CMarkupD1Ev>
+  42d875:	48 89 d8             	mov    %rbx,%rax
+  42d878:	48 89 c7             	mov    %rax,%rdi
+  42d87b:	e8 a0 6f fd ff       	call   404820 <_Unwind_Resume@plt>
+  42d880:	48 8b 85 d8 fe ff ff 	mov    -0x128(%rbp),%rax
+  42d887:	48 81 c4 48 01 00 00 	add    $0x148,%rsp
+  42d88e:	5b                   	pop    %rbx
+  42d88f:	5d                   	pop    %rbp
+  42d890:	c3                   	ret
+  42d891:	90                   	nop

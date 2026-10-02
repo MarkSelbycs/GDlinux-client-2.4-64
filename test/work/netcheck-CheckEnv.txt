@@ -1,0 +1,20 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000424e78 <_ZN13CPortalServer8CheckEnvEPKcR7CXMLOpt>:
+  424e78:	55                   	push   %rbp
+  424e79:	48 89 e5             	mov    %rsp,%rbp
+  424e7c:	48 83 ec 20          	sub    $0x20,%rsp
+  424e80:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  424e84:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+  424e88:	48 89 55 e8          	mov    %rdx,-0x18(%rbp)
+  424e8c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  424e90:	be 00 00 00 00       	mov    $0x0,%esi
+  424e95:	48 89 c7             	mov    %rax,%rdi
+  424e98:	e8 03 00 00 00       	call   424ea0 <_ZN13CPortalServer14CheckNetStatusEi>
+  424e9d:	c9                   	leave
+  424e9e:	c3                   	ret
+  424e9f:	90                   	nop

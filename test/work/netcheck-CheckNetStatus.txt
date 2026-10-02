@@ -1,0 +1,39 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000424ea0 <_ZN13CPortalServer14CheckNetStatusEi>:
+  424ea0:	55                   	push   %rbp
+  424ea1:	48 89 e5             	mov    %rsp,%rbp
+  424ea4:	48 83 ec 10          	sub    $0x10,%rsp
+  424ea8:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  424eac:	89 75 f4             	mov    %esi,-0xc(%rbp)
+  424eaf:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  424eb2:	48 63 d0             	movslq %eax,%rdx
+  424eb5:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  424eb9:	48 83 c0 40          	add    $0x40,%rax
+  424ebd:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+  424ec3:	49 89 d0             	mov    %rdx,%r8
+  424ec6:	b9 00 00 00 00       	mov    $0x0,%ecx
+  424ecb:	ba 01 00 00 00       	mov    $0x1,%edx
+  424ed0:	be 01 00 00 00       	mov    $0x1,%esi
+  424ed5:	48 89 c7             	mov    %rax,%rdi
+  424ed8:	e8 03 06 01 00       	call   4354e0 <_ZN11CTableTimer7AddTaskEiiblb>
+  424edd:	c9                   	leave
+  424ede:	c3                   	ret
+  424edf:	90                   	nop
+
+0000000000424ee0 <_ZN13CPortalServer15TerminalRequestEPKcR7CXMLOpt>:
+  424ee0:	55                   	push   %rbp
+  424ee1:	48 89 e5             	mov    %rsp,%rbp
+  424ee4:	53                   	push   %rbx
+  424ee5:	48 83 ec 68          	sub    $0x68,%rsp
+  424ee9:	48 89 7d a8          	mov    %rdi,-0x58(%rbp)
+  424eed:	48 89 75 a0          	mov    %rsi,-0x60(%rbp)
+  424ef1:	48 89 55 98          	mov    %rdx,-0x68(%rbp)
+  424ef5:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+  424ef9:	be 0b 00 00 00       	mov    $0xb,%esi
+  424efe:	48                   	rex.W
+  424eff:	89                   	.byte 0x89

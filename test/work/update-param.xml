@@ -1,0 +1,14 @@
+<conf>
+    <version>2.4.64</version>
+    <updateInstId>test-installer</updateInstId>
+    <decompressDir>/tmp/gd-decompress</decompressDir>
+    <updateDir>/tmp/gd-update</updateDir>
+    <mainProgram>client</mainProgram>
+    <mainProgramWnd>GDClient</mainProgramWnd>
+    <mainProgramId>gdlinux-client</mainProgramId>
+    <backupPath>/tmp/gd-backup</backupPath>
+    <recordFile>/tmp/gd-record.xml</recordFile>
+    <updateType>3</updateType>
+    <downloadDir>/tmp/gd-download</downloadDir>
+    <imgDir>/tmp/gd-images</imgDir>
+</conf>

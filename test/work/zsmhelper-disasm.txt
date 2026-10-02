@@ -1,0 +1,425 @@
+
+samples/ESurfingSvr:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000042fbb8 <_ZN10CZsmHelper7GetInstEv>:
+  42fbb8:	55                   	push   %rbp
+  42fbb9:	48 89 e5             	mov    %rsp,%rbp
+  42fbbc:	53                   	push   %rbx
+  42fbbd:	48 83 ec 08          	sub    $0x8,%rsp
+  42fbc1:	48 8b 05 10 d8 23 00 	mov    0x23d810(%rip),%rax        # 66d3d8 <_ZN10CZsmHelper9m_pHelperE>
+  42fbc8:	48 85 c0             	test   %rax,%rax
+  42fbcb:	75 1c                	jne    42fbe9 <_ZN10CZsmHelper7GetInstEv+0x31>
+  42fbcd:	bf a8 08 00 00       	mov    $0x8a8,%edi
+  42fbd2:	e8 19 4c fd ff       	call   4047f0 <_Znwm@plt>
+  42fbd7:	48 89 c3             	mov    %rax,%rbx
+  42fbda:	48 89 df             	mov    %rbx,%rdi
+  42fbdd:	e8 16 00 00 00       	call   42fbf8 <_ZN10CZsmHelperC1Ev>
+  42fbe2:	48 89 1d ef d7 23 00 	mov    %rbx,0x23d7ef(%rip)        # 66d3d8 <_ZN10CZsmHelper9m_pHelperE>
+  42fbe9:	48 8b 05 e8 d7 23 00 	mov    0x23d7e8(%rip),%rax        # 66d3d8 <_ZN10CZsmHelper9m_pHelperE>
+  42fbf0:	48 83 c4 08          	add    $0x8,%rsp
+  42fbf4:	5b                   	pop    %rbx
+  42fbf5:	5d                   	pop    %rbp
+  42fbf6:	c3                   	ret
+  42fbf7:	90                   	nop
+
+000000000042fbf8 <_ZN10CZsmHelperC1Ev>:
+  42fbf8:	55                   	push   %rbp
+  42fbf9:	48 89 e5             	mov    %rsp,%rbp
+  42fbfc:	53                   	push   %rbx
+  42fbfd:	48 83 ec 18          	sub    $0x18,%rsp
+  42fc01:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+  42fc05:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  42fc09:	48 05 68 08 00 00    	add    $0x868,%rax
+  42fc0f:	48 89 c7             	mov    %rax,%rdi
+  42fc12:	e8 a3 ea fd ff       	call   40e6ba <_ZN6RWLockC1Ev>
+  42fc17:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  42fc1b:	ba 00 04 00 00       	mov    $0x400,%edx
+  42fc20:	be 00 00 00 00       	mov    $0x0,%esi
+  42fc25:	48 89 c7             	mov    %rax,%rdi
+  42fc28:	e8 63 41 fd ff       	call   403d90 <memset@plt>
+  42fc2d:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  42fc31:	48 05 00 04 00 00    	add    $0x400,%rax
+  42fc37:	ba 00 04 00 00       	mov    $0x400,%edx
+  42fc3c:	be 00 00 00 00       	mov    $0x0,%esi
+  42fc41:	48 89 c7             	mov    %rax,%rdi
+  42fc44:	e8 47 41 fd ff       	call   403d90 <memset@plt>
+  42fc49:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  42fc4d:	48 05 00 08 00 00    	add    $0x800,%rax
+  42fc53:	48 b9 30 30 30 30 30 	movabs $0x3030303030303030,%rcx
+  42fc5a:	30 30 30 
+  42fc5d:	48 89 08             	mov    %rcx,(%rax)
+  42fc60:	48 bb 2d 30 30 30 30 	movabs $0x30302d303030302d,%rbx
+  42fc67:	2d 30 30 
+  42fc6a:	48 89 58 08          	mov    %rbx,0x8(%rax)
+  42fc6e:	48 ba 30 30 2d 30 30 	movabs $0x2d303030302d3030,%rdx
+  42fc75:	30 30 2d 
+  42fc78:	48 89 50 10          	mov    %rdx,0x10(%rax)
+  42fc7c:	48 b9 30 30 30 30 30 	movabs $0x3030303030303030,%rcx
+  42fc83:	30 30 30 
+  42fc86:	48 89 48 18          	mov    %rcx,0x18(%rax)
+  42fc8a:	c7 40 20 30 30 30 30 	movl   $0x30303030,0x20(%rax)
+  42fc91:	c6 40 24 00          	movb   $0x0,0x24(%rax)
+  42fc95:	48 83 c4 18          	add    $0x18,%rsp
+  42fc99:	5b                   	pop    %rbx
+  42fc9a:	5d                   	pop    %rbp
+  42fc9b:	c3                   	ret
+
+000000000042fc9c <_ZN10CZsmHelperD1Ev>:
+  42fc9c:	55                   	push   %rbp
+  42fc9d:	48 89 e5             	mov    %rsp,%rbp
+  42fca0:	48 83 ec 10          	sub    $0x10,%rsp
+  42fca4:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  42fca8:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  42fcac:	48 05 68 08 00 00    	add    $0x868,%rax
+  42fcb2:	48 89 c7             	mov    %rax,%rdi
+  42fcb5:	e8 3a ea fd ff       	call   40e6f4 <_ZN6RWLockD1Ev>
+  42fcba:	c9                   	leave
+  42fcbb:	c3                   	ret
+
+000000000042fcbc <_ZN10CZsmHelper4InitEPKcPcm>:
+  42fcbc:	55                   	push   %rbp
+  42fcbd:	48 89 e5             	mov    %rsp,%rbp
+  42fcc0:	53                   	push   %rbx
+  42fcc1:	48 83 ec 48          	sub    $0x48,%rsp
+  42fcc5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+  42fcc9:	48 89 75 c0          	mov    %rsi,-0x40(%rbp)
+  42fccd:	48 89 55 b8          	mov    %rdx,-0x48(%rbp)
+  42fcd1:	48 89 4d b0          	mov    %rcx,-0x50(%rbp)
+  42fcd5:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fcd9:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fce0:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fce4:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fce9:	48 89 ce             	mov    %rcx,%rsi
+  42fcec:	48 89 c7             	mov    %rax,%rdi
+  42fcef:	e8 06 ed fd ff       	call   40e9fa <_ZN10CLockGuardIP6RWLock8GNothingIS1_EEC1ES1_b>
+  42fcf4:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fcf8:	48 8d 90 00 04 00 00 	lea    0x400(%rax),%rdx
+  42fcff:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+  42fd03:	48 89 c6             	mov    %rax,%rsi
+  42fd06:	48 89 d7             	mov    %rdx,%rdi
+  42fd09:	e8 42 48 fd ff       	call   404550 <strcpy@plt>
+  42fd0e:	bb 01 00 00 00       	mov    $0x1,%ebx
+  42fd13:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fd17:	48 89 c7             	mov    %rax,%rdi
+  42fd1a:	e8 21 ed fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  42fd1f:	89 d8                	mov    %ebx,%eax
+  42fd21:	48 83 c4 48          	add    $0x48,%rsp
+  42fd25:	5b                   	pop    %rbx
+  42fd26:	5d                   	pop    %rbp
+  42fd27:	c3                   	ret
+
+000000000042fd28 <_ZN10CZsmHelper7ReleaseEv>:
+  42fd28:	55                   	push   %rbp
+  42fd29:	48 89 e5             	mov    %rsp,%rbp
+  42fd2c:	48 83 ec 30          	sub    $0x30,%rsp
+  42fd30:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  42fd34:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fd38:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fd3f:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fd43:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fd48:	48 89 ce             	mov    %rcx,%rsi
+  42fd4b:	48 89 c7             	mov    %rax,%rdi
+  42fd4e:	e8 a7 ec fd ff       	call   40e9fa <_ZN10CLockGuardIP6RWLock8GNothingIS1_EEC1ES1_b>
+  42fd53:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fd57:	48 89 c7             	mov    %rax,%rdi
+  42fd5a:	e8 e1 ec fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  42fd5f:	c9                   	leave
+  42fd60:	c3                   	ret
+  42fd61:	90                   	nop
+
+000000000042fd62 <_ZN10CZsmHelper9IsUpdatedEv>:
+  42fd62:	55                   	push   %rbp
+  42fd63:	48 89 e5             	mov    %rsp,%rbp
+  42fd66:	48 83 ec 10          	sub    $0x10,%rsp
+  42fd6a:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  42fd6e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  42fd72:	48 05 00 04 00 00    	add    $0x400,%rax
+  42fd78:	48 89 c7             	mov    %rax,%rdi
+  42fd7b:	e8 8e 36 fe ff       	call   41340e <_ZN11CSimpleFile11IsFileExistEPKc>
+  42fd80:	0f b6 c0             	movzbl %al,%eax
+  42fd83:	83 f8 ff             	cmp    $0xffffffff,%eax
+  42fd86:	74 07                	je     42fd8f <_ZN10CZsmHelper9IsUpdatedEv+0x2d>
+  42fd88:	b8 01 00 00 00       	mov    $0x1,%eax
+  42fd8d:	eb 05                	jmp    42fd94 <_ZN10CZsmHelper9IsUpdatedEv+0x32>
+  42fd8f:	b8 00 00 00 00       	mov    $0x0,%eax
+  42fd94:	c9                   	leave
+  42fd95:	c3                   	ret
+
+000000000042fd96 <_ZN10CZsmHelper9GetAlgoIdEv>:
+  42fd96:	55                   	push   %rbp
+  42fd97:	48 89 e5             	mov    %rsp,%rbp
+  42fd9a:	53                   	push   %rbx
+  42fd9b:	48 83 ec 48          	sub    $0x48,%rsp
+  42fd9f:	48 89 7d b8          	mov    %rdi,-0x48(%rbp)
+  42fda3:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fda7:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42fdae:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fdb2:	ba 00 00 00 00       	mov    $0x0,%edx
+  42fdb7:	48 89 ce             	mov    %rcx,%rsi
+  42fdba:	48 89 c7             	mov    %rax,%rdi
+  42fdbd:	e8 38 ec fd ff       	call   40e9fa <_ZN10CLockGuardIP6RWLock8GNothingIS1_EEC1ES1_b>
+  42fdc2:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fdc6:	48 89 c7             	mov    %rax,%rdi
+  42fdc9:	e8 54 0c 00 00       	call   430a22 <_ZN10CZsmHelper13openZsmModuleEv>
+  42fdce:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  42fdd2:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fdd6:	48 85 c0             	test   %rax,%rax
+  42fdd9:	75 07                	jne    42fde2 <_ZN10CZsmHelper9GetAlgoIdEv+0x4c>
+  42fddb:	bb 60 37 45 00       	mov    $0x453760,%ebx
+  42fde0:	eb 3c                	jmp    42fe1e <_ZN10CZsmHelper9GetAlgoIdEv+0x88>
+  42fde2:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fde6:	48 8b 40 10          	mov    0x10(%rax),%rax
+  42fdea:	48 8b 55 b8          	mov    -0x48(%rbp),%rdx
+  42fdee:	48 81 c2 00 08 00 00 	add    $0x800,%rdx
+  42fdf5:	48 89 c6             	mov    %rax,%rsi
+  42fdf8:	48 89 d7             	mov    %rdx,%rdi
+  42fdfb:	e8 50 47 fd ff       	call   404550 <strcpy@plt>
+  42fe00:	48 8d 55 c8          	lea    -0x38(%rbp),%rdx
+  42fe04:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fe08:	48 89 d6             	mov    %rdx,%rsi
+  42fe0b:	48 89 c7             	mov    %rax,%rdi
+  42fe0e:	e8 c7 09 00 00       	call   4307da <_ZN10CZsmHelper11FreeZsoFileERP9__ZsoFile>
+  42fe13:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+  42fe17:	48 8d 98 00 08 00 00 	lea    0x800(%rax),%rbx
+  42fe1e:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fe22:	48 89 c7             	mov    %rax,%rdi
+  42fe25:	e8 16 ec fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  42fe2a:	48 89 d8             	mov    %rbx,%rax
+  42fe2d:	eb 1a                	jmp    42fe49 <_ZN10CZsmHelper9GetAlgoIdEv+0xb3>
+  42fe2f:	48 89 c3             	mov    %rax,%rbx
+  42fe32:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42fe36:	48 89 c7             	mov    %rax,%rdi
+  42fe39:	e8 02 ec fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  42fe3e:	48 89 d8             	mov    %rbx,%rax
+  42fe41:	48 89 c7             	mov    %rax,%rdi
+  42fe44:	e8 d7 49 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42fe49:	48 83 c4 48          	add    $0x48,%rsp
+  42fe4d:	5b                   	pop    %rbx
+  42fe4e:	5d                   	pop    %rbp
+  42fe4f:	c3                   	ret
+
+000000000042fe50 <_ZN10CZsmHelper9UpdateZsmEPcm>:
+  42fe50:	55                   	push   %rbp
+  42fe51:	48 89 e5             	mov    %rsp,%rbp
+  42fe54:	53                   	push   %rbx
+  42fe55:	48 83 ec 38          	sub    $0x38,%rsp
+  42fe59:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  42fe5d:	48 89 75 d0          	mov    %rsi,-0x30(%rbp)
+  42fe61:	48 89 55 c8          	mov    %rdx,-0x38(%rbp)
+  42fe65:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%rbp)
+  42fe6c:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fe70:	48 89 c7             	mov    %rax,%rdi
+  42fe73:	e8 18 0f 00 00       	call   430d90 <_ZN11CSimpleFileC1Ev>
+  42fe78:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fe7c:	48 8d 88 00 04 00 00 	lea    0x400(%rax),%rcx
+  42fe83:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fe87:	ba 85 37 45 00       	mov    $0x453785,%edx
+  42fe8c:	48 89 ce             	mov    %rcx,%rsi
+  42fe8f:	48 89 c7             	mov    %rax,%rdi
+  42fe92:	e8 c3 34 fe ff       	call   41335a <_ZN11CSimpleFile10CreateFileEPKcS1_>
+  42fe97:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42fe9a:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42fe9e:	74 34                	je     42fed4 <_ZN10CZsmHelper9UpdateZsmEPcm+0x84>
+  42fea0:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fea4:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42feab:	e8 14 00 fe ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  42feb0:	48 89 d9             	mov    %rbx,%rcx
+  42feb3:	ba 87 37 45 00       	mov    $0x453787,%edx
+  42feb8:	be 00 00 00 00       	mov    $0x0,%esi
+  42febd:	48 89 c7             	mov    %rax,%rdi
+  42fec0:	b8 00 00 00 00       	mov    $0x0,%eax
+  42fec5:	e8 08 00 fe ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  42feca:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42fecf:	e9 9c 00 00 00       	jmp    42ff70 <_ZN10CZsmHelper9UpdateZsmEPcm+0x120>
+  42fed4:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  42fed8:	48 8b 4d d0          	mov    -0x30(%rbp),%rcx
+  42fedc:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42fee0:	48 89 ce             	mov    %rcx,%rsi
+  42fee3:	48 89 c7             	mov    %rax,%rdi
+  42fee6:	e8 63 ff fd ff       	call   40fe4e <_ZN11CSimpleFile9WriteFileEPKvm>
+  42feeb:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42feee:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42fef2:	74 31                	je     42ff25 <_ZN10CZsmHelper9UpdateZsmEPcm+0xd5>
+  42fef4:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42fef8:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42feff:	e8 c0 ff fd ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  42ff04:	48 89 d9             	mov    %rbx,%rcx
+  42ff07:	ba 9b 37 45 00       	mov    $0x45379b,%edx
+  42ff0c:	be 00 00 00 00       	mov    $0x0,%esi
+  42ff11:	48 89 c7             	mov    %rax,%rdi
+  42ff14:	b8 00 00 00 00       	mov    $0x0,%eax
+  42ff19:	e8 b4 ff fd ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  42ff1e:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42ff23:	eb 4b                	jmp    42ff70 <_ZN10CZsmHelper9UpdateZsmEPcm+0x120>
+  42ff25:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff29:	48 89 c7             	mov    %rax,%rdi
+  42ff2c:	e8 8d 34 fe ff       	call   4133be <_ZN11CSimpleFile9CloseFileEv>
+  42ff31:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  42ff34:	83 7d ec 00          	cmpl   $0x0,-0x14(%rbp)
+  42ff38:	74 31                	je     42ff6b <_ZN10CZsmHelper9UpdateZsmEPcm+0x11b>
+  42ff3a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  42ff3e:	48 8d 98 00 04 00 00 	lea    0x400(%rax),%rbx
+  42ff45:	e8 7a ff fd ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  42ff4a:	48 89 d9             	mov    %rbx,%rcx
+  42ff4d:	ba ae 37 45 00       	mov    $0x4537ae,%edx
+  42ff52:	be 00 00 00 00       	mov    $0x0,%esi
+  42ff57:	48 89 c7             	mov    %rax,%rdi
+  42ff5a:	b8 00 00 00 00       	mov    $0x0,%eax
+  42ff5f:	e8 6e ff fd ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  42ff64:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+  42ff69:	eb 05                	jmp    42ff70 <_ZN10CZsmHelper9UpdateZsmEPcm+0x120>
+  42ff6b:	bb 01 00 00 00       	mov    $0x1,%ebx
+  42ff70:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff74:	48 89 c7             	mov    %rax,%rdi
+  42ff77:	e8 2a 0e 00 00       	call   430da6 <_ZN11CSimpleFileD1Ev>
+  42ff7c:	89 d8                	mov    %ebx,%eax
+  42ff7e:	eb 1a                	jmp    42ff9a <_ZN10CZsmHelper9UpdateZsmEPcm+0x14a>
+  42ff80:	48 89 c3             	mov    %rax,%rbx
+  42ff83:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  42ff87:	48 89 c7             	mov    %rax,%rdi
+  42ff8a:	e8 17 0e 00 00       	call   430da6 <_ZN11CSimpleFileD1Ev>
+  42ff8f:	48 89 d8             	mov    %rbx,%rax
+  42ff92:	48 89 c7             	mov    %rax,%rdi
+  42ff95:	e8 86 48 fd ff       	call   404820 <_Unwind_Resume@plt>
+  42ff9a:	48 83 c4 38          	add    $0x38,%rsp
+  42ff9e:	5b                   	pop    %rbx
+  42ff9f:	5d                   	pop    %rbp
+  42ffa0:	c3                   	ret
+  42ffa1:	90                   	nop
+
+000000000042ffa2 <_ZN10CZsmHelper6UpdateEPcm>:
+  42ffa2:	55                   	push   %rbp
+  42ffa3:	48 89 e5             	mov    %rsp,%rbp
+  42ffa6:	53                   	push   %rbx
+  42ffa7:	48 83 ec 48          	sub    $0x48,%rsp
+  42ffab:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+  42ffaf:	48 89 75 c0          	mov    %rsi,-0x40(%rbp)
+  42ffb3:	48 89 55 b8          	mov    %rdx,-0x48(%rbp)
+  42ffb7:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42ffbb:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  42ffc2:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  42ffc6:	ba 00 00 00 00       	mov    $0x0,%edx
+  42ffcb:	48 89 ce             	mov    %rcx,%rsi
+  42ffce:	48 89 c7             	mov    %rax,%rdi
+  42ffd1:	e8 24 ea fd ff       	call   40e9fa <_ZN10CLockGuardIP6RWLock8GNothingIS1_EEC1ES1_b>
+  42ffd6:	48 83 7d c0 00       	cmpq   $0x0,-0x40(%rbp)
+  42ffdb:	75 07                	jne    42ffe4 <_ZN10CZsmHelper6UpdateEPcm+0x42>
+  42ffdd:	bb 00 00 00 00       	mov    $0x0,%ebx
+  42ffe2:	eb 19                	jmp    42fffd <_ZN10CZsmHelper6UpdateEPcm+0x5b>
+  42ffe4:	48 8b 55 b8          	mov    -0x48(%rbp),%rdx
+  42ffe8:	48 8b 4d c0          	mov    -0x40(%rbp),%rcx
+  42ffec:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  42fff0:	48 89 ce             	mov    %rcx,%rsi
+  42fff3:	48 89 c7             	mov    %rax,%rdi
+  42fff6:	e8 55 fe ff ff       	call   42fe50 <_ZN10CZsmHelper9UpdateZsmEPcm>
+  42fffb:	89 c3                	mov    %eax,%ebx
+  42fffd:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  430001:	48 89 c7             	mov    %rax,%rdi
+  430004:	e8 37 ea fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  430009:	89 d8                	mov    %ebx,%eax
+  43000b:	eb 1a                	jmp    430027 <_ZN10CZsmHelper6UpdateEPcm+0x85>
+  43000d:	48 89 c3             	mov    %rax,%rbx
+  430010:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  430014:	48 89 c7             	mov    %rax,%rdi
+  430017:	e8 24 ea fd ff       	call   40ea40 <_ZN10CLockGuardIP6RWLock8GNothingIS1_EED1Ev>
+  43001c:	48 89 d8             	mov    %rbx,%rax
+  43001f:	48 89 c7             	mov    %rax,%rdi
+  430022:	e8 f9 47 fd ff       	call   404820 <_Unwind_Resume@plt>
+  430027:	48 83 c4 48          	add    $0x48,%rsp
+  43002b:	5b                   	pop    %rbx
+  43002c:	5d                   	pop    %rbp
+  43002d:	c3                   	ret
+
+000000000043002e <_ZN10CZsmHelper4CodeEPKc>:
+  43002e:	55                   	push   %rbp
+  43002f:	48 89 e5             	mov    %rsp,%rbp
+  430032:	53                   	push   %rbx
+  430033:	48 83 ec 78          	sub    $0x78,%rsp
+  430037:	48 89 7d 88          	mov    %rdi,-0x78(%rbp)
+  43003b:	48 89 75 80          	mov    %rsi,-0x80(%rbp)
+  43003f:	bf 32 00 00 00       	mov    $0x32,%edi
+  430044:	e8 67 3e fd ff       	call   403eb0 <_Znam@plt>
+  430049:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  43004d:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  430051:	48 b9 74 61 72 63 65 	movabs $0x6f6c206563726174,%rcx
+  430058:	20 6c 6f 
+  43005b:	48 89 08             	mov    %rcx,(%rax)
+  43005e:	48 b9 67 20 61 6c 67 	movabs $0x61206f676c612067,%rcx
+  430065:	6f 20 61 
+  430068:	48 89 48 08          	mov    %rcx,0x8(%rax)
+  43006c:	48 b9 75 74 6f 20 63 	movabs $0x706d6f63206f7475,%rcx
+  430073:	6f 6d 70 
+  430076:	48 89 48 10          	mov    %rcx,0x10(%rax)
+  43007a:	48 bb 73 74 72 20 6e 	movabs $0x6c6c756e20727473,%rbx
+  430081:	75 6c 6c 
+  430084:	48 89 58 18          	mov    %rbx,0x18(%rax)
+  430088:	c7 40 20 20 76 61 6c 	movl   $0x6c617620,0x20(%rax)
+  43008f:	66 c7 40 24 75 65    	movw   $0x6575,0x24(%rax)
+  430095:	c6 40 26 00          	movb   $0x0,0x26(%rax)
+  430099:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  43009d:	48 8d 88 68 08 00 00 	lea    0x868(%rax),%rcx
+  4300a4:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+  4300a8:	ba 00 00 00 00       	mov    $0x0,%edx
+  4300ad:	48 89 ce             	mov    %rcx,%rsi
+  4300b0:	48 89 c7             	mov    %rax,%rdi
+  4300b3:	e8 42 e9 fd ff       	call   40e9fa <_ZN10CLockGuardIP6RWLock8GNothingIS1_EEC1ES1_b>
+  4300b8:	48 c7 45 e0 00 00 00 	movq   $0x0,-0x20(%rbp)
+  4300bf:	00 
+  4300c0:	48 c7 45 d8 00 00 00 	movq   $0x0,-0x28(%rbp)
+  4300c7:	00 
+  4300c8:	48 c7 45 d0 00 00 00 	movq   $0x0,-0x30(%rbp)
+  4300cf:	00 
+  4300d0:	48 c7 45 c8 00 00 00 	movq   $0x0,-0x38(%rbp)
+  4300d7:	00 
+  4300d8:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  4300dc:	48 89 c7             	mov    %rax,%rdi
+  4300df:	e8 3e 09 00 00       	call   430a22 <_ZN10CZsmHelper13openZsmModuleEv>
+  4300e4:	48 89 45 98          	mov    %rax,-0x68(%rbp)
+  4300e8:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  4300ec:	48 85 c0             	test   %rax,%rax
+  4300ef:	75 09                	jne    4300fa <_ZN10CZsmHelper4CodeEPKc+0xcc>
+  4300f1:	48 8b 5d e8          	mov    -0x18(%rbp),%rbx
+  4300f5:	e9 43 01 00 00       	jmp    43023d <_ZN10CZsmHelper4CodeEPKc+0x20f>
+  4300fa:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+  4300fe:	48 8b 40 28          	mov    0x28(%rax),%rax
+  430102:	be c1 37 45 00       	mov    $0x4537c1,%esi
+  430107:	48 89 c7             	mov    %rax,%rdi
+  43010a:	e8 31 45 fd ff       	call   404640 <dlsym@plt>
+  43010f:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  430113:	48 83 7d d0 00       	cmpq   $0x0,-0x30(%rbp)
+  430118:	75 4d                	jne    430167 <_ZN10CZsmHelper4CodeEPKc+0x139>
+  43011a:	e8 81 40 fd ff       	call   4041a0 <dlerror@plt>
+  43011f:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  430123:	48 83 7d e0 00       	cmpq   $0x0,-0x20(%rbp)
+  430128:	0f 95 c0             	setne  %al
+  43012b:	84 c0                	test   %al,%al
+  43012d:	74 38                	je     430167 <_ZN10CZsmHelper4CodeEPKc+0x139>
+  43012f:	48 8d 55 98          	lea    -0x68(%rbp),%rdx
+  430133:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  430137:	48 89 d6             	mov    %rdx,%rsi
+  43013a:	48 89 c7             	mov    %rax,%rdi
+  43013d:	e8 98 06 00 00       	call   4307da <_ZN10CZsmHelper11FreeZsoFileERP9__ZsoFile>
+  430142:	e8 7d fd fd ff       	call   40fec4 <_ZN4CLog7GetInstEv>
+  430147:	ba c6 37 45 00       	mov    $0x4537c6,%edx
+  43014c:	be 00 00 00 00       	mov    $0x0,%esi
+  430151:	48 89 c7             	mov    %rax,%rdi
+  430154:	b8 00 00 00 00       	mov    $0x0,%eax
+  430159:	e8 74 fd fd ff       	call   40fed2 <_ZN4CLog8WriteLogEiPKcz>
+  43015e:	48 8b 5d e8          	mov    -0x18(%rbp),%rbx
+  430162:	e9 d6 00 00 00       	jmp    43023d <_ZN10CZsmHelper4CodeEPKc+0x20f>
+  430167:	48 8b 55 80          	mov    -0x80(%rbp),%rdx
+  43016b:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  43016f:	48 89 d7             	mov    %rdx,%rdi
+  430172:	ff d0                	call   *%rax
+  430174:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  430178:	48 83 7d d8 00       	cmpq   $0x0,-0x28(%rbp)
+  43017d:	0f 94 c0             	sete   %al
+  430180:	84 c0                	test   %al,%al
+  430182:	74 38                	je     4301bc <_ZN10CZsmHelper4CodeEPKc+0x18e>
+  430184:	48 8d 55 98          	lea    -0x68(%rbp),%rdx
+  430188:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+  43018c:	48 89 d6             	mov    %rdx,%rsi
+  43018f:	48                   	rex.W
